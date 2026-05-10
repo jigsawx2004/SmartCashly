@@ -128,15 +128,16 @@
     }
 
     header {
+      height: 80px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 1.25rem;
+      justify-content: center;
       padding: 1rem 1.5rem;
       background: #008e45 !important;
       color: #fff;
       position: relative;
-      overflow: hidden;
+      overflow: visible;
+      z-index: 1001;
     }
 
     /* Enhanced header particles */
@@ -148,10 +149,10 @@
       width: 100%;
       height: 100%;
       background-image: 
-        radial-gradient(circle at 25% 40%, rgba(255, 255, 255, 0.4) 1px, transparent 1px),
-        radial-gradient(circle at 75% 60%, rgba(255, 215, 0, 0.4) 1px, transparent 1px),
-        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.3) 0.5px, transparent 0.5px),
-        radial-gradient(circle at 15% 80%, rgba(255, 193, 7, 0.3) 1px, transparent 1px);
+        radial-gradient(circle at 25% 40%, rgba(255, 255, 255, 1) 1px, transparent 1px),
+        radial-gradient(circle at 75% 60%, rgba(255, 255, 255, 1) 1px, transparent 1px),
+        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 1) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 15% 80%, rgba(255, 255, 255, 1) 1px, transparent 1px);
       background-size: 80px 80px, 100px 100px, 60px 60px, 90px 90px;
       pointer-events: none !important;
       z-index: 1;
@@ -174,12 +175,12 @@
     }
 
     .logo-img {
+      position: absolute;
+      left: 1.5rem;
       height: 100px;
       width: auto;
-      flex: 0 0 auto;
       background: transparent !important;
-      position: relative;
-      z-index: 2;
+      z-index: 1002;
     }
 
     .auth-nav {
@@ -212,11 +213,115 @@
     }
     main h2 { font-size: 1.9rem; margin-bottom: .5rem; }
 
+    .signup-layout {
+      max-width: 680px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 400px) 160px;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+    }
+
     .form-container {
       max-width: 400px;
       margin: 0 auto;
       padding: 2rem;
       text-align: center;
+    }
+
+    .password-field {
+      position: relative;
+    }
+
+    .password-field input {
+      width: 100%;
+      padding-right: 2.6rem;
+    }
+
+    .toggle-password {
+      position: absolute;
+      top: 50%;
+      right: 0.65rem;
+      transform: translateY(-50%);
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      color: #666;
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .cash-guy {
+      width: 150px;
+      height: 140px;
+      margin: 0 auto;
+      position: relative;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+    }
+
+    .cash-guy .bill {
+      width: 132px;
+      height: 78px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #00a34f 0%, #008e45 60%, #00763a 100%);
+      border: 2px solid #006d35;
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,.16), 0 8px 14px rgba(0,0,0,.15);
+      position: relative;
+      transition: transform .2s ease;
+    }
+    .cash-guy .bill::before,
+    .cash-guy .bill::after {
+      content: '$';
+      position: absolute;
+      font-weight: 800;
+      color: rgba(255,255,255,.8);
+      font-size: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .cash-guy .bill::before { left: 9px; }
+    .cash-guy .bill::after { right: 9px; }
+
+    .cash-guy .eyes {
+      position: absolute;
+      top: 26px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 44px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      color: #f6fff9;
+      transition: transform .2s ease;
+    }
+
+    .cash-guy .cover {
+      position: absolute;
+      top: 44px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 56px;
+      display: flex;
+      justify-content: space-between;
+      opacity: 1;
+      transition: opacity .2s ease;
+      font-size: 18px;
+    }
+
+    .cash-guy .caption { margin-top: 2px; font-size: .75rem; color: #1b3c2b; font-weight: 600; }
+
+    .cash-guy.is-watching .bill { transform: rotate(-2deg) translateX(2px); }
+    .cash-guy.is-watching .eyes { transform: translateX(-50%) translateX(-5px); }
+    .cash-guy.is-watching .cover { opacity: 0; }
+    @media (max-width: 760px) {
+      .signup-layout { grid-template-columns: 1fr; }
+      .cash-guy { order: -1; height: 120px; }
     }
 
     .form-container form {
@@ -405,16 +510,31 @@
   <main>
     <h2>Create an Account</h2>
 
-    <div class="form-container">
+    <div class="signup-layout">
+      <div class="form-container">
       <form id="signup-form">
         <input type="email"    id="su_email"    placeholder="Email"    required />
-        <input type="password" id="su_pass"     placeholder="Password" required />
-        <input type="password" id="su_confirm"  placeholder="Confirm Password"  required />
+        <div class="password-field">
+          <input type="password" id="su_pass" placeholder="Password" required />
+          <button type="button" class="toggle-password" data-target="su_pass" aria-label="Show password" aria-pressed="false">👁️</button>
+        </div>
+        <div class="password-field">
+          <input type="password" id="su_confirm" placeholder="Confirm Password" required />
+          <button type="button" class="toggle-password" data-target="su_confirm" aria-label="Show confirm password" aria-pressed="false">👁️</button>
+        </div>
         <input type="text"     id="su_referral" placeholder="Referral Code (Optional)" />
         <p class="referral-note">👥 Have a friend's referral code? Enter it above to help them earn rewards!</p>
         <button class="btn btn--full">Sign Up</button>
         <p id="su_error" class="form-error"></p>
       </form>
+      </div>
+      <aside class="cash-guy" id="cash-guy" aria-hidden="true">
+        <div class="bill">
+          <div class="eyes"><span>◉</span><span>◉</span></div>
+          <div class="cover"><span>🙈</span><span>🙈</span></div>
+        </div>
+        <div class="caption">Privacy mode</div>
+      </aside>
     </div>
   </main>
 
@@ -452,6 +572,29 @@
     const su_confirm = document.getElementById("su_confirm");
     const su_referral = document.getElementById("su_referral");
     const su_error = document.getElementById("su_error");
+
+    const cashGuy = document.getElementById("cash-guy");
+    const cashGuyCaption = cashGuy?.querySelector(".caption");
+
+    function updateCashGuyState() {
+      const visible = [su_pass, su_confirm].some(el => el.type === "text");
+      cashGuy?.classList.toggle("is-watching", visible);
+      if (cashGuyCaption) cashGuyCaption.textContent = visible ? "Security check" : "Privacy mode";
+    }
+
+    document.querySelectorAll(".toggle-password").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = document.getElementById(btn.dataset.target);
+        if (!target) return;
+        const show = target.type === "password";
+        target.type = show ? "text" : "password";
+        btn.textContent = show ? "🙈" : "👁️";
+        btn.setAttribute("aria-pressed", String(show));
+        updateCashGuyState();
+      });
+    });
+
+    updateCashGuyState();
 
     document.getElementById("signup-form").addEventListener("submit", async e => {
       e.preventDefault();
