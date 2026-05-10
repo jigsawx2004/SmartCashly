@@ -1,6 +1,16 @@
 {
   "redirects": [
     {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/stores/:store/",
+      "destination": "/stores/:store",
+      "permanent": true
+    },
+    {
       "source": "/login.html",
       "destination": "/general-stuff/login.html",
       "permanent": true
@@ -24,6 +34,12 @@
       "source": "/signup",
       "destination": "/general-stuff/signup.html",
       "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/stores/:store",
+      "destination": "/stores/:store/index.html"
     }
   ]
 }
