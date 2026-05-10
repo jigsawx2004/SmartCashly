@@ -1,0 +1,29 @@
+{
+  "redirects": [
+    {
+      "source": "/login.html",
+      "destination": "/general-stuff/login.html",
+      "permanent": true
+    },
+    {
+      "source": "/signup.html",
+      "destination": "/general-stuff/signup.html",
+      "permanent": true
+    },
+    {
+      "source": "/all-stores.html",
+      "destination": "/general-stuff/all-stores.html",
+      "permanent": true
+    },
+    {
+      "source": "/login",
+      "destination": "/general-stuff/login.html",
+      "permanent": true
+    },
+    {
+      "source": "/signup",
+      "destination": "/general-stuff/signup.html",
+      "permanent": true
+    }
+  ]
+}
