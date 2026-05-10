@@ -214,13 +214,12 @@
     main h2 { font-size: 1.9rem; margin-bottom: .5rem; }
 
     .signup-layout {
-      max-width: 680px;
+      width: min(100%, 680px);
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, 400px) 160px;
-      gap: 1rem;
-      align-items: center;
+      position: relative;
+      display: flex;
       justify-content: center;
+      align-items: center;
     }
 
     .form-container {
@@ -255,8 +254,11 @@
     .cash-guy {
       width: 140px;
       height: 165px;
-      margin: 0 auto;
-      position: relative;
+      margin: 0;
+      position: absolute;
+      left: calc(50% + 220px);
+      top: 50%;
+      transform: translateY(-50%);
       user-select: none;
     }
 
@@ -280,20 +282,27 @@
       color: rgba(255, 215, 0, .85);
       font-weight: 800;
     }
-    .cash-guy .eye { position: absolute; top: 26px; width: 8px; height: 8px; border-radius: 50%; background: #f5f9f6; box-shadow: 0 0 0 2px #0d4f2f; }
+    .cash-guy .eye { position: absolute; top: 26px; width: 8px; height: 8px; border-radius: 50%; background: #ffd700; box-shadow: 0 0 0 2px #0d4f2f; transition: transform .08s linear; }
     .cash-guy .eye.left { left: 28px; }
     .cash-guy .eye.right { right: 28px; }
-    .cash-guy .mouth { position: absolute; left: 50%; bottom: 12px; width: 20px; height: 8px; margin-left: -10px; border-bottom: 2px solid #e3f7e9; border-radius: 0 0 10px 10px; }
+    .cash-guy .mouth { position: absolute; left: 50%; bottom: 12px; width: 20px; height: 8px; margin-left: -10px; border-bottom: 2px solid #ffd700; border-radius: 0 0 10px 10px; }
     .cash-guy .hands { position: absolute; left: 50%; top: 21px; width: 62px; margin-left: -31px; display: flex; justify-content: space-between; opacity: 1; transition: opacity .2s; }
-    .cash-guy .hand { width: 24px; height: 16px; border-radius: 12px; background: #f4cc9a; border: 1px solid #c89b66; }
+    .cash-guy .hand { width: 24px; height: 16px; border-radius: 12px; background: #ffd700; border: 1px solid #e3b800; }
     .cash-guy.is-watching .hands { opacity: 0; }
     .cash-guy.is-watching .face { transform: translateX(-5px) rotate(-2deg); }
     .cash-guy.is-watching .eye.left { left: 22px; }
     .cash-guy.is-watching .eye.right { right: 34px; }
 
     @media (max-width: 760px) {
-      .signup-layout { grid-template-columns: 1fr; }
-      .cash-guy { order: -1; height: 120px; }
+      .cash-guy {
+        position: static;
+        transform: none;
+        height: 120px;
+        margin: 0 auto 0.5rem;
+      }
+      .signup-layout {
+        flex-direction: column;
+      }
     }
 
     .form-container form {
@@ -549,6 +558,12 @@
     function updateCashGuyState() {
       const visible = [su_pass, su_confirm].some(el => el.type === "text");
       cashGuy?.classList.toggle("is-watching", visible);
+
+      if (!visible) {
+        cashGuy?.querySelectorAll(".eye").forEach(eye => {
+          eye.style.transform = "translate(0, 0)";
+        });
+      }
     }
 
     document.querySelectorAll(".toggle-password").forEach(btn => {
@@ -557,13 +572,37 @@
         if (!target) return;
         const show = target.type === "password";
         target.type = show ? "text" : "password";
-        btn.textContent = show ? "🙈" : "👁";
+        btn.textContent = show ? "◠" : "👁";
         btn.setAttribute("aria-pressed", String(show));
         updateCashGuyState();
       });
     });
 
     updateCashGuyState();
+
+    function trackEyes(event) {
+      if (!cashGuy?.classList.contains("is-watching")) return;
+      const face = cashGuy.querySelector(".face");
+      const eyes = cashGuy.querySelectorAll(".eye");
+      if (!face || eyes.length === 0) return;
+
+      const rect = face.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const dx = event.clientX - centerX;
+      const dy = event.clientY - centerY;
+      const maxMove = 3.5;
+      const angle = Math.atan2(dy, dx);
+      const distance = Math.min(maxMove, Math.hypot(dx, dy) / 18);
+      const moveX = Math.cos(angle) * distance;
+      const moveY = Math.sin(angle) * distance;
+
+      eyes.forEach(eye => {
+        eye.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+    }
+
+    document.addEventListener("mousemove", trackEyes);
 
     document.getElementById("signup-form").addEventListener("submit", async e => {
       e.preventDefault();
