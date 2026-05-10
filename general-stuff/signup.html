@@ -282,10 +282,10 @@
       color: rgba(255, 215, 0, .85);
       font-weight: 800;
     }
-    .cash-guy .eye { position: absolute; top: 26px; width: 8px; height: 8px; border-radius: 50%; background: #f5f9f6; box-shadow: 0 0 0 2px #0d4f2f; transition: transform .08s linear; }
+    .cash-guy .eye { position: absolute; top: 26px; width: 8px; height: 8px; border-radius: 50%; background: #ffd700; box-shadow: 0 0 0 2px #0d4f2f; transition: transform .08s linear; }
     .cash-guy .eye.left { left: 28px; }
     .cash-guy .eye.right { right: 28px; }
-    .cash-guy .mouth { position: absolute; left: 50%; bottom: 12px; width: 20px; height: 8px; margin-left: -10px; border-bottom: 2px solid #e3f7e9; border-radius: 0 0 10px 10px; }
+    .cash-guy .mouth { position: absolute; left: 50%; bottom: 12px; width: 20px; height: 8px; margin-left: -10px; border-bottom: 2px solid #ffd700; border-radius: 0 0 10px 10px; }
     .cash-guy .hands { position: absolute; left: 50%; top: 21px; width: 62px; margin-left: -31px; display: flex; justify-content: space-between; opacity: 1; transition: opacity .2s; }
     .cash-guy .hand { width: 24px; height: 16px; border-radius: 12px; background: #ffd700; border: 1px solid #e3b800; }
     .cash-guy.is-watching .hands { opacity: 0; }
@@ -572,7 +572,7 @@
         if (!target) return;
         const show = target.type === "password";
         target.type = show ? "text" : "password";
-        btn.textContent = show ? "🙈" : "👁";
+        btn.textContent = show ? "👁️‍🗨️" : "👁";
         btn.setAttribute("aria-pressed", String(show));
         updateCashGuyState();
       });
