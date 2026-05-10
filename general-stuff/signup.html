@@ -265,7 +265,7 @@
       height: 70px;
       margin: 0 auto;
       border-radius: 10px;
-      background: linear-gradient(145deg, #14a45a, #008e45);
+      background: #0f7f43;
       border: 2px solid #006a33;
       position: relative;
       transition: transform .25s ease;
@@ -286,14 +286,10 @@
     .cash-guy .mouth { position: absolute; left: 50%; bottom: 12px; width: 20px; height: 8px; margin-left: -10px; border-bottom: 2px solid #e3f7e9; border-radius: 0 0 10px 10px; }
     .cash-guy .hands { position: absolute; left: 50%; top: 21px; width: 62px; margin-left: -31px; display: flex; justify-content: space-between; opacity: 1; transition: opacity .2s; }
     .cash-guy .hand { width: 24px; height: 16px; border-radius: 12px; background: #f4cc9a; border: 1px solid #c89b66; }
-    .cash-guy .body { width: 88px; height: 80px; margin: -4px auto 0; border-radius: 12px; background: #0f7f43; border: 2px solid #006a33; position: relative; }
-    .cash-guy .body::before { content: '$'; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #ffd700; font-weight: 800; font-size: 1.35rem; }
-    .cash-guy .caption { margin-top: 8px; font-size: .75rem; color: #1b3c2b; font-weight: 600; }
-
     .cash-guy.is-watching .hands { opacity: 0; }
     .cash-guy.is-watching .face { transform: translateX(-5px) rotate(-2deg); }
-    .cash-guy.is-watching .eye.left { left: 34px; }
-    .cash-guy.is-watching .eye.right { right: 22px; }
+    .cash-guy.is-watching .eye.left { left: 22px; }
+    .cash-guy.is-watching .eye.right { right: 34px; }
 
     @media (max-width: 760px) {
       .signup-layout { grid-template-columns: 1fr; }
@@ -510,8 +506,6 @@
           <span class="mouth"></span>
           <div class="hands"><span class="hand"></span><span class="hand"></span></div>
         </div>
-        <div class="body"></div>
-        <div class="caption">Privacy mode</div>
       </aside>
     </div>
   </main>
@@ -552,12 +546,9 @@
     const su_error = document.getElementById("su_error");
 
     const cashGuy = document.getElementById("cash-guy");
-    const cashGuyCaption = cashGuy?.querySelector(".caption");
-
     function updateCashGuyState() {
       const visible = [su_pass, su_confirm].some(el => el.type === "text");
       cashGuy?.classList.toggle("is-watching", visible);
-      if (cashGuyCaption) cashGuyCaption.textContent = visible ? "Verifying your cash code" : "Privacy mode";
     }
 
     document.querySelectorAll(".toggle-password").forEach(btn => {
