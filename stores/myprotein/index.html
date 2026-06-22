@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Myprotein - 20% Cashback • Smartcashly</title>
   <style>
-    /* Advanced shiny dark yellow background with floating particles */
-    html { 
-      background: 
+    html {
+      background:
         radial-gradient(circle at 20% 80%, rgba(255, 160, 0, 0.2) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(255, 143, 0, 0.3) 0%, transparent 50%),
         radial-gradient(circle at 40% 40%, rgba(255, 193, 7, 0.15) 0%, transparent 50%),
@@ -17,9 +16,9 @@
       animation: shimmer 12s ease-in-out infinite !important;
       min-height: 100vh;
     }
-    
-    body { 
-      background: 
+
+    body {
+      background:
         radial-gradient(circle at 20% 80%, rgba(255, 160, 0, 0.2) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(255, 143, 0, 0.3) 0%, transparent 50%),
         radial-gradient(circle at 40% 40%, rgba(255, 193, 7, 0.15) 0%, transparent 50%),
@@ -30,39 +29,33 @@
       min-height: 100vh;
       overflow-x: hidden;
       overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      color: #222;
     }
 
-    /* Enhanced golden floating particles overlay */
     body::before {
       content: '';
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: 
+      inset: 0;
+      background-image:
         radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.5) 1px, transparent 1px),
         radial-gradient(circle at 75% 75%, rgba(255, 215, 0, 0.6) 1px, transparent 1px),
         radial-gradient(circle at 45% 55%, rgba(255, 255, 255, 0.4) 1px, transparent 1px),
         radial-gradient(circle at 85% 15%, rgba(255, 193, 7, 0.5) 1px, transparent 1px),
         radial-gradient(circle at 25% 85%, rgba(255, 160, 0, 0.4) 1.5px, transparent 1.5px),
         radial-gradient(circle at 65% 45%, rgba(255, 235, 59, 0.5) 1px, transparent 1px);
-      background-size: 120px 120px, 160px 160px, 100px 100px, 140px 140px, 90px 90px, 110px 110px;      
+      background-size: 120px 120px, 160px 160px, 100px 100px, 140px 140px, 90px 90px, 110px 110px;
       z-index: 0;
       pointer-events: none !important;
       animation: gentleFloat 25s ease-in-out infinite;
-      will-change: background-position;
     }
 
-    /* Enhanced sparkle layer */
     body::after {
       content: '';
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: 
+      inset: 0;
+      background-image:
         radial-gradient(circle at 25% 40%, rgba(255, 255, 255, 0.7) 0.5px, transparent 0.5px),
         radial-gradient(circle at 65% 20%, rgba(255, 215, 0, 0.5) 0.5px, transparent 0.5px),
         radial-gradient(circle at 35% 70%, rgba(255, 255, 255, 0.6) 0.5px, transparent 0.5px),
@@ -72,7 +65,6 @@
       pointer-events: none !important;
       z-index: 1;
       animation: gentleSparkle 20s ease-in-out infinite;
-      will-change: background-position;
     }
 
     @keyframes shimmer {
@@ -82,41 +74,16 @@
     }
 
     @keyframes gentleFloat {
-      0% { 
-        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-        opacity: 0.6;
-      }
-      33% { 
-        background-position: 30% 20%, 20% 40%, 50% 30%, 40% 10%, 60% 50%, 70% 20%;
-        opacity: 0.9;
-      }
-      66% { 
-        background-position: 60% 40%, 40% 80%, 80% 60%, 10% 70%, 30% 80%, 90% 40%;
-        opacity: 0.7;
-      }
-      100% { 
-        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-        opacity: 0.6;
-      }
+      0%, 100% { background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0; opacity: 0.6; }
+      33% { background-position: 30% 20%, 20% 40%, 50% 30%, 40% 10%, 60% 50%, 70% 20%; opacity: 0.9; }
+      66% { background-position: 60% 40%, 40% 80%, 80% 60%, 10% 70%, 30% 80%, 90% 40%; opacity: 0.7; }
     }
 
     @keyframes gentleSparkle {
-      0%, 100% { 
-        opacity: 0.4;
-        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-      }
-      25% { 
-        opacity: 0.8;
-        background-position: 15% 15%, 25% 25%, 35% 35%, 45% 45%, 55% 55%;
-      }
-      50% { 
-        opacity: 0.9;
-        background-position: 30% 30%, 50% 50%, 70% 70%, 90% 90%, 10% 90%;
-      }
-      75% { 
-        opacity: 0.6;
-        background-position: 20% 40%, 40% 20%, 60% 80%, 80% 60%, 100% 40%;
-      }
+      0%, 100% { opacity: 0.4; background-position: 0 0, 0 0, 0 0, 0 0, 0 0; }
+      25% { opacity: 0.8; background-position: 15% 15%, 25% 25%, 35% 35%, 45% 45%, 55% 55%; }
+      50% { opacity: 0.9; background-position: 30% 30%, 50% 50%, 70% 70%, 90% 90%, 10% 90%; }
+      75% { opacity: 0.6; background-position: 20% 40%, 40% 20%, 60% 80%, 80% 60%, 100% 40%; }
     }
 
     *, *::before, *::after {
@@ -126,297 +93,145 @@
       font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     }
 
-    /* Ensure content appears above particles */
-    header, main, footer {
-      position: relative;
-      z-index: 10;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      color: #222;
-    }
+    header, main, footer { position: relative; z-index: 10; }
 
     header {
       height: 80px;
       display: flex;
       align-items: center;
-      justify-content: center; 
+      justify-content: center;
       padding: 1rem 1.5rem;
       background: #008e45 !important;
       color: #fff;
-      position: relative;
       overflow: visible;
       z-index: 1001;
     }
 
-
-    /* Enhanced header particles */
     header::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: 
-        radial-gradient(circle at 25% 40%, rgba(255, 255, 255, 1) 1px, transparent 1px),
-        radial-gradient(circle at 75% 60%, rgba(255, 255, 255, 1) 1px, transparent 1px),
-        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 1) 0.5px, transparent 0.5px),
-        radial-gradient(circle at 15% 80%, rgba(255, 255, 255, 1) 1px, transparent 1px);
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 25% 40%, white 1px, transparent 1px),
+        radial-gradient(circle at 75% 60%, white 1px, transparent 1px),
+        radial-gradient(circle at 50% 20%, white 0.5px, transparent 0.5px),
+        radial-gradient(circle at 15% 80%, white 1px, transparent 1px);
       background-size: 80px 80px, 100px 100px, 60px 60px, 90px 90px;
       pointer-events: none !important;
       z-index: 1;
-      animation: headerParticles 20s ease-in-out infinite;
     }
 
-    @keyframes headerParticles {
-      0% { 
-        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-        opacity: 0.6;
-      }
-      50% { 
-        background-position: 30% 30%, 40% 40%, 20% 50%, 60% 20%;
-        opacity: 0.9;
-      }
-      100% { 
-        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-        opacity: 0.6;
-      }
+    .logo-img {
+      position: absolute;
+      left: 1.5rem;
+      height: 100px;
+      width: auto;
+      z-index: 1002;
     }
 
-    /* Logo positioning */
-.logo-img {
-  position: absolute;
-  left: 1.5rem;
-  height: 100px;
-  width: auto;
-  background: transparent !important;
-  z-index: 1002;
-}
+    .center-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex: 1;
+    }
 
-/* Search bar container */
-.search-bar {
-  position: relative;
-  flex: 0 1 500px;  /* allow shrink if needed */
-  max-width: 500px;
-  width: 100%;
-  z-index: 1002;
-  margin: 0; /* remove auto margins */
-}
+    .search-bar {
+      position: relative;
+      flex: 0 1 500px;
+      max-width: 500px;
+      width: 100%;
+      z-index: 1002;
+    }
 
-/* Search input field */
-.search-bar input {
-  width: 100%;
-  padding: 0.55rem 2.8rem 0.55rem 1rem;
-  border: none;
-  border-radius: 9999px;
-  font-size: 0.95rem;
-  outline: none;
-  background: white !important;
-  transition: box-shadow .18s;
-}
-
-/* Search input focus state */
-.search-bar input:focus {
-  box-shadow: 0 0 0 2px rgba(0,112,243,.35);
-}
-
-/* Search button */
-.search-bar button {
-  font-size: 1rem; /* keeps emoji small */
-  line-height: 1;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.2rem;
-  height: 2.2rem;
-  border: none;
-  border-radius: 50%;
-  background: #0070f3 !important;
-  cursor: pointer;
-  transition: background .18s;
-}
-
-/* Search button hover */
-.search-bar button:hover { 
-  background: #0059c1 !important; 
-}
-
-/* Search button icon */
-.search-bar button svg { 
-width: 1rem; height: 1rem; fill: #fff; 
-}
-
-/* Search Autocomplete Styles */
-.search-bar {
-  position: relative !important;
-}
-
-.search-autocomplete {
-  position: absolute !important;
-  top: calc(100% + 2px) !important;
-  left: 0 !important;
-  right: 0 !important;
-  background: white !important;
-  border: 2px solid #008e45 !important;
-  border-radius: 0 0 12px 12px !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
-  z-index: 999999 !important;
-  max-height: 250px !important;
-  overflow-y: auto !important;
-  display: none !important;
-}
-
- .search-container {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* center the group */
-  gap: 1rem; /* spacing between search and button */
-  flex: 1;
-}   
-
-.search-autocomplete.show { 
-  display: block !important; 
-}
-
-/* Search bar should anchor the dropdown */
-.search-bar {
-  position: relative !important;
-  z-index: 1002;
-}
-
-/* Autocomplete dropdown */
-.search-autocomplete {
-  position: absolute !important;
-  top: calc(100% + 2px) !important;
-  left: 0 !important;
-  right: 0 !important;
-  background: white !important;
-  border: 2px solid #008e45 !important;
-  border-radius: 0 0 12px 12px !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
-  z-index: 999999 !important;
-  max-height: 250px !important;
-  overflow-y: auto !important;
-  display: none;
-}
-
-.search-autocomplete.show {
-  display: block !important;
-}
-
-.search-autocomplete div {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem;
-  cursor: pointer;
-  font-size: 0.95rem;      /* ✅ normal size */
-  transition: background 0.2s;
-}
-
-.search-autocomplete div:hover {
-  background: #f0f8ff;
-}
-
-.search-autocomplete .store-logo {
-  height: 120px;
-  width: 120px;
-  object-fit: contain;
-  flex-shrink: 0;
-  border-radius: 5px;
-}
-
-.search-autocomplete .store-name {
-  color: #008e45;
-  font-weight: 600;
-  font-size: 1.2rem;       /* ✅ same as working store */
-}
-   
-
-.search-autocomplete div:hover {
-  background: #f0f8ff;
-}
-
-.search-autocomplete.store-logo {
-  height: 120px;
-  width: 120px;           /* ✅ force consistent square size */
-  object-fit: contain;   /* ✅ keep proportions, no stretching */
-  flex-shrink: 0;
-  border-radius: 5px;    /* optional: soften edges */
-}
-    
-.center-group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem; /* space between search and button */
-  flex: 1;
-}
-
-/* View All Stores button */
-.all-stores-btn {
-  position: relative;   
-  z-index: 5;           
-  background: #0070f3;
-  color: white;
-  text-decoration: none;
-  padding: 0.55rem 1.2rem;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: background 0.18s;
-  white-space: nowrap;  /* keeps text in one line */
-  height: 38px;         /* matches search input height */
-  display: flex;
-  align-items: center;
-}
-
-/* View All Stores button hover */
-.all-stores-btn:hover { 
-  background: #0059c1; 
-}
-
-/* Auth navigation */
-.auth-nav {
-  position: absolute;
-  right: 1.5rem;
-  display: flex;
-  gap: 0.5rem;
-  z-index: 1002;
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .search-bar {
-    margin-left: 20px;
-    max-width: 300px;
-  }
-}
-
-    .btn {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      background: #0070f3 !important;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background .18s;
+    .search-bar input {
+      width: 100%;
+      padding: 0.55rem 2.8rem 0.55rem 1rem;
       border: none;
+      border-radius: 9999px;
+      font-size: 0.95rem;
+      outline: none;
+      background: white !important;
+    }
+
+    .search-bar input:focus { box-shadow: 0 0 0 2px rgba(0,112,243,.35); }
+
+    .search-bar button {
+      font-size: 1rem;
+      line-height: 1;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.2rem;
+      height: 2.2rem;
+      border: none;
+      border-radius: 50%;
+      background: #0070f3 !important;
       cursor: pointer;
     }
-    .btn:hover          { background: #0059c1 !important; }
-    .btn--secondary     { background: #0070f3 !important; }
-    .btn--secondary:hover { background: #0059c1 !important; }
+
+    .search-bar button:hover, .all-stores-btn:hover, .btn:hover { background: #0059c1 !important; }
+
+    .search-autocomplete {
+      position: absolute !important;
+      top: calc(100% + 2px) !important;
+      left: 0 !important;
+      right: 0 !important;
+      background: white !important;
+      border: 2px solid #008e45 !important;
+      border-radius: 0 0 12px 12px !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+      z-index: 999999 !important;
+      max-height: 250px !important;
+      overflow-y: auto !important;
+      display: none;
+    }
+
+    .search-autocomplete.show { display: block !important; }
+
+    .search-autocomplete div {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+    }
+
+    .search-autocomplete div:hover { background: #f0f8ff; }
+
+    .search-autocomplete .store-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      flex-shrink: 0;
+      border-radius: 5px;
+    }
+
+    .search-autocomplete .store-name {
+      color: #008e45;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .all-stores-btn, .btn {
+      background: #0070f3;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+    }
+
+    .all-stores-btn { padding: 0.55rem 1.2rem; height: 38px; font-size: 0.95rem; }
+    .btn { padding: 0.5rem 1rem; border: none; }
+    .auth-nav { position: absolute; right: 1.5rem; z-index: 1002; }
 
     main {
       flex: 1 1 auto;
@@ -426,7 +241,7 @@ width: 1rem; height: 1rem; fill: #fff;
       width: 100%;
     }
 
-   .store-header {
+    .store-header {
       background: rgba(255, 255, 255, 0.95);
       border-radius: 12px;
       padding: 2rem;
@@ -442,27 +257,15 @@ width: 1rem; height: 1rem; fill: #fff;
     .store-logo-large {
       width: 120px;
       height: 120px;
-      background: url('/store-logos/store-logo-myprotein.png') no-repeat center center;
-      background-size: cover;
+      background: url('/store-logos/store-logo-myprotein.png') no-repeat center/cover;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+      flex-shrink: 0;
     }
 
-    .store-details {
-      flex: 1;
-    }
-
-    .store-title {
-      font-size: 2.2rem;
-      color: #008e45;
-      margin-bottom: 0.1rem;
-    }
-
-    .store-subtitle {
-      font-size: 1.1rem;
-      color: #333;
-      margin-bottom: 1rem;
-    }
+    .store-details { flex: 1; }
+    .store-title { font-size: 2.2rem; color: #008e45; margin-bottom: 0.1rem; }
+    .store-subtitle { font-size: 1.1rem; color: #333; margin-bottom: 1rem; }
 
     .cashback-highlight {
       background: linear-gradient(135deg, #ff6b35, #ff8a50);
@@ -475,9 +278,7 @@ width: 1rem; height: 1rem; fill: #fff;
       margin-bottom: 1rem;
     }
 
-    .offers-section {
-      margin-bottom: 3rem;
-    }
+    .offers-section { margin-bottom: 3rem; }
 
     .offers-grid {
       display: grid;
@@ -493,28 +294,23 @@ width: 1rem; height: 1rem; fill: #fff;
       transition: all 0.3s ease;
       backdrop-filter: blur(10px);
       border: 3px solid #0070f3;
+      cursor: pointer;
     }
 
-    
     .offer-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 25px #0059c1;
       border-color: #0059c1;
     }
 
-    .offer-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
+    .offer-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
 
     .offer-logo {
       width: 60px;
       height: 60px;
-      background: url('/store-logos/store-logo-myprotein.png') no-repeat center center;
-      background-size: cover;
+      background: url('/store-logos/store-logo-myprotein.png') no-repeat center/cover;
       border-radius: 6px;
+      flex-shrink: 0;
     }
 
     .offer-type {
@@ -527,40 +323,11 @@ width: 1rem; height: 1rem; fill: #fff;
       text-transform: uppercase;
     }
 
-    .offer-type.cashback {
-      background: #ff6b35;
-    }
-
-    .offer-type.promo {
-      background: #2196F3;
-    }
-
-    .offer-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #008e45;
-      margin-bottom: 0.5rem;
-    }
-
-    .offer-description {
-      color: #666;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-      line-height: 1.4;
-    }
-
-    .offer-cashback {
-      color: #ff6b35;
-      font-weight: bold;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .offer-validity {
-      color: #999;
-      font-size: 0.8rem;
-      margin-bottom: 1rem;
-    }
+    .offer-type.cashback { background: #ff6b35; }
+    .offer-type.coupon { background: #e74c3c; }
+    .offer-title { font-size: 1.1rem; font-weight: 600; color: #008e45; margin-bottom: 0.5rem; }
+    .offer-description { color: #666; font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.4; }
+    .offer-cashback { color: #ff6b35; font-weight: bold; font-size: 1rem; margin-bottom: 1rem; }
 
     .offer-button {
       background: #4CAF50;
@@ -570,98 +337,44 @@ width: 1rem; height: 1rem; fill: #fff;
       border-radius: 6px;
       font-weight: bold;
       cursor: pointer;
-      transition: background 0.3s;
       width: 100%;
     }
 
-    .offer-button:hover {
-      background: #45a049;
-    }
+    .offer-button:hover { background: #45a049; }
 
     footer {
-      height: 80px;                 /* keep your set height */
-      display: flex;                /* enable flexbox */
-      align-items: center;          /* ✅ vertical centering */
-      justify-content: center;      /* ✅ horizontal centering */
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 1rem;
-      font-weight: bold; 
+      font-weight: bold;
       background: #008e45 !important;
-      color: #000000 !important;
-      position: relative;  
-      overflow: visible;
-      z-index: 1001;
-    }
-
-    footer * {
-      position: relative;
-      z-index: 3;
-      color: #ffffff !important;
-    }
-
-    footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: 
-        radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
-        radial-gradient(circle at 70% 30%, rgba(255, 215, 0, 0.4) 1px, transparent 1px),
-        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.2) 0.5px, transparent 0.5px),
-        radial-gradient(circle at 80% 70%, rgba(255, 193, 7, 0.3) 1px, transparent 1px);
-      background-size: 70px 70px, 90px 90px, 50px 50px, 80px 80px;
-      pointer-events: none !important;
-      z-index: 1;
-      animation: footerParticles 15s ease-in-out infinite;
-    }
-
-    @keyframes footerParticles {
-      0% { 
-        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-        opacity: 0.6;
-      }
-      50% { 
-        background-position: 15% 15%, 20% 20%, 25% 25%, 30% 30%;
-        opacity: 0.8;
-      }
-      100% { 
-        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-        opacity: 0.6;
-      }
+      color: white !important;
+      overflow: hidden;
     }
 
     @media (max-width: 768px) {
-      .store-header {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .offers-grid {
-        grid-template-columns: 1fr;
-      }
+      .search-bar { margin-left: 20px; max-width: 300px; }
+      .store-header { flex-direction: column; text-align: center; }
+      .offers-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
-
 <body>
   <header>
-  <img src="/site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
-
-  <div class="center-group">
-  <form class="search-bar" action="#" method="get">
-    <input type="search" placeholder="Search any store ..." />
-    <button type="submit" aria-label="Search">🔍</button>
-    </button>
-  </form>
-  <a href="/all-stores.html" class="all-stores-btn">View All Stores</a>
- </div>
-
-  <nav class="auth-nav">
-    <a href="/" class="btn btn--secondary">Home</a>
-  </nav>
-</header>
-
+    <img src="/site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <div class="center-group">
+      <form class="search-bar" action="#" method="get">
+        <input type="search" placeholder="Search any store ..." aria-label="Search stores" />
+        <button type="submit" aria-label="Search">🔍</button>
+      </form>
+      <a href="/all-stores.html" class="all-stores-btn">View All Stores</a>
+    </div>
+    <nav class="auth-nav">
+      <a href="/" class="btn">Home</a>
+    </nav>
+  </header>
 
   <main>
     <div class="store-header">
@@ -676,186 +389,161 @@ width: 1rem; height: 1rem; fill: #fff;
 
     <div class="offers-section">
       <div class="offers-grid">
-        <div class="offer-card" onclick="window.open('https://us.myprotein.com/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025', '_blank')" style="cursor: pointer;">
-          <div class="offer-header">
-            <div class="offer-logo"></div>
-            <div class="offer-type cashback">CASHBACK</div>
-          </div>
+        <div class="offer-card" onclick="openOffer('https://us.myprotein.com/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025')">
+          <div class="offer-header"><div class="offer-logo"></div><div class="offer-type cashback">CASHBACK</div></div>
           <h3 class="offer-title">Shop at Myprotein & Earn Cashback</h3>
           <p class="offer-description">Browse the entire Myprotein collection and earn cashback on every supplement purchase!</p>
           <div style="height: 48px;"></div>
-          <div class="offer-cashback" style="color: #ff6b35;">💰 Earn up to 20% Cashback</div>
-          <button class="offer-button">💰 Shop & Earn</button>
+          <div class="offer-cashback">💰 Earn up to 20% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); openOffer('https://us.myprotein.com/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025')">💰 Shop & Earn</button>
         </div>
-        
-        <div class="offer-card" onclick="window.open('https://us.myprotein.com/c/nutrition/protein/whey-protein/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025', '_blank')" style="cursor: pointer;">
-          <div class="offer-header">
-            <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
-          </div>
+
+        <div class="offer-card" onclick="showCouponModal()">
+          <div class="offer-header"><div class="offer-logo"></div><div class="offer-type coupon">COUPON</div></div>
+          <h3 class="offer-title">30% Off with Christos Kogias!</h3>
+          <p class="offer-description">Use Christos Kogias' Myprotein promo code for 30% off almost all products!</p>
+          <div style="height: 24px;"></div>
+          <div class="offer-cashback">🎫 Get Exclusive Coupon + Extra 20% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); showCouponModal()">🎫 Get Coupon</button>
+        </div>
+
+        <div class="offer-card" onclick="openOffer('https://us.myprotein.com/c/nutrition/protein/whey-protein/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025')">
+          <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Whey Protein Collection - 40% Off</h3>
           <p class="offer-description">Premium whey protein powders including Impact Whey, Isolate, and Hydrolysate!</p>
-          <div style="height: 48px;"></div>
-          <div class="offer-cashback">+ Get Extra 20% Cashback</div>
-          <button class="offer-button">🥛 Get Offer</button>
+          <div style="height: 48px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🥛 Get Offer</button>
         </div>
 
-        <div class="offer-card" onclick="window.open('https://us.myprotein.com/c/nutrition/bestsellers-en-us/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025', '_blank')" style="cursor: pointer;">
-          <div class="offer-header">
-            <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
-          </div>
+        <div class="offer-card" onclick="openOffer('https://us.myprotein.com/c/nutrition/bestsellers-en-us/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025')">
+          <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Bestsellers Collection - 35% Off</h3>
           <p class="offer-description">Shop the most popular supplements including creatine and pre-workout formulas!</p>
-          <div style="height: 48px;"></div>
-          <div class="offer-cashback">+ Get Extra 20% Cashback</div>
-          <button class="offer-button">🏆 Get Offer</button>
+          <div style="height: 48px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🏆 Get Offer</button>
         </div>
 
-        <div class="offer-card" onclick="window.open('https://us.myprotein.com/c/nutrition/protein/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025', '_blank')" style="cursor: pointer;">
-          <div class="offer-header">
-            <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
-          </div>
+        <div class="offer-card" onclick="openOffer('https://us.myprotein.com/c/nutrition/protein/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025')">
+          <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Protein Collection - 25% Off</h3>
           <p class="offer-description">Complete protein range including BCAA, amino acids, and protein supplements!</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Get Extra 20% Cashback</div>
-          <button class="offer-button">🔬 Get Offer</button>
+          <div style="height: 24px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🔬 Get Offer</button>
         </div>
 
-        <div class="offer-card" onclick="window.open('https://us.myprotein.com/c/nutrition/healthy-ingredients/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025', '_blank')" style="cursor: pointer;">
-          <div class="offer-header">
-            <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
-          </div>
-          <h3 class="offer-title">Healthy Ingredients - 45% Off</h3>
-          <p class="offer-description">Complete your nutrition with essential vitamins, minerals, and health supplements!</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Get Extra 20% Cashback</div>
-          <button class="offer-button">🌿 Get Offer</button>
-        </div>
-
-        <div class="offer-card" onclick="window.open('https://us.myprotein.com/c/nutrition/protein/protein-bars-snacks/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025', '_blank')" style="cursor: pointer;">
-          <div class="offer-header">
-            <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
-          </div>
+        <div class="offer-card" onclick="openOffer('https://us.myprotein.com/c/nutrition/protein/protein-bars-snacks/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025')">
+          <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Protein Bars & Snacks - 50% Off</h3>
           <p class="offer-description">Delicious high-protein snacks perfect for on-the-go nutrition and post-workout!</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Get Extra 20% Cashback</div>
-          <button class="offer-button">🍫 Get Offer</button>
+          <div style="height: 24px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🍫 Get Offer</button>
         </div>
 
-        <div class="offer-card" onclick="window.open('https://us.myprotein.com/c/nutrition/healthy-food-drinks/protein-bars/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025', '_blank')" style="cursor: pointer;">
-          <div class="offer-header">
-            <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
-          </div>
+        <div class="offer-card" onclick="openOffer('https://us.myprotein.com/c/nutrition/healthy-food-drinks/protein-bars/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025')">
+          <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Impact Protein Bar - Award Winning</h3>
           <p class="offer-description">Try the award-winning Impact Protein Bar with 20g protein, low sugar, high fiber!</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Get Extra 20% Cashback</div>
-          <button class="offer-button">🏅 Get Offer</button>
+          <div style="height: 24px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🏅 Get Offer</button>
         </div>
 
-        <div class="offer-card" onclick="window.open('https://us.myprotein.com/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025&student=true', '_blank')" style="cursor: pointer;">
-          <div class="offer-header">
-            <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
-          </div>
+        <div class="offer-card" onclick="openOffer('https://us.myprotein.com/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025&student=true')">
+          <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Student Discount - 10% Off</h3>
           <p class="offer-description">Special discount for students on all Myprotein supplements and nutrition products!</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Get Extra 20% Cashback</div>
-          <button class="offer-button">🎓 Get Offer</button>
+          <div style="height: 24px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🎓 Get Offer</button>
         </div>
       </div>
     </div>
   </main>
 
-  <footer>
-    ©&nbsp;<span id="year"></span>&nbsp;2025 Smartcashly. All rights reserved.
-  </footer>
+  <footer>©&nbsp;<span id="year"></span>&nbsp; Smartcashly. All rights reserved.</footer>
 
-    <!-- ✅ Paste the search functionality block here -->
   <script>
-    // Search functionality  
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function openOffer(url) {
+      window.open(url, '_blank');
+    }
+
     const searchInput = document.querySelector('.search-bar input');
     const searchBar = document.querySelector('.search-bar');
+    const autocomplete = document.createElement('div');
+    autocomplete.className = 'search-autocomplete';
+    searchBar.appendChild(autocomplete);
 
-    if (searchInput && searchBar) {
-      const autocomplete = document.createElement('div');
-      autocomplete.className = 'search-autocomplete';
-      searchBar.appendChild(autocomplete);
+    const stores = [
+      { name: 'Box Now', url: '/stores/boxnow' },
+      { name: 'Nike', url: '/stores/nike' },
+      { name: 'Shein', url: '/stores/shein' },
+      { name: 'Benetton', url: '/stores/benetton' },
+      { name: 'Myprotein', url: '/stores/myprotein' },
+      { name: 'Aegean Airlines', url: '/stores/aegeanairlines' },
+      { name: 'Adidas', url: '/stores/adidas' }
+    ];
 
-      const stores = [
-        { name: 'Box Now', url: '/stores/boxnow' },
-        { name: 'Nike', url: '/stores/nike' },
-        { name: 'Shein', url: '/stores/shein' },
-        { name: 'Benetton', url: '/stores/benetton' },
-        { name: 'Myprotein', url: '/stores/myprotein' },
-        { name: 'Aegean Airlines', url: '/stores/aegeanairlines' },
-        { name: 'Adidas', url: '/stores/adidas' }
-      ];
+    searchInput.addEventListener('input', function(e) {
+      const query = e.target.value.toLowerCase().trim();
+      if (!query) {
+        autocomplete.classList.remove('show');
+        return;
+      }
+      const results = stores.filter(store => store.name.toLowerCase().includes(query));
+      autocomplete.innerHTML = results.map(store => `
+        <div onclick="window.location.href='${store.url}'">
+          <img src="/store-logos/store-logo-${store.name.toLowerCase().replace(/\s+/g, '')}.png" alt="${store.name} logo" class="store-logo">
+          <span class="store-name">${store.name}</span>
+        </div>
+      `).join('');
+      autocomplete.classList.toggle('show', results.length > 0);
+    });
 
-      searchInput.addEventListener('input', function(e) {
-        const query = e.target.value.toLowerCase().trim();
-        if (!query) { 
-          autocomplete.classList.remove('show'); 
-          return; 
-        }
-        
-        const results = stores.filter(s => s.name.toLowerCase().includes(query));
-        if (results.length) {
-          autocomplete.innerHTML = results.map(s => 
-              `<div onclick="window.location.href='${s.url}'">
-                 <img src="/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png"
-                      alt="${s.name} logo" class="store-logo">
-                 <span class="store-name">${s.name}</span>
-               </div>`
-            ).join('');
-          autocomplete.classList.add('show');
-        } else {
-          autocomplete.classList.remove('show');
-        }
-      });
+    searchInput.addEventListener('blur', () => setTimeout(() => autocomplete.classList.remove('show'), 200));
 
-      searchInput.addEventListener('blur', () => {
-        setTimeout(() => autocomplete.classList.remove('show'), 200);
-      });
+    function showCouponModal() {
+      if (document.getElementById('coupon-modal')) return;
+      const modal = document.createElement('div');
+      modal.id = 'coupon-modal';
+      modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:10000;padding:1rem;';
+      modal.innerHTML = `
+        <div style="background:white;border-radius:12px;padding:2rem;max-width:400px;width:90%;text-align:center;position:relative;box-shadow:0 10px 30px rgba(0,0,0,.3);">
+          <button onclick="document.getElementById('coupon-modal').remove()" aria-label="Close coupon" style="position:absolute;top:10px;right:15px;background:none;border:0;font-size:1.5rem;cursor:pointer;color:#999;">×</button>
+          <h2 style="color:#008e45;margin-bottom:1rem;">🎫 Your Coupon Code</h2>
+          <p style="margin-bottom:1.5rem;color:#333;">Get 30% off almost all products at Myprotein!</p>
+          <p style="margin-bottom:1.5rem;color:#ff6b35;font-weight:bold;">+ Extra 20% Cashback</p>
+          <div style="background:#f8f9fa;border:3px dashed #e74c3c;border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;">
+            <p style="font-weight:bold;color:#e74c3c;margin-bottom:.5rem;">Your Coupon Code:</p>
+            <div id="coupon-code-display" style="background:white;border:2px solid #e74c3c;border-radius:6px;padding:1rem;font-family:monospace;font-size:1.5rem;font-weight:bold;color:#e74c3c;margin-bottom:.5rem;letter-spacing:2px;">BS30</div>
+            <button onclick="copyCouponCode(this)" style="background:#e74c3c;color:white;border:0;padding:.5rem 1rem;border-radius:6px;cursor:pointer;font-size:.9rem;">📋 Copy Code</button>
+          </div>
+          <button onclick="goToMyprotein()" style="background:#008e45;color:white;border:0;padding:1rem 2rem;border-radius:8px;cursor:pointer;font-size:1rem;font-weight:bold;width:100%;">🛒 Shop at Myprotein Now</button>
+        </div>`;
+      document.body.appendChild(modal);
     }
-  </script>
 
-  <!-- your existing Shein-specific script follows -->
-  <script>
-    document.getElementById('year').textContent = 2025;
+    window.copyCouponCode = function(button) {
+      const code = document.getElementById('coupon-code-display').textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        const original = button.textContent;
+        button.textContent = '✅ Copied!';
+        setTimeout(() => { button.textContent = original; }, 2000);
+      });
+    };
 
-
-  <script>
-    document.getElementById('year').textContent = 2025;
+    window.goToMyprotein = function() {
+      const clickData = {
+        store: 'Myprotein',
+        offerId: 'myprotein-coupon',
+        timestamp: new Date().toISOString(),
+        clickId: 'MP' + Date.now().toString().slice(-6),
+        couponCode: 'BS30'
+      };
+      try {
+        let history = JSON.parse(localStorage.getItem('click_history') || '[]');
+        if (!Array.isArray(history)) history = [];
+        history.unshift(clickData);
+        localStorage.setItem('click_history', JSON.stringify(history.slice(0, 50)));
+      } catch (error) {
+        console.warn('Could not store click history:', error);
+      }
+      document.getElementById('coupon-modal').remove();
+      window.open('https://us.myprotein.com/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=coupon&partner_id=SMART2025&coupon=BS30', '_blank');
+    };
   </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
