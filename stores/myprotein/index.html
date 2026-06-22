@@ -389,13 +389,13 @@
 
     <div class="offers-section">
       <div class="offers-grid">
-        <div class="offer-card" onclick="openOffer('https://us.myprotein.com/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025')">
+        <div class="offer-card" onclick="openOffer('cashback')">
           <div class="offer-header"><div class="offer-logo"></div><div class="offer-type cashback">CASHBACK</div></div>
           <h3 class="offer-title">Shop at Myprotein & Earn Cashback</h3>
           <p class="offer-description">Browse the entire Myprotein collection and earn cashback on every supplement purchase!</p>
           <div style="height: 48px;"></div>
           <div class="offer-cashback">💰 Earn up to 20% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); openOffer('https://us.myprotein.com/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025')">💰 Shop & Earn</button>
+          <button class="offer-button" onclick="event.stopPropagation(); openOffer('cashback')">💰 Shop & Earn</button>
         </div>
 
         <div class="offer-card" onclick="showCouponModal()">
@@ -407,42 +407,42 @@
           <button class="offer-button" onclick="event.stopPropagation(); showCouponModal()">🎫 Get Coupon</button>
         </div>
 
-        <div class="offer-card" onclick="openOffer('https://us.myprotein.com/c/nutrition/protein/whey-protein/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025')">
+        <div class="offer-card" onclick="openOffer('whey')">
           <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Whey Protein Collection - 40% Off</h3>
           <p class="offer-description">Premium whey protein powders including Impact Whey, Isolate, and Hydrolysate!</p>
           <div style="height: 48px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🥛 Get Offer</button>
         </div>
 
-        <div class="offer-card" onclick="openOffer('https://us.myprotein.com/c/nutrition/bestsellers-en-us/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025')">
+        <div class="offer-card" onclick="openOffer('bestsellers')">
           <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Bestsellers Collection - 35% Off</h3>
           <p class="offer-description">Shop the most popular supplements including creatine and pre-workout formulas!</p>
           <div style="height: 48px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🏆 Get Offer</button>
         </div>
 
-        <div class="offer-card" onclick="openOffer('https://us.myprotein.com/c/nutrition/protein/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025')">
+        <div class="offer-card" onclick="openOffer('protein')">
           <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Protein Collection - 25% Off</h3>
           <p class="offer-description">Complete protein range including BCAA, amino acids, and protein supplements!</p>
           <div style="height: 24px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🔬 Get Offer</button>
         </div>
 
-        <div class="offer-card" onclick="openOffer('https://us.myprotein.com/c/nutrition/protein/protein-bars-snacks/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025')">
+        <div class="offer-card" onclick="openOffer('snacks')">
           <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Protein Bars & Snacks - 50% Off</h3>
           <p class="offer-description">Delicious high-protein snacks perfect for on-the-go nutrition and post-workout!</p>
           <div style="height: 24px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🍫 Get Offer</button>
         </div>
 
-        <div class="offer-card" onclick="openOffer('https://us.myprotein.com/c/nutrition/healthy-food-drinks/protein-bars/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025')">
+        <div class="offer-card" onclick="openOffer('proteinBar')">
           <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Impact Protein Bar - Award Winning</h3>
           <p class="offer-description">Try the award-winning Impact Protein Bar with 20g protein, low sugar, high fiber!</p>
           <div style="height: 24px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🏅 Get Offer</button>
         </div>
 
-        <div class="offer-card" onclick="openOffer('https://us.myprotein.com/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&partner_id=SMART2025&student=true')">
+        <div class="offer-card" onclick="openOffer('student')">
           <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Student Discount - 10% Off</h3>
           <p class="offer-description">Special discount for students on all Myprotein supplements and nutrition products!</p>
@@ -457,8 +457,24 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    function openOffer(url) {
-      window.open(url, '_blank');
+    // Temporary Awin-style tracking values. Replace the dummy campaign ID and
+    // awc tokens with production values when Smartcashly's account is ready.
+    const MYPROTEIN_LINKS = {
+      coupon: 'https://www.myprotein.gr/c/teammyprotein/christos-kogias/?utm_content=Smartcashly&sv_campaign_id=348951&utm_term=Greece&utm_campaign=AffiliateWin&affil=awin&utm_medium=affiliate&sv1=affiliate&awc=10423_1783127859_50f4c95c83eccaeda7a3d0c0954513c&utm_source=AWin_348951',
+      cashback: 'https://www.myprotein.gr/?settingsSaved=Y&shippingcountry=GR&switchcurrency=EUR&countrySelected=Y&clickRef2=gr&clickRef3=cashback-home&affil=awin&utm_content=Smartcashly&utm_term=Greece&utm_source=AWin_348951&utm_medium=affiliate&utm_campaign=AffiliateWin&sv1=affiliate&sv_campaign_id=348951&awc=10423_1783128861_78e50206a7d4e618eb96905373060d0a',
+      whey: 'https://www.myprotein.gr/c/nutrition/protein/whey-protein/?settingsSaved=Y&shippingcountry=GR&switchcurrency=EUR&countrySelected=Y&clickRef2=gr&clickRef3=whey-protein&affil=awin&utm_content=Smartcashly&utm_term=Greece&utm_source=AWin_348951&utm_medium=affiliate&utm_campaign=AffiliateWin&sv1=affiliate&sv_campaign_id=348951&awc=10423_1783128872_91f61317b8e5f729fc08016484171e1b',
+      bestsellers: 'https://www.myprotein.gr/c/nutrition/bestsellers-en-us/?settingsSaved=Y&shippingcountry=GR&switchcurrency=EUR&countrySelected=Y&clickRef2=gr&clickRef3=bestsellers&affil=awin&utm_content=Smartcashly&utm_term=Greece&utm_source=AWin_348951&utm_medium=affiliate&utm_campaign=AffiliateWin&sv1=affiliate&sv_campaign_id=348951&awc=10423_1783128883_a2f72428c9f6a83afd19127595282f2c',
+      protein: 'https://www.myprotein.gr/c/nutrition/protein/?settingsSaved=Y&shippingcountry=GR&switchcurrency=EUR&countrySelected=Y&clickRef2=gr&clickRef3=protein-collection&affil=awin&utm_content=Smartcashly&utm_term=Greece&utm_source=AWin_348951&utm_medium=affiliate&utm_campaign=AffiliateWin&sv1=affiliate&sv_campaign_id=348951&awc=10423_1783128894_b3083539daf7b94b0e2a2386a639303d',
+      snacks: 'https://www.myprotein.gr/c/nutrition/protein/protein-bars-snacks/?settingsSaved=Y&shippingcountry=GR&switchcurrency=EUR&countrySelected=Y&clickRef2=gr&clickRef3=protein-snacks&affil=awin&utm_content=Smartcashly&utm_term=Greece&utm_source=AWin_348951&utm_medium=affiliate&utm_campaign=AffiliateWin&sv1=affiliate&sv_campaign_id=348951&awc=10423_1783128905_c419464aeb08ca5c1f3b3497b740414e',
+      proteinBar: 'https://www.myprotein.gr/c/nutrition/healthy-food-drinks/protein-bars/?settingsSaved=Y&shippingcountry=GR&switchcurrency=EUR&countrySelected=Y&clickRef2=gr&clickRef3=impact-protein-bar&affil=awin&utm_content=Smartcashly&utm_term=Greece&utm_source=AWin_348951&utm_medium=affiliate&utm_campaign=AffiliateWin&sv1=affiliate&sv_campaign_id=348951&awc=10423_1783128916_d52a575bfc19db6d204c4508c851525f',
+      student: 'https://www.myprotein.gr/?student=true&settingsSaved=Y&shippingcountry=GR&switchcurrency=EUR&countrySelected=Y&clickRef2=gr&clickRef3=student-discount&affil=awin&utm_content=Smartcashly&utm_term=Greece&utm_source=AWin_348951&utm_medium=affiliate&utm_campaign=AffiliateWin&sv1=affiliate&sv_campaign_id=348951&awc=10423_1783128927_e63b686c0d2aec7e315d5619d962636a'
+    };
+
+    function openOffer(offerKey) {
+      const url = MYPROTEIN_LINKS[offerKey];
+      if (url) {
+        window.open(url, '_blank');
+      }
     }
 
     const searchInput = document.querySelector('.search-bar input');
@@ -542,7 +558,7 @@
         console.warn('Could not store click history:', error);
       }
       document.getElementById('coupon-modal').remove();
-      window.open('https://us.myprotein.com/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=coupon&partner_id=SMART2025&coupon=BS30', '_blank');
+      window.open(MYPROTEIN_LINKS.coupon, '_blank');
     };
   </script>
 </body>
