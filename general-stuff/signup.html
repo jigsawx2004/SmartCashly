@@ -714,9 +714,9 @@
           su_error.textContent = `✅ Account created! You used referral code: ${referralCode}`;
         }
         
-        // Small delay then redirect to the signed-in user's account page
+        // Small delay then redirect home; Firebase keeps the new user signed in so the profile shows in the header
         setTimeout(() => {
-          window.location.href = "account-settings.html";
+          window.location.href = "../index.html";
         }, 1500);
         
       } catch (err) {
