@@ -510,8 +510,8 @@
     <img src="/site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
     <div style="flex:1 1 auto;"></div>
     <nav class="auth-nav">
-      <a href="/index.html" class="btn">Home</a>
-      <a href="/general-stuff/signup.html" class="btn">Sign Up</a>
+      <a href="../index.html" class="btn">Home</a>
+      <a href="signup.html" class="btn">Sign Up</a>
     </nav>
   </header>
 
@@ -532,7 +532,7 @@
       </form>
 
       <p class="forgot-password">
-        <a href="/general-stuff/reset.html">Forgot your password?</a>
+        <a href="reset.html">Forgot your password?</a>
       </p>
     </div>
     <aside class="cash-guy" id="cash-guy" aria-hidden="true">
@@ -546,13 +546,13 @@
   </main>
 
   <footer>
-    © <span id="year"></span>2025 Smartcashly. All rights reserved.
+    ©&nbsp;<span id="year"></span>&nbsp;Smartcashly. All rights reserved.
   </footer>
 
   <script type="module" src="auth.js"></script>
   <script type="module">
     // Set the year
-    document.getElementById('year').textContent = 2025;
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     // Wait for both DOM and auth.js to be fully loaded
     window.addEventListener('load', async function() {
@@ -663,7 +663,7 @@
           
           // Small delay then redirect
           setTimeout(() => {
-            window.location.href = '/index.html';
+            window.location.href = '../index.html';
           }, 1000);
           
         } catch (err) {

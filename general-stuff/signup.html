@@ -496,8 +496,8 @@
     <img src="/site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
     <div style="flex:1 1 auto;"></div>
     <nav class="auth-nav">
-      <a href="/index.html"  class="btn">Home</a>
-      <a href="/general-stuff/login.html"  class="btn">Login</a>
+      <a href="../index.html"  class="btn">Home</a>
+      <a href="login.html"  class="btn">Login</a>
     </nav>
   </header>
 
@@ -532,11 +532,11 @@
     </div>
   </main>
 
-  <footer>© <span id="year"></span>2025 Smartcashly. All rights reserved.</footer>
+  <footer>©&nbsp;<span id="year"></span>&nbsp;Smartcashly. All rights reserved.</footer>
 
   <script type="module" src="auth.js"></script>
   <script>
-    document.getElementById("year").textContent = 2025;
+    document.getElementById("year").textContent = new Date().getFullYear();
 
     // Check if there's a referral code in the URL
     window.addEventListener('load', async () => {
@@ -686,7 +686,7 @@
         
         // Small delay then redirect
         setTimeout(() => {
-          window.location = "/index.html";
+          window.location = "../index.html";
         }, 1500);
         
       } catch (err) {

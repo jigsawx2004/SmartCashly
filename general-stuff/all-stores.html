@@ -434,7 +434,7 @@
     <img src="logo.png" alt="Smartcashly logo" class="logo-img" />
     <div style="flex:1 1 auto;"></div>
     <nav class="auth-nav">
-      <a href="index.html" class="btn btn--secondary">Home</a>
+      <a href="../index.html" class="btn btn--secondary">Home</a>
       <a href="#" id="logout-btn" class="btn">Logout</a>
     </nav>
   </header>
@@ -476,7 +476,7 @@
     </div>
 
     <div class="stores-list">
-      <a href="store-aegeanairlines.html" class="store-item">
+      <a href="../stores/aegeanairlines/index.html" class="store-item">
         <div class="store-icon" style="background-image: url('logo-aegeanairlines.png')"></div>
         <div class="store-info">
           <div class="store-name">Aegean Airlines</div>
@@ -486,7 +486,7 @@
         <button class="visit-store-btn">Visit Store</button>
       </a>
 
-      <a href="store-benetton.html" class="store-item">
+      <a href="../stores/benetton/index.html" class="store-item">
         <div class="store-icon" style="background-image: url('logo-benetton.png')"></div>
         <div class="store-info">
           <div class="store-name">Benetton</div>
@@ -496,7 +496,7 @@
         <button class="visit-store-btn">Visit Store</button>
       </a>
 
-      <a href="store-boxnow.html" class="store-item">
+      <a href="../stores/boxnow/index.html" class="store-item">
         <div class="store-icon" style="background-image: url('logo-boxnow.png')"></div>
         <div class="store-info">
           <div class="store-name">Box Now</div>
@@ -506,7 +506,7 @@
         <button class="visit-store-btn">Visit Store</button>
       </a>
 
-      <a href="store-myprotein.html" class="store-item">
+      <a href="../stores/myprotein/index.html" class="store-item">
         <div class="store-icon" style="background-image: url('logo-myprotein.png')"></div>
         <div class="store-info">
           <div class="store-name">Myprotein</div>
@@ -516,7 +516,7 @@
         <button class="visit-store-btn">Visit Store</button>
       </a>
 
-      <a href="store-nike.html" class="store-item">
+      <a href="../stores/nike/index.html" class="store-item">
         <div class="store-icon" style="background-image: url('logo-nike.png')"></div>
         <div class="store-info">
           <div class="store-name">Nike</div>
@@ -526,7 +526,7 @@
         <button class="visit-store-btn">Visit Store</button>
       </a>
 
-      <a href="store-shein.html" class="store-item">
+      <a href="../stores/shein/index.html" class="store-item">
         <div class="store-icon" style="background-image: url('logo-shein.png')"></div>
         <div class="store-info">
           <div class="store-name">Shein</div>
@@ -536,7 +536,7 @@
         <button class="visit-store-btn">Visit Store</button>
       </a>
      
-      <a href="store-adidas.html" class="store-item">
+      <a href="../stores/adidas/index.html" class="store-item">
         <div class="store-icon" style="background-image: url('logo-adidas.png')"></div>
         <div class="store-info">
           <div class="store-name">Adidas</div>
@@ -549,11 +549,11 @@
   </main>
 
   <footer>
-    © <span id="year"></span>2025 Smartcashly. All rights reserved.
+    ©&nbsp;<span id="year"></span>&nbsp;Smartcashly. All rights reserved.
   </footer>
 
   <script>
-    document.getElementById('year').textContent = 2025;
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     // Logout functionality
     document.getElementById('logout-btn').addEventListener('click', async function(e) {
@@ -561,7 +561,7 @@
       try {
         if (typeof smartAuth !== 'undefined') {
           await smartAuth.signOut();
-          window.location.href = 'index.html';
+          window.location.href = '../index.html';
         }
       } catch (err) {
         console.error('Logout error:', err);
