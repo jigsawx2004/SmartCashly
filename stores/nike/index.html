@@ -55,6 +55,34 @@
     .offer-button{background:#4CAF50;color:#fff;padding:.75rem 1.5rem;border:0;border-radius:6px;font-weight:bold;cursor:pointer;width:100%}.offer-button:hover{background:#45a049}
     footer{height:80px;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:bold;background:#008e45!important;color:#fff!important;overflow:hidden}
     @media(max-width:768px){.search-bar{margin-left:20px;max-width:300px}.store-header{flex-direction:column;text-align:center}.offers-grid{grid-template-columns:1fr}}
+  
+
+    /* Unified Smartcashly footer */
+    footer {
+      min-height: 80px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: #000 !important;
+      color: #fff !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      overflow: hidden !important;
+    }
+
+    footer *,
+    footer span {
+      color: #fff !important;
+      font-weight: 700 !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    footer::before,
+    footer::after {
+      display: none !important;
+      content: none !important;
+    }
   </style>
 </head>
 <body>
