@@ -714,9 +714,9 @@
           su_error.textContent = `✅ Account created! You used referral code: ${referralCode}`;
         }
         
-        // Small delay then redirect
+        // Small delay then redirect to the signed-in user's account page
         setTimeout(() => {
-          window.location = "../index.html";
+          window.location.href = "account-settings.html";
         }, 1500);
         
       } catch (err) {
