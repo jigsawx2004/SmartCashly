@@ -549,11 +549,11 @@
   </main>
 
   <footer>
-    © <span id="year"></span>2025 Smartcashly. All rights reserved.
+    ©&nbsp;<span id="year"></span>&nbsp;Smartcashly. All rights reserved.
   </footer>
 
   <script>
-    document.getElementById('year').textContent = 2025;
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     // Logout functionality
     document.getElementById('logout-btn').addEventListener('click', async function(e) {
