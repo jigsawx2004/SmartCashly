@@ -613,7 +613,37 @@ footer::before {
     grid-template-columns: 1fr;
   }
 }
-</style>
+
+
+    /* Unified Smartcashly footer */
+    footer {
+      height: 80px !important;
+      min-height: 80px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 1rem 1.5rem !important;
+      background: #008e45 !important;
+      color: #000 !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      overflow: hidden !important;
+    }
+
+    footer *,
+    footer span {
+      color: #000 !important;
+      font-weight: 700 !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    footer::before,
+    footer::after {
+      display: none !important;
+      content: none !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -625,7 +655,7 @@ footer::before {
     <input type="search" placeholder="Search any store ..." /> 
     <button type="submit" aria-label="Search">🔍</button>
   </form>
-  <a href="/all-stores.html" class="all-stores-btn">View All Stores</a>
+  <a href="../../general-stuff/all-stores.html" class="all-stores-btn">View All Stores</a>
 </div>
 
   <nav class="auth-nav">
@@ -770,7 +800,7 @@ footer::before {
   </main>
 
   <footer>
-    ©&nbsp;<span id="year"></span>&nbsp;Smartcashly. All rights reserved.
+    ©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.
   </footer>
   
   <script>
@@ -823,7 +853,7 @@ footer::before {
 
   <!-- your existing Shein-specific script follows -->
   <script>
-    document.getElementById('year').textContent = 2025;
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     function trackClick(offerId) {
       if (offerId === 'shein-coupon') {
