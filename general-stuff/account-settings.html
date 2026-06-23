@@ -431,6 +431,36 @@
         opacity: 0.6;
       }
     }
+  
+
+    /* Unified Smartcashly footer */
+    footer {
+      height: 80px !important;
+      min-height: 80px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 1rem 1.5rem !important;
+      background: #008e45 !important;
+      color: #000 !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      overflow: hidden !important;
+    }
+
+    footer *,
+    footer span {
+      color: #000 !important;
+      font-weight: 700 !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    footer::before,
+    footer::after {
+      display: none !important;
+      content: none !important;
+    }
   </style>
 </head>
 
@@ -439,7 +469,7 @@
     <img src="logo.png" alt="Smartcashly logo" class="logo-img" />
     <div style="flex:1 1 auto;"></div>
     <nav class="auth-nav">
-      <a href="index.html" class="btn">Home</a>
+      <a href="../index.html" class="btn">Home</a>
       <a href="#" id="logout-btn" class="btn">Logout</a>
     </nav>
   </header>
@@ -516,7 +546,7 @@
   </main>
 
   <footer>
-    © <span id="year"></span>2025 Smartcashly. All rights reserved.
+    ©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.
   </footer>
 
   <script type="module" src="auth.js"></script>
@@ -555,7 +585,7 @@
       console.log('DOM loaded, setting up event listeners');
       
       // Set the year to 2025
-      document.getElementById('year').textContent = 2025;
+      document.getElementById('year').textContent = new Date().getFullYear();
       
       // Check authentication
       onAuthStateChanged(auth, (user) => {
@@ -696,7 +726,7 @@
       e.preventDefault();
       try {
         await signOut(auth);
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
       } catch (error) {
         console.error('Logout error:', error);
       }
