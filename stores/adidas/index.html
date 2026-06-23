@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adidas - 18% Cashback • Smartcashly</title>
+  <link rel="icon" type="image/png" href="../../site-logo/smartcashly-logo.png" />
   <style>
     /* Advanced shiny black background with floating white particles */
     html { 
@@ -642,6 +643,36 @@
         grid-template-columns: 1fr;
       }
     }
+  
+
+    /* Unified Smartcashly footer */
+    footer {
+      height: 80px !important;
+      min-height: 80px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 1rem 1.5rem !important;
+      background: #008e45 !important;
+      color: #000 !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      overflow: hidden !important;
+    }
+
+    footer *,
+    footer span {
+      color: #000 !important;
+      font-weight: 700 !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    footer::before,
+    footer::after {
+      display: none !important;
+      content: none !important;
+    }
   </style>
 </head>
 
@@ -653,7 +684,7 @@
   <input type="search" placeholder="Search any store ..." /> 
   <button type="submit" aria-label="Search">🔍</button>
   </form>
-  <a href="/all-stores.html" class="all-stores-btn">View All Stores</a>
+  <a href="../../general-stuff/all-stores.html" class="all-stores-btn">View All Stores</a>
   </div>
   <nav class="auth-nav">
     <a href="/" class="btn btn--secondary">Home</a>
@@ -773,7 +804,7 @@
   </main>
 
   <footer>
-    ©&nbsp;<span id="year"></span>&nbsp;2025 Smartcashly. All rights reserved.
+    ©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.
   </footer>
 
   <!-- ✅ Paste the search functionality block here -->
@@ -827,10 +858,10 @@
 
   <!-- your existing Shein-specific script follows -->
   <script>
-    document.getElementById('year').textContent = 2025;
+    document.getElementById('year').textContent = new Date().getFullYear();
 
   <script>
-    document.getElementById('year').textContent = 2025;
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 
