@@ -548,7 +548,7 @@
     <img src="logo.png" alt="Smartcashly logo" class="logo-img" />
     <div style="flex:1 1 auto;"></div>
     <nav class="auth-nav">
-      <a href="index.html" class="btn btn--secondary">Home</a>
+      <a href="../index.html" class="btn btn--secondary">Home</a>
       <a href="#" id="logout-btn" class="btn">Logout</a>
     </nav>
   </header>
@@ -634,7 +634,7 @@
   </main>
   
   <footer>
-    © <span id="year"></span>2025 Smartcashly. All rights reserved.
+    ©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.
   </footer>
 
   <script type="module" src="auth.js"></script>
@@ -659,7 +659,7 @@
       });
 
       // Set the current year
-      document.getElementById('year').textContent = 2025;
+      document.getElementById('year').textContent = new Date().getFullYear();
     });
 
     function loadBalanceData() {
@@ -1096,7 +1096,7 @@
       try {
         if (typeof smartAuth !== 'undefined') {
           await smartAuth.signOut();
-          window.location.href = 'index.html';
+          window.location.href = '../index.html';
         }
       } catch (err) {
         console.error('Logout error:', err);
