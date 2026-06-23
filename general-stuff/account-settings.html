@@ -439,7 +439,7 @@
     <img src="logo.png" alt="Smartcashly logo" class="logo-img" />
     <div style="flex:1 1 auto;"></div>
     <nav class="auth-nav">
-      <a href="index.html" class="btn">Home</a>
+      <a href="../index.html" class="btn">Home</a>
       <a href="#" id="logout-btn" class="btn">Logout</a>
     </nav>
   </header>
@@ -696,7 +696,7 @@
       e.preventDefault();
       try {
         await signOut(auth);
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
       } catch (error) {
         console.error('Logout error:', error);
       }

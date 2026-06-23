@@ -548,7 +548,7 @@
     <img src="logo.png" alt="Smartcashly logo" class="logo-img" />
     <div style="flex:1 1 auto;"></div>
     <nav class="auth-nav">
-      <a href="index.html" class="btn btn--secondary">Home</a>
+      <a href="../index.html" class="btn btn--secondary">Home</a>
       <a href="#" id="logout-btn" class="btn">Logout</a>
     </nav>
   </header>
@@ -1096,7 +1096,7 @@
       try {
         if (typeof smartAuth !== 'undefined') {
           await smartAuth.signOut();
-          window.location.href = 'index.html';
+          window.location.href = '../index.html';
         }
       } catch (err) {
         console.error('Logout error:', err);
