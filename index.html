@@ -836,7 +836,35 @@ footer::before {
     padding: 1rem;
   }
 }
-</style>
+
+
+    /* Unified Smartcashly footer */
+    footer {
+      min-height: 80px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: #000 !important;
+      color: #fff !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      overflow: hidden !important;
+    }
+
+    footer *,
+    footer span {
+      color: #fff !important;
+      font-weight: 700 !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    footer::before,
+    footer::after {
+      display: none !important;
+      content: none !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -856,12 +884,12 @@ footer::before {
         <button type="submit" aria-label="Search">📦</button>
         <div id="search-autocomplete" class="search-autocomplete"></div>
       </form>
-      <a href="all-stores.html" class="all-stores-btn">View All Stores</a>
+      <a href="general-stuff/all-stores.html" class="all-stores-btn">View All Stores</a>
     </div>
     <nav class="auth-nav" id="auth-nav">
       <div id="auth-buttons" style="display: flex; gap: 0.5rem;">
-        <a href="login.html" class="btn">Login</a>
-        <a href="signup.html" class="btn btn--secondary">Sign Up</a>
+        <a href="general-stuff/login.html" class="btn">Login</a>
+        <a href="general-stuff/signup.html" class="btn btn--secondary">Sign Up</a>
       </div>
       <div id="user-profile" style="display: none; align-items: center; gap: 1rem;">
         <span id="user-email" style="color: #fff; font-size: 0.9rem;"></span>
@@ -874,9 +902,9 @@ footer::before {
               <div class="balance-pending" id="balance-pending">$0.00 pending</div>
             </div>
             <div class="dropdown-divider"></div>
-            <a href="your-balance.html" id="your-balance">💰 Your Balance</a>
-            <a href="account-settings.html" id="account-settings">⚙️ Account Settings</a>
-            <a href="click-history.html" id="click-history">📊 Click History</a>
+            <a href="general-stuff/user-balance.html" id="your-balance">💰 Your Balance</a>
+            <a href="general-stuff/account-settings.html" id="account-settings">⚙️ Account Settings</a>
+            <a href="general-stuff/ click-history.html" id="click-history">📊 Click History</a>
             <a href="#" id="refer-friend">👥 Refer a Friend</a>
             <a href="#" id="logout-btn">🚪 Logout</a>
           </div>
@@ -982,7 +1010,7 @@ footer::before {
   </main>
 
   <footer>
-    © <span id="year"></span>2025 Smartcashly. All rights reserved.
+    ©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.
   </footer>
 
   <!-- ✅ Paste the search functionality block here -->
@@ -1170,7 +1198,7 @@ footer::before {
 </script>
 
   <script>
-    document.getElementById('year').textContent = 2025;
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     // Search data for autocomplete
     const stores = [
@@ -1803,8 +1831,15 @@ document.addEventListener('keydown', function(e) {
 });
   </script>
 
-  <!-- Firebase Auth Module -->
-  <script type="module" src="auth.js"></script>
+  <script>
+    const searchButton = document.querySelector('.search-bar button[aria-label="Search"]');
+
+    if (searchButton) {
+      searchButton.textContent = '🔍';
+      searchButton.style.fontSize = '1rem';
+      searchButton.style.lineHeight = '1';
+    }
+  </script>
   <script>
   // Support Modal Functions - Fixed Implementation
   function openSupportModal() {
@@ -2014,7 +2049,7 @@ document.addEventListener('keydown', function(e) {
       const user = auth.currentUser;
       if (user) {
         const referralCode = generateReferralCode(user.uid, user.email);
-        const referralLink = `${window.location.origin}/signup.html?ref=${referralCode}`;
+        const referralLink = new URL(`general-stuff/signup.html?ref=${referralCode}`, window.location.href).href;
         
         document.getElementById('referral-code-display').textContent = referralCode;
         document.getElementById('referral-link-display').textContent = referralLink;

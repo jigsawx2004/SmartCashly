@@ -480,6 +480,34 @@
     @media (max-width: 500px) {
       .cash-rain { display: none; }
     }
+  
+
+    /* Unified Smartcashly footer */
+    footer {
+      min-height: 80px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: #000 !important;
+      color: #fff !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      overflow: hidden !important;
+    }
+
+    footer *,
+    footer span {
+      color: #fff !important;
+      font-weight: 700 !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    footer::before,
+    footer::after {
+      display: none !important;
+      content: none !important;
+    }
   </style>
 </head>
 
@@ -496,8 +524,8 @@
     <img src="/site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
     <div style="flex:1 1 auto;"></div>
     <nav class="auth-nav">
-      <a href="/index.html"  class="btn">Home</a>
-      <a href="/general-stuff/login.html"  class="btn">Login</a>
+      <a href="../index.html"  class="btn">Home</a>
+      <a href="login.html"  class="btn">Login</a>
     </nav>
   </header>
 
@@ -532,11 +560,11 @@
     </div>
   </main>
 
-  <footer>© <span id="year"></span>2025 Smartcashly. All rights reserved.</footer>
+  <footer>©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.</footer>
 
   <script type="module" src="auth.js"></script>
   <script>
-    document.getElementById("year").textContent = 2025;
+    document.getElementById("year").textContent = new Date().getFullYear();
 
     // Check if there's a referral code in the URL
     window.addEventListener('load', async () => {
@@ -686,7 +714,7 @@
         
         // Small delay then redirect
         setTimeout(() => {
-          window.location = "/index.html";
+          window.location = "../index.html";
         }, 1500);
         
       } catch (err) {

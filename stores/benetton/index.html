@@ -602,6 +602,34 @@
         max-width: 300px;
       }
     }
+  
+
+    /* Unified Smartcashly footer */
+    footer {
+      min-height: 80px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: #000 !important;
+      color: #fff !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      overflow: hidden !important;
+    }
+
+    footer *,
+    footer span {
+      color: #fff !important;
+      font-weight: 700 !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    footer::before,
+    footer::after {
+      display: none !important;
+      content: none !important;
+    }
   </style>
 </head>
 
@@ -614,7 +642,7 @@
     <input type="search" placeholder="Search any store ..." />
     <button type="submit" aria-label="Search">🔍</button>
   </form>
-  <a href="/all-stores.html" class="all-stores-btn">View All Stores</a>
+  <a href="../../general-stuff/all-stores.html" class="all-stores-btn">View All Stores</a>
   </div>
 
   <nav class="auth-nav">
@@ -735,7 +763,7 @@
   </main>
 
   <footer>
-    ©&nbsp;2025<span id="year"></span>&nbsp;Smartcashly. All rights reserved.
+    ©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.
   </footer>
    <!-- ✅ Paste the search functionality block here -->
   <script>
@@ -788,10 +816,10 @@
 
   <!-- your existing Shein-specific script follows -->
   <script>
-    document.getElementById('year').textContent = 2025;
+    document.getElementById('year').textContent = new Date().getFullYear();
 
   <script>
-    document.getElementById('year').textContent = 2025;
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

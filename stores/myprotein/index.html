@@ -359,6 +359,34 @@
       .store-header { flex-direction: column; text-align: center; }
       .offers-grid { grid-template-columns: 1fr; }
     }
+  
+
+    /* Unified Smartcashly footer */
+    footer {
+      min-height: 80px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: #000 !important;
+      color: #fff !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      overflow: hidden !important;
+    }
+
+    footer *,
+    footer span {
+      color: #fff !important;
+      font-weight: 700 !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    footer::before,
+    footer::after {
+      display: none !important;
+      content: none !important;
+    }
   </style>
 </head>
 <body>
@@ -369,7 +397,7 @@
         <input type="search" placeholder="Search any store ..." aria-label="Search stores" />
         <button type="submit" aria-label="Search">🔍</button>
       </form>
-      <a href="/all-stores.html" class="all-stores-btn">View All Stores</a>
+      <a href="../../general-stuff/all-stores.html" class="all-stores-btn">View All Stores</a>
     </div>
     <nav class="auth-nav">
       <a href="/" class="btn">Home</a>
@@ -452,7 +480,7 @@
     </div>
   </main>
 
-  <footer>©&nbsp;<span id="year"></span>&nbsp; Smartcashly. All rights reserved.</footer>
+  <footer>©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.</footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
