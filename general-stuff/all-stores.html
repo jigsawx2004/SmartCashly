@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>All Stores • Smartcashly</title>
+  <link rel="icon" type="image/svg+xml" href="../site-logo/smartcashly-favicon.svg" />
   <style>
     /* Advanced shiny dark yellow background with floating particles */
     html { 
@@ -426,15 +427,45 @@
         font-size: 0.9rem;
       }
     }
+  
+
+    /* Unified Smartcashly footer */
+    footer {
+      height: 80px !important;
+      min-height: 80px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 1rem 1.5rem !important;
+      background: #FFB300 !important;
+      color: #000 !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      overflow: hidden !important;
+    }
+
+    footer *,
+    footer span {
+      color: #000 !important;
+      font-weight: 700 !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    footer::before,
+    footer::after {
+      display: none !important;
+      content: none !important;
+    }
   </style>
 </head>
 
 <body>
   <header>
-    <img src="logo.png" alt="Smartcashly logo" class="logo-img" />
+    <img src="../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
     <div style="flex:1 1 auto;"></div>
     <nav class="auth-nav">
-      <a href="index.html" class="btn btn--secondary">Home</a>
+      <a href="../index.html" class="btn btn--secondary">Home</a>
       <a href="#" id="logout-btn" class="btn">Logout</a>
     </nav>
   </header>
@@ -476,8 +507,8 @@
     </div>
 
     <div class="stores-list">
-      <a href="store-aegeanairlines.html" class="store-item">
-        <div class="store-icon" style="background-image: url('logo-aegeanairlines.png')"></div>
+      <a href="../stores/aegeanairlines/index.html" class="store-item">
+        <div class="store-icon" style="background-image: url('../store-logos/store-logo-aegeanairlines.png')"></div>
         <div class="store-info">
           <div class="store-name">Aegean Airlines</div>
           <div class="store-category">Travel</div>
@@ -486,8 +517,8 @@
         <button class="visit-store-btn">Visit Store</button>
       </a>
 
-      <a href="store-benetton.html" class="store-item">
-        <div class="store-icon" style="background-image: url('logo-benetton.png')"></div>
+      <a href="../stores/benetton/index.html" class="store-item">
+        <div class="store-icon" style="background-image: url('../store-logos/store-logo-benetton.png')"></div>
         <div class="store-info">
           <div class="store-name">Benetton</div>
           <div class="store-category">Fashion</div>
@@ -496,8 +527,8 @@
         <button class="visit-store-btn">Visit Store</button>
       </a>
 
-      <a href="store-boxnow.html" class="store-item">
-        <div class="store-icon" style="background-image: url('logo-boxnow.png')"></div>
+      <a href="../stores/boxnow/index.html" class="store-item">
+        <div class="store-icon" style="background-image: url('../store-logos/store-logo-boxnow.png')"></div>
         <div class="store-info">
           <div class="store-name">Box Now</div>
           <div class="store-category">Delivery</div>
@@ -506,8 +537,8 @@
         <button class="visit-store-btn">Visit Store</button>
       </a>
 
-      <a href="store-myprotein.html" class="store-item">
-        <div class="store-icon" style="background-image: url('logo-myprotein.png')"></div>
+      <a href="../stores/myprotein/index.html" class="store-item">
+        <div class="store-icon" style="background-image: url('../store-logos/store-logo-myprotein.png')"></div>
         <div class="store-info">
           <div class="store-name">Myprotein</div>
           <div class="store-category">Supplements</div>
@@ -516,8 +547,8 @@
         <button class="visit-store-btn">Visit Store</button>
       </a>
 
-      <a href="store-nike.html" class="store-item">
-        <div class="store-icon" style="background-image: url('logo-nike.png')"></div>
+      <a href="../stores/nike/index.html" class="store-item">
+        <div class="store-icon" style="background-image: url('../store-logos/store-logo-nike.png')"></div>
         <div class="store-info">
           <div class="store-name">Nike</div>
           <div class="store-category">Sports & Fashion</div>
@@ -526,8 +557,8 @@
         <button class="visit-store-btn">Visit Store</button>
       </a>
 
-      <a href="store-shein.html" class="store-item">
-        <div class="store-icon" style="background-image: url('logo-shein.png')"></div>
+      <a href="../stores/shein/index.html" class="store-item">
+        <div class="store-icon" style="background-image: url('../store-logos/store-logo-shein.png')"></div>
         <div class="store-info">
           <div class="store-name">Shein</div>
           <div class="store-category">Fashion</div>
@@ -536,8 +567,8 @@
         <button class="visit-store-btn">Visit Store</button>
       </a>
      
-      <a href="store-adidas.html" class="store-item">
-        <div class="store-icon" style="background-image: url('logo-adidas.png')"></div>
+      <a href="../stores/adidas/index.html" class="store-item">
+        <div class="store-icon" style="background-image: url('../store-logos/store-logo-adidas.png')"></div>
         <div class="store-info">
           <div class="store-name">Adidas</div>
           <div class="store-category">Sports & Fashion</div>
@@ -549,11 +580,11 @@
   </main>
 
   <footer>
-    © <span id="year"></span>2025 Smartcashly. All rights reserved.
+    ©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.
   </footer>
 
   <script>
-    document.getElementById('year').textContent = 2025;
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     // Logout functionality
     document.getElementById('logout-btn').addEventListener('click', async function(e) {
@@ -561,7 +592,7 @@
       try {
         if (typeof smartAuth !== 'undefined') {
           await smartAuth.signOut();
-          window.location.href = 'index.html';
+          window.location.href = '../index.html';
         }
       } catch (err) {
         console.error('Logout error:', err);

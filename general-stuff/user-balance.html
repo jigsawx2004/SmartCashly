@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Balance • Smartcashly</title>
+  <link rel="icon" type="image/svg+xml" href="../site-logo/smartcashly-favicon.svg" />
   <style>
     /* Advanced shiny dark yellow background with floating particles */
     html { 
@@ -144,9 +145,11 @@
       align-items: center;
       justify-content: space-between;
       gap: 1.25rem;
-      padding: 1rem 1.5rem;
+      padding: 0 1.5rem;
       background: #008e45 !important;
       color: #fff;
+      height: 80px;
+      min-height: 80px;
       position: relative;
       overflow: hidden;
     }
@@ -186,7 +189,7 @@
     }
 
     .logo-img {
-      height: 100px;
+      height: 80px;
       width: auto;
       flex: 0 0 auto;
       background: transparent !important;
@@ -540,15 +543,60 @@
         grid-template-columns: 1fr;
       }
     }
+  
+
+
+
+    /* Your Balance page background matches the main-screen yellow area */
+    html,
+    body {
+      background: #FFB300 !important;
+      animation: none !important;
+    }
+
+    body::before,
+    body::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    /* Unified Smartcashly footer */
+    footer {
+      height: 80px !important;
+      min-height: 80px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 1rem 1.5rem !important;
+      background: #008e45 !important;
+      color: #000 !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      overflow: hidden !important;
+    }
+
+    footer *,
+    footer span {
+      color: #000 !important;
+      font-weight: 700 !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    footer::before,
+    footer::after {
+      display: none !important;
+      content: none !important;
+    }
   </style>
 </head>
 
 <body>
   <header>
-    <img src="logo.png" alt="Smartcashly logo" class="logo-img" />
+    <img src="../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
     <div style="flex:1 1 auto;"></div>
     <nav class="auth-nav">
-      <a href="index.html" class="btn btn--secondary">Home</a>
+      <a href="../index.html" class="btn btn--secondary">Home</a>
       <a href="#" id="logout-btn" class="btn">Logout</a>
     </nav>
   </header>
@@ -634,7 +682,7 @@
   </main>
   
   <footer>
-    © <span id="year"></span>2025 Smartcashly. All rights reserved.
+    ©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.
   </footer>
 
   <script type="module" src="auth.js"></script>
@@ -659,7 +707,7 @@
       });
 
       // Set the current year
-      document.getElementById('year').textContent = 2025;
+      document.getElementById('year').textContent = new Date().getFullYear();
     });
 
     function loadBalanceData() {
@@ -1096,7 +1144,7 @@
       try {
         if (typeof smartAuth !== 'undefined') {
           await smartAuth.signOut();
-          window.location.href = 'index.html';
+          window.location.href = '../index.html';
         }
       } catch (err) {
         console.error('Logout error:', err);
