@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Benetton - 25% Cashback • Smartcashly</title>
+  <link rel="icon" type="image/svg+xml" href="../../site-logo/smartcashly-favicon.svg" />
   <style>
     /* Advanced shiny dark yellow background with floating particles */
     html { 
@@ -602,19 +603,49 @@
         max-width: 300px;
       }
     }
+  
+
+    /* Unified Smartcashly footer */
+    footer {
+      height: 80px !important;
+      min-height: 80px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 1rem 1.5rem !important;
+      background: #FFB300 !important;
+      color: #000 !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      overflow: hidden !important;
+    }
+
+    footer *,
+    footer span {
+      color: #000 !important;
+      font-weight: 700 !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    footer::before,
+    footer::after {
+      display: none !important;
+      content: none !important;
+    }
   </style>
 </head>
 
 <body>
   <header>
-  <img src="/site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+  <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
 
   <div class="center-group">
   <form class="search-bar" action="#" method="get">
     <input type="search" placeholder="Search any store ..." />
     <button type="submit" aria-label="Search">🔍</button>
   </form>
-  <a href="/all-stores.html" class="all-stores-btn">View All Stores</a>
+  <a href="../../general-stuff/all-stores.html" class="all-stores-btn">View All Stores</a>
   </div>
 
   <nav class="auth-nav">
@@ -735,7 +766,7 @@
   </main>
 
   <footer>
-    ©&nbsp;2025<span id="year"></span>&nbsp;Smartcashly. All rights reserved.
+    ©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.
   </footer>
    <!-- ✅ Paste the search functionality block here -->
   <script>
@@ -788,10 +819,10 @@
 
   <!-- your existing Shein-specific script follows -->
   <script>
-    document.getElementById('year').textContent = 2025;
+    document.getElementById('year').textContent = new Date().getFullYear();
 
   <script>
-    document.getElementById('year').textContent = 2025;
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

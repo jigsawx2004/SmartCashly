@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sign in • Smartcashly</title>
+  <link rel="icon" type="image/svg+xml" href="../site-logo/smartcashly-favicon.svg" />
   <style>
     /* Advanced shiny dark yellow background with floating particles */
     html { 
@@ -494,6 +495,36 @@
     @media (max-width: 500px) {
       .cash-rain { display: none; }
     }
+  
+
+    /* Unified Smartcashly footer */
+    footer {
+      height: 80px !important;
+      min-height: 80px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 1rem 1.5rem !important;
+      background: #FFB300 !important;
+      color: #000 !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      overflow: hidden !important;
+    }
+
+    footer *,
+    footer span {
+      color: #000 !important;
+      font-weight: 700 !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    footer::before,
+    footer::after {
+      display: none !important;
+      content: none !important;
+    }
   </style>
 </head>
 
@@ -507,11 +538,11 @@
   </ul>
 
   <header>
-    <img src="/site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <img src="../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
     <div style="flex:1 1 auto;"></div>
     <nav class="auth-nav">
-      <a href="/index.html" class="btn">Home</a>
-      <a href="/general-stuff/signup.html" class="btn">Sign Up</a>
+      <a href="../index.html" class="btn">Home</a>
+      <a href="signup.html" class="btn">Sign Up</a>
     </nav>
   </header>
 
@@ -532,7 +563,7 @@
       </form>
 
       <p class="forgot-password">
-        <a href="/general-stuff/reset.html">Forgot your password?</a>
+        <a href="reset.html">Forgot your password?</a>
       </p>
     </div>
     <aside class="cash-guy" id="cash-guy" aria-hidden="true">
@@ -546,13 +577,13 @@
   </main>
 
   <footer>
-    © <span id="year"></span>2025 Smartcashly. All rights reserved.
+    ©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.
   </footer>
 
   <script type="module" src="auth.js"></script>
   <script type="module">
     // Set the year
-    document.getElementById('year').textContent = 2025;
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     // Wait for both DOM and auth.js to be fully loaded
     window.addEventListener('load', async function() {
@@ -663,7 +694,7 @@
           
           // Small delay then redirect
           setTimeout(() => {
-            window.location.href = '/index.html';
+            window.location.href = '../index.html';
           }, 1000);
           
         } catch (err) {
