@@ -674,18 +674,50 @@
       content: none !important;
     }
 
-    /* Unified footer: match header color and size on every page */
+    /* Unified header/footer: keep footer color and size matched to header on every page */
+    header,
     footer {
       height: 80px !important;
       min-height: 80px !important;
       display: flex !important;
       align-items: center !important;
-      justify-content: center !important;
       padding: 1rem 1.5rem !important;
       background: #008e45 !important;
       color: #fff !important;
-      font-size: 1rem;
-      font-weight: bold;
+    }
+
+    footer {
+      justify-content: center !important;
+      font-size: 1rem !important;
+      font-weight: bold !important;
+      text-align: center !important;
+      overflow: hidden !important;
+    }
+
+    footer *,
+    footer span {
+      color: #fff !important;
+      font-weight: bold !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    footer::before,
+    footer::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    /* Unified main-screen background: match the Smartcashly homepage yellow */
+    html,
+    body {
+      background: #FFDE59 !important;
+      background-image: none !important;
+      min-height: 100vh;
+    }
+
+    main {
+      background: transparent !important;
     }
 </style>
 </head>
