@@ -145,9 +145,11 @@
       align-items: center;
       justify-content: space-between;
       gap: 1.25rem;
-      padding: 1rem 1.5rem;
+      padding: 0 1.5rem;
       background: #008e45 !important;
       color: #fff;
+      height: 80px;
+      min-height: 80px;
       position: relative;
       overflow: hidden;
     }
@@ -187,7 +189,7 @@
     }
 
     .logo-img {
-      height: 100px;
+      height: 80px;
       width: auto;
       flex: 0 0 auto;
       background: transparent !important;
@@ -542,6 +544,21 @@
       }
     }
   
+
+
+
+    /* Your Balance page background matches the main-screen yellow area */
+    html,
+    body {
+      background: #FFB300 !important;
+      animation: none !important;
+    }
+
+    body::before,
+    body::after {
+      display: none !important;
+      content: none !important;
+    }
 
     /* Unified Smartcashly footer */
     footer {
