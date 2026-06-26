@@ -571,7 +571,6 @@
     <div style="flex:1 1 auto;"></div>
     <nav class="auth-nav">
       <a href="../index.html" class="btn btn--secondary">Home</a>
-      <a href="#" id="logout-btn" class="btn">Logout</a>
     </nav>
   </header>
 
@@ -801,17 +800,6 @@
       });
     }
     
-    document.getElementById('logout-btn').addEventListener('click', async function(e) {
-      e.preventDefault();
-      try {
-        if (typeof smartAuth !== 'undefined') {
-          await smartAuth.signOut();
-          window.location.href = '../index.html';
-        }
-      } catch (err) {
-        console.error('Logout error:', err);
-      }
-    });
 
     function showMessage(text, type = 'info') {
       // Create a temporary message element
