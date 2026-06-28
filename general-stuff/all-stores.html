@@ -256,7 +256,7 @@
       text-align: center;
     }
 
-    .alphabet-filter .all-stores {
+    .alphabet-filter a.active {
       background: #008e45;
       color: white;
       padding: 0.5rem 1rem;
@@ -513,7 +513,6 @@
     <div style="flex:1 1 auto;"></div>
     <nav class="auth-nav">
       <a href="../index.html" class="btn btn--secondary">Home</a>
-      <a href="#" id="logout-btn" class="btn">Logout</a>
     </nav>
   </header>
 
@@ -523,7 +522,7 @@
     </div>
 
     <div class="alphabet-filter">
-      <a href="#" class="all-stores">ALL</a>
+      <a href="#" class="all-stores active">ALL</a>
       <a href="#">A</a>
       <a href="#">B</a>
       <a href="#">C</a>
@@ -550,7 +549,6 @@
       <a href="#">X</a>
       <a href="#">Y</a>
       <a href="#">Z</a>
-      <a href="#">0-9</a>
     </div>
 
     <div class="stores-list">
@@ -633,33 +631,17 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Logout functionality
-    document.getElementById('logout-btn').addEventListener('click', async function(e) {
-      e.preventDefault();
-      try {
-        if (typeof smartAuth !== 'undefined') {
-          await smartAuth.signOut();
-          window.location.href = '../index.html';
-        }
-      } catch (err) {
-        console.error('Logout error:', err);
-      }
-    });
-
     // Alphabet filter functionality
     document.querySelectorAll('.alphabet-filter a').forEach(letter => {
       letter.addEventListener('click', function(e) {
         e.preventDefault();
         
-        // Remove active class from all letters
+        // Move the active state to the clicked filter without hiding the ALL label
         document.querySelectorAll('.alphabet-filter a').forEach(l => {
-          l.style.background = '';
-          l.style.color = '#008e45';
+          l.classList.remove('active');
         });
         
-        // Add active class to clicked letter
-        this.style.background = '#008e45';
-        this.style.color = 'white';
+        this.classList.add('active');
         
         // Filter stores (for now just visual feedback)
         const selectedLetter = this.textContent;
