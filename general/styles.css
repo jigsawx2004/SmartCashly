@@ -292,7 +292,7 @@
         <a href="login.html"  class="btn">Login</a>
         <a href="signup.html" class="btn btn--secondary">Sign Up</a>
       </div>
-      
+
       <!-- Show when logged in -->
       <div id="user-profile" style="display: none; align-items: center; gap: 1rem;">
         <span id="user-email" style="color: #fff; font-size: 0.9rem;"></span>
@@ -331,7 +331,7 @@
     window.addEventListener('load', () => {
       // Get Firebase auth instance
       const auth = getAuth();
-      
+
       // Listen for authentication state changes
       onAuthStateChanged(auth, (user) => {
         updateAuthUI(user);
@@ -350,7 +350,7 @@
         authButtons.style.display = 'none';
         userProfile.style.display = 'flex';
         userEmail.textContent = user.email;
-        
+
         // Set default profile picture or user's photo
         if (user.photoURL) {
           profilePic.src = user.photoURL;
@@ -379,7 +379,7 @@
           console.error('Logout error:', err);
         }
       }
-      
+
       if (e.target.id === 'account-settings') {
         e.preventDefault();
         alert('Account settings coming soon!');
