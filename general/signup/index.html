@@ -3,16 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign in • Smartcashly</title>
-  <link rel="icon" type="image/svg+xml" href="../site-logo/smartcashly-favicon.svg" />
+  <title>Sign Up • Smartcashly</title>
+  <link rel="icon" type="image/svg+xml" href="../../site-logo/smartcashly-favicon.svg" />
   <style>
     /* Advanced shiny dark yellow background with floating particles */
-    html { 
-      background: #FFDE59 !important;
-      min-height: 100vh;
-    }
-    
-    body { 
+    html {
       background: #FFDE59 !important;
       min-height: 100vh;
       overflow-x: hidden;
@@ -27,7 +22,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: 
+      background-image:
         radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.5) 1px, transparent 1px),
         radial-gradient(circle at 75% 75%, rgba(255, 215, 0, 0.6) 1px, transparent 1px),
         radial-gradient(circle at 45% 55%, rgba(255, 255, 255, 0.4) 1px, transparent 1px),
@@ -49,7 +44,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: 
+      background-image:
         radial-gradient(circle at 25% 40%, rgba(255, 255, 255, 0.7) 0.5px, transparent 0.5px),
         radial-gradient(circle at 65% 20%, rgba(255, 215, 0, 0.5) 0.5px, transparent 0.5px),
         radial-gradient(circle at 35% 70%, rgba(255, 255, 255, 0.6) 0.5px, transparent 0.5px),
@@ -69,38 +64,38 @@
     }
 
     @keyframes gentleFloat {
-      0% { 
+      0% {
         background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
         opacity: 0.6;
       }
-      33% { 
+      33% {
         background-position: 30% 20%, 20% 40%, 50% 30%, 40% 10%, 60% 50%, 70% 20%;
         opacity: 0.9;
       }
-      66% { 
+      66% {
         background-position: 60% 40%, 40% 80%, 80% 60%, 10% 70%, 30% 80%, 90% 40%;
         opacity: 0.7;
       }
-      100% { 
+      100% {
         background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
         opacity: 0.6;
       }
     }
 
     @keyframes gentleSparkle {
-      0%, 100% { 
+      0%, 100% {
         opacity: 0.4;
         background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
       }
-      25% { 
+      25% {
         opacity: 0.8;
         background-position: 15% 15%, 25% 25%, 35% 35%, 45% 45%, 55% 55%;
       }
-      50% { 
+      50% {
         opacity: 0.9;
         background-position: 30% 30%, 50% 50%, 70% 70%, 90% 90%, 10% 90%;
       }
-      75% { 
+      75% {
         opacity: 0.6;
         background-position: 20% 40%, 40% 20%, 60% 80%, 80% 60%, 100% 40%;
       }
@@ -147,7 +142,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: 
+      background-image:
         radial-gradient(circle at 25% 40%, rgba(255, 255, 255, 1) 1px, transparent 1px),
         radial-gradient(circle at 75% 60%, rgba(255, 255, 255, 1) 1px, transparent 1px),
         radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 1) 0.5px, transparent 0.5px),
@@ -159,15 +154,15 @@
     }
 
     @keyframes headerParticles {
-      0% { 
+      0% {
         background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
         opacity: 0.6;
       }
-      50% { 
+      50% {
         background-position: 30% 30%, 40% 40%, 20% 50%, 60% 20%;
         opacity: 0.9;
       }
-      100% { 
+      100% {
         background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
         opacity: 0.6;
       }
@@ -211,7 +206,15 @@
       padding: 3rem 1rem;
     }
     main h2 { font-size: 1.9rem; margin-bottom: .5rem; }
-    main p  { font-size: 1rem; color: #000000; margin-bottom: 2rem; }
+
+    .signup-layout {
+      width: min(100%, 680px);
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     .form-container {
       width: min(100%, 420px);
@@ -219,7 +222,6 @@
       padding: 2rem;
       text-align: center;
     }
-
 
     .password-field {
       position: relative;
@@ -260,15 +262,6 @@
     .toggle-password[aria-pressed="true"]::before {
       border-color: #0070f3;
       box-shadow: inset 0 0 0 3px rgba(0, 112, 243, 0.25);
-    }
-
-    .login-layout {
-      width: min(100%, 680px);
-      margin: 0 auto;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .cash-guy {
@@ -320,7 +313,7 @@
         height: 120px;
         margin: 0 auto 0.5rem;
       }
-      .login-layout {
+      .signup-layout {
         flex-direction: column;
       }
     }
@@ -355,22 +348,15 @@
       color: #c00;
       font-size: 0.875rem;
       margin-top: 0.5rem;
-      font-weight: 600;
     }
 
-    .forgot-password {
-      margin-top: 1rem;
-      font-size: 0.95rem;
-    }
-
-    .forgot-password a {
-      color: #0059c1;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .forgot-password a:hover {
-      text-decoration: underline;
+    .referral-note {
+      font-size: 0.85rem;
+      color: #000;
+      margin-top: -0.5rem;
+      margin-bottom: 0.5rem;
+      text-align: left;
+      font-style: italic;
     }
 
     footer {
@@ -400,7 +386,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: 
+      background-image:
         radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
         radial-gradient(circle at 70% 30%, rgba(255, 215, 0, 0.4) 1px, transparent 1px),
         radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.2) 0.5px, transparent 0.5px),
@@ -412,15 +398,15 @@
     }
 
     @keyframes footerParticles {
-      0% { 
+      0% {
         background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
         opacity: 0.6;
       }
-      50% { 
+      50% {
         background-position: 15% 15%, 20% 20%, 25% 25%, 30% 30%;
         opacity: 0.8;
       }
-      100% { 
+      100% {
         background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
         opacity: 0.6;
       }
@@ -461,11 +447,11 @@
     }
 
     @keyframes fall {
-      0%   { 
+      0%   {
         transform: translateX(var(--start-x, 0)) translateY(-120px) rotate(var(--start-rotation, 0deg));
         opacity: 0.9;
       }
-      100% { 
+      100% {
         transform: translateX(var(--end-x, 0)) translateY(calc(100vh + 120px)) rotate(var(--end-rotation, 360deg));
         opacity: 0.9;
       }
@@ -488,14 +474,14 @@
     .cash-rain li:nth-child(15) { --start-x: 65vw;  --end-x: 70vw;  --start-rotation: 50deg;  --end-rotation: 410deg; animation-delay: 2.1s; animation-duration: 9.8s; }
     .cash-rain li:nth-child(16) { --start-x: 60vw;  --end-x: 65vw;  --start-rotation: -10deg; --end-rotation: 350deg; animation-delay: 4.6s; animation-duration: 8.7s; }
     .cash-rain li:nth-child(17) { --start-x: 10vw;  --end-x: 15vw;  --start-rotation: 35deg;  --end-rotation: 395deg; animation-delay: 6.2s; animation-duration: 7.5s; }
-    .cash-rain li:nth-child(18) { --start-x: 90vw;  --end-x: 85vw;  --start-rotation: -15deg; --end-rotation: 335deg; animation-delay: 0.8s; animation-duration: 10.2s; }
+    .cash-rain li:nth-child(18) { --start-x: 90vw;  --end-x: 85vw;  --start-rotation: -25deg; --end-rotation: 335deg; animation-delay: 0.8s; animation-duration: 10.2s; }
     .cash-rain li:nth-child(19) { --start-x: 5vw;   --end-x: 10vw;  --start-rotation: 60deg;  --end-rotation: 420deg; animation-delay: 3.5s; animation-duration: 8.9s; }
     .cash-rain li:nth-child(20) { --start-x: 95vw;  --end-x: 90vw;  --start-rotation: -50deg; --end-rotation: 310deg; animation-delay: 1.3s; animation-duration: 9.6s; }
-    
+
     @media (max-width: 500px) {
       .cash-rain { display: none; }
     }
-  
+
 
     /* Unified Smartcashly footer */
     footer {
@@ -582,196 +568,221 @@
     <li>$</li><li>$</li><li>$</li><li>$</li><li>$</li><li>$</li>
     <li>$</li><li>$</li><li>$</li><li>$</li><li>$</li><li>$</li>
     <li>$</li><li>$</li><li>$</li><li>$</li><li>$</li><li>$</li>
-    <li>$</li><li>$</li><li>$</li><li>$</li>
+    <li>$</li><li>$</li>
   </ul>
 
   <header>
-    <img src="../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
     <div style="flex:1 1 auto;"></div>
     <nav class="auth-nav">
-      <a href="../index.html" class="btn">Home</a>
-      <a href="signup.html" class="btn">Sign Up</a>
+      <a href="../../"  class="btn">Home</a>
+      <a href="../login/"  class="btn">Login</a>
     </nav>
   </header>
 
   <main>
-    <h2>Login to Smartcashly</h2>
-    <p>Enter your credentials to continue</p>
+    <h2>Create an Account</h2>
 
-    <div class="login-layout">
-    <div class="form-container">
-      <form id="login_form">
-        <input type="email" name="email" id="lg_email" placeholder="Email" required />
+    <div class="signup-layout">
+      <div class="form-container">
+      <form id="signup-form">
+        <input type="email"    id="su_email"    placeholder="Email"    required />
         <div class="password-field">
-          <input type="password" name="password" id="lg_pass" placeholder="Password" required />
-          <button type="button" class="toggle-password" data-target="lg_pass" aria-label="Show password" aria-pressed="false"></button>
+          <input type="password" id="su_pass" placeholder="Password" required />
+          <button type="button" class="toggle-password" data-target="su_pass" aria-label="Show password" aria-pressed="false"></button>
         </div>
-        <button type="submit" class="btn btn--full">Login</button>
-        <p id="lg_msg" class="form-error"></p>
+        <div class="password-field">
+          <input type="password" id="su_confirm" placeholder="Confirm Password" required />
+          <button type="button" class="toggle-password" data-target="su_confirm" aria-label="Show confirm password" aria-pressed="false"></button>
+        </div>
+        <input type="text"     id="su_referral" placeholder="Referral Code (Optional)" />
+        <p class="referral-note">👥 Have a friend's referral code? Enter it above to help them earn rewards!</p>
+        <button class="btn btn--full">Sign Up</button>
+        <p id="su_error" class="form-error"></p>
       </form>
-
-      <p class="forgot-password">
-        <a href="reset.html">Forgot your password?</a>
-      </p>
-    </div>
-    <aside class="cash-guy" id="cash-guy" aria-hidden="true">
-      <div class="face">
-        <span class="eye left"></span><span class="eye right"></span>
-        <span class="mouth"></span>
-        <div class="hands"><span class="hand"></span><span class="hand"></span></div>
       </div>
-    </aside>
+      <aside class="cash-guy" id="cash-guy" aria-hidden="true">
+        <div class="face">
+          <span class="eye left"></span><span class="eye right"></span>
+          <span class="mouth"></span>
+          <div class="hands"><span class="hand"></span><span class="hand"></span></div>
+        </div>
+      </aside>
     </div>
   </main>
 
-  <footer>
-    ©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.
-  </footer>
+  <footer>©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.</footer>
 
-  <script type="module" src="auth.js"></script>
-  <script type="module">
-    // Set the year
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <script type="module" src="../auth.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Wait for both DOM and auth.js to be fully loaded
-    window.addEventListener('load', async function() {
-      console.log('🔄 Login page loaded');
-      
+    // Check if there's a referral code in the URL
+    window.addEventListener('load', async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const referralCode = urlParams.get('ref');
+      if (referralCode) {
+        document.getElementById('su_referral').value = referralCode;
+      }
+
       // Wait for smartAuth to be available
       let attempts = 0;
       while (typeof smartAuth === 'undefined' && attempts < 50) {
         await new Promise(resolve => setTimeout(resolve, 100));
         attempts++;
       }
-      
+
       if (typeof smartAuth === 'undefined') {
         console.error('❌ smartAuth not available after waiting');
         return;
       }
-      
+
       console.log('✅ smartAuth is available');
-      
-      const lg_form = document.getElementById('login_form');
-      const lg_email = document.getElementById('lg_email');
-      const lg_pass = document.getElementById('lg_pass');
-      const lg_msg = document.getElementById('lg_msg');
+    });
 
-      const cashGuy = document.getElementById('cash-guy');
-      function updateCashGuyState() {
-        const visible = lg_pass.type === 'text';
-        cashGuy?.classList.toggle('is-watching', visible);
+    const su_email = document.getElementById("su_email");
+    const su_pass = document.getElementById("su_pass");
+    const su_confirm = document.getElementById("su_confirm");
+    const su_referral = document.getElementById("su_referral");
+    const su_error = document.getElementById("su_error");
 
-        if (!visible) {
-          cashGuy?.querySelectorAll('.eye').forEach(eye => {
-            eye.style.transform = 'translate(0, 0)';
-          });
-        }
-      }
+    const cashGuy = document.getElementById("cash-guy");
+    function updateCashGuyState() {
+      const visible = [su_pass, su_confirm].some(el => el.type === "text");
+      cashGuy?.classList.toggle("is-watching", visible);
 
-      document.querySelectorAll('.toggle-password').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const target = document.getElementById(btn.dataset.target);
-          if (!target) return;
-          const show = target.type === 'password';
-          target.type = show ? 'text' : 'password';
-          btn.setAttribute('aria-pressed', String(show));
-          updateCashGuyState();
+      if (!visible) {
+        cashGuy?.querySelectorAll(".eye").forEach(eye => {
+          eye.style.transform = "translate(0, 0)";
         });
+      }
+    }
+
+    document.querySelectorAll(".toggle-password").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = document.getElementById(btn.dataset.target);
+        if (!target) return;
+        const show = target.type === "password";
+        target.type = show ? "text" : "password";
+        btn.setAttribute("aria-pressed", String(show));
+        updateCashGuyState();
       });
+    });
 
-      updateCashGuyState();
+    updateCashGuyState();
 
-      function trackEyes(event) {
-        if (!cashGuy?.classList.contains('is-watching')) return;
-        const face = cashGuy.querySelector('.face');
-        const eyes = cashGuy.querySelectorAll('.eye');
-        if (!face || eyes.length === 0) return;
+    function trackEyes(event) {
+      if (!cashGuy?.classList.contains("is-watching")) return;
+      const face = cashGuy.querySelector(".face");
+      const eyes = cashGuy.querySelectorAll(".eye");
+      if (!face || eyes.length === 0) return;
 
-        const rect = face.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const dx = event.clientX - centerX;
-        const dy = event.clientY - centerY;
-        const maxMove = 3.5;
-        const angle = Math.atan2(dy, dx);
-        const distance = Math.min(maxMove, Math.hypot(dx, dy) / 18);
-        const moveX = Math.cos(angle) * distance;
-        const moveY = Math.sin(angle) * distance;
+      const rect = face.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const dx = event.clientX - centerX;
+      const dy = event.clientY - centerY;
+      const maxMove = 3.5;
+      const angle = Math.atan2(dy, dx);
+      const distance = Math.min(maxMove, Math.hypot(dx, dy) / 18);
+      const moveX = Math.cos(angle) * distance;
+      const moveY = Math.sin(angle) * distance;
 
-        eyes.forEach(eye => {
-          eye.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        });
-      }
+      eyes.forEach(eye => {
+        eye.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+    }
 
-      document.addEventListener('mousemove', trackEyes);
+    document.addEventListener("mousemove", trackEyes);
 
-      if (!lg_form) {
-        console.error('❌ Login form not found!');
+    document.getElementById("signup-form").addEventListener("submit", async e => {
+      e.preventDefault();
+      su_error.textContent = "";
+
+      if (su_pass.value !== su_confirm.value) {
+        su_error.textContent = "ERROR: Passwords do not match";
         return;
       }
 
-      lg_form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        lg_msg.textContent = '';
-        console.log('🔄 Login form submitted');
+      // Check if smartAuth is available
+      if (typeof smartAuth === 'undefined') {
+        su_error.textContent = "ERROR: Authentication system not ready. Please try again.";
+        return;
+      }
 
-        const email = lg_email.value.trim();
-        const password = lg_pass.value;
+      try {
+        // Create the user account first
+        const userCredential = await smartAuth.signUp(su_email.value.trim(), su_pass.value);
+        const newUser = userCredential.user;
 
-        if (!email || !password) {
-          lg_msg.style.color = 'crimson';
-          lg_msg.textContent = 'Please fill in all fields';
-          return;
+        // Process referral code AFTER successful signup
+        if (su_referral.value.trim()) {
+          const referralCode = su_referral.value.trim().toUpperCase();
+          const newUserEmail = su_email.value.trim();
+
+          console.log('🎯 Processing referral signup:', {
+            referralCode,
+            newUserEmail,
+            newUserId: newUser.uid
+          });
+
+          // Create notification data
+          const referralNotification = {
+            id: `referral_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+            type: 'referral_signup',
+            referralCode: referralCode,
+            newUserEmail: newUserEmail,
+            newUserId: newUser.uid,
+            newUserDisplayName: newUserEmail.split('@')[0], // Use email prefix as display name
+            timestamp: Date.now(),
+            signupDate: new Date().toISOString(),
+            read: false,
+            processed: false
+          };
+
+          // Store the notification in pending queue
+          const pendingNotifications = JSON.parse(localStorage.getItem('pending_referral_notifications') || '[]');
+          pendingNotifications.push(referralNotification);
+          localStorage.setItem('pending_referral_notifications', JSON.stringify(pendingNotifications));
+
+          // Also store referral usage for analytics
+          const referralUsages = JSON.parse(localStorage.getItem('referral_usages') || '[]');
+          referralUsages.push({
+            referralCode,
+            newUserEmail,
+            newUserId: newUser.uid,
+            timestamp: Date.now(),
+            signupDate: new Date().toISOString()
+          });
+          localStorage.setItem('referral_usages', JSON.stringify(referralUsages));
+
+          console.log('✅ Referral notification queued successfully');
+
+          // Show success message to the new user
+          su_error.style.color = '#008e45';
+          su_error.textContent = `✅ Account created! You used referral code: ${referralCode}`;
         }
 
-        // Disable button during login
-        const submitBtn = lg_form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Logging in...';
+        // Small delay then redirect home; Firebase keeps the new user signed in so the profile shows in the header
+        setTimeout(() => {
+          window.location.href = "../../";
+        }, 1500);
 
-        try {
-          console.log('🔄 Attempting login with:', email);
-          
-          // Use smartAuth consistently
-          await smartAuth.signIn(email, password);
-          
-          console.log('✅ Login successful! Redirecting...');
-          lg_msg.style.color = '#008e45';
-          lg_msg.textContent = 'Success! Redirecting…';
-          
-          // Small delay then redirect
-          setTimeout(() => {
-            window.location.href = '../index.html';
-          }, 1000);
-          
-        } catch (err) {
-          console.error('❌ Login error:', err);
-          lg_msg.style.color = 'crimson';
-          
-          if (err.code === 'auth/wrong-password' || 
-              err.message?.includes('wrong-password')) {
-            lg_msg.textContent = "ERROR: Password is wrong. Please try again.";
-          } else if (err.code === 'auth/invalid-credential' ||
-                     err.code === 'auth/invalid-login-credentials') {
-            lg_msg.textContent = "ERROR: Invalid email or password. Please try again";
-          } else if (err.code === 'auth/too-many-requests') {
-            lg_msg.textContent = "ERROR: Too many failed attempts. Try again later.";
-          } else if (err.code === 'auth/user-disabled') {
-            lg_msg.textContent = "ERROR: This account has been disabled";
-          } else if (err.code === 'auth/network-request-failed') {
-            lg_msg.textContent = "ERROR: Network error. Check your connection";
-          } else {
-            lg_msg.textContent = `ERROR: ${err.code || err.message || 'Unknown error'}. Please try again`;
-          }
+      } catch (err) {
+        let errorMessage = "ERROR: An error occurred. Please try again.";
 
-          // Re-enable button
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalText;
+        if (err.code.includes("email-already-in-use")) {
+          errorMessage = "ERROR: Email already in use";
+        } else if (err.code.includes("weak-password")) {
+          errorMessage = "ERROR: Password is too weak";
+        } else if (err.code.includes("invalid-email")) {
+          errorMessage = "ERROR: Invalid email address";
+        } else if (err.code.includes("network-request-failed")) {
+          errorMessage = "ERROR: Network error. Please check your connection";
         }
-      });
 
-      console.log('✅ Login form event listener attached successfully');
+        su_error.textContent = errorMessage;
+      }
     });
   </script>
 </body>
