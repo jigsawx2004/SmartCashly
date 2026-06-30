@@ -727,6 +727,13 @@ footer::before {
       }
     }
 
+
+    .search-autocomplete .store-logo {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
 </style>
 </head>
 
@@ -903,7 +910,8 @@ footer::before {
         { name: 'Benetton', url: '/stores/benetton' },
         { name: 'Myprotein', url: '/stores/myprotein' },
         { name: 'Aegean Airlines', url: '/stores/aegeanairlines' },
-        { name: 'Adidas', url: '/stores/adidas' }
+        { name: 'Adidas', url: '/stores/adidas' },
+        { name: 'AliExpress', url: '/stores/aliexpress', logo: '/store-logos/store-logo-aliexpress.png' }
       ];
 
     searchInput.addEventListener('input', function(e) {
@@ -917,8 +925,7 @@ footer::before {
       if (results.length) {
         autocomplete.innerHTML = results.map(s =>
           `<div onclick="window.location.href='${s.url}'">
-             <img src="/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png"
-                  alt="${s.name} logo" class="store-logo">
+             <div class="store-logo" style="background-image: url('${s.logo || `/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png`}')"></div>
              <span class="store-name">${s.name}</span>
            </div>`
         ).join('');
