@@ -443,20 +443,10 @@
     .store-logo-large {
       width: 120px;
       height: 120px;
-      background: linear-gradient(135deg, #ff6a00, #ff9f1a);
+      background: url('/store-logos/store-logo-aliexpress.png') no-repeat center center;
       background-size: cover;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 800;
-      font-size: 1.4rem;
-    }
-
-    .store-logo-large::after {
-      content: 'Ali';
     }
 
     .store-details {
@@ -504,6 +494,8 @@
       transition: all 0.3s ease;
       backdrop-filter: blur(10px);
       border: 3px solid #0070f3;
+      display: flex;
+      flex-direction: column;
     }
 
 
@@ -524,19 +516,9 @@
     .offer-logo {
       width: 60px;
       height: 60px;
-      background: linear-gradient(135deg, #ff6a00, #ff9f1a);
+      background: url('/store-logos/store-logo-aliexpress.png') no-repeat center center;
       background-size: cover;
       border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 800;
-      font-size: 0.9rem;
-    }
-
-    .offer-logo::after {
-      content: 'Ali';
     }
 
     .offer-type {
@@ -575,6 +557,7 @@
       color: #ff6b35;
       font-weight: bold;
       font-size: 1rem;
+      margin-top: auto;
       margin-bottom: 1rem;
     }
 
@@ -799,9 +782,9 @@
       <div class="store-logo-large"></div>
       <div class="store-details">
         <h1 class="store-title">AliExpress</h1>
-        <p class="store-subtitle">Online marketplace with coupons, offers and cashback rewards</p>
-        <div class="cashback-highlight">💰 Earn up to 7% Cashback</div>
-        <p>AliExpress is an online marketplace with deals, coupons, electronics, fashion, gadgets, tools, and everyday finds. Shop marketplace offers and combine eligible purchases with Smartcashly cashback rewards.</p>
+        <p class="store-subtitle">Διαδικτυακή αγορά με κουπόνια, προσφορές και ανταμοιβές επιστροφής χρημάτων</p>
+        <div class="cashback-highlight">💰 Κερδίστε έως 7% επιστροφή χρημάτων</div>
+        <p>Το AliExpress είναι μια διαδικτυακή αγορά με προσφορές, κουπόνια, ηλεκτρονικά, μόδα, gadgets, εργαλεία και καθημερινά προϊόντα. Ανακαλύψτε προσφορές και συνδυάστε τις επιλέξιμες αγορές με ανταμοιβές επιστροφής χρημάτων από το Smartcashly.</p>
       </div>
     </div>
 
@@ -810,109 +793,89 @@
         <div class="offer-card">
           <div class="offer-header">
             <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
+            <div class="offer-type promo">ΠΡΟΣΦΟΡΑ</div>
           </div>
-          <h3 class="offer-title">Εξοικονόμησε έως 7% από το Aliexpress (Ελλάδα)!</h3>
-          <p class="offer-description">Ανακατευθυνθείτε στη ιστοσελίδα του aliexpress μέσω του apopou κάντε τις αγορές σας όπως κάθε άλλη φορά και θα λάβετε cashback στον apopou λογαριασμό σας.</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Συνδυάζεται με έως 7% Cashback</div>
-          <button class="offer-button" type="button">🛍️ Get Offer</button>
+          <h3 class="offer-title">Εξοικονόμησε έως 7% από το AliExpress (Ελλάδα)!</h3>
+          <p class="offer-description">Ανακατευθυνθείτε στην ιστοσελίδα του AliExpress μέσω του Smartcashly, κάντε τις αγορές σας όπως κάθε άλλη φορά και λάβετε επιστροφή χρημάτων στον λογαριασμό σας.</p>
+          <div class="offer-cashback">+ Συνδυάζεται με έως 7% επιστροφή χρημάτων</div>
+          <button class="offer-button" type="button">🛍️ Πάρε Προσφορά</button>
         </div>
 
         <div class="offer-card">
           <div class="offer-header">
             <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
+            <div class="offer-type promo">ΠΡΟΣΦΟΡΑ</div>
           </div>
-          <h3 class="offer-title">Δώρα για τους αγαπημένους σου από τα Top Brands του AliExpress!</h3>
-          <p class="offer-description">Αγόρασε δώρα για τους αγαπημένους σου από τα Top Brands του AliExpress και συνδυάστε τα με cashback. Οι προσφορές ανανεώνονται συνεχώς και ισχύουν μέχρι εξαντλήσεως του stock.</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Συνδυάζεται με έως 7% Cashback</div>
-          <button class="offer-button" type="button">🎁 Get Offer</button>
+          <h3 class="offer-title">Δώρα για τους αγαπημένους σου από τις κορυφαίες μάρκες του AliExpress!</h3>
+          <p class="offer-description">Αγόρασε δώρα για τους αγαπημένους σου από τις κορυφαίες μάρκες του AliExpress και συνδύασέ τα με επιστροφή χρημάτων. Οι προσφορές ανανεώνονται συνεχώς και ισχύουν μέχρι εξαντλήσεως του stock.</p>
+          <div class="offer-cashback">+ Συνδυάζεται με έως 7% επιστροφή χρημάτων</div>
+          <button class="offer-button" type="button">🎁 Πάρε Προσφορά</button>
         </div>
 
         <div class="offer-card">
           <div class="offer-header">
             <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
+            <div class="offer-type promo">ΠΡΟΣΦΟΡΑ</div>
           </div>
-          <h3 class="offer-title">Κάθε μέρα SuperDeals από το AliExpress!</h3>
-          <p class="offer-description">Δείτε τα SuperDeals του AliExpress και συνδυάστε τα με cashback. Οι προσφορές ανανεώνονται συνεχώς και ισχύουν μέχρι εξαντλήσεως του stock.</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Συνδυάζεται με έως 7% Cashback</div>
-          <button class="offer-button" type="button">⚡ Get Offer</button>
+          <h3 class="offer-title">Κάθε μέρα σούπερ προσφορές από το AliExpress!</h3>
+          <p class="offer-description">Δείτε τις σούπερ προσφορές του AliExpress και συνδυάστε τις με επιστροφή χρημάτων. Οι προσφορές ανανεώνονται συνεχώς και ισχύουν μέχρι εξαντλήσεως του stock.</p>
+          <div class="offer-cashback">+ Συνδυάζεται με έως 7% επιστροφή χρημάτων</div>
+          <button class="offer-button" type="button">⚡ Πάρε Προσφορά</button>
         </div>
 
         <div class="offer-card">
           <div class="offer-header">
             <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
+            <div class="offer-type promo">ΠΡΟΣΦΟΡΑ</div>
           </div>
-          <h3 class="offer-title">Weekly Deals από το AliExpress</h3>
-          <p class="offer-description">Δείτε τις Εβδομαδιαίες Προσφορές του AliExpress και συνδυάστε τες με cashback. Οι προσφορές ανανεώνονται κάθε εβδομάδα, ενώ ισχύουν για μία μόνο εβδομάδα ή μέχρι εξαντλήσεως του stock.</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Συνδυάζεται με έως 7% Cashback</div>
-          <button class="offer-button" type="button">📅 Get Offer</button>
+          <h3 class="offer-title">Εβδομαδιαίες προσφορές από το AliExpress</h3>
+          <p class="offer-description">Δείτε τις εβδομαδιαίες προσφορές του AliExpress και συνδυάστε τις με επιστροφή χρημάτων. Οι προσφορές ανανεώνονται κάθε εβδομάδα και ισχύουν για μία μόνο εβδομάδα ή μέχρι εξαντλήσεως του stock.</p>
+          <div class="offer-cashback">+ Συνδυάζεται με έως 7% επιστροφή χρημάτων</div>
+          <button class="offer-button" type="button">📅 Πάρε Προσφορά</button>
         </div>
 
         <div class="offer-card">
           <div class="offer-header">
             <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
+            <div class="offer-type promo">ΠΡΟΣΦΟΡΑ</div>
           </div>
-          <h3 class="offer-title">Bundle Deals από το AliExpress!</h3>
-          <p class="offer-description">Δείτε τα Bundle Deals του AliExpress και συνδυάστε τα με cashback. Οι προσφορές ανανεώνονται συνεχώς και ισχύουν μέχρι εξαντλήσεως του stock.</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Συνδυάζεται με έως 7% Cashback</div>
-          <button class="offer-button" type="button">📦 Get Offer</button>
+          <h3 class="offer-title">Προσφορές πακέτων από το AliExpress!</h3>
+          <p class="offer-description">Δείτε τις προσφορές πακέτων του AliExpress και συνδυάστε τις με επιστροφή χρημάτων. Οι προσφορές ανανεώνονται συνεχώς και ισχύουν μέχρι εξαντλήσεως του stock.</p>
+          <div class="offer-cashback">+ Συνδυάζεται με έως 7% επιστροφή χρημάτων</div>
+          <button class="offer-button" type="button">📦 Πάρε Προσφορά</button>
         </div>
 
         <div class="offer-card">
           <div class="offer-header">
             <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
+            <div class="offer-type promo">ΠΡΟΣΦΟΡΑ</div>
           </div>
           <h3 class="offer-title">20% έκπτωση σε ανδρικά ρούχα!</h3>
-          <p class="offer-description">Συνδίαστε την προσφορά aliexpress με cashback</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Συνδυάζεται με έως 7% Cashback</div>
-          <button class="offer-button" type="button">👕 Get Offer</button>
+          <p class="offer-description">Συνδυάστε την προσφορά του AliExpress με επιστροφή χρημάτων.</p>
+          <div class="offer-cashback">+ Συνδυάζεται με έως 7% επιστροφή χρημάτων</div>
+          <button class="offer-button" type="button">👕 Πάρε Προσφορά</button>
         </div>
 
         <div class="offer-card">
           <div class="offer-header">
             <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
+            <div class="offer-type promo">ΠΡΟΣΦΟΡΑ</div>
           </div>
-          <h3 class="offer-title">Aliexpress promo code Greece!</h3>
-          <p class="offer-description">Όλα τα aliexpress promo codes μπορούν να συνδιαστούν με cashback.</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Συνδυάζεται με έως 7% Cashback</div>
-          <button class="offer-button" type="button">🏷️ Get Offer</button>
+          <h3 class="offer-title">20% έκπτωση σε γυναικεία ρούχα!</h3>
+          <p class="offer-description">Συνδυάστε την προσφορά του AliExpress με επιστροφή χρημάτων.</p>
+          <div class="offer-cashback">+ Συνδυάζεται με έως 7% επιστροφή χρημάτων</div>
+          <button class="offer-button" type="button">👗 Πάρε Προσφορά</button>
         </div>
 
         <div class="offer-card">
           <div class="offer-header">
             <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
+            <div class="offer-type promo">ΠΡΟΣΦΟΡΑ</div>
           </div>
-          <h3 class="offer-title">Παιδικά ρολόγια σε τιμές χάρισμα!</h3>
-          <p class="offer-description"></p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Συνδυάζεται με έως 7% Cashback</div>
-          <button class="offer-button" type="button">⌚ Get Offer</button>
-        </div>
-
-        <div class="offer-card">
-          <div class="offer-header">
-            <div class="offer-logo"></div>
-            <div class="offer-type promo">OFFER</div>
-          </div>
-          <h3 class="offer-title">Εργαλεία σε απίστευτα χαμηλές Τιμές!</h3>
-          <p class="offer-description">Η προσφορά ισχύει μόνο σε επιλεγμένους εμπόρους του aliexpress. Η προσφορά δεν μπορεί να συνδιαστεί με άλλη προσφορά.</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Συνδυάζεται με έως 7% Cashback</div>
-          <button class="offer-button" type="button">🛠️ Get Offer</button>
+          <h3 class="offer-title">Κωδικοί προσφοράς AliExpress για την Ελλάδα!</h3>
+          <p class="offer-description">Όλοι οι κωδικοί προσφοράς του AliExpress μπορούν να συνδυαστούν με επιστροφή χρημάτων.</p>
+          <div class="offer-cashback">+ Συνδυάζεται με έως 7% επιστροφή χρημάτων</div>
+          <button class="offer-button" type="button">🏷️ Πάρε Προσφορά</button>
         </div>
       </div>
     </div>
@@ -955,7 +918,8 @@
         if (results.length) {
           autocomplete.innerHTML = results.map(s =>
               `<div onclick="window.location.href='${s.url}'">
-                 ${s.name === 'AliExpress' ? '' : `<img src="/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png" alt="${s.name} logo" class="store-logo">`}
+                 <img src="/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png"
+                      alt="${s.name} logo" class="store-logo">
                  <span class="store-name">${s.name}</span>
                </div>`
             ).join('');
