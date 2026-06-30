@@ -618,7 +618,7 @@
       const results = stores.filter(store => store.name.toLowerCase().includes(query));
       autocomplete.innerHTML = results.map(store => `
         <div onclick="window.location.href='${store.url}'">
-          <img src="/store-logos/store-logo-${store.name.toLowerCase().replace(/\s+/g, '')}.png" alt="${store.name} logo" class="store-logo">
+          ${store.name === 'AliExpress' ? '' : `<img src="/store-logos/store-logo-${store.name.toLowerCase().replace(/\s+/g, '')}.png" alt="${store.name} logo" class="store-logo">`}
           <span class="store-name">${store.name}</span>
         </div>
       `).join('');
