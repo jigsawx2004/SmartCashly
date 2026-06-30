@@ -1118,7 +1118,8 @@ footer::before {
         { name: 'Benetton', url: '/stores/benetton' },
         { name: 'Myprotein', url: '/stores/myprotein' },
         { name: 'Aegean Airlines', url: '/stores/aegeanairlines' },
-        { name: 'Adidas', url:'/stores/adidas'}
+        { name: 'Adidas', url: '/stores/adidas' },
+        { name: 'AliExpress', url: '/stores/aliexpress' }
       ];
 
       searchInput.addEventListener('input', function(e) {
@@ -1132,8 +1133,7 @@ footer::before {
         if (results.length) {
           autocomplete.innerHTML = results.map(s =>
               `<div onclick="window.location.href='${s.url}'">
-                 <img src="/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png"
-                      alt="${s.name} logo" class="store-logo">
+                 ${s.name === 'AliExpress' ? '' : `<img src="/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png" alt="${s.name} logo" class="store-logo">`}
                  <span class="store-name">${s.name}</span>
                </div>`
             ).join('');
@@ -1345,6 +1345,13 @@ footer::before {
         url: '/stores/adidas',
         icon: '/store-logos/store-logo-adidas.png',
         keywords: ['adidas', 'shoes', 'sneakers', 'sports', 'athletic', 'apparel', 'fashion', 'clothing', 'ultraboost', 'stansmith', 'originals', 'football', 'activewear', 'nmd']
+      },
+      {
+        name: 'AliExpress',
+        description: 'Online marketplace with deals, coupons and cashback',
+        cashback: '7%',
+        url: '/stores/aliexpress',
+        keywords: ['aliexpress', 'ali express', 'marketplace', 'shopping', 'deals', 'coupons', 'superdeals', 'bundles', 'gadgets', 'electronics', 'tools', 'clothes']
       }
     ];
 
@@ -1460,8 +1467,9 @@ footer::before {
         'Shein': 4.10,
         'Benetton': 3.75,
         'Myprotein': 2.80,
-        'Aegean Airlines': 8.50
-        'Adidas': 3.15
+        'Aegean Airlines': 8.50,
+        'Adidas': 3.15,
+        'AliExpress': 7.00
       };
 
       return cashbackRates[storeName] || 1.50;
@@ -1485,9 +1493,9 @@ footer::before {
       if (e.key === 'Escape') {
         closeSupportModal();
       }
-      // Contact Form Functions
-    function openContactForm() {
-      // Contact Form Functions - Fixed Version
+    });
+
+    // Contact Form Functions - Fixed Version
 window.openContactForm = function() {
   // Close the main support modal first
   document.getElementById('supportModal').style.display = 'none';
@@ -1639,6 +1647,7 @@ window.openContactForm = function() {
       charCount.style.color = count > 900 ? '#ff6b35' : '#666';
       });
     }
+};
 
     function closeContactForm() {
       const contactModal = document.getElementById('contactModal');
