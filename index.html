@@ -428,6 +428,60 @@ main {
   border-color: #0059c1;
 }
 
+.store-card.store-boxnow {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.24) 0 18px, transparent 19px),
+    radial-gradient(circle at 78% 18%, rgba(255, 255, 255, 0.18) 0 28px, transparent 29px),
+    radial-gradient(circle at 88% 72%, rgba(255, 255, 255, 0.2) 0 22px, transparent 23px),
+    linear-gradient(135deg, #44d62c 0%, #44d62c 55%, #35c91f 100%);
+  border-color: #ffffff;
+  box-shadow: 0 8px 32px rgba(68, 214, 44, 0.35);
+  color: #ffffff;
+}
+
+.store-card.store-boxnow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.85) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.85) 1px, transparent 1px),
+    radial-gradient(circle at 45% 55%, rgba(255, 255, 255, 0.7) 1px, transparent 1px),
+    radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+    radial-gradient(circle at 25% 85%, rgba(255, 255, 255, 0.75) 1.5px, transparent 1.5px);
+  background-size: 88px 88px, 118px 118px, 74px 74px, 102px 102px, 66px 66px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.store-card.store-boxnow > * {
+  position: relative;
+  z-index: 1;
+}
+
+.store-card.store-boxnow:hover {
+  box-shadow: 0 10px 30px rgba(68, 214, 44, 0.55);
+  border-color: #ffffff;
+}
+
+.store-card.store-boxnow .store-name,
+.store-card.store-boxnow .store-description,
+.store-card.store-boxnow .store-features li,
+.store-card.store-boxnow .store-features li::before {
+  color: #ffffff;
+}
+
+.store-card.store-boxnow .cashback-badge,
+.store-card.store-boxnow .shop-now-btn {
+  background: #ffffff;
+  color: #35c91f;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.store-card.store-boxnow .shop-now-btn:hover {
+  background: #f5fff2;
+}
+
 .store-logo {
   width: 100px;
   height: 100px;
@@ -1033,7 +1087,7 @@ footer::before {
     <div class="stores-section">
       <h2 class="section-title">🔥 Best offers currently</h2>
       <div class="stores-grid">
-        <div class="store-card" onclick="window.location.href='/stores/boxnow'" style="cursor: pointer;">
+        <div class="store-card store-boxnow" onclick="window.location.href='/stores/boxnow'" style="cursor: pointer;">
           <img src="/store-logos/store-logo-boxnow.png" alt="Box Now Logo" class="store-logo" />
           <div class="store-name">Box Now</div>
           <div class="store-description">Fast and reliable delivery service with amazing cashback rewards on every shipment</div>
