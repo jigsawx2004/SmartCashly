@@ -869,7 +869,8 @@
         { name: 'Benetton', url: '/stores/benetton' },
         { name: 'Myprotein', url: '/stores/myprotein' },
         { name: 'Aegean Airlines', url: '/stores/aegeanairlines' },
-        { name: 'Adidas', url: '/stores/adidas' }
+        { name: 'Adidas', url: '/stores/adidas' },
+        { name: 'AliExpress', url: '/stores/aliexpress' }
       ];
 
       searchInput.addEventListener('input', function(e) {
@@ -883,8 +884,7 @@
         if (results.length) {
           autocomplete.innerHTML = results.map(s =>
               `<div onclick="window.location.href='${s.url}'">
-                 <img src="/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png"
-                      alt="${s.name} logo" class="store-logo">
+                 ${s.name === 'AliExpress' ? '' : `<img src="/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png" alt="${s.name} logo" class="store-logo">`}
                  <span class="store-name">${s.name}</span>
                </div>`
             ).join('');
@@ -899,10 +899,6 @@
       });
     }
   </script>
-
-  <!-- your existing Shein-specific script follows -->
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
