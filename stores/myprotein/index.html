@@ -474,6 +474,13 @@
       }
     }
 
+
+    .search-autocomplete .store-logo {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
 </style>
 </head>
 <body>
@@ -618,7 +625,7 @@
       const results = stores.filter(store => store.name.toLowerCase().includes(query));
       autocomplete.innerHTML = results.map(store => `
         <div onclick="window.location.href='${store.url}'">
-          <img src="${store.logo || `/store-logos/store-logo-${store.name.toLowerCase().replace(/\s+/g, '')}.png`}" alt="${store.name} logo" class="store-logo">
+          <div class="store-logo" style="background-image: url('${store.logo || `/store-logos/store-logo-${store.name.toLowerCase().replace(/\s+/g, '')}.png`}')"></div>
           <span class="store-name">${store.name}</span>
         </div>
       `).join('');

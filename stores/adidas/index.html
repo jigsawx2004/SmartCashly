@@ -756,6 +756,13 @@
       }
     }
 
+
+    .search-autocomplete .store-logo {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
 </style>
 </head>
 
@@ -923,8 +930,7 @@
         if (results.length) {
           autocomplete.innerHTML = results.map(s =>
               `<div onclick="window.location.href='${s.url}'">
-                 <img src="${s.logo || `/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png`}"
-                      alt="${s.name} logo" class="store-logo">
+                 <div class="store-logo" style="background-image: url('${s.logo || `/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png`}')"></div>
                  <span class="store-name">${s.name}</span>
                </div>`
             ).join('');
