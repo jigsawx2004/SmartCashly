@@ -1119,7 +1119,7 @@ footer::before {
         { name: 'Myprotein', url: '/stores/myprotein' },
         { name: 'Aegean Airlines', url: '/stores/aegeanairlines' },
         { name: 'Adidas', url: '/stores/adidas' },
-        { name: 'AliExpress', url: '/stores/aliexpress' }
+        { name: 'AliExpress', url: '/stores/aliexpress', logo: '/store-logos/store-logo-aliexpress.png' }
       ];
 
       searchInput.addEventListener('input', function(e) {
@@ -1133,7 +1133,8 @@ footer::before {
         if (results.length) {
           autocomplete.innerHTML = results.map(s =>
               `<div onclick="window.location.href='${s.url}'">
-                 ${s.name === 'AliExpress' ? '' : `<img src="/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png" alt="${s.name} logo" class="store-logo">`}
+                 <img src="${s.logo || `/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png`}"
+                      alt="${s.name} logo" class="store-logo">
                  <span class="store-name">${s.name}</span>
                </div>`
             ).join('');
