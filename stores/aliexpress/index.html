@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AliExpress - 7% Cashback • Smartcashly</title>
+  <link rel="icon" type="image/svg+xml" href="../../site-logo/smartcashly-favicon.svg" />
+  <style>
+    /* Advanced shiny black background with floating white particles */
+    html { 
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 60% 80%, rgba(255, 255, 255, 0.18) 0%, transparent 40%),
+        linear-gradient(135deg, #000000 0%, #1a1a1a 25%, #2d2d2d 50%, #404040 75%, #525252 100%) !important;
+      background-size: 300% 300%, 250% 250%, 200% 200%, 280% 280%, 300% 300% !important;
+      animation: shimmer 12s ease-in-out infinite !important;
+      min-height: 100vh;
+    }
+    
+    body { 
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 60% 80%, rgba(255, 255, 255, 0.18) 0%, transparent 40%),
+        linear-gradient(135deg, #000000 0%, #1a1a1a 25%, #2d2d2d 50%, #404040 75%, #525252 100%) !important;
+      background-size: 300% 300%, 250% 250%, 200% 200%, 280% 280%, 300% 300% !important;
+      animation: shimmer 12s ease-in-out infinite !important;
+      min-height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    
+    /* Enhanced white floating particles overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.6) 1px, transparent 1px),
+        radial-gradient(circle at 45% 55%, rgba(255, 255, 255, 0.7) 1px, transparent 1px),
+        radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+        radial-gradient(circle at 25% 85%, rgba(255, 255, 255, 0.6) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 65% 45%, rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+      background-size: 120px 120px, 160px 160px, 100px 100px, 140px 140px, 90px 90px, 110px 110px;
+      z-index: 0;
+      pointer-events: none !important;
+      animation: gentleFloat 25s ease-in-out infinite;
+      will-change: background-position;
+    }
+    
+    /* Enhanced white sparkle layer */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 25% 40%, rgba(255, 255, 255, 0.9) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 65% 20%, rgba(255, 255, 255, 0.7) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 35% 70%, rgba(255, 255, 255, 0.8) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 80% 60%, rgba(255, 255, 255, 0.6) 0.8px, transparent 0.8px),
+        radial-gradient(circle at 15% 80%, rgba(255, 255, 255, 0.5) 0.5px, transparent 0.5px);
+      background-size: 70px 70px, 90px 90px, 60px 60px, 80px 80px, 65px 65px;
+      pointer-events: none !important;
+      z-index: 1;
+      animation: gentleSparkle 20s ease-in-out infinite;
+      will-change: background-position;
+    }
+    
+    @keyframes shimmer {
+      0% { background-position: 0% 50%, 0% 0%, 0% 0%, 0% 0%, 0% 50%; }
+      50% { background-position: 100% 50%, 100% 100%, 100% 50%, 100% 100%, 100% 50%; }
+      100% { background-position: 0% 50%, 0% 0%, 0% 0%, 0% 0%, 0% 50%; }
+    }
+    
+    @keyframes gentleFloat {
+      0% { 
+        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        opacity: 0.4;
+      }
+      33% { 
+        background-position: 30% 20%, 20% 40%, 50% 30%, 40% 10%, 60% 50%, 70% 20%;
+        opacity: 0.7;
+      }
+      66% { 
+        background-position: 60% 40%, 40% 80%, 80% 60%, 10% 70%, 30% 80%, 90% 40%;
+        opacity: 0.5;
+      }
+      100% { 
+        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        opacity: 0.4;
+      }
+    }
+    
+    @keyframes gentleSparkle {
+      0%, 100% { 
+        opacity: 0.3;
+        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+      }
+      25% { 
+        opacity: 0.6;
+        background-position: 15% 15%, 25% 25%, 35% 35%, 45% 45%, 55% 55%;
+      }
+      50% { 
+        opacity: 0.8;
+        background-position: 30% 30%, 50% 50%, 70% 70%, 90% 90%, 10% 90%;
+      }
+      75% { 
+        opacity: 0.4;
+        background-position: 20% 40%, 40% 20%, 60% 80%, 80% 60%, 100% 40%;
+      }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    }
+
+    /* Ensure content appears above particles */
+    header, main, footer {
+      position: relative;
+      z-index: 10;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: #222;
+    }
+
+  header {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      padding: 1rem 1.5rem;
+      background: #008e45 !important;
+      color: #fff;
+      position: relative;
+      overflow: visible;
+      z-index: 1001;
+    }
+
+    /* Enhanced header particles */
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 25% 40%, rgba(255, 255, 255, 1) 1px, transparent 1px),
+        radial-gradient(circle at 75% 60%, rgba(255, 255, 255, 1) 1px, transparent 1px),
+        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 1) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 15% 80%, rgba(255, 255, 255, 1) 1px, transparent 1px);
+      background-size: 80px 80px, 100px 100px, 60px 60px, 90px 90px;
+      pointer-events: none !important;
+      z-index: 1;
+      animation: headerParticles 20s ease-in-out infinite;
+    }
+
+    @keyframes headerParticles {
+      0% { 
+        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        opacity: 0.6;
+      }
+      50% { 
+        background-position: 30% 30%, 40% 40%, 20% 50%, 60% 20%;
+        opacity: 0.9;
+      }
+      100% { 
+        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        opacity: 0.6;
+      }
+    }
+
+   /* Logo positioning */
+.logo-img {
+  position: absolute;
+  left: 1.5rem;
+  height: 100px;
+  width: auto;
+  background: transparent !important;
+  z-index: 1002;
+}
+
+/* Search bar container */
+.search-bar {
+  position: relative;
+  flex: 0 1 500px;  /* allow shrink if needed */
+  max-width: 500px;
+  width: 100%;
+  z-index: 1002;
+  margin: 0; /* remove auto margins */
+}
+
+/* Search input field */
+.search-bar input {
+  width: 100%;
+  padding: 0.55rem 2.8rem 0.55rem 1rem;
+  border: none;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  outline: none;
+  background: white !important;
+  transition: box-shadow .18s;
+}
+
+/* Search input focus state */
+.search-bar input:focus {
+  box-shadow: 0 0 0 2px rgba(0,112,243,.35);
+}
+
+/* Search button */
+.search-bar button {
+  font-size: 1rem; /* keeps emoji small */
+  line-height: 1;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: none;
+  border-radius: 50%;
+  background: #0070f3 !important;
+  cursor: pointer;
+  transition: background .18s;
+}
+
+/* Search button hover */
+.search-bar button:hover { 
+  background: #0059c1 !important;
+}
+
+/* Search button icon */
+.search-bar button svg { 
+  width: 1rem; height: 1rem; fill: #fff; 
+}
+
+/* Search Autocomplete Styles */
+.search-bar {
+  position: relative !important;
+}
+
+.search-autocomplete {
+  position: absolute !important;
+  top: calc(100% + 2px) !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: white !important;
+  border: 2px solid #008e45 !important;
+  border-radius: 0 0 12px 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+  z-index: 999999 !important;
+  max-height: 250px !important;
+  overflow-y: auto !important;
+  display: none !important;
+}
+
+.search-autocomplete.show { 
+  display: block !important; 
+}
+
+/* Search bar should anchor the dropdown */
+.search-bar {
+  position: relative !important;
+  z-index: 1002;
+}
+
+/* Autocomplete dropdown */
+.search-autocomplete {
+  position: absolute !important;
+  top: calc(100% + 2px) !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: white !important;
+  border: 2px solid #008e45 !important;
+  border-radius: 0 0 12px 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+  z-index: 999999 !important;
+  max-height: 250px !important;
+  overflow-y: auto !important;
+  display: none;
+}
+
+.search-autocomplete.show {
+  display: block !important;
+}
+
+.search-autocomplete div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-size: 0.95rem;      /* ✅ normal size */
+  transition: background 0.2s;
+}
+
+.search-autocomplete div:hover {
+  background: #f0f8ff;
+}
+
+.search-autocomplete .store-logo {
+  height: 120px;
+  width: 120px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 5px;
+}
+
+.search-autocomplete .store-name {
+  color: #008e45;
+  font-weight: 600;
+  font-size: 1.2rem;       /* ✅ same as working store */
+}
+
+    
+.search-autocomplete div:hover {
+  background: #f0f8ff;
+}
+
+.search-autocomplete.store-logo {
+  height: 120px;
+  width: 120px;           /* ✅ force consistent square size */
+  object-fit: contain;   /* ✅ keep proportions, no stretching */
+  flex-shrink: 0;
+  border-radius: 5px;    /* optional: soften edges */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center the group */
+  gap: 1rem; /* spacing between search and button */
+  flex: 1;
+}
+
+.center-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* space between search and button */
+  flex: 1;
+}
+    
+/* View All Stores button */
+.all-stores-btn {
+  position: relative;   
+  z-index: 5;           
+  background: #0070f3;
+  color: white;
+  text-decoration: none;
+  padding: 0.55rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.18s;
+  white-space: nowrap;  /* keeps text in one line */
+  height: 38px;         /* matches search input height */
+  display: flex;
+  align-items: center;
+}
+
+/* View All Stores button hover */
+.all-stores-btn:hover { 
+  background: #0059c1; 
+}
+
+/* Auth navigation */
+.auth-nav {
+  position: absolute;
+  right: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 1002;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .search-bar {
+    margin-left: 20px;
+    max-width: 300px;
+  }
+}
+
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      background: #0070f3 !important;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background .18s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover          { background: #0059c1 !important; }
+    .btn--secondary     { background: #0070f3 !important; }
+    .btn--secondary:hover { background: #0059c1 !important; }
+
+    main {
+      flex: 1 1 auto;
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    
+    .store-header {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      backdrop-filter: blur(10px);
+      border: 3px solid #0070f3;
+    }
+
+    .store-logo-large {
+      width: 120px;
+      height: 120px;
+      background: url('/store-logos/store-logo-aliexpress.svg') no-repeat center center;
+      background-size: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    }
+
+    .store-details {
+      flex: 1;
+    }
+
+    .store-title {
+      font-size: 2.2rem;
+      color: #008e45;
+      margin-bottom: 0.1rem;
+    }
+
+    .store-subtitle {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .cashback-highlight {
+      background: linear-gradient(135deg, #ff6b35, #ff8a50);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .offers-section {
+      margin-bottom: 3rem;
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .offer-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      border: 3px solid #0070f3;
+    }
+
+    
+    .offer-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px #0059c1;
+      border-color: #0059c1;
+    }
+
+
+    .offer-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .offer-logo {
+      width: 60px;
+      height: 60px;
+      background: url('/store-logos/store-logo-aliexpress.svg') no-repeat center center;
+      background-size: cover;
+      border-radius: 6px;
+    }
+
+    .offer-type {
+      background: #2196F3;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .offer-type.cashback {
+      background: #ff6b35;
+    }
+
+    .offer-type.promo {
+      background: #2196F3;
+    }
+
+    .offer-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #008e45;
+      margin-bottom: 0.5rem;
+    }
+
+    .offer-description {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+
+    .offer-cashback {
+      color: #ff6b35;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .offer-validity {
+      color: #999;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .offer-button {
+      background: #4CAF50;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+    }
+
+    .offer-button:hover {
+      background: #45a049;
+    }
+
+    footer {
+      height: 80px;                 /* keep your set height */
+      display: flex;                /* enable flexbox */
+      align-items: center;          /* ✅ vertical centering */
+      justify-content: center;      /* ✅ horizontal centering */
+      font-size: 1rem;
+      font-weight: bold; 
+      background: #008e45 !important;
+      color: #000000 !important;
+      position: relative;  
+      overflow: visible;
+      z-index: 1001;
+    }
+
+    footer * {
+      position: relative;
+      z-index: 3;
+      color: #ffffff !important;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+        radial-gradient(circle at 70% 30%, rgba(255, 215, 0, 0.4) 1px, transparent 1px),
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.2) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 80% 70%, rgba(255, 193, 7, 0.3) 1px, transparent 1px);
+      background-size: 70px 70px, 90px 90px, 50px 50px, 80px 80px;
+      pointer-events: none !important;
+      z-index: 1;
+      animation: footerParticles 15s ease-in-out infinite;
+    }
+
+    @keyframes footerParticles {
+      0% { 
+        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        opacity: 0.6;
+      }
+      50% { 
+        background-position: 15% 15%, 20% 20%, 25% 25%, 30% 30%;
+        opacity: 0.8;
+      }
+      100% { 
+        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        opacity: 0.6;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .store-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .offers-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+
+    /* Unified Smartcashly footer */
+    footer {
+      height: 80px !important;
+      min-height: 80px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 1rem 1.5rem !important;
+      background: #008e45 !important;
+      color: #000 !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      overflow: hidden !important;
+    }
+
+    footer *,
+    footer span {
+      color: #000 !important;
+      font-weight: 700 !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    footer::before,
+    footer::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    /* Unified header/footer: keep footer color and size matched to header on every page */
+    header,
+    footer {
+      height: 80px !important;
+      min-height: 80px !important;
+      display: flex !important;
+      align-items: center !important;
+      padding: 1rem 1.5rem !important;
+      background: #008e45 !important;
+      color: #fff !important;
+    }
+
+    footer {
+      justify-content: center !important;
+      color: #000 !important;
+      font-size: 1rem !important;
+      font-weight: bold !important;
+      text-align: center !important;
+      overflow: hidden !important;
+    }
+
+    footer *,
+    footer span {
+      color: #000 !important;
+      font-weight: bold !important;
+      position: relative !important;
+      z-index: 1 !important;
+    }
+
+    footer::before,
+    footer::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    /* Unified main-screen background: match the Smartcashly homepage yellow */
+    html,
+    body {
+      background: #FFDE59 !important;
+      background-image: none !important;
+      min-height: 100vh;
+    }
+
+    main {
+      background: transparent !important;
+    }
+</style>
+</head>
+
+<body>
+ <header>
+  <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+  <div class="center-group">
+  <form class="search-bar" action="#" method="get">
+  <input type="search" placeholder="Search any store ..." /> 
+  <button type="submit" aria-label="Search">🔍</button>
+  </form>
+  <a href="../../general-stuff/all-stores.html" class="all-stores-btn">View All Stores</a>
+  </div>
+  <nav class="auth-nav">
+    <a href="/" class="btn btn--secondary">Home</a>
+  </nav>
+</header>
+
+  <main>
+    <div class="store-header">
+      <div class="store-logo-large"></div>
+      <div class="store-details">
+        <h1 class="store-title">AliExpress</h1>
+        <p class="store-subtitle">Online marketplace with cashback rewards on everyday shopping</p>
+        <div class="cashback-highlight">💰 Earn up to 7% Cashback</div>
+        <p>AliExpress is a global online marketplace with millions of products across fashion, electronics, home goods, toys, tools, accessories, and more. Browse daily deals, seasonal promotions, and marketplace offers while earning cashback on eligible purchases.</p>
+      </div>
+    </div>
+
+    <div class="offers-section">
+      <div class="offers-grid">
+        <div class="offer-card" style="cursor: default;">
+          <div class="offer-header">
+            <div class="offer-logo"></div>
+            <div class="offer-type cashback">CASHBACK</div>
+          </div>
+          <h3 class="offer-title">Εξοικονόμησε έως 7% από το Aliexpress (Ελλάδα)!</h3>
+          <p class="offer-description">Ανακατευθυνθείτε στη ιστοσελίδα του aliexpress μέσω του Smartcashly, κάντε τις αγορές σας όπως κάθε άλλη φορά και λάβετε cashback στον Smartcashly λογαριασμό σας.</p>
+          <div style="height: 24px;"></div>
+          <div class="offer-cashback">💰 Earn up to 7% Cashback</div>
+          <button class="offer-button" type="button">💰 View Cashback</button>
+        </div>
+        <div class="offer-card" style="cursor: default;">
+          <div class="offer-header">
+            <div class="offer-logo"></div>
+            <div class="offer-type promo">OFFER</div>
+          </div>
+          <h3 class="offer-title">Δώρα για τους αγαπημένους σου από τα Top Brands του AliExpress!</h3>
+          <p class="offer-description">Αγόρασε δώρα για τους αγαπημένους σου από τα Top Brands του AliExpress και συνδύασέ τα με cashback. Οι προσφορές ανανεώνονται συνεχώς και ισχύουν μέχρι εξαντλήσεως του stock.</p>
+          <div style="height: 24px;"></div>
+          <div class="offer-cashback">+ Get Extra 7% Cashback</div>
+          <button class="offer-button" type="button">🛍️ View Offer</button>
+        </div>
+        <div class="offer-card" style="cursor: default;">
+          <div class="offer-header">
+            <div class="offer-logo"></div>
+            <div class="offer-type promo">OFFER</div>
+          </div>
+          <h3 class="offer-title">Κάθε μέρα SuperDeals από το AliExpress!</h3>
+          <p class="offer-description">Δείτε τα SuperDeals του AliExpress και συνδυάστε τα με cashback. Οι προσφορές ανανεώνονται συνεχώς και ισχύουν μέχρι εξαντλήσεως του stock.</p>
+          <div style="height: 24px;"></div>
+          <div class="offer-cashback">+ Get Extra 7% Cashback</div>
+          <button class="offer-button" type="button">🛍️ View Offer</button>
+        </div>
+        <div class="offer-card" style="cursor: default;">
+          <div class="offer-header">
+            <div class="offer-logo"></div>
+            <div class="offer-type promo">OFFER</div>
+          </div>
+          <h3 class="offer-title">Weekly Deals από το AliExpress</h3>
+          <p class="offer-description">Δείτε τις Εβδομαδιαίες Προσφορές του AliExpress και συνδυάστε τες με cashback. Οι προσφορές ανανεώνονται κάθε εβδομάδα ή μέχρι εξαντλήσεως του stock.</p>
+          <div style="height: 24px;"></div>
+          <div class="offer-cashback">+ Get Extra 7% Cashback</div>
+          <button class="offer-button" type="button">🛍️ View Offer</button>
+        </div>
+        <div class="offer-card" style="cursor: default;">
+          <div class="offer-header">
+            <div class="offer-logo"></div>
+            <div class="offer-type promo">OFFER</div>
+          </div>
+          <h3 class="offer-title">Bundle Deals από το AliExpress!</h3>
+          <p class="offer-description">Δείτε τα Bundle Deals του AliExpress και συνδυάστε τα με cashback. Οι προσφορές ανανεώνονται συνεχώς και ισχύουν μέχρι εξαντλήσεως του stock.</p>
+          <div style="height: 24px;"></div>
+          <div class="offer-cashback">+ Get Extra 7% Cashback</div>
+          <button class="offer-button" type="button">🛍️ View Offer</button>
+        </div>
+        <div class="offer-card" style="cursor: default;">
+          <div class="offer-header">
+            <div class="offer-logo"></div>
+            <div class="offer-type promo">OFFER</div>
+          </div>
+          <h3 class="offer-title">20% έκπτωση σε ανδρικά ρούχα!</h3>
+          <p class="offer-description">Συνδυάστε την προσφορά AliExpress με cashback.</p>
+          <div style="height: 24px;"></div>
+          <div class="offer-cashback">+ Get Extra 7% Cashback</div>
+          <button class="offer-button" type="button">🛍️ View Offer</button>
+        </div>
+        <div class="offer-card" style="cursor: default;">
+          <div class="offer-header">
+            <div class="offer-logo"></div>
+            <div class="offer-type promo">OFFER</div>
+          </div>
+          <h3 class="offer-title">Aliexpress promo code Greece!</h3>
+          <p class="offer-description">Όλα τα AliExpress promo codes μπορούν να συνδυαστούν με cashback.</p>
+          <div style="height: 24px;"></div>
+          <div class="offer-cashback">+ Get Extra 7% Cashback</div>
+          <button class="offer-button" type="button">🛍️ View Offer</button>
+        </div>
+        <div class="offer-card" style="cursor: default;">
+          <div class="offer-header">
+            <div class="offer-logo"></div>
+            <div class="offer-type promo">OFFER</div>
+          </div>
+          <h3 class="offer-title">Παιδικά ρολόγια σε τιμές χάρισμα!</h3>
+          <p class="offer-description">Βρείτε παιδικά ρολόγια σε πολύ χαμηλές τιμές και συνδυάστε την προσφορά με cashback.</p>
+          <div style="height: 24px;"></div>
+          <div class="offer-cashback">+ Get Extra 7% Cashback</div>
+          <button class="offer-button" type="button">🛍️ View Offer</button>
+        </div>
+        <div class="offer-card" style="cursor: default;">
+          <div class="offer-header">
+            <div class="offer-logo"></div>
+            <div class="offer-type promo">OFFER</div>
+          </div>
+          <h3 class="offer-title">Εργαλεία σε απίστευτα χαμηλές Τιμές!</h3>
+          <p class="offer-description">Η προσφορά ισχύει μόνο σε επιλεγμένους εμπόρους του AliExpress και μπορεί να συνδυαστεί με cashback όπου είναι διαθέσιμο.</p>
+          <div style="height: 24px;"></div>
+          <div class="offer-cashback">+ Get Extra 7% Cashback</div>
+          <button class="offer-button" type="button">🛍️ View Offer</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    ©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.
+  </footer>
+
+  <!-- ✅ Paste the search functionality block here -->
+  <script>
+    // Search functionality  
+    const searchInput = document.querySelector('.search-bar input');
+    const searchBar = document.querySelector('.search-bar');
+
+    if (searchInput && searchBar) {
+      const autocomplete = document.createElement('div');
+      autocomplete.className = 'search-autocomplete';
+      searchBar.appendChild(autocomplete);
+
+      const stores = [
+        { name: 'Box Now', url: '/stores/boxnow' },
+        { name: 'Nike', url: '/stores/nike' },
+        { name: 'Shein', url: '/stores/shein' },
+        { name: 'Benetton', url: '/stores/benetton' },
+        { name: 'Myprotein', url: '/stores/myprotein' },
+        { name: 'Aegean Airlines', url: '/stores/aegeanairlines' },
+        { name: 'AliExpress', url: '/stores/aliexpress' }
+      ];
+      
+      searchInput.addEventListener('input', function(e) {
+        const query = e.target.value.toLowerCase().trim();
+        if (!query) { 
+          autocomplete.classList.remove('show'); 
+          return; 
+        }
+        
+        const results = stores.filter(s => s.name.toLowerCase().includes(query));
+        if (results.length) {
+          autocomplete.innerHTML = results.map(s => 
+              `<div onclick="window.location.href='${s.url}'">
+                 <img src="/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png" onerror="this.onerror=null;this.src=this.src.replace('.png','.svg')"
+                      alt="${s.name} logo" class="store-logo">
+                 <span class="store-name">${s.name}</span>
+               </div>`
+            ).join('');
+          autocomplete.classList.add('show');
+        } else {
+          autocomplete.classList.remove('show');
+        }
+      });
+
+      searchInput.addEventListener('blur', () => {
+        setTimeout(() => autocomplete.classList.remove('show'), 200);
+      });
+    }
+  </script>
+
+  <!-- your existing Shein-specific script follows -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
+
+
+

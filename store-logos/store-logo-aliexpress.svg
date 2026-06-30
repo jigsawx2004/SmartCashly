@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">AliExpress logo</title>
+  <desc id="desc">Orange AliExpress shopping bag icon.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff3b00"/>
+      <stop offset="1" stop-color="#d92400"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#7a1700" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="256" height="256" rx="0" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="59" y="45" width="138" height="128" rx="13" fill="#ffa300"/>
+    <rect x="45" y="72" width="166" height="128" rx="17" fill="#f12a00"/>
+    <path d="M92 98c0 42 72 42 72 0" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="92" cy="98" r="8" fill="#a92100" opacity="0.55"/>
+    <circle cx="164" cy="98" r="8" fill="#a92100" opacity="0.55"/>
+    <path d="M93 157h-9l19-38h9l19 38h-10l-4-9H97l-4 9Zm8-17h13l-6-14-7 14Zm36 17h-8v-38h8v38Zm9-29h8v29h-8v-29Zm0-9h8v7h-8v-7Zm41 38h-10l-8-11-8 11h-10l13-17-12-16h10l7 10 7-10h10l-12 16 13 17Z" fill="#fff"/>
+  </g>
+</svg>

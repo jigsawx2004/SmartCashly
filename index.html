@@ -1118,7 +1118,8 @@ footer::before {
         { name: 'Benetton', url: '/stores/benetton' },
         { name: 'Myprotein', url: '/stores/myprotein' },
         { name: 'Aegean Airlines', url: '/stores/aegeanairlines' },
-        { name: 'Adidas', url:'/stores/adidas'}
+        { name: 'Adidas', url:'/stores/adidas'},
+        { name: 'AliExpress', url:'/stores/aliexpress'}
       ];
 
       searchInput.addEventListener('input', function(e) {
@@ -1132,7 +1133,7 @@ footer::before {
         if (results.length) {
           autocomplete.innerHTML = results.map(s =>
               `<div onclick="window.location.href='${s.url}'">
-                 <img src="/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png"
+                 <img src="/store-logos/store-logo-${s.name.toLowerCase().replace(/\s+/g,'')}.png" onerror="this.onerror=null;this.src=this.src.replace('.png','.svg')"
                       alt="${s.name} logo" class="store-logo">
                  <span class="store-name">${s.name}</span>
                </div>`
@@ -1345,6 +1346,14 @@ footer::before {
         url: '/stores/adidas',
         icon: '/store-logos/store-logo-adidas.png',
         keywords: ['adidas', 'shoes', 'sneakers', 'sports', 'athletic', 'apparel', 'fashion', 'clothing', 'ultraboost', 'stansmith', 'originals', 'football', 'activewear', 'nmd']
+      },
+      {
+        name: 'AliExpress',
+        description: 'Online marketplace with daily deals',
+        cashback: '7%',
+        url: '/stores/aliexpress',
+        icon: '/store-logos/store-logo-aliexpress.svg',
+        keywords: ['aliexpress', 'ali', 'marketplace', 'shopping', 'deals', 'electronics', 'fashion', 'tools', 'toys', 'home', 'superdeals']
       }
     ];
 
@@ -1460,8 +1469,9 @@ footer::before {
         'Shein': 4.10,
         'Benetton': 3.75,
         'Myprotein': 2.80,
-        'Aegean Airlines': 8.50
-        'Adidas': 3.15
+        'Aegean Airlines': 8.50,
+        'Adidas': 3.15,
+        'AliExpress': 1.50
       };
 
       return cashbackRates[storeName] || 1.50;
