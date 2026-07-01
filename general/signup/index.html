@@ -581,7 +581,7 @@
       pointer-events: none !important;
       z-index: 1 !important;
       opacity: 0.6 !important;
-      animation-duration: 6s !important;
+      animation-duration: 5s !important;
       animation-timing-function: linear !important;
       animation-iteration-count: infinite !important;
     }
@@ -592,6 +592,12 @@
 
     footer::before {
       animation-name: footerBubbleCycle !important;
+      z-index: 0 !important;
+    }
+
+    footer > * {
+      position: relative !important;
+      z-index: 2 !important;
     }
 
     @keyframes headerBubbleCycle {
