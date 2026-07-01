@@ -2165,7 +2165,7 @@ document.addEventListener('keydown', function(e) {
               color: #008e45;
               margin-bottom: 0.5rem;
             " id="referral-code-display">LOADING...</div>
-            <button onclick="copyReferralCode()" style="
+            <button onclick="copyReferralCode(this)" style="
               background: #008e45;
               color: white;
               border: none;
@@ -2174,6 +2174,7 @@ document.addEventListener('keydown', function(e) {
               cursor: pointer;
               font-size: 0.9rem;
             ">📋 Copy Code</button>
+            <p id="referral-code-copy-status" aria-live="polite" style="margin: 0.5rem 0 0; color: #008e45; font-weight: bold; min-height: 1.2rem;"></p>
           </div>
 
           <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
@@ -2187,7 +2188,7 @@ document.addEventListener('keydown', function(e) {
               word-break: break-all;
               margin-bottom: 0.5rem;
             " id="referral-link-display">LOADING...</div>
-            <button onclick="copyReferralLink()" style="
+            <button onclick="copyReferralLink(this)" style="
               background: #0070f3;
               color: white;
               border: none;
@@ -2206,6 +2207,7 @@ document.addEventListener('keydown', function(e) {
               cursor: pointer;
               font-size: 0.9rem;
             ">📤 Share</button>
+            <p id="referral-link-copy-status" aria-live="polite" style="margin: 0.5rem 0 0; color: #0070f3; font-weight: bold; min-height: 1.2rem;"></p>
           </div>
 
           <div style="font-size: 0.85rem; color: #666; margin-top: 1rem;">
@@ -2236,29 +2238,66 @@ document.addEventListener('keydown', function(e) {
       return `${emailPrefix}${userIdSuffix}`;
     }
 
-    // Global functions for the modal
-    window.copyReferralCode = function() {
-      const codeElement = document.getElementById('referral-code-display');
-      navigator.clipboard.writeText(codeElement.textContent).then(() => {
-        const button = event.target;
-        const originalText = button.textContent;
-        button.textContent = '✅ Copied!';
-        setTimeout(() => {
-          button.textContent = originalText;
-        }, 2000);
+    function showReferralCopyStatus(button, statusId, successMessage) {
+      const originalText = button.textContent;
+      const statusElement = document.getElementById(statusId);
+
+      button.textContent = '✅ Copied!';
+      button.disabled = true;
+      if (statusElement) {
+        statusElement.textContent = successMessage;
+        statusElement.style.color = statusId === 'referral-link-copy-status' ? '#0070f3' : '#008e45';
+      }
+
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.disabled = false;
+        if (statusElement) {
+          statusElement.textContent = '';
+        }
+      }, 2500);
+    }
+
+    function showReferralCopyError(statusId) {
+      const statusElement = document.getElementById(statusId);
+      if (statusElement) {
+        statusElement.textContent = 'Unable to copy automatically. Please select and copy it manually.';
+        statusElement.style.color = '#dc3545';
+      }
+    }
+
+    function copyTextToClipboard(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text);
+      }
+
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+
+      return new Promise((resolve, reject) => {
+        document.execCommand('copy') ? resolve() : reject();
+        textArea.remove();
       });
+    }
+
+    // Global functions for the modal
+    window.copyReferralCode = function(button) {
+      const codeElement = document.getElementById('referral-code-display');
+      copyTextToClipboard(codeElement.textContent)
+        .then(() => showReferralCopyStatus(button, 'referral-code-copy-status', 'Referral code copied to your clipboard!'))
+        .catch(() => showReferralCopyError('referral-code-copy-status'));
     };
 
-    window.copyReferralLink = function() {
+    window.copyReferralLink = function(button) {
       const linkElement = document.getElementById('referral-link-display');
-      navigator.clipboard.writeText(linkElement.textContent).then(() => {
-        const button = event.target;
-        const originalText = button.textContent;
-        button.textContent = '✅ Copied!';
-        setTimeout(() => {
-          button.textContent = originalText;
-        }, 2000);
-      });
+      copyTextToClipboard(linkElement.textContent)
+        .then(() => showReferralCopyStatus(button, 'referral-link-copy-status', 'Referral link copied to your clipboard!'))
+        .catch(() => showReferralCopyError('referral-link-copy-status'));
     };
 
     window.shareReferralLink = function() {
