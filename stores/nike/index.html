@@ -8,25 +8,25 @@
   <style>
     html, body {
       background:
-        radial-gradient(circle at 20% 80%, rgba(255,255,0,.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255,255,0,.2) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(255,255,0,.1) 0%, transparent 50%),
-        radial-gradient(circle at 60% 80%, rgba(255,255,0,.18) 0%, transparent 40%),
-        linear-gradient(135deg,#000 0%,#111 70%,#FFD700 100%) !important;
+        radial-gradient(circle at 20% 80%, rgba(246,213,109,.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(246,213,109,.2) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(246,213,109,.1) 0%, transparent 50%),
+        radial-gradient(circle at 60% 80%, rgba(246,213,109,.18) 0%, transparent 40%),
+        linear-gradient(135deg,#070706 0%,#11110F 70%,#1A1915 100%) !important;
       background-size:300% 300%,250% 250%,200% 200%,280% 280%,300% 300% !important;
       animation:shimmer 12s ease-in-out infinite !important;
       min-height:100vh;
     }
     body{overflow-x:hidden;overflow-y:auto;display:flex;flex-direction:column;color:#222}
-    body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 15% 25%,rgba(255,255,255,.5) 1px,transparent 1px),radial-gradient(circle at 75% 75%,rgba(255,215,0,.6) 1px,transparent 1px),radial-gradient(circle at 45% 55%,rgba(255,255,255,.4) 1px,transparent 1px),radial-gradient(circle at 85% 15%,rgba(255,193,7,.5) 1px,transparent 1px),radial-gradient(circle at 25% 85%,rgba(255,160,0,.4) 1.5px,transparent 1.5px),radial-gradient(circle at 65% 45%,rgba(255,235,59,.5) 1px,transparent 1px);background-size:120px 120px,160px 160px,100px 100px,140px 140px,90px 90px,110px 110px;z-index:0;pointer-events:none;animation:gentleFloat 25s ease-in-out infinite}
-    body::after{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 25% 40%,rgba(255,255,255,.7) .5px,transparent .5px),radial-gradient(circle at 65% 20%,rgba(255,215,0,.5) .5px,transparent .5px),radial-gradient(circle at 35% 70%,rgba(255,255,255,.6) .5px,transparent .5px),radial-gradient(circle at 80% 60%,rgba(255,193,7,.4) .8px,transparent .8px),radial-gradient(circle at 15% 80%,rgba(255,160,0,.5) .5px,transparent .5px);background-size:70px 70px,90px 90px,60px 60px,80px 80px,65px 65px;pointer-events:none;z-index:1;animation:gentleSparkle 20s ease-in-out infinite}
+    body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 15% 25%,rgba(246,213,109,.5) 1px,transparent 1px),radial-gradient(circle at 75% 75%,rgba(246,213,109,.6) 1px,transparent 1px),radial-gradient(circle at 45% 55%,rgba(246,213,109,.4) 1px,transparent 1px),radial-gradient(circle at 85% 15%,rgba(246,213,109,.5) 1px,transparent 1px),radial-gradient(circle at 25% 85%,rgba(246,213,109,.4) 1.5px,transparent 1.5px),radial-gradient(circle at 65% 45%,rgba(246,213,109,.5) 1px,transparent 1px);background-size:120px 120px,160px 160px,100px 100px,140px 140px,90px 90px,110px 110px;z-index:0;pointer-events:none;animation:gentleFloat 25s ease-in-out infinite}
+    body::after{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 25% 40%,rgba(246,213,109,.7) .5px,transparent .5px),radial-gradient(circle at 65% 20%,rgba(246,213,109,.5) .5px,transparent .5px),radial-gradient(circle at 35% 70%,rgba(246,213,109,.6) .5px,transparent .5px),radial-gradient(circle at 80% 60%,rgba(246,213,109,.4) .8px,transparent .8px),radial-gradient(circle at 15% 80%,rgba(246,213,109,.5) .5px,transparent .5px);background-size:70px 70px,90px 90px,60px 60px,80px 80px,65px 65px;pointer-events:none;z-index:1;animation:gentleSparkle 20s ease-in-out infinite}
     @keyframes shimmer{0%{background-position:0 50%,0 0,0 0,0 0,0 50%}50%{background-position:100% 50%,100% 100%,100% 50%,100% 100%,100% 50%}100%{background-position:0 50%,0 0,0 0,0 0,0 50%}}
     @keyframes gentleFloat{0%,100%{background-position:0 0,0 0,0 0,0 0,0 0,0 0;opacity:.6}33%{background-position:30% 20%,20% 40%,50% 30%,40% 10%,60% 50%,70% 20%;opacity:.9}66%{background-position:60% 40%,40% 80%,80% 60%,10% 70%,30% 80%,90% 40%;opacity:.7}}
     @keyframes gentleSparkle{0%,100%{opacity:.4;background-position:0 0,0 0,0 0,0 0,0 0}25%{opacity:.8;background-position:15% 15%,25% 25%,35% 35%,45% 45%,55% 55%}50%{opacity:.9;background-position:30% 30%,50% 50%,70% 70%,90% 90%,10% 90%}75%{opacity:.6;background-position:20% 40%,40% 20%,60% 80%,80% 60%,100% 40%}}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,Helvetica,Arial,sans-serif}
     header,main,footer{position:relative;z-index:10}
     header{height:80px;display:flex;align-items:center;justify-content:center;padding:1rem 1.5rem;background:#008e45!important;color:#fff;overflow:visible;z-index:1001}
-    header::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 25% 40%,#fff 1px,transparent 1px),radial-gradient(circle at 75% 60%,#fff 1px,transparent 1px),radial-gradient(circle at 50% 20%,#fff .5px,transparent .5px),radial-gradient(circle at 15% 80%,#fff 1px,transparent 1px);background-size:80px 80px,100px 100px,60px 60px,90px 90px;pointer-events:none;z-index:1}
+    header::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 25% 40%,#F6D56D 1px,transparent 1px),radial-gradient(circle at 75% 60%,#F6D56D 1px,transparent 1px),radial-gradient(circle at 50% 20%,#F6D56D .5px,transparent .5px),radial-gradient(circle at 15% 80%,#F6D56D 1px,transparent 1px);background-size:80px 80px,100px 100px,60px 60px,90px 90px;pointer-events:none;z-index:1}
     .logo-img{position:absolute;left:1.5rem;height:100px;width:auto;z-index:1002}
     .center-group{display:flex;align-items:center;justify-content:center;gap:.5rem;flex:1}
     .search-bar{position:relative;flex:0 1 500px;max-width:500px;width:100%;z-index:1002}
@@ -123,10 +123,10 @@
       content: none !important;
     }
 
-    /* Unified main-screen background: match the Smartcashly homepage yellow */
+    /* Unified main-screen background: match the Nike logo dark background */
     html,
     body {
-      background: #FFDE59 !important;
+      background: #11110F !important;
       background-image: none !important;
       min-height: 100vh;
     }
@@ -147,9 +147,9 @@
       width: 100% !important;
       height: 100% !important;
       background-image:
-        radial-gradient(circle at center 22%, rgba(255, 255, 255, 1) 1px, transparent 1px),
-        radial-gradient(circle at center 50%, rgba(255, 255, 255, 1) 1px, transparent 1px),
-        radial-gradient(circle at center 78%, rgba(255, 255, 255, 1) 1px, transparent 1px) !important;
+        radial-gradient(circle at center 22%, rgba(246, 213, 109, 1) 1px, transparent 1px),
+        radial-gradient(circle at center 50%, rgba(246, 213, 109, 1) 1px, transparent 1px),
+        radial-gradient(circle at center 78%, rgba(246, 213, 109, 1) 1px, transparent 1px) !important;
       background-size: 72px 100%, 72px 100%, 72px 100% !important;
       background-position: 0 0, 24px 0, 48px 0;
       background-repeat: repeat-x !important;
