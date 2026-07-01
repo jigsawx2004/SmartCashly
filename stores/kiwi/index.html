@@ -786,6 +786,26 @@
       background-repeat: no-repeat;
     }
 
+
+    /* Keep offer actions stable and aligned across cards */
+    .offer-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 320px;
+    }
+
+    .offer-cashback {
+      margin-top: auto;
+    }
+
+    .offer-button {
+      width: 100%;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
 </style>
 </head>
 
@@ -832,22 +852,10 @@
         <div class="offer-card" style="cursor: default;">
           <div class="offer-header">
             <div class="offer-logo"></div>
-            <div class="offer-type cashback">CASHBACK</div>
-          </div>
-          <h3 class="offer-title">Διαθέσιμη επιστροφή χρημάτων για οποιαδήποτε αγορά από το κατάστημα!</h3>
-          <p class="offer-description">Ενεργοποιήστε οποιαδήποτε προσφορά για να μεταβείτε στο κατάστημα κάνοντας κλικ σε οποιοδήποτε link που βρίσκετε στο ApoPou. Η επιστροφή χρημάτων συνδυάζετε με όλες τις προσφορές και κουπόνια που βρίσκονται στο apopou.gr</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Extra 3% Cashback</div>
-          <button class="offer-button" type="button">💰 Activate Cashback</button>
-        </div>
-
-        <div class="offer-card" style="cursor: default;">
-          <div class="offer-header">
-            <div class="offer-logo"></div>
             <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">Έκπτωση από 15% σε διαμονές και καταλύματα</h3>
-          <p class="offer-description"></p>
+          <h3 class="offer-title">15% off stays and accommodation</h3>
+          <p class="offer-description">Save from 15% on stays and accommodation with Kiwi and combine eligible bookings with cashback.</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Extra 3% Cashback</div>
           <button class="offer-button" type="button">🏨 Get Offer</button>
@@ -858,8 +866,8 @@
             <div class="offer-logo"></div>
             <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">Ενοικιάσεις αυτοκινήτων με τις μεγαλύτερες εταιρείες στις καλύτερες τιμές</h3>
-          <p class="offer-description"></p>
+          <h3 class="offer-title">Car rentals at great prices</h3>
+          <p class="offer-description">Find car rentals at competitive prices through Kiwi and combine eligible bookings with cashback.</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Extra 3% Cashback</div>
           <button class="offer-button" type="button">🚗 Get Offer</button>

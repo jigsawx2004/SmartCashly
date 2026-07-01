@@ -786,6 +786,26 @@
       background-repeat: no-repeat;
     }
 
+
+    /* Keep offer actions stable and aligned across cards */
+    .offer-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 320px;
+    }
+
+    .offer-cashback {
+      margin-top: auto;
+    }
+
+    .offer-button {
+      width: 100%;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
 </style>
 </head>
 
@@ -832,22 +852,10 @@
         <div class="offer-card" style="cursor: default;">
           <div class="offer-header">
             <div class="offer-logo"></div>
-            <div class="offer-type cashback">CASHBACK</div>
-          </div>
-          <h3 class="offer-title">Εξοικονόμησε 12% από το Airhelp (Ελλάδα)!</h3>
-          <p class="offer-description">Ανακατευθυνθείτε στη ιστοσελίδα του Airhelp μέσω του apopou κάντε τις αγορές σας όπως κάθε άλλη φορά και θα λάβετε cashback στον apopou λογαριασμό σας.</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Extra 12% Cashback</div>
-          <button class="offer-button" type="button">💰 Activate Cashback</button>
-        </div>
-
-        <div class="offer-card" style="cursor: default;">
-          <div class="offer-header">
-            <div class="offer-logo"></div>
             <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">Αποζημείωση για ακύρωση πτήσης έως 600€</h3>
-          <p class="offer-description">Οι επιβάτες πτήσεων της Ε. Ε. δικαιούνται βάσει του ΕΚ 261 αποζημίωση ύψους έως και 600 ευρώ για καθυστέρηση πτήσης 3 ωρών και πλέον.</p>
+          <h3 class="offer-title">Compensation for flight cancellation</h3>
+          <p class="offer-description">Check whether you are eligible for compensation after a cancelled flight with AirHelp.</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Extra 12% Cashback</div>
           <button class="offer-button" type="button">✈️ Get Offer</button>
@@ -858,8 +866,8 @@
             <div class="offer-logo"></div>
             <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">Δωρεάν έλεγχος αποζημείωσης!</h3>
-          <p class="offer-description">Ας δούμε αν η αεροπορική εταιρεία σάς οφείλει αποζημίωση. Ποιος ήταν ο προορισμός της πτήσης σας;</p>
+          <h3 class="offer-title">Free compensation check!</h3>
+          <p class="offer-description">Use AirHelp to check your flight compensation eligibility for free.</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Extra 12% Cashback</div>
           <button class="offer-button" type="button">✅ Get Offer</button>

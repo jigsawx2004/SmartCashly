@@ -786,6 +786,26 @@
       background-repeat: no-repeat;
     }
 
+
+    /* Keep offer actions stable and aligned across cards */
+    .offer-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 320px;
+    }
+
+    .offer-cashback {
+      margin-top: auto;
+    }
+
+    .offer-button {
+      width: 100%;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
 </style>
 </head>
 
@@ -832,22 +852,10 @@
         <div class="offer-card" style="cursor: default;">
           <div class="offer-header">
             <div class="offer-logo"></div>
-            <div class="offer-type cashback">CASHBACK</div>
-          </div>
-          <h3 class="offer-title">Κέρδισε 5% Cashback από το Alibaba!</h3>
-          <p class="offer-description">Απλά κάνε κλικ για να μεταφέρθείς στο alibaba μέσω του apopou και λάβε 5% cashback. Όλες οι προσφορές και τα εκπτωτικά κουπόνια alibaba που βρίσκονται στο apopou συνδιάζονται με επιστροφή χρημάτων.</p>
-          <div style="height: 24px;"></div>
-          <div class="offer-cashback">+ Extra 5% Cashback</div>
-          <button class="offer-button" type="button">💰 Activate Cashback</button>
-        </div>
-
-        <div class="offer-card" style="cursor: default;">
-          <div class="offer-header">
-            <div class="offer-logo"></div>
             <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">Πλήρωσε με mastercard και εξοικονόμησε $5</h3>
-          <p class="offer-description">Πλήρωσε με mastercard και εξοικονόμησε $5 για κάθε $200 που ξοδεύεις.</p>
+          <h3 class="offer-title">Pay with Mastercard and save $5</h3>
+          <p class="offer-description">Pay with Mastercard and save $5 for every $200 you spend.</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Extra 5% Cashback</div>
           <button class="offer-button" type="button">💳 Get Offer</button>
@@ -858,7 +866,7 @@
             <div class="offer-logo"></div>
             <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">Ηλεκτρονικά είδη από 20% έκπτωση</h3>
+          <h3 class="offer-title">Electronics from 20% off</h3>
           <p class="offer-description"></p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Extra 5% Cashback</div>
