@@ -745,12 +745,31 @@ background: #0059c1;
       content: none !important;
     }
 
-    /* Unified main-screen background: match the Smartcashly homepage yellow */
+    /* Unified Aegean Airlines main-screen background: match the logo's very dark blue with off-white logo-word bubbles */
     html,
     body {
-      background: #FFDE59 !important;
+      background: #141D32 !important;
       background-image: none !important;
       min-height: 100vh;
+    }
+
+    body::before {
+      background-image:
+        radial-gradient(circle at 15% 25%, rgba(245, 245, 242, 0.55) 1px, transparent 1px),
+        radial-gradient(circle at 75% 75%, rgba(245, 245, 242, 0.45) 1px, transparent 1px),
+        radial-gradient(circle at 45% 55%, rgba(245, 245, 242, 0.5) 1px, transparent 1px),
+        radial-gradient(circle at 85% 15%, rgba(245, 245, 242, 0.4) 1px, transparent 1px),
+        radial-gradient(circle at 25% 85%, rgba(245, 245, 242, 0.45) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 65% 45%, rgba(245, 245, 242, 0.5) 1px, transparent 1px) !important;
+    }
+
+    body::after {
+      background-image:
+        radial-gradient(circle at 25% 40%, rgba(245, 245, 242, 0.7) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 65% 20%, rgba(245, 245, 242, 0.45) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 35% 70%, rgba(245, 245, 242, 0.6) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 80% 60%, rgba(245, 245, 242, 0.4) 0.8px, transparent 0.8px),
+        radial-gradient(circle at 15% 80%, rgba(245, 245, 242, 0.5) 0.5px, transparent 0.5px) !important;
     }
 
     main {
