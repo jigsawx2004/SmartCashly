@@ -156,7 +156,7 @@
       pointer-events: none !important;
       z-index: 1 !important;
       opacity: 0.6 !important;
-      animation-duration: 5s !important;
+      animation-duration: 4s !important;
       animation-timing-function: linear !important;
       animation-iteration-count: infinite !important;
     }
@@ -170,7 +170,7 @@
       z-index: 0 !important;
     }
 
-    footer > * {
+    footer * {
       position: relative !important;
       z-index: 2 !important;
     }
@@ -236,7 +236,7 @@
       <div class="offer-card" onclick="openNikeOffer('training')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div><h3 class="offer-title">Training Gear - 45% Off</h3><p class="offer-description">Professional equipment and accessories to elevate your fitness game to the next level!</p><div style="height:24px"></div><div class="offer-cashback">+ Get Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('training')">💪 Get Offer</button></div>
     </div></div>
   </main>
-  <footer>©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.</footer>
+  <footer><span class="footer-copy">©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.</span></footer>
   <script>
     document.getElementById('year').textContent=new Date().getFullYear();
     const NIKE_LINKS={
