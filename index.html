@@ -1203,7 +1203,17 @@ footer::before {
         { name: 'Myprotein', url: '/stores/myprotein' },
         { name: 'Aegean Airlines', url: '/stores/aegeanairlines' },
         { name: 'Adidas', url: '/stores/adidas' },
-        { name: 'AliExpress', url: '/stores/aliexpress', logo: '/store-logos/store-logo-aliexpress.png' }
+        { name: 'AliExpress', url: '/stores/aliexpress', logo: '/store-logos/store-logo-aliexpress.png' },
+        { name: 'Temu', url: '/stores/temu' },
+        { name: 'Alibaba', url: '/stores/alibaba' },
+        { name: 'Agoda', url: '/stores/agoda' },
+        { name: 'Notino', url: '/stores/notino' },
+        { name: 'YOOX', url: '/stores/yoox' },
+        { name: 'Alensa', url: '/stores/alensa' },
+        { name: 'AirHelp', url: '/stores/airhelp' },
+        { name: 'Airshop', url: '/stores/airshop' },
+        { name: 'Kiwi', url: '/stores/kiwi' },
+        { name: 'Abito', url: '/stores/abito' }
       ];
 
       searchInput.addEventListener('input', function(e) {
@@ -1437,6 +1447,86 @@ footer::before {
         url: '/stores/aliexpress',
         icon: '/store-logos/store-logo-aliexpress.png',
         keywords: ['aliexpress', 'ali express', 'marketplace', 'shopping', 'deals', 'coupons', 'superdeals', 'bundles', 'gadgets', 'electronics', 'tools', 'clothes']
+      },
+      {
+        name: 'Temu',
+        description: 'Online marketplace with low-price products, coupons, daily deals and cashback.',
+        cashback: '20%',
+        url: '/stores/temu',
+        icon: '/store-logos/store-logo-temu.png',
+        keywords: ['temu', 'marketplace', 'shopping', 'deals', 'coupons', 'gadgets', 'fashion', 'home', 'electronics', 'discounts']
+      },
+      {
+        name: 'Alibaba',
+        description: 'Global wholesale marketplace with business products, electronics, tools and cashback.',
+        cashback: '5%',
+        url: '/stores/alibaba',
+        icon: '/store-logos/store-logo-alibaba.png',
+        keywords: ['alibaba', 'wholesale', 'marketplace', 'b2b', 'shopping', 'electronics', 'business', 'suppliers', 'deals']
+      },
+      {
+        name: 'Agoda',
+        description: 'Hotel and travel booking platform with accommodation deals, discount codes and cashback.',
+        cashback: '5%',
+        url: '/stores/agoda',
+        icon: '/store-logos/store-logo-agoda.png',
+        keywords: ['agoda', 'travel', 'hotels', 'booking', 'accommodation', 'athens', 'cyprus', 'deals', 'coupons']
+      },
+      {
+        name: 'Notino',
+        description: 'Beauty, perfume and skincare store with cosmetic deals, coupons and cashback.',
+        cashback: '5%',
+        url: '/stores/notino',
+        icon: '/store-logos/store-logo-notino.png',
+        keywords: ['notino', 'beauty', 'perfume', 'skincare', 'makeup', 'cosmetics', 'fragrance', 'coupons', 'cashback']
+      },
+      {
+        name: 'YOOX',
+        description: 'Designer fashion marketplace with luxury clothing deals, sales and cashback.',
+        cashback: '5%',
+        url: '/stores/yoox',
+        icon: '/store-logos/store-logo-yoox.png',
+        keywords: ['yoox', 'fashion', 'designer', 'luxury', 'clothing', 'shoes', 'sale', 'discounts', 'cashback']
+      },
+      {
+        name: 'Alensa',
+        description: 'Eyewear, contact lenses and sunglasses store with lens deals and cashback.',
+        cashback: '5%',
+        url: '/stores/alensa',
+        icon: '/store-logos/store-logo-alensa.png',
+        keywords: ['alensa', 'eyewear', 'glasses', 'sunglasses', 'contact lenses', 'ray-ban', 'lenses', 'optical', 'cashback']
+      },
+      {
+        name: 'AirHelp',
+        description: 'Flight compensation service with passenger-rights offers and cashback.',
+        cashback: '12%',
+        url: '/stores/airhelp',
+        icon: '/store-logos/store-logo-airhelp.png',
+        keywords: ['airhelp', 'flight compensation', 'travel', 'delayed flight', 'cancelled flight', 'passenger rights', 'cashback']
+      },
+      {
+        name: 'Airshop',
+        description: 'Travel booking store for flights, hotels and trip offers with cashback.',
+        cashback: '7%',
+        url: '/stores/airshop',
+        icon: '/store-logos/store-logo-airshop.png',
+        keywords: ['airshop', 'travel', 'flights', 'hotels', 'tickets', 'athens', 'thessaloniki', 'milan', 'cashback']
+      },
+      {
+        name: 'Kiwi',
+        description: 'Travel booking platform for flights, stays, car rentals and destination deals with cashback.',
+        cashback: '3%',
+        url: '/stores/kiwi',
+        icon: '/store-logos/store-logo-kiwi.png',
+        keywords: ['kiwi', 'travel', 'flights', 'hotels', 'car rentals', 'trip', 'destinations', 'cashback', 'booking']
+      },
+      {
+        name: 'Abito',
+        description: 'Fashion shop with clothing offers, gift voucher promotions and cashback.',
+        cashback: '10%',
+        url: '/stores/abito',
+        icon: '/store-logos/store-logo-abito.png',
+        keywords: ['abito', 'fashion', 'clothes', 'women', 'men', 'jackets', 'knitwear', 'cashback', 'offers']
       }
     ];
 
@@ -1554,7 +1644,17 @@ footer::before {
         'Myprotein': 2.80,
         'Aegean Airlines': 8.50,
         'Adidas': 3.15,
-        'AliExpress': 11.00
+        'AliExpress': 11.00,
+        'Temu': 20.00,
+        'Alibaba': 5.00,
+        'Agoda': 5.00,
+        'Notino': 5.00,
+        'YOOX': 5.00,
+        'Alensa': 5.00,
+        'AirHelp': 12.00,
+        'Airshop': 7.00,
+        'Kiwi': 3.00,
+        'Abito': 10.00
       };
 
       return cashbackRates[storeName] || 1.50;
