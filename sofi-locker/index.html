@@ -6,74 +6,165 @@
   <title>Loading Offer | SmartCashly</title>
   <meta name="robots" content="noindex, nofollow" />
   <link rel="icon" type="image/svg+xml" href="../site-logo/smartcashly-favicon.svg" />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #ffde59;
+      color: #102a43;
       display: grid;
       place-items: center;
       padding: 1rem;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #102a43;
-      background: #ffde59;
-      text-align: center;
     }
-    .loading-card {
-      width: min(520px, 100%);
-      padding: clamp(1.5rem, 5vw, 3rem);
-      border: 1px solid rgba(0, 142, 69, 0.18);
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.94);
-      box-shadow: 0 24px 60px rgba(31, 41, 51, 0.16);
-    }
-    h1 { font-size: clamp(2rem, 8vw, 3rem); margin-bottom: 0.75rem; }
-    p { color: #52606d; font-size: 1.05rem; line-height: 1.6; }
-  </style>
-  <script type="text/javascript" data-cfasync="false">
-    window.aQnMY_kBZ_vmgszc = {"it":461633,"key":"7cd04"};
-    var aQnMY_kBZ_vmgszc = window.aQnMY_kBZ_vmgszc;
-    console.log("AdBlueMedia config loaded");
 
-    window.openAdBlueMediaLockerWhenReady = function () {
-      if (window.adBlueMediaLockerOpened) {
-        return;
-      }
+    .box {
+      width: min(560px, 100%);
+      background: rgba(255, 255, 255, 0.94);
+      border-radius: 26px;
+      padding: clamp(2rem, 5vw, 3rem);
+      text-align: center;
+      box-shadow: 0 24px 60px rgba(31, 41, 51, 0.16);
+      border: 1px solid rgba(0, 142, 69, 0.18);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #3e4c59;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .status {
+      margin-top: 1.25rem;
+      padding: 1rem;
+      border-radius: 16px;
+      background: #f8fff9;
+      color: #52606d;
+      font-weight: 650;
+    }
+
+    .button {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      margin: 1.25rem auto 0;
+      padding: 0.8rem 1.2rem;
+      border-radius: 999px;
+      background: #008e45;
+      color: #fff;
+      border: 0;
+      cursor: pointer;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(0, 142, 69, 0.24);
+    }
+
+    .button.visible {
+      display: inline-flex;
+    }
+
+    .small {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #627d98;
+    }
+  </style>
+
+  <script type="text/javascript">
+    window.aQnMY_kBZ_vmgszc = {"it":461633,"key":"7cd04"};
+    console.log("AdBlueMedia config loaded", window.aQnMY_kBZ_vmgszc);
+  </script>
+
+  <script
+    src="https://d1g11hd4vferpn.cloudfront.net/ff2c6b.js"
+    onload="window.__adblueScriptLoaded = true; console.log('AdBlueMedia external script loaded');"
+    onerror="window.__adblueScriptFailed = true; console.error('AdBlueMedia external script failed to load');"
+  ></script>
+</head>
+
+<body>
+  <main class="box">
+    <h1>Loading offer...</h1>
+    <p>Please wait while the registration offer opens.</p>
+
+    <div id="status" class="status">Locker is loading, please wait...</div>
+
+    <button id="manualOpen" class="button" type="button">
+      Open registration offer
+    </button>
+
+    <p class="small">
+      Sponsored offer. Available for eligible users only. Not financial advice.
+    </p>
+  </main>
+
+  <script>
+    const statusEl = document.getElementById("status");
+    const manualBtn = document.getElementById("manualOpen");
+
+    let opened = false;
+
+    function openLocker() {
+      if (opened) return;
 
       if (typeof window._HJ === "function") {
-        window.adBlueMediaLockerOpened = true;
+        opened = true;
         console.log("Opening AdBlueMedia locker");
+        statusEl.textContent = "Opening registration offer...";
+        manualBtn.classList.remove("visible");
         window._HJ();
         return;
       }
 
-      console.log("AdBlueMedia _HJ not available");
-    };
-  </script>
-  <script
-    data-cfasync="false"
-    src="https://d1g11hd4vferpn.cloudfront.net/ff2c6b.js"
-    onload="console.log('AdBlueMedia script loaded'); window.openAdBlueMediaLockerWhenReady();"
-    onerror="console.log('AdBlueMedia _HJ not available')"
-  ></script>
-</head>
-<body>
-  <main class="loading-card" aria-live="polite">
-    <h1>Loading offer...</h1>
-    <p>Please wait while the registration offer opens.</p>
-  </main>
+      console.log("AdBlueMedia _HJ missing");
+    }
 
-  <script data-cfasync="false">
-    (function () {
-      var elapsed = 0;
-      var interval = window.setInterval(function () {
-        elapsed += 250;
-        window.openAdBlueMediaLockerWhenReady();
+    function showManualFallback() {
+      if (!opened) {
+        manualBtn.classList.add("visible");
+        statusEl.textContent = "If the offer did not open, click the button below.";
+      }
+    }
 
-        if (window.adBlueMediaLockerOpened || elapsed >= 10000) {
-          window.clearInterval(interval);
-        }
-      }, 250);
-    })();
+    manualBtn.addEventListener("click", openLocker);
+
+    let attempts = 0;
+    const maxAttempts = 40;
+
+    const poll = setInterval(() => {
+      attempts++;
+
+      if (typeof window._HJ === "function") {
+        console.log("AdBlueMedia _HJ available");
+        clearInterval(poll);
+        openLocker();
+        return;
+      }
+
+      if (window.__adblueScriptFailed) {
+        clearInterval(poll);
+        statusEl.textContent = "Locker failed to load. Please disable ad blocker or try another browser.";
+        return;
+      }
+
+      if (attempts >= maxAttempts) {
+        clearInterval(poll);
+        console.error("AdBlueMedia failed to load");
+        statusEl.textContent = "Locker failed to load. Please disable ad blocker or try another browser.";
+        showManualFallback();
+      }
+    }, 250);
+
+    setTimeout(showManualFallback, 2000);
   </script>
 </body>
 </html>
