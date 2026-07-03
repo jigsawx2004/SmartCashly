@@ -316,6 +316,27 @@
   background: #0059c1;
 }
 
+.credit-insights-btn {
+    position: relative;
+    z-index: 5;
+    background: #102a43;
+    color: white;
+    text-decoration: none;
+    padding: 0.55rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.18s;
+    white-space: nowrap;
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.credit-insights-btn:hover {
+  background: #1f3f5b;
+}
+
 .search-autocomplete.show {
   display: block !important;
 }
@@ -372,6 +393,46 @@ main {
   font-size: 1rem;
   color: #222;
   font-weight: bold;
+}
+
+.credit-insights-feature {
+  width: min(760px, 100%);
+  margin: 1.5rem auto 0;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: 3px solid #008e45;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.credit-insights-feature h3 {
+  color: #008e45;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.credit-insights-feature p {
+  color: #334e68;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.credit-insights-feature .feature-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  background: #008e45;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.credit-insights-feature .feature-link:hover {
+  background: #006b36;
 }
 
 /* STORES SECTION */
@@ -1056,6 +1117,7 @@ footer::before {
         <div id="search-autocomplete" class="search-autocomplete"></div>
       </form>
       <a href="general/all-stores/" class="all-stores-btn">View All Stores</a>
+      <a href="credit-insights/" class="credit-insights-btn">Credit Insights</a>
     </div>
     <nav class="auth-nav" id="auth-nav">
       <div id="auth-buttons" style="display: flex; gap: 0.5rem;">
@@ -1088,6 +1150,11 @@ footer::before {
     <div class="welcome-section">
       <h2>Welcome to Smartcashly</h2>
       <p>💲The most generous cashback platform💲</p>
+      <section class="credit-insights-feature" aria-labelledby="credit-insights-feature-title">
+        <h3 id="credit-insights-feature-title">Credit Insights Guide</h3>
+        <p>Complete the sponsored SoFi Credit Insights registration offer to unlock a simple informational checklist for better credit habits.</p>
+        <a class="feature-link" href="credit-insights/">Open Credit Insights</a>
+      </section>
     </div>
 
     <div class="stores-section">
