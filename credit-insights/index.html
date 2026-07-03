@@ -126,16 +126,17 @@
       .button { width: 100%; }
     }
   </style>
-  <script type="text/javascript">
+  <script type="text/javascript" data-cfasync="false">
     window.aQnMY_kBZ_vmgszc = {"it":461633,"key":"7cd04"};
     var aQnMY_kBZ_vmgszc = window.aQnMY_kBZ_vmgszc;
     console.log("AdBlueMedia config loaded");
   </script>
   <script
     id="adblue-locker-script"
+    data-cfasync="false"
     src="https://d1g11hd4vferpn.cloudfront.net/ff2c6b.js"
     onload="window.adBlueMediaScriptLoaded = true; console.log('AdBlueMedia script loaded')"
-    onerror="console.log('AdBlueMedia script failed to load')"
+    onerror="window.adBlueMediaScriptFailed = true; console.log('AdBlueMedia script failed to load')"
   ></script>
 </head>
 <body>
@@ -180,6 +181,7 @@
         var fallbackScript = document.createElement("script");
         fallbackScript.src = adBlueMediaScriptUrl;
         fallbackScript.async = true;
+        fallbackScript.setAttribute("data-cfasync", "false");
         fallbackScript.onload = function () {
           window.adBlueMediaScriptLoaded = true;
           console.log("AdBlueMedia script loaded");
@@ -212,7 +214,9 @@
           console.log("AdBlueMedia _HJ missing");
           lockerButton.disabled = true;
           lockerButton.textContent = "Locker is loading, please wait...";
-          lockerStatus.textContent = "Locker is loading, please wait...";
+          lockerStatus.textContent = window.adBlueMediaScriptFailed
+            ? "Locker script could not load. Please refresh this page and try again."
+            : "Locker is loading, please wait...";
           return false;
         }
 
