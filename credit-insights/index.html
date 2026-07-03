@@ -127,9 +127,10 @@
     }
   </style>
   <script type="text/javascript">
-    var aQnMY_kBZ_vmgszc={"it":461633,"key":"7cd04"};
+    window.aQnMY_kBZ_vmgszc = {"it":461633,"key":"7cd04"};
+    console.log("AdBlueMedia config loaded");
   </script>
-  <script src="https://d1g11hd4vferpn.cloudfront.net/ff2c6b.js"></script>
+  <script src="https://d1g11hd4vferpn.cloudfront.net/ff2c6b.js" onload="console.log('AdBlueMedia script loaded')"></script>
 </head>
 <body>
   <header>
@@ -145,7 +146,7 @@
         <p class="subtitle">Complete the SoFi Credit Insights registration to unlock the guide.</p>
         <p class="small-note">Available for US users only.</p>
         <div class="actions" aria-label="Page actions">
-          <button class="button" id="locker-button" type="button" onclick="_HJ()" disabled>Locker is loading, please wait...</button>
+          <button class="button" id="locker-button" type="button" onclick="window._HJ()" disabled>Locker is loading, please wait...</button>
           <a class="button secondary" href="../">Visit SmartCashly home</a>
         </div>
         <p class="disclaimer">Sponsored offer. Not financial advice.</p>
@@ -162,31 +163,43 @@
   <footer>&copy; 2026 SmartCashly. Sponsored offer disclosures apply.</footer>
   <script>
     (function () {
-      var lockerButton = document.getElementById("locker-button");
-      var lockerStatus = document.getElementById("locker-status");
+      function initLockerButton() {
+        var lockerButton = document.getElementById("locker-button");
+        var lockerStatus = document.getElementById("locker-status");
+        var hasLoggedAvailable = false;
 
-      function enableLockerButton() {
-        if (typeof window._HJ === "function") {
-          lockerButton.disabled = false;
-          lockerButton.textContent = "Continue to registration";
-          lockerStatus.textContent = "When you are ready, click “Continue to registration” to open the sponsored offer.";
-          return true;
+        function enableLockerButton() {
+          if (typeof window._HJ === "function") {
+            if (!hasLoggedAvailable) {
+              console.log("AdBlueMedia _HJ available");
+              hasLoggedAvailable = true;
+            }
+            lockerButton.disabled = false;
+            lockerButton.textContent = "Continue to registration";
+            lockerStatus.textContent = "When you are ready, click “Continue to registration” to open the sponsored offer.";
+            return true;
+          }
+
+          console.log("AdBlueMedia _HJ missing");
+          lockerButton.disabled = true;
+          lockerButton.textContent = "Locker is loading, please wait...";
+          lockerStatus.textContent = "Locker is loading, please wait...";
+          return false;
         }
 
-        lockerButton.disabled = true;
-        lockerButton.textContent = "Locker is loading, please wait...";
-        lockerStatus.textContent = "Locker is loading, please wait...";
-        return false;
+        if (!enableLockerButton()) {
+          var loadingCheck = window.setInterval(function () {
+            if (enableLockerButton()) {
+              window.clearInterval(loadingCheck);
+            }
+          }, 250);
+        }
       }
 
-      if (!enableLockerButton()) {
-        var attempts = 0;
-        var loadingCheck = window.setInterval(function () {
-          attempts += 1;
-          if (enableLockerButton() || attempts >= 40) {
-            window.clearInterval(loadingCheck);
-          }
-        }, 250);
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initLockerButton);
+      } else {
+        initLockerButton();
       }
     })();
   </script>
