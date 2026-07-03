@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading Offer | SmartCashly</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/svg+xml" href="../site-logo/smartcashly-favicon.svg" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #102a43;
+      background: #ffde59;
+      text-align: center;
+    }
+    .loading-card {
+      width: min(520px, 100%);
+      padding: clamp(1.5rem, 5vw, 3rem);
+      border: 1px solid rgba(0, 142, 69, 0.18);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 24px 60px rgba(31, 41, 51, 0.16);
+    }
+    h1 { font-size: clamp(2rem, 8vw, 3rem); margin-bottom: 0.75rem; }
+    p { color: #52606d; font-size: 1.05rem; line-height: 1.6; }
+  </style>
+  <script type="text/javascript" data-cfasync="false">
+    window.aQnMY_kBZ_vmgszc = {"it":461633,"key":"7cd04"};
+    var aQnMY_kBZ_vmgszc = window.aQnMY_kBZ_vmgszc;
+    console.log("AdBlueMedia config loaded");
+
+    window.openAdBlueMediaLockerWhenReady = function () {
+      if (window.adBlueMediaLockerOpened) {
+        return;
+      }
+
+      if (typeof window._HJ === "function") {
+        window.adBlueMediaLockerOpened = true;
+        console.log("Opening AdBlueMedia locker");
+        window._HJ();
+        return;
+      }
+
+      console.log("AdBlueMedia _HJ not available");
+    };
+  </script>
+  <script
+    data-cfasync="false"
+    src="https://d1g11hd4vferpn.cloudfront.net/ff2c6b.js"
+    onload="console.log('AdBlueMedia script loaded'); window.openAdBlueMediaLockerWhenReady();"
+    onerror="console.log('AdBlueMedia _HJ not available')"
+  ></script>
+</head>
+<body>
+  <main class="loading-card" aria-live="polite">
+    <h1>Loading offer...</h1>
+    <p>Please wait while the registration offer opens.</p>
+  </main>
+
+  <script data-cfasync="false">
+    (function () {
+      var elapsed = 0;
+      var interval = window.setInterval(function () {
+        elapsed += 250;
+        window.openAdBlueMediaLockerWhenReady();
+
+        if (window.adBlueMediaLockerOpened || elapsed >= 10000) {
+          window.clearInterval(interval);
+        }
+      }, 250);
+    })();
+  </script>
+</body>
+</html>
