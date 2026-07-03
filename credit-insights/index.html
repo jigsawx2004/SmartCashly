@@ -128,9 +128,15 @@
   </style>
   <script type="text/javascript">
     window.aQnMY_kBZ_vmgszc = {"it":461633,"key":"7cd04"};
+    var aQnMY_kBZ_vmgszc = window.aQnMY_kBZ_vmgszc;
     console.log("AdBlueMedia config loaded");
   </script>
-  <script src="https://d1g11hd4vferpn.cloudfront.net/ff2c6b.js" onload="console.log('AdBlueMedia script loaded')"></script>
+  <script
+    id="adblue-locker-script"
+    src="https://d1g11hd4vferpn.cloudfront.net/ff2c6b.js"
+    onload="window.adBlueMediaScriptLoaded = true; console.log('AdBlueMedia script loaded')"
+    onerror="console.log('AdBlueMedia script failed to load')"
+  ></script>
 </head>
 <body>
   <header>
@@ -163,10 +169,33 @@
   <footer>&copy; 2026 SmartCashly. Sponsored offer disclosures apply.</footer>
   <script>
     (function () {
+      var adBlueMediaScriptUrl = "https://d1g11hd4vferpn.cloudfront.net/ff2c6b.js";
+
+      function loadAdBlueMediaScriptFallback() {
+        if (typeof window._HJ === "function" || window.adBlueMediaFallbackLoading) {
+          return;
+        }
+
+        window.adBlueMediaFallbackLoading = true;
+        var fallbackScript = document.createElement("script");
+        fallbackScript.src = adBlueMediaScriptUrl;
+        fallbackScript.async = true;
+        fallbackScript.onload = function () {
+          window.adBlueMediaScriptLoaded = true;
+          console.log("AdBlueMedia script loaded");
+        };
+        fallbackScript.onerror = function () {
+          window.adBlueMediaFallbackLoading = false;
+          console.log("AdBlueMedia script failed to load");
+        };
+        document.head.appendChild(fallbackScript);
+      }
+
       function initLockerButton() {
         var lockerButton = document.getElementById("locker-button");
         var lockerStatus = document.getElementById("locker-status");
         var hasLoggedAvailable = false;
+        var checks = 0;
 
         function enableLockerButton() {
           if (typeof window._HJ === "function") {
@@ -189,6 +218,11 @@
 
         if (!enableLockerButton()) {
           var loadingCheck = window.setInterval(function () {
+            checks += 1;
+            if (checks === 8 && !window.adBlueMediaScriptLoaded) {
+              loadAdBlueMediaScriptFallback();
+            }
+
             if (enableLockerButton()) {
               window.clearInterval(loadingCheck);
             }
