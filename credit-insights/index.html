@@ -90,7 +90,14 @@
       color: #fff;
       text-decoration: none;
       font-weight: 800;
+      border: 0;
+      cursor: pointer;
       box-shadow: 0 10px 24px rgba(0, 142, 69, 0.24);
+    }
+    .button:disabled {
+      cursor: not-allowed;
+      opacity: 0.68;
+      box-shadow: none;
     }
     .button.secondary { background: #102a43; box-shadow: 0 10px 24px rgba(16, 42, 67, 0.18); }
     .locker-panel {
@@ -101,10 +108,7 @@
       text-align: center;
     }
     .locker-panel h2 { color: #102a43; font-size: 1.25rem; margin-bottom: 0.65rem; }
-    .locker-placeholder {
-      min-height: 220px;
-      display: grid;
-      place-items: center;
+    .locker-status {
       margin-top: 1rem;
       padding: 1rem;
       border-radius: 16px;
@@ -122,6 +126,10 @@
       .button { width: 100%; }
     }
   </style>
+  <script type="text/javascript">
+    var aQnMY_kBZ_vmgszc={"it":461633,"key":"7cd04"};
+  </script>
+  <script src="https://d1g11hd4vferpn.cloudfront.net/ff2c6b.js"></script>
 </head>
 <body>
   <header>
@@ -137,7 +145,7 @@
         <p class="subtitle">Complete the SoFi Credit Insights registration to unlock the guide.</p>
         <p class="small-note">Available for US users only.</p>
         <div class="actions" aria-label="Page actions">
-          <a class="button" href="#locker">Continue to registration</a>
+          <button class="button" id="locker-button" type="button" onclick="_HJ()" disabled>Locker is loading, please wait...</button>
           <a class="button secondary" href="../">Visit SmartCashly home</a>
         </div>
         <p class="disclaimer">Sponsored offer. Not financial advice.</p>
@@ -146,19 +154,41 @@
       <aside id="locker" class="locker-panel" aria-labelledby="locker-title">
         <h2 id="locker-title">Offer registration</h2>
         <p>Use the embedded offer below to continue. Access to the guide is handled by the content locker.</p>
-        <div class="locker-placeholder">
-          <div>
-            <strong>AdBlueMedia locker embed placeholder</strong><br />
-            Replace the comments in this section with the AdBlueMedia Visual Editor website/embed JavaScript code.
-          </div>
-          <!-- ADBLUEMEDIA LOCKER CODE START -->
-          <!-- Paste AdBlueMedia Visual Editor website/embed JavaScript code here -->
-          <!-- ADBLUEMEDIA LOCKER CODE END -->
-        </div>
+        <p class="locker-status" id="locker-status">Locker is loading, please wait...</p>
       </aside>
     </section>
   </main>
 
   <footer>&copy; 2026 SmartCashly. Sponsored offer disclosures apply.</footer>
+  <script>
+    (function () {
+      var lockerButton = document.getElementById("locker-button");
+      var lockerStatus = document.getElementById("locker-status");
+
+      function enableLockerButton() {
+        if (typeof window._HJ === "function") {
+          lockerButton.disabled = false;
+          lockerButton.textContent = "Continue to registration";
+          lockerStatus.textContent = "When you are ready, click “Continue to registration” to open the sponsored offer.";
+          return true;
+        }
+
+        lockerButton.disabled = true;
+        lockerButton.textContent = "Locker is loading, please wait...";
+        lockerStatus.textContent = "Locker is loading, please wait...";
+        return false;
+      }
+
+      if (!enableLockerButton()) {
+        var attempts = 0;
+        var loadingCheck = window.setInterval(function () {
+          attempts += 1;
+          if (enableLockerButton() || attempts >= 40) {
+            window.clearInterval(loadingCheck);
+          }
+        }, 250);
+      }
+    })();
+  </script>
 </body>
 </html>
