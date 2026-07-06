@@ -611,32 +611,33 @@
           <option value="cashback-desc">Cashback: High to Low</option>
         </select>
       </div>
-      <a href="#">A</a>
-      <a href="#">B</a>
-      <a href="#">C</a>
-      <a href="#">D</a>
-      <a href="#">E</a>
-      <a href="#">F</a>
-      <a href="#">G</a>
-      <a href="#">H</a>
-      <a href="#">I</a>
-      <a href="#">J</a>
-      <a href="#">K</a>
-      <a href="#">L</a>
-      <a href="#">M</a>
-      <a href="#">N</a>
-      <a href="#">O</a>
-      <a href="#">P</a>
-      <a href="#">Q</a>
-      <a href="#">R</a>
-      <a href="#">S</a>
-      <a href="#">T</a>
-      <a href="#">U</a>
-      <a href="#">V</a>
-      <a href="#">W</a>
-      <a href="#">X</a>
-      <a href="#">Y</a>
-      <a href="#">Z</a>
+      <a href="#" class="active" data-filter="all">All</a>
+      <a href="#" data-filter="A">A</a>
+      <a href="#" data-filter="B">B</a>
+      <a href="#" data-filter="C">C</a>
+      <a href="#" data-filter="D">D</a>
+      <a href="#" data-filter="E">E</a>
+      <a href="#" data-filter="F">F</a>
+      <a href="#" data-filter="G">G</a>
+      <a href="#" data-filter="H">H</a>
+      <a href="#" data-filter="I">I</a>
+      <a href="#" data-filter="J">J</a>
+      <a href="#" data-filter="K">K</a>
+      <a href="#" data-filter="L">L</a>
+      <a href="#" data-filter="M">M</a>
+      <a href="#" data-filter="N">N</a>
+      <a href="#" data-filter="O">O</a>
+      <a href="#" data-filter="P">P</a>
+      <a href="#" data-filter="Q">Q</a>
+      <a href="#" data-filter="R">R</a>
+      <a href="#" data-filter="S">S</a>
+      <a href="#" data-filter="T">T</a>
+      <a href="#" data-filter="U">U</a>
+      <a href="#" data-filter="V">V</a>
+      <a href="#" data-filter="W">W</a>
+      <a href="#" data-filter="X">X</a>
+      <a href="#" data-filter="Y">Y</a>
+      <a href="#" data-filter="Z">Z</a>
     </div>
 
     <div class="stores-list">
@@ -856,21 +857,40 @@
       sortedStores.forEach(storeItem => storesList.appendChild(storeItem));
     }
 
-    function showAllStores() {
-      storeItems.forEach(item => {
-        item.style.display = 'flex';
+    function setActiveFilter(activeFilter) {
+      document.querySelectorAll('.alphabet-filter a').forEach(letter => {
+        letter.classList.toggle('active', letter.dataset.filter === activeFilter);
       });
     }
 
+    function getActiveFilter() {
+      const activeFilter = document.querySelector('.alphabet-filter a.active');
+
+      return activeFilter ? activeFilter.dataset.filter : 'all';
+    }
+
+    function filterStores(activeFilter) {
+      storeItems.forEach(item => {
+        const storeName = getStoreName(item);
+        const shouldShow = activeFilter === 'all' || storeName.charAt(0).toUpperCase() === activeFilter;
+
+        item.style.display = shouldShow ? 'flex' : 'none';
+      });
+    }
+
+    function showAllStores() {
+      setActiveFilter('all');
+      filterStores('all');
+    }
+
     sortStores(storeSort.value);
+    showAllStores();
 
     storeSort.addEventListener('change', function() {
-      document.querySelectorAll('.alphabet-filter a').forEach(letter => {
-        letter.classList.remove('active');
-      });
+      const activeFilter = getActiveFilter();
 
       sortStores(this.value);
-      showAllStores();
+      filterStores(activeFilter);
     });
 
     // Alphabet filter functionality
@@ -878,24 +898,10 @@
       letter.addEventListener('click', function(e) {
         e.preventDefault();
 
-        // Move the active state to the clicked letter filter
-        document.querySelectorAll('.alphabet-filter a').forEach(l => {
-          l.classList.remove('active');
-        });
+        const selectedFilter = this.dataset.filter;
 
-        this.classList.add('active');
-
-        const selectedLetter = this.textContent;
-
-        storeItems.forEach(item => {
-          const storeName = getStoreName(item);
-
-          if (storeName.charAt(0).toUpperCase() === selectedLetter) {
-            item.style.display = 'flex';
-          } else {
-            item.style.display = 'none';
-          }
-        });
+        setActiveFilter(selectedFilter);
+        filterStores(selectedFilter);
       });
     });
   </script>
