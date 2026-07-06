@@ -863,6 +863,12 @@
       });
     }
 
+    function getActiveFilter() {
+      const activeFilter = document.querySelector('.alphabet-filter a.active');
+
+      return activeFilter ? activeFilter.dataset.filter : 'all';
+    }
+
     function filterStores(activeFilter) {
       storeItems.forEach(item => {
         const storeName = getStoreName(item);
@@ -881,8 +887,10 @@
     showAllStores();
 
     storeSort.addEventListener('change', function() {
+      const activeFilter = getActiveFilter();
+
       sortStores(this.value);
-      showAllStores();
+      filterStores(activeFilter);
     });
 
     // Alphabet filter functionality
