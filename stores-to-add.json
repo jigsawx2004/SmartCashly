@@ -8,9 +8,9 @@
     "logoFile": "store-logo-temu.png",
     "sourceUrl": "https://apopou.gr/kouponia/temu/1042",
     "theme": {
-      "pageBackgroundColor": "#FF6A00",
+      "pageBackgroundColor": "#FF6905",
       "bubbleColor": "#FFFFFF",
-      "notes": "Use the main orange from the Temu logo for the page background; use white for the logo-letter/bubble particles."
+      "notes": "Use the Temu orange logo field as the page background; use the white lettering color (#FFFFFF) for page bubbles while keeping header/footer bubbles unchanged."
     },
     "description": "Online marketplace with low-price products, coupons, daily deals and cashback.",
     "keywords": [
@@ -66,9 +66,9 @@
     "logoFile": "store-logo-alibaba.png",
     "sourceUrl": "https://apopou.gr/kouponia/alibaba/1005",
     "theme": {
-      "pageBackgroundColor": "#FF6A00",
+      "pageBackgroundColor": "#FF5A00",
       "bubbleColor": "#FFFFFF",
-      "notes": "Use Alibaba orange as the page background; use white for the logo-letter/bubble particles."
+      "notes": "Use the Alibaba orange logo field as the page background; use the white mark color (#FFFFFF) for page bubbles while keeping header/footer bubbles unchanged."
     },
     "description": "Global wholesale marketplace with business products, electronics, tools and cashback.",
     "keywords": [
@@ -123,9 +123,9 @@
     "logoFile": "store-logo-agoda.png",
     "sourceUrl": "https://apopou.gr/kouponia/agoda/305",
     "theme": {
-      "pageBackgroundColor": "#2446A6",
-      "bubbleColor": "#FFFFFF",
-      "notes": "Agoda has multicolor marks; use the prominent deep blue wordmark color as the page background and white as the bubble/letter color."
+      "pageBackgroundColor": "#FFFFFF",
+      "bubbleColor": "#5F5F5A",
+      "notes": "Use the Agoda logo white field as the page background; use the grey letter tone (#5F5F5A) for page bubbles while keeping header/footer bubbles unchanged."
     },
     "description": "Hotel and travel booking platform with accommodation deals, discount codes and cashback.",
     "keywords": [
@@ -180,9 +180,9 @@
     "logoFile": "store-logo-notino.png",
     "sourceUrl": "https://apopou.gr/kouponia/notino/379",
     "theme": {
-      "pageBackgroundColor": "#111111",
+      "pageBackgroundColor": "#000000",
       "bubbleColor": "#FFFFFF",
-      "notes": "Use black/dark charcoal from the Notino wordmark as the page background; use white for bubbles."
+      "notes": "Use the Notino black logo field as the page background; use the white wordmark color (#FFFFFF) for page bubbles while keeping header/footer bubbles unchanged."
     },
     "description": "Beauty, perfume and skincare store with cosmetic deals, coupons and cashback.",
     "keywords": [
@@ -237,9 +237,9 @@
     "logoFile": "store-logo-yoox.png",
     "sourceUrl": "https://apopou.gr/kouponia/yoox/34",
     "theme": {
-      "pageBackgroundColor": "#000000",
+      "pageBackgroundColor": "#FF3269",
       "bubbleColor": "#FFFFFF",
-      "notes": "Use black from the YOOX logo as the page background; use white bubbles."
+      "notes": "Use the YOOX pink logo field as the page background; use the white wordmark color (#FFFFFF) for page bubbles while keeping header/footer bubbles unchanged."
     },
     "description": "Designer fashion marketplace with luxury clothing deals, sales and cashback.",
     "keywords": [
@@ -294,9 +294,9 @@
     "logoFile": "store-logo-alensa.png",
     "sourceUrl": "https://apopou.gr/kouponia/alensa/54",
     "theme": {
-      "pageBackgroundColor": "#0B66C3",
+      "pageBackgroundColor": "#E14664",
       "bubbleColor": "#FFFFFF",
-      "notes": "Use blue from the Alensa brand/logo as the page background; use white bubble particles."
+      "notes": "Use the Alensa rose logo field as the page background; use the white letterform color (#FFFFFF) for page bubbles while keeping header/footer bubbles unchanged."
     },
     "description": "Eyewear, contact lenses and sunglasses store with lens deals and cashback.",
     "keywords": [
@@ -351,9 +351,9 @@
     "logoFile": "store-logo-airhelp.png",
     "sourceUrl": "https://apopou.gr/kouponia/airhelp/1029",
     "theme": {
-      "pageBackgroundColor": "#123A63",
-      "bubbleColor": "#FFFFFF",
-      "notes": "Use a deep blue from the AirHelp identity as the page background; use white bubbles/letters."
+      "pageBackgroundColor": "#FFFFFF",
+      "bubbleColor": "#1478F5",
+      "notes": "Use the AirHelp logo white field as the page background; use the blue logo mark color (#1478F5) for page bubbles while keeping header/footer bubbles unchanged."
     },
     "description": "Flight compensation service with passenger-rights offers and cashback.",
     "keywords": [
@@ -406,9 +406,9 @@
     "logoFile": "store-logo-airshop.png",
     "sourceUrl": "https://apopou.gr/kouponia/airshop/51",
     "theme": {
-      "pageBackgroundColor": "#005DAA",
+      "pageBackgroundColor": "#00EBFF",
       "bubbleColor": "#FFFFFF",
-      "notes": "Use the main Airshop blue as the page background; use white for bubbles."
+      "notes": "Use the Airshop cyan logo field as the page background; use the white airplane mark color (#FFFFFF) for page bubbles while keeping header/footer bubbles unchanged."
     },
     "description": "Travel booking store for flights, hotels and trip offers with cashback.",
     "keywords": [
@@ -463,9 +463,9 @@
     "logoFile": "store-logo-kiwi.png",
     "sourceUrl": "https://apopou.gr/kouponia/kiwi/156",
     "theme": {
-      "pageBackgroundColor": "#00A991",
+      "pageBackgroundColor": "#00AA91",
       "bubbleColor": "#FFFFFF",
-      "notes": "Use Kiwi green as the page background; use white for bubbles/letters."
+      "notes": "Use the Kiwi teal logo field as the page background; use the white letter mark color (#FFFFFF) for page bubbles while keeping header/footer bubbles unchanged."
     },
     "description": "Travel booking platform for flights, stays, car rentals and destination deals with cashback.",
     "keywords": [
@@ -521,8 +521,8 @@
     "sourceUrl": "https://apopou.gr/kouponia/abito/1060",
     "theme": {
       "pageBackgroundColor": "#FFFFFF",
-      "bubbleColor": "#111111",
-      "notes": "Use the Abito logo's clean white field as the page background; use the dark logo-letter tone for bubbles."
+      "bubbleColor": "#FFFFFF",
+      "notes": "Use the Abito logo's clean white field as the page background; use white bubbles for the shared green header and footer."
     },
     "description": "Fashion shop with clothing offers, gift voucher promotions and cashback.",
     "keywords": [
