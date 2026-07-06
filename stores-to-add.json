@@ -520,9 +520,9 @@
     "logoFile": "store-logo-abito.png",
     "sourceUrl": "https://apopou.gr/kouponia/abito/1060",
     "theme": {
-      "pageBackgroundColor": "#111111",
-      "bubbleColor": "#FFFFFF",
-      "notes": "Use black/dark logo tone as the page background; use white bubbles."
+      "pageBackgroundColor": "#FFFFFF",
+      "bubbleColor": "#111111",
+      "notes": "Use the Abito logo's clean white field as the page background; use the dark logo-letter tone for bubbles."
     },
     "description": "Fashion shop with clothing offers, gift voucher promotions and cashback.",
     "keywords": [
