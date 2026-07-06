@@ -123,9 +123,9 @@
     "logoFile": "store-logo-agoda.png",
     "sourceUrl": "https://apopou.gr/kouponia/agoda/305",
     "theme": {
-      "pageBackgroundColor": "#2446A6",
-      "bubbleColor": "#FFFFFF",
-      "notes": "Agoda has multicolor marks; use the prominent deep blue wordmark color as the page background and white as the bubble/letter color."
+      "pageBackgroundColor": "#FFFFFF",
+      "bubbleColor": "#5F5F5A",
+      "notes": "Use the Agoda logo white field as the page background; use the grey letter tone (#5F5F5A) for page bubbles while keeping header/footer bubbles unchanged."
     },
     "description": "Hotel and travel booking platform with accommodation deals, discount codes and cashback.",
     "keywords": [
@@ -521,8 +521,8 @@
     "sourceUrl": "https://apopou.gr/kouponia/abito/1060",
     "theme": {
       "pageBackgroundColor": "#FFFFFF",
-      "bubbleColor": "#111111",
-      "notes": "Use the Abito logo's clean white field as the page background; use the dark logo-letter tone for bubbles."
+      "bubbleColor": "#FFFFFF",
+      "notes": "Use the Abito logo's clean white field as the page background; use white bubbles for the shared green header and footer."
     },
     "description": "Fashion shop with clothing offers, gift voucher promotions and cashback.",
     "keywords": [
