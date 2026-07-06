@@ -143,7 +143,7 @@
       {
         "type": "CASHBACK",
         "title": "Shop at Agoda & Earn Cashback",
-        "description": "Browse Agoda hotels and travel deals and earn cashback on every eligible booking you make!",
+        "description": "Book Agoda hotels, apartments or resort stays through Smartcashly and get cashback on completed stays that qualify.",
         "cashbackText": "💰 Earn 5% Cashback",
         "buttonText": "💰 Shop & Earn",
         "isFirstCard": true
@@ -200,7 +200,7 @@
       {
         "type": "CASHBACK",
         "title": "Shop at Notino & Earn Cashback",
-        "description": "Browse the entire Notino collection and earn cashback on every eligible purchase you make!",
+        "description": "Shop Notino fragrances, skincare, haircare and makeup through Smartcashly to receive cashback on qualifying orders.",
         "cashbackText": "💰 Earn 5% Cashback",
         "buttonText": "💰 Shop & Earn",
         "isFirstCard": true
@@ -314,7 +314,7 @@
       {
         "type": "CASHBACK",
         "title": "Shop at Alensa & Earn Cashback",
-        "description": "Browse Alensa eyewear and lens deals and earn cashback on every eligible purchase you make!",
+        "description": "Order contact lenses, glasses, sunglasses or lens-care products from Alensa and collect cashback when the order qualifies.",
         "cashbackText": "💰 Earn 5% Cashback",
         "buttonText": "💰 Shop & Earn",
         "isFirstCard": true
@@ -369,7 +369,7 @@
       {
         "type": "CASHBACK",
         "title": "Shop at AirHelp & Earn Cashback",
-        "description": "Browse AirHelp services and earn cashback on every eligible purchase you make!",
+        "description": "Use AirHelp to review a disrupted-flight claim through Smartcashly and earn cashback when the service qualifies.",
         "cashbackText": "💰 Earn 12% Cashback",
         "buttonText": "💰 Shop & Earn",
         "isFirstCard": true
@@ -540,7 +540,7 @@
       {
         "type": "CASHBACK",
         "title": "Shop at Abito & Earn Cashback",
-        "description": "Browse Abito fashion deals and earn cashback on every eligible purchase you make!",
+        "description": "Shop Abito clothing, seasonal styles and wardrobe offers through Smartcashly to earn cashback on qualifying orders.",
         "cashbackText": "💰 Earn 10% Cashback",
         "buttonText": "💰 Shop & Earn",
         "isFirstCard": true
