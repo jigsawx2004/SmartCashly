@@ -5,75 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>iHerb - 1% Cashback • Smartcashly</title>
 <link rel="icon" type="image/svg+xml" href="../../site-logo/smartcashly-favicon.svg" />
-<style>*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,Helvetica,Arial,sans-serif}html,body{min-height:100vh;background:#eaf6df;color:#222}body{display:flex;flex-direction:column}body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at center 22%,#4b8f29 1px,transparent 1px),radial-gradient(circle at center 50%,#4b8f29 1px,transparent 1px),radial-gradient(circle at center 78%,#4b8f29 1px,transparent 1px);background-size:72px 100%,72px 100%,72px 100%;background-position:0 0,24px 0,48px 0;opacity:.22;pointer-events:none;animation:bubbles 8s linear infinite}@keyframes bubbles{to{background-position:72px 0,96px 0,120px 0}}header,footer{height:80px;display:flex;align-items:center;padding:1rem 1.5rem;background:#008e45;color:#fff;position:relative;z-index:2}header{justify-content:center}footer{justify-content:center;color:#000;font-weight:700}.logo-img{position:absolute;left:1.5rem;height:100px;width:auto}.center-group{display:flex;gap:.5rem;align-items:center}.search-bar input{width:min(500px,52vw);padding:.55rem 1rem;border:0;border-radius:9999px}.btn,.all-stores-btn{background:#0070f3;color:#fff;text-decoration:none;border:0;border-radius:6px;font-weight:600;padding:.55rem 1rem}.auth-nav{position:absolute;right:1.5rem}main{flex:1;width:min(1200px,100%);margin:0 auto;padding:2rem 1rem;position:relative;z-index:1}.store-header,.offer-card{background:rgba(255,255,255,.95);border:3px solid #0070f3;border-radius:12px;box-shadow:0 8px 25px rgba(0,0,0,.15)}.store-header{padding:2rem;display:flex;gap:2rem;align-items:center;margin-bottom:2rem}.store-logo-large{width:120px;height:120px;background:url('/store-logos/store-logo-iherb.png') no-repeat center/contain;border-radius:12px;flex-shrink:0}.store-title{font-size:2.2rem;color:#008e45}.store-subtitle{font-size:1.1rem;color:#333;margin:.25rem 0 1rem}.cashback-highlight{background:linear-gradient(135deg,#ff6b35,#ff8a50);color:white;padding:1rem 2rem;border-radius:8px;font-weight:700;display:inline-block;margin-bottom:1rem}.offers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}.offer-card{padding:1.5rem;cursor:pointer}.offer-header{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}.offer-logo{width:60px;height:60px;background:url('/store-logos/store-logo-iherb.png') no-repeat center/contain;border-radius:6px}.offer-type{background:#2196f3;color:white;padding:.3rem .8rem;border-radius:4px;font-size:.8rem;font-weight:700}.offer-type.cashback{background:#ff6b35}.offer-type.coupon{background:#e74c3c}.offer-title{color:#008e45;font-size:1.1rem;margin-bottom:.5rem}.offer-description{color:#666;line-height:1.4;margin-bottom:1rem}.offer-cashback{color:#ff6b35;font-weight:700;margin-bottom:1rem}.offer-button{width:100%;background:#4caf50;color:white;border:0;border-radius:6px;padding:.75rem 1.5rem;font-weight:700;cursor:pointer}@media(max-width:768px){.store-header{flex-direction:column;text-align:center}.auth-nav{display:none}}
+<style>
+:root{--page-bg:#eaf6df;--bubble:#4b8f29;--text:#17324d}*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,Helvetica,Arial,sans-serif}html,body{min-height:100vh;background:var(--page-bg);color:#222}body{display:flex;flex-direction:column;position:relative;overflow-x:hidden}.brand-bubbles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}.brand-bubbles span{position:absolute;display:block;border-radius:999px;background:var(--bubble);opacity:.14;filter:blur(.2px)}.brand-bubbles span:nth-child(1){width:120px;height:120px;left:5%;top:10px}.brand-bubbles span:nth-child(2){width:70px;height:70px;right:12%;top:22px;opacity:.18}.brand-bubbles span:nth-child(3){width:42px;height:42px;right:28%;bottom:8px;opacity:.22}body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 12% 18%,var(--bubble) 0 62px,transparent 64px),radial-gradient(circle at 88% 28%,var(--bubble) 0 46px,transparent 48px),radial-gradient(circle at 20% 78%,var(--bubble) 0 34px,transparent 36px),radial-gradient(circle at 78% 86%,var(--bubble) 0 80px,transparent 82px);opacity:.10;pointer-events:none;z-index:0}header,footer{min-height:80px;display:flex;align-items:center;padding:1rem 1.5rem;background:#008e45;color:#fff;position:relative;z-index:2;overflow:hidden}header{justify-content:center}footer{justify-content:center;color:#051b10;font-weight:700}header>*:not(.brand-bubbles),footer>*:not(.brand-bubbles){position:relative;z-index:1}.logo-img{position:absolute;left:1.5rem;height:96px;width:auto}.center-group{display:flex;gap:.5rem;align-items:center}.search-bar input{width:min(500px,52vw);padding:.55rem 1rem;border:0;border-radius:9999px}.btn,.all-stores-btn{background:#0070f3;color:#fff;text-decoration:none;border:0;border-radius:6px;font-weight:600;padding:.55rem 1rem}.auth-nav{position:absolute;right:1.5rem}main{flex:1;width:min(1200px,100%);margin:0 auto;padding:2rem 1rem;position:relative;z-index:1}.store-hero{position:relative;overflow:hidden;border-radius:18px;margin-bottom:2rem;background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(255,255,255,.76));box-shadow:0 12px 35px rgba(0,0,0,.16)}.store-header{position:relative;z-index:1;padding:2rem;display:flex;gap:2rem;align-items:center}.store-logo-large{width:120px;height:120px;background:#fff url('/store-logos/store-logo-iherb.png') no-repeat center/contain;border-radius:14px;flex-shrink:0;box-shadow:0 6px 18px rgba(0,0,0,.12)}.store-title{font-size:2.2rem;color:#008e45}.store-subtitle{font-size:1.1rem;color:#333;margin:.25rem 0 1rem}.cashback-highlight{background:linear-gradient(135deg,#ff6b35,#ff8a50);color:white;padding:1rem 2rem;border-radius:10px;font-weight:800;display:inline-block;margin-bottom:1rem}.offers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}.offer-card{background:rgba(255,255,255,.94);border:3px solid #0070f3;border-radius:14px;box-shadow:0 8px 25px rgba(0,0,0,.15);padding:1.5rem;cursor:pointer}.offer-header{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}.offer-logo{width:60px;height:60px;background:#fff url('/store-logos/store-logo-iherb.png') no-repeat center/contain;border-radius:8px}.offer-type{background:#2196f3;color:white;padding:.3rem .8rem;border-radius:4px;font-size:.8rem;font-weight:700}.offer-type.cashback{background:#ff6b35}.offer-type.coupon{background:#e74c3c}.offer-title{color:#008e45;font-size:1.1rem;margin-bottom:.5rem}.offer-description{color:#555;line-height:1.4;margin-bottom:1rem}.offer-cashback{color:#ff6b35;font-weight:800;margin-bottom:1rem}.offer-button{width:100%;background:#4caf50;color:white;border:0;border-radius:6px;padding:.75rem 1.5rem;font-weight:800;cursor:pointer}@media(max-width:768px){header{min-height:118px;padding-top:4rem}.logo-img{left:50%;top:.35rem;transform:translateX(-50%);height:70px}.center-group{width:100%;justify-content:center;flex-wrap:wrap}.search-bar input{width:min(86vw,420px)}.store-header{flex-direction:column;text-align:center;padding:1.5rem}.auth-nav{display:none}.offers-grid{grid-template-columns:1fr}.brand-bubbles span:nth-child(1){width:86px;height:86px;left:-18px}.brand-bubbles span:nth-child(2){width:54px;height:54px;right:4%}}
 </style>
 </head>
 <body>
-<header>
-<img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
-<div class="center-group">
-<form class="search-bar">
-<input type="search" placeholder="Search any store ..." aria-label="Search stores" />
-</form>
-<a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
-</div>
-<nav class="auth-nav">
-<a href="/" class="btn">Home</a>
-</nav>
-</header>
+<header><div class="brand-bubbles"><span></span><span></span><span></span></div><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /><div class="center-group"><form class="search-bar"><input type="search" placeholder="Search any store ..." aria-label="Search stores" /></form><a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a></div><nav class="auth-nav"><a href="/" class="btn">Home</a></nav></header>
 <main>
-<div class="store-header">
-<div class="store-logo-large">
-</div>
-<div class="store-details">
-<h1 class="store-title">iHerb</h1>
-<p class="store-subtitle">Health & Wellness store with cashback rewards</p>
-<div class="cashback-highlight">💰 Earn up to 1% Cashback</div>
-<p>Browse vitamins, supplements, wellness products, beauty items, groceries, and healthy lifestyle essentials.</p>
-</div>
-</div>
-<div class="offers-section">
-<div class="offers-grid">
-      <div class="offer-card" onclick="openStoreOffer()">
-<div class="offer-header">
-<div class="offer-logo">
-</div>
-<div class="offer-type cashback">CASHBACK</div>
-</div>
-<h3 class="offer-title">Shop wellness essentials at iHerb + Get Extra 1% Cashback</h3>
-<p class="offer-description">Open this offer through Smartcashly, then shop as usual to earn 1% cashback.</p>
-<div class="offer-cashback">+ Get Extra 1% Cashback</div>
-<button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">💰 Get Offer</button>
-</div>
-      <div class="offer-card" onclick="openStoreOffer()">
-<div class="offer-header">
-<div class="offer-logo">
-</div>
-<div class="offer-type ">OFFER</div>
-</div>
-<h3 class="offer-title">Save on selected supplements, beauty, and grocery products + Get Extra 1% Cashback</h3>
-<p class="offer-description">Open this offer through Smartcashly, then shop as usual to earn 1% cashback.</p>
-<div class="offer-cashback">+ Get Extra 1% Cashback</div>
-<button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">💰 Get Offer</button>
-</div>
-      <div class="offer-card" onclick="openStoreOffer()">
-<div class="offer-header">
-<div class="offer-logo">
-</div>
-<div class="offer-type coupon">COUPON</div>
-</div>
-<h3 class="offer-title">Get Exclusive Coupon + Extra 1% Cashback</h3>
-<p class="offer-description">Reveal this coupon-style offer, continue to the store, and keep your extra 1% cashback active.</p>
-<div class="offer-cashback">🎫 Get Exclusive Coupon + Extra 1% Cashback</div>
-<button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">🎫 Get Coupon</button>
-</div>
-    </div>
-</div>
+<section class="store-hero"><div class="brand-bubbles"><span></span><span></span><span></span></div><div class="store-header"><div class="store-logo-large"></div><div class="store-details"><h1 class="store-title">iHerb</h1><p class="store-subtitle">Health &amp; Wellness store with cashback rewards</p><div class="cashback-highlight">💰 Earn up to 1% Cashback</div><p>Browse vitamins, supplements, wellness products, natural beauty items, groceries, personal care, and healthy lifestyle essentials.</p></div></div></section>
+<section class="offers-section"><div class="offers-grid"><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type cashback">CASHBACK</div></div><h3 class="offer-title">Shop wellness essentials at iHerb + Get Extra 1% Cashback</h3><p class="offer-description">Activate Smartcashly, then continue to iHerb to shop wellness essentials at iHerb while your extra 1% cashback tracks.</p><div class="offer-cashback">+ Get Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">💰 Get Offer</button></article><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type ">OFFER</div></div><h3 class="offer-title">Save on selected vitamins and supplements + Get Extra 1% Cashback</h3><p class="offer-description">Start at Smartcashly before you save on selected vitamins and supplements; your iHerb visit will carry extra 1% cashback.</p><div class="offer-cashback">+ Get Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">💰 Get Offer</button></article><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type ">OFFER</div></div><h3 class="offer-title">Browse healthy groceries and natural products + Get Extra 1% Cashback</h3><p class="offer-description">Use this Smartcashly link to browse healthy groceries and natural products, then complete your order with extra 1% cashback enabled.</p><div class="offer-cashback">+ Get Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">💰 Get Offer</button></article><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type ">OFFER</div></div><h3 class="offer-title">Discover beauty, personal care, and lifestyle items + Get Extra 1% Cashback</h3><p class="offer-description">Head to iHerb from Smartcashly when you want to discover beauty, personal care, and lifestyle items and keep extra 1% cashback in place.</p><div class="offer-cashback">+ Get Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">💰 Get Offer</button></article><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type ">OFFER</div></div><h3 class="offer-title">Find sports nutrition and daily wellness picks + Get Extra 1% Cashback</h3><p class="offer-description">Open this tracked visit for find sports nutrition and daily wellness picks; Smartcashly will connect extra 1% cashback to your session.</p><div class="offer-cashback">+ Get Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">💰 Get Offer</button></article><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type ">OFFER</div></div><h3 class="offer-title">Shop trusted health brands through iHerb + Get Extra 1% Cashback</h3><p class="offer-description">Choose this deal before you shop trusted health brands through iHerb, then shop at iHerb with extra 1% cashback ready.</p><div class="offer-cashback">+ Get Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">💰 Get Offer</button></article><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type coupon">COUPON</div></div><h3 class="offer-title">Get Exclusive Coupon + Extra 1% Cashback</h3><p class="offer-description">Open this no-code coupon-style deal for iHerb; Smartcashly sends you onward with extra 1% cashback attached.</p><div class="offer-cashback">🎫 Get Exclusive Coupon + Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">🎫 Get Coupon</button></article><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type coupon">COUPON</div></div><h3 class="offer-title">Unlock iHerb wellness savings + Get Exclusive Coupon + Extra 1% Cashback</h3><p class="offer-description">Reveal Unlock iHerb wellness savings without adding a fake code, then continue to iHerb with extra 1% cashback active.</p><div class="offer-cashback">🎫 Get Exclusive Coupon + Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">🎫 Get Coupon</button></article></div></section>
 </main>
-<footer>
-<span>©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.</span>
-</footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();function openStoreOffer(){window.open('https://www.iherb.com/','_blank');}
-</script>
+<footer><div class="brand-bubbles"><span></span><span></span><span></span></div><span>©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.</span></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();function openStoreOffer(){window.open('https://www.iherb.com/','_blank');}</script>
 </body>
 </html>
