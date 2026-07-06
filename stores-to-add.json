@@ -1,0 +1,202 @@
+[
+  {
+    "slug": "ebay",
+    "name": "eBay",
+    "category": "Marketplace",
+    "desc": "Shop deals across electronics, fashion, collectibles, home items, refurbished products, and everyday marketplace finds.",
+    "bg": "#ffffff",
+    "bubble": "#0064d2",
+    "url": "https://www.ebay.com/",
+    "domain": "ebay.com",
+    "offers": [
+      "Explore eBay marketplace deals + Get Extra 1% Cashback",
+      "Save on selected electronics, fashion, and home finds + Get Extra 1% Cashback",
+      "Get Exclusive Coupon + Extra 1% Cashback"
+    ],
+    "cashback": "1%",
+    "listingCashbackText": "Up to 1% Cashback",
+    "logo": "store-logos/store-logo-ebay.png",
+    "pageBackgroundColor": "#ffffff",
+    "bubbleColor": "#0064d2"
+  },
+  {
+    "slug": "asos",
+    "name": "ASOS",
+    "category": "Fashion",
+    "desc": "Discover trend-led clothing, shoes, accessories, and beauty picks from ASOS and popular fashion brands.",
+    "bg": "#050505",
+    "bubble": "#ffffff",
+    "url": "https://www.asos.com/",
+    "domain": "asos.com",
+    "offers": [
+      "Shop new-season fashion at ASOS + Get Extra 1% Cashback",
+      "Save on selected clothing, shoes, and accessories + Get Extra 1% Cashback",
+      "Get Exclusive Coupon + Extra 1% Cashback"
+    ],
+    "cashback": "1%",
+    "listingCashbackText": "Up to 1% Cashback",
+    "logo": "store-logos/store-logo-asos.png",
+    "pageBackgroundColor": "#050505",
+    "bubbleColor": "#ffffff"
+  },
+  {
+    "slug": "hm",
+    "name": "H&M",
+    "category": "Fashion",
+    "desc": "Find affordable clothing, basics, accessories, and home styles for everyday wardrobes and seasonal looks.",
+    "bg": "#ffffff",
+    "bubble": "#cc071e",
+    "url": "https://www.hm.com/",
+    "domain": "hm.com",
+    "offers": [
+      "Shop everyday fashion and seasonal styles + Get Extra 1% Cashback",
+      "Save on selected H&M clothing and accessories + Get Extra 1% Cashback",
+      "Get Exclusive Coupon + Extra 1% Cashback"
+    ],
+    "cashback": "1%",
+    "listingCashbackText": "Up to 1% Cashback",
+    "logo": "store-logos/store-logo-hm.png",
+    "pageBackgroundColor": "#ffffff",
+    "bubbleColor": "#cc071e"
+  },
+  {
+    "slug": "sephora",
+    "name": "Sephora",
+    "category": "Beauty",
+    "desc": "Explore makeup, skincare, fragrance, haircare, and beauty essentials from well-known and premium brands.",
+    "bg": "#ffffff",
+    "bubble": "#000000",
+    "url": "https://www.sephora.com/",
+    "domain": "sephora.com",
+    "offers": [
+      "Shop beauty must-haves at Sephora + Get Extra 1% Cashback",
+      "Save on selected skincare, makeup, and fragrance picks + Get Extra 1% Cashback",
+      "Get Exclusive Coupon + Extra 1% Cashback"
+    ],
+    "cashback": "1%",
+    "listingCashbackText": "Up to 1% Cashback",
+    "logo": "store-logos/store-logo-sephora.png",
+    "pageBackgroundColor": "#ffffff",
+    "bubbleColor": "#000000"
+  },
+  {
+    "slug": "iherb",
+    "name": "iHerb",
+    "category": "Health & Wellness",
+    "desc": "Browse vitamins, supplements, wellness products, beauty items, groceries, and healthy lifestyle essentials.",
+    "bg": "#eaf6df",
+    "bubble": "#4b8f29",
+    "url": "https://www.iherb.com/",
+    "domain": "iherb.com",
+    "offers": [
+      "Shop wellness essentials at iHerb + Get Extra 1% Cashback",
+      "Save on selected supplements, beauty, and grocery products + Get Extra 1% Cashback",
+      "Get Exclusive Coupon + Extra 1% Cashback"
+    ],
+    "cashback": "1%",
+    "listingCashbackText": "Up to 1% Cashback",
+    "logo": "store-logos/store-logo-iherb.png",
+    "pageBackgroundColor": "#eaf6df",
+    "bubbleColor": "#4b8f29"
+  },
+  {
+    "slug": "booking",
+    "name": "Booking.com",
+    "category": "Travel",
+    "desc": "Compare hotels, apartments, villas, car rentals, and travel stays for trips in Greece and worldwide.",
+    "bg": "#003b95",
+    "bubble": "#ffffff",
+    "url": "https://www.booking.com/",
+    "domain": "booking.com",
+    "offers": [
+      "Book your next stay with Booking.com + Get Extra 1% Cashback",
+      "Save on selected hotels, apartments, and travel stays + Get Extra 1% Cashback",
+      "Get Exclusive Coupon + Extra 1% Cashback"
+    ],
+    "cashback": "1%",
+    "listingCashbackText": "Up to 1% Cashback",
+    "logo": "store-logos/store-logo-booking.png",
+    "pageBackgroundColor": "#003b95",
+    "bubbleColor": "#ffffff"
+  },
+  {
+    "slug": "expedia",
+    "name": "Expedia",
+    "category": "Travel",
+    "desc": "Plan flights, hotels, packages, car rentals, and activities through one of the biggest travel booking platforms.",
+    "bg": "#fff3bf",
+    "bubble": "#10285f",
+    "url": "https://www.expedia.com/",
+    "domain": "expedia.com",
+    "offers": [
+      "Book hotels, flights, and travel packages + Get Extra 1% Cashback",
+      "Save on selected Expedia travel deals + Get Extra 1% Cashback",
+      "Get Exclusive Coupon + Extra 1% Cashback"
+    ],
+    "cashback": "1%",
+    "listingCashbackText": "Up to 1% Cashback",
+    "logo": "store-logos/store-logo-expedia.png",
+    "pageBackgroundColor": "#fff3bf",
+    "bubbleColor": "#10285f"
+  },
+  {
+    "slug": "klook",
+    "name": "Klook",
+    "category": "Travel Experiences",
+    "desc": "Book attractions, tours, transport, activities, and travel experiences for destinations around the world.",
+    "bg": "#e7fff3",
+    "bubble": "#00b371",
+    "url": "https://www.klook.com/",
+    "domain": "klook.com",
+    "offers": [
+      "Book activities and attractions with Klook + Get Extra 1% Cashback",
+      "Save on selected tours, tickets, and travel experiences + Get Extra 1% Cashback",
+      "Get Exclusive Coupon + Extra 1% Cashback"
+    ],
+    "cashback": "1%",
+    "listingCashbackText": "Up to 1% Cashback",
+    "logo": "store-logos/store-logo-klook.png",
+    "pageBackgroundColor": "#e7fff3",
+    "bubbleColor": "#00b371"
+  },
+  {
+    "slug": "samsung",
+    "name": "Samsung",
+    "category": "Electronics",
+    "desc": "Shop smartphones, tablets, TVs, monitors, appliances, wearables, and official Samsung technology products.",
+    "bg": "#1428a0",
+    "bubble": "#ffffff",
+    "url": "https://www.samsung.com/",
+    "domain": "samsung.com",
+    "offers": [
+      "Shop official Samsung tech and devices + Get Extra 1% Cashback",
+      "Save on selected phones, TVs, monitors, and appliances + Get Extra 1% Cashback",
+      "Get Exclusive Coupon + Extra 1% Cashback"
+    ],
+    "cashback": "1%",
+    "listingCashbackText": "Up to 1% Cashback",
+    "logo": "store-logos/store-logo-samsung.png",
+    "pageBackgroundColor": "#1428a0",
+    "bubbleColor": "#ffffff"
+  },
+  {
+    "slug": "decathlon",
+    "name": "Decathlon",
+    "category": "Sports & Outdoor",
+    "desc": "Find sportswear, fitness gear, outdoor equipment, shoes, bikes, camping items, and training essentials.",
+    "bg": "#0072ce",
+    "bubble": "#ffffff",
+    "url": "https://www.decathlon.com/",
+    "domain": "decathlon.com",
+    "offers": [
+      "Shop sports and outdoor gear at Decathlon + Get Extra 1% Cashback",
+      "Save on selected fitness, camping, cycling, and training products + Get Extra 1% Cashback",
+      "Get Exclusive Coupon + Extra 1% Cashback"
+    ],
+    "cashback": "1%",
+    "listingCashbackText": "Up to 1% Cashback",
+    "logo": "store-logos/store-logo-decathlon.png",
+    "pageBackgroundColor": "#0072ce",
+    "bubbleColor": "#ffffff"
+  }
+]
