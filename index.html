@@ -316,27 +316,6 @@
   background: #0059c1;
 }
 
-.credit-insights-btn {
-    position: relative;
-    z-index: 5;
-    background: #102a43;
-    color: white;
-    text-decoration: none;
-    padding: 0.55rem 1.2rem;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: background 0.18s;
-    white-space: nowrap;
-    height: 38px;
-    display: flex;
-    align-items: center;
-}
-
-.credit-insights-btn:hover {
-  background: #1f3f5b;
-}
-
 .search-autocomplete.show {
   display: block !important;
 }
@@ -416,23 +395,6 @@ main {
   font-weight: 600;
   line-height: 1.5;
   margin-bottom: 1rem;
-}
-
-.credit-insights-feature .feature-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 0.7rem 1.2rem;
-  border-radius: 999px;
-  background: #008e45;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 800;
-}
-
-.credit-insights-feature .feature-link:hover {
-  background: #006b36;
 }
 
 /* STORES SECTION */
@@ -1117,7 +1079,6 @@ footer::before {
         <div id="search-autocomplete" class="search-autocomplete"></div>
       </form>
       <a href="general/all-stores/" class="all-stores-btn">View All Stores</a>
-      <a href="credit-insights/" class="credit-insights-btn">Credit Insights</a>
     </div>
     <nav class="auth-nav" id="auth-nav">
       <div id="auth-buttons" style="display: flex; gap: 0.5rem;">
@@ -1153,7 +1114,6 @@ footer::before {
       <section class="credit-insights-feature" aria-labelledby="credit-insights-feature-title">
         <h3 id="credit-insights-feature-title">Credit Insights Guide</h3>
         <p>Complete the sponsored SoFi Credit Insights registration offer to unlock a simple informational checklist for better credit habits.</p>
-        <a class="feature-link" href="credit-insights/">Open Credit Insights</a>
       </section>
     </div>
 
@@ -1533,7 +1493,7 @@ footer::before {
       },
       {
         name: 'Agoda',
-        description: 'Hotel and travel booking platform with accommodation deals, discount codes and cashback.',
+        description: 'Travel booking platform for hotels, apartments and resort stays with member deals and cashback.',
         cashback: '13%',
         url: '/stores/agoda',
         icon: '/store-logos/store-logo-agoda.png',
@@ -1541,7 +1501,7 @@ footer::before {
       },
       {
         name: 'Notino',
-        description: 'Beauty, perfume and skincare store with cosmetic deals, coupons and cashback.',
+        description: 'Beauty destination for fragrances, skincare, makeup and personal-care savings with cashback.',
         cashback: '7%',
         url: '/stores/notino',
         icon: '/store-logos/store-logo-notino.png',
@@ -1557,7 +1517,7 @@ footer::before {
       },
       {
         name: 'Alensa',
-        description: 'Eyewear, contact lenses and sunglasses store with lens deals and cashback.',
+        description: 'Optical shop for contact lenses, sunglasses, glasses and eye-care essentials with cashback.',
         cashback: '9%',
         url: '/stores/alensa',
         icon: '/store-logos/store-logo-alensa.png',
@@ -1565,7 +1525,7 @@ footer::before {
       },
       {
         name: 'AirHelp',
-        description: 'Flight compensation service with passenger-rights offers and cashback.',
+        description: 'Passenger-rights service for disrupted flights, compensation checks and travel support cashback.',
         cashback: '15%',
         url: '/stores/airhelp',
         icon: '/store-logos/store-logo-airhelp.png',
@@ -1589,7 +1549,7 @@ footer::before {
       },
       {
         name: 'Abito',
-        description: 'Fashion shop with clothing offers, gift voucher promotions and cashback.',
+        description: 'Fashion retailer for women’s and men’s apparel, seasonal discounts and voucher offers with cashback.',
         cashback: '10%',
         url: '/stores/abito',
         icon: '/store-logos/store-logo-abito.png',
