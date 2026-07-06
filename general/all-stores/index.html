@@ -284,6 +284,27 @@
       background: rgba(0, 142, 69, 0.1);
     }
 
+    .sort-control {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+      color: #008e45;
+      font-weight: 700;
+    }
+
+    .sort-control select {
+      padding: 0.5rem 0.75rem;
+      border: 2px solid #008e45;
+      border-radius: 6px;
+      background: #fff;
+      color: #008e45;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
     .stores-list {
       background: rgba(255, 255, 255, 0.95);
       border-radius: 12px;
@@ -581,7 +602,15 @@
     </div>
 
     <div class="alphabet-filter">
-      <a href="#" class="all-stores active">ALL</a>
+      <div class="sort-control">
+        <label for="store-sort">Sort stores:</label>
+        <select id="store-sort" aria-label="Sort stores">
+          <option value="name-asc">Alphabetical: A to Z</option>
+          <option value="name-desc">Alphabetical: Z to A</option>
+          <option value="cashback-asc">Cashback: Low to High</option>
+          <option value="cashback-desc">Cashback: High to Low</option>
+        </select>
+      </div>
       <a href="#">A</a>
       <a href="#">B</a>
       <a href="#">C</a>
@@ -611,167 +640,6 @@
     </div>
 
     <div class="stores-list">
-      <a href="../../stores/aegeanairlines/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-aegeanairlines.png')"></div>
-        <div class="store-info">
-          <div class="store-name">Aegean Airlines</div>
-          <div class="store-category">Travel</div>
-        </div>
-        <div class="store-cashback">Up to 15% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
-      <a href="../../stores/benetton/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-benetton.png')"></div>
-        <div class="store-info">
-          <div class="store-name">Benetton</div>
-          <div class="store-category">Fashion</div>
-        </div>
-        <div class="store-cashback">Up to 25% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
-      <a href="../../stores/boxnow/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-boxnow.png')"></div>
-        <div class="store-info">
-          <div class="store-name">Box Now</div>
-          <div class="store-category">Delivery</div>
-        </div>
-        <div class="store-cashback">Up to 35% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
-      <a href="../../stores/myprotein/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-myprotein.png')"></div>
-        <div class="store-info">
-          <div class="store-name">Myprotein</div>
-          <div class="store-category">Supplements</div>
-        </div>
-        <div class="store-cashback">Up to 20% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
-      <a href="../../stores/nike/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-nike.png')"></div>
-        <div class="store-info">
-          <div class="store-name">Nike</div>
-          <div class="store-category">Sports & Fashion</div>
-        </div>
-        <div class="store-cashback">Up to 17% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
-      <a href="../../stores/shein/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-shein.png')"></div>
-        <div class="store-info">
-          <div class="store-name">Shein</div>
-          <div class="store-category">Fashion</div>
-        </div>
-        <div class="store-cashback">Up to 30% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
-      <a href="../../stores/adidas/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-adidas.png')"></div>
-        <div class="store-info">
-          <div class="store-name">Adidas</div>
-          <div class="store-category">Sports & Fashion</div>
-        </div>
-        <div class="store-cashback">Up to 18% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
-
-      <a href="../../stores/temu/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-temu.png')"></div>
-        <div class="store-info">
-          <div class="store-name">Temu</div>
-          <div class="store-category">Marketplace</div>
-        </div>
-        <div class="store-cashback">Up to 20% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
-      <a href="../../stores/alibaba/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-alibaba.png')"></div>
-        <div class="store-info">
-          <div class="store-name">Alibaba</div>
-          <div class="store-category">Marketplace</div>
-        </div>
-        <div class="store-cashback">Up to 10% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
-      <a href="../../stores/agoda/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-agoda.png')"></div>
-        <div class="store-info">
-          <div class="store-name">Agoda</div>
-          <div class="store-category">Travel</div>
-        </div>
-        <div class="store-cashback">Up to 13% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
-      <a href="../../stores/notino/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-notino.png')"></div>
-        <div class="store-info">
-          <div class="store-name">Notino</div>
-          <div class="store-category">Beauty</div>
-        </div>
-        <div class="store-cashback">Up to 7% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
-      <a href="../../stores/yoox/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-yoox.png')"></div>
-        <div class="store-info">
-          <div class="store-name">YOOX</div>
-          <div class="store-category">Fashion</div>
-        </div>
-        <div class="store-cashback">Up to 5% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
-      <a href="../../stores/alensa/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-alensa.png')"></div>
-        <div class="store-info">
-          <div class="store-name">Alensa</div>
-          <div class="store-category">Eyewear</div>
-        </div>
-        <div class="store-cashback">Up to 9% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
-      <a href="../../stores/airhelp/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-airhelp.png')"></div>
-        <div class="store-info">
-          <div class="store-name">AirHelp</div>
-          <div class="store-category">Travel Services</div>
-        </div>
-        <div class="store-cashback">Up to 15% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
-      <a href="../../stores/airshop/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-airshop.png')"></div>
-        <div class="store-info">
-          <div class="store-name">Airshop</div>
-          <div class="store-category">Travel</div>
-        </div>
-        <div class="store-cashback">Up to 8% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
-      <a href="../../stores/kiwi/" class="store-item">
-        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-kiwi.png')"></div>
-        <div class="store-info">
-          <div class="store-name">Kiwi</div>
-          <div class="store-category">Travel</div>
-        </div>
-        <div class="store-cashback">Up to 10% Cashback</div>
-        <button class="visit-store-btn">Visit Store</button>
-      </a>
-
       <a href="../../stores/abito/" class="store-item">
         <div class="store-icon" style="background-image: url('../../store-logos/store-logo-abito.png')"></div>
         <div class="store-info">
@@ -781,7 +649,69 @@
         <div class="store-cashback">Up to 10% Cashback</div>
         <button class="visit-store-btn">Visit Store</button>
       </a>
-
+      <a href="../../stores/adidas/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-adidas.png')"></div>
+        <div class="store-info">
+          <div class="store-name">Adidas</div>
+          <div class="store-category">Sports & Fashion</div>
+        </div>
+        <div class="store-cashback">Up to 18% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
+      <a href="../../stores/aegeanairlines/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-aegeanairlines.png')"></div>
+        <div class="store-info">
+          <div class="store-name">Aegean Airlines</div>
+          <div class="store-category">Travel</div>
+        </div>
+        <div class="store-cashback">Up to 15% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
+      <a href="../../stores/agoda/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-agoda.png')"></div>
+        <div class="store-info">
+          <div class="store-name">Agoda</div>
+          <div class="store-category">Travel</div>
+        </div>
+        <div class="store-cashback">Up to 13% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
+      <a href="../../stores/airhelp/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-airhelp.png')"></div>
+        <div class="store-info">
+          <div class="store-name">AirHelp</div>
+          <div class="store-category">Travel Services</div>
+        </div>
+        <div class="store-cashback">Up to 15% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
+      <a href="../../stores/airshop/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-airshop.png')"></div>
+        <div class="store-info">
+          <div class="store-name">Airshop</div>
+          <div class="store-category">Travel</div>
+        </div>
+        <div class="store-cashback">Up to 8% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
+      <a href="../../stores/alensa/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-alensa.png')"></div>
+        <div class="store-info">
+          <div class="store-name">Alensa</div>
+          <div class="store-category">Eyewear</div>
+        </div>
+        <div class="store-cashback">Up to 9% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
+      <a href="../../stores/alibaba/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-alibaba.png')"></div>
+        <div class="store-info">
+          <div class="store-name">Alibaba</div>
+          <div class="store-category">Marketplace</div>
+        </div>
+        <div class="store-cashback">Up to 10% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
       <a href="../../stores/aliexpress/" class="store-item">
         <div class="store-icon" style="background-image: url('../../store-logos/store-logo-aliexpress.png')"></div>
         <div class="store-info">
@@ -789,6 +719,87 @@
           <div class="store-category">Marketplace</div>
         </div>
         <div class="store-cashback">Up to 11% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
+      <a href="../../stores/benetton/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-benetton.png')"></div>
+        <div class="store-info">
+          <div class="store-name">Benetton</div>
+          <div class="store-category">Fashion</div>
+        </div>
+        <div class="store-cashback">Up to 25% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
+      <a href="../../stores/boxnow/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-boxnow.png')"></div>
+        <div class="store-info">
+          <div class="store-name">Box Now</div>
+          <div class="store-category">Delivery</div>
+        </div>
+        <div class="store-cashback">Up to 35% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
+      <a href="../../stores/kiwi/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-kiwi.png')"></div>
+        <div class="store-info">
+          <div class="store-name">Kiwi</div>
+          <div class="store-category">Travel</div>
+        </div>
+        <div class="store-cashback">Up to 10% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
+      <a href="../../stores/myprotein/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-myprotein.png')"></div>
+        <div class="store-info">
+          <div class="store-name">Myprotein</div>
+          <div class="store-category">Supplements</div>
+        </div>
+        <div class="store-cashback">Up to 20% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
+      <a href="../../stores/nike/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-nike.png')"></div>
+        <div class="store-info">
+          <div class="store-name">Nike</div>
+          <div class="store-category">Sports & Fashion</div>
+        </div>
+        <div class="store-cashback">Up to 17% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
+      <a href="../../stores/notino/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-notino.png')"></div>
+        <div class="store-info">
+          <div class="store-name">Notino</div>
+          <div class="store-category">Beauty</div>
+        </div>
+        <div class="store-cashback">Up to 7% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
+      <a href="../../stores/shein/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-shein.png')"></div>
+        <div class="store-info">
+          <div class="store-name">Shein</div>
+          <div class="store-category">Fashion</div>
+        </div>
+        <div class="store-cashback">Up to 30% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
+      <a href="../../stores/temu/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-temu.png')"></div>
+        <div class="store-info">
+          <div class="store-name">Temu</div>
+          <div class="store-category">Marketplace</div>
+        </div>
+        <div class="store-cashback">Up to 20% Cashback</div>
+        <button class="visit-store-btn">Visit Store</button>
+      </a>
+      <a href="../../stores/yoox/" class="store-item">
+        <div class="store-icon" style="background-image: url('../../store-logos/store-logo-yoox.png')"></div>
+        <div class="store-info">
+          <div class="store-name">YOOX</div>
+          <div class="store-category">Fashion</div>
+        </div>
+        <div class="store-cashback">Up to 5% Cashback</div>
         <button class="visit-store-btn">Visit Store</button>
       </a>
     </div>
@@ -801,34 +812,90 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    const storesList = document.querySelector('.stores-list');
+    const storeItems = Array.from(document.querySelectorAll('.store-item'));
+    const storeSort = document.getElementById('store-sort');
+
+    function getStoreName(storeItem) {
+      return storeItem.querySelector('.store-name').textContent.trim();
+    }
+
+    function getCashbackValue(storeItem) {
+      const cashbackText = storeItem.querySelector('.store-cashback').textContent;
+      const cashbackMatch = cashbackText.match(/\d+(?:\.\d+)?/);
+
+      return cashbackMatch ? Number(cashbackMatch[0]) : 0;
+    }
+
+    function sortStores(sortType) {
+      const sortedStores = [...storeItems].sort((firstStore, secondStore) => {
+        const nameComparison = getStoreName(firstStore).localeCompare(
+          getStoreName(secondStore),
+          undefined,
+          {
+            numeric: true,
+            sensitivity: 'base'
+          }
+        );
+
+        if (sortType === 'name-desc') {
+          return -nameComparison;
+        }
+
+        if (sortType === 'cashback-asc') {
+          return getCashbackValue(firstStore) - getCashbackValue(secondStore) || nameComparison;
+        }
+
+        if (sortType === 'cashback-desc') {
+          return getCashbackValue(secondStore) - getCashbackValue(firstStore) || nameComparison;
+        }
+
+        return nameComparison;
+      });
+
+      sortedStores.forEach(storeItem => storesList.appendChild(storeItem));
+    }
+
+    function showAllStores() {
+      storeItems.forEach(item => {
+        item.style.display = 'flex';
+      });
+    }
+
+    sortStores(storeSort.value);
+
+    storeSort.addEventListener('change', function() {
+      document.querySelectorAll('.alphabet-filter a').forEach(letter => {
+        letter.classList.remove('active');
+      });
+
+      sortStores(this.value);
+      showAllStores();
+    });
+
     // Alphabet filter functionality
     document.querySelectorAll('.alphabet-filter a').forEach(letter => {
       letter.addEventListener('click', function(e) {
         e.preventDefault();
 
-        // Move the active state to the clicked filter without hiding the ALL label
+        // Move the active state to the clicked letter filter
         document.querySelectorAll('.alphabet-filter a').forEach(l => {
           l.classList.remove('active');
         });
 
         this.classList.add('active');
 
-        // Filter stores (for now just visual feedback)
         const selectedLetter = this.textContent;
-        const storeItems = document.querySelectorAll('.store-item');
 
-        if (selectedLetter === 'ALL') {
-          storeItems.forEach(item => item.style.display = 'flex');
-        } else {
-          storeItems.forEach(item => {
-            const storeName = item.querySelector('.store-name').textContent;
-            if (storeName.charAt(0).toUpperCase() === selectedLetter) {
-              item.style.display = 'flex';
-            } else {
-              item.style.display = 'none';
-            }
-          });
-        }
+        storeItems.forEach(item => {
+          const storeName = getStoreName(item);
+
+          if (storeName.charAt(0).toUpperCase() === selectedLetter) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
       });
     });
   </script>
