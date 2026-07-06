@@ -284,6 +284,27 @@
       background: rgba(0, 142, 69, 0.1);
     }
 
+    .sort-control {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+      color: #008e45;
+      font-weight: 700;
+    }
+
+    .sort-control select {
+      padding: 0.5rem 0.75rem;
+      border: 2px solid #008e45;
+      border-radius: 6px;
+      background: #fff;
+      color: #008e45;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
     .stores-list {
       background: rgba(255, 255, 255, 0.95);
       border-radius: 12px;
@@ -581,7 +602,15 @@
     </div>
 
     <div class="alphabet-filter">
-      <a href="#" class="all-stores active">ALL</a>
+      <div class="sort-control">
+        <label for="store-sort">Sort stores:</label>
+        <select id="store-sort" aria-label="Sort stores">
+          <option value="name-asc">Alphabetical: A to Z</option>
+          <option value="name-desc">Alphabetical: Z to A</option>
+          <option value="cashback-asc">Cashback: Low to High</option>
+          <option value="cashback-desc">Cashback: High to Low</option>
+        </select>
+      </div>
       <a href="#">A</a>
       <a href="#">B</a>
       <a href="#">C</a>
@@ -785,47 +814,88 @@
 
     const storesList = document.querySelector('.stores-list');
     const storeItems = Array.from(document.querySelectorAll('.store-item'));
+    const storeSort = document.getElementById('store-sort');
 
-    storeItems
-      .sort((firstStore, secondStore) => {
-        const firstStoreName = firstStore.querySelector('.store-name').textContent.trim();
-        const secondStoreName = secondStore.querySelector('.store-name').textContent.trim();
+    function getStoreName(storeItem) {
+      return storeItem.querySelector('.store-name').textContent.trim();
+    }
 
-        return firstStoreName.localeCompare(secondStoreName, undefined, {
-          numeric: true,
-          sensitivity: 'base'
-        });
-      })
-      .forEach(storeItem => storesList.appendChild(storeItem));
+    function getCashbackValue(storeItem) {
+      const cashbackText = storeItem.querySelector('.store-cashback').textContent;
+      const cashbackMatch = cashbackText.match(/\d+(?:\.\d+)?/);
+
+      return cashbackMatch ? Number(cashbackMatch[0]) : 0;
+    }
+
+    function sortStores(sortType) {
+      const sortedStores = [...storeItems].sort((firstStore, secondStore) => {
+        const nameComparison = getStoreName(firstStore).localeCompare(
+          getStoreName(secondStore),
+          undefined,
+          {
+            numeric: true,
+            sensitivity: 'base'
+          }
+        );
+
+        if (sortType === 'name-desc') {
+          return -nameComparison;
+        }
+
+        if (sortType === 'cashback-asc') {
+          return getCashbackValue(firstStore) - getCashbackValue(secondStore) || nameComparison;
+        }
+
+        if (sortType === 'cashback-desc') {
+          return getCashbackValue(secondStore) - getCashbackValue(firstStore) || nameComparison;
+        }
+
+        return nameComparison;
+      });
+
+      sortedStores.forEach(storeItem => storesList.appendChild(storeItem));
+    }
+
+    function showAllStores() {
+      storeItems.forEach(item => {
+        item.style.display = 'flex';
+      });
+    }
+
+    sortStores(storeSort.value);
+
+    storeSort.addEventListener('change', function() {
+      document.querySelectorAll('.alphabet-filter a').forEach(letter => {
+        letter.classList.remove('active');
+      });
+
+      sortStores(this.value);
+      showAllStores();
+    });
 
     // Alphabet filter functionality
     document.querySelectorAll('.alphabet-filter a').forEach(letter => {
       letter.addEventListener('click', function(e) {
         e.preventDefault();
 
-        // Move the active state to the clicked filter without hiding the ALL label
+        // Move the active state to the clicked letter filter
         document.querySelectorAll('.alphabet-filter a').forEach(l => {
           l.classList.remove('active');
         });
 
         this.classList.add('active');
 
-        // Filter stores (for now just visual feedback)
         const selectedLetter = this.textContent;
-        const storeItems = document.querySelectorAll('.store-item');
 
-        if (selectedLetter === 'ALL') {
-          storeItems.forEach(item => item.style.display = 'flex');
-        } else {
-          storeItems.forEach(item => {
-            const storeName = item.querySelector('.store-name').textContent;
-            if (storeName.charAt(0).toUpperCase() === selectedLetter) {
-              item.style.display = 'flex';
-            } else {
-              item.style.display = 'none';
-            }
-          });
-        }
+        storeItems.forEach(item => {
+          const storeName = getStoreName(item);
+
+          if (storeName.charAt(0).toUpperCase() === selectedLetter) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
       });
     });
   </script>
