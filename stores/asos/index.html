@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>ASOS - 1% Cashback • Smartcashly</title>
   <link rel="icon" type="image/svg+xml" href="../../site-logo/smartcashly-favicon.svg" />
-
   <style>
+    /* ASOS background: white logo style with floating black particles, same system as Shein/Box Now */
     html,
     body {
       background:
@@ -122,28 +121,25 @@
     header::before {
       content: '';
       position: absolute;
-      inset: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-image:
-        radial-gradient(circle at center 22%, rgba(255, 255, 255, 1) 1px, transparent 1px),
-        radial-gradient(circle at center 50%, rgba(255, 255, 255, 1) 1px, transparent 1px),
-        radial-gradient(circle at center 78%, rgba(255, 255, 255, 1) 1px, transparent 1px) !important;
-      background-size: 72px 100%, 72px 100%, 72px 100% !important;
-      background-position: 0 0, 24px 0, 48px 0;
-      background-repeat: repeat-x !important;
+        radial-gradient(circle at 25% 40%, rgba(255, 255, 255, 1) 1px, transparent 1px),
+        radial-gradient(circle at 75% 60%, rgba(255, 255, 255, 1) 1px, transparent 1px),
+        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 1) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 15% 80%, rgba(255, 255, 255, 1) 1px, transparent 1px);
+      background-size: 80px 80px, 100px 100px, 60px 60px, 90px 90px;
       pointer-events: none !important;
-      z-index: 1 !important;
-      opacity: 1 !important;
-      animation: headerBubbleCycle 4s linear infinite !important;
+      z-index: 1;
+      animation: headerParticles 20s ease-in-out infinite;
     }
 
-    @keyframes headerBubbleCycle {
-      from { background-position: 0 0, 24px 0, 48px 0; }
-      to { background-position: 72px 0, 96px 0, 120px 0; }
-    }
-
-    @keyframes footerBubbleCycle {
-      from { background-position: 0 0, 24px 0, 48px 0; }
-      to { background-position: -72px 0, -48px 0, -24px 0; }
+    @keyframes headerParticles {
+      0% { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%; opacity: 0.6; }
+      50% { background-position: 30% 30%, 40% 40%, 20% 50%, 60% 20%; opacity: 0.6; }
+      100% { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%; opacity: 0.6; }
     }
 
     .logo-img {
@@ -206,9 +202,7 @@
       transition: background .18s;
     }
 
-    .search-bar button:hover {
-      background: #0059c1 !important;
-    }
+    .search-bar button:hover { background: #0059c1 !important; }
 
     .all-stores-btn {
       position: relative;
@@ -226,10 +220,7 @@
       display: flex;
       align-items: center;
     }
-
-    .all-stores-btn:hover {
-      background: #0059c1;
-    }
+    .all-stores-btn:hover { background: #0059c1; }
 
     .auth-nav {
       position: absolute;
@@ -251,18 +242,9 @@
       border: none;
       cursor: pointer;
     }
-
-    .btn:hover {
-      background: #0059c1 !important;
-    }
-
-    .btn--secondary {
-      background: #0070f3 !important;
-    }
-
-    .btn--secondary:hover {
-      background: #0059c1 !important;
-    }
+    .btn:hover { background: #0059c1 !important; }
+    .btn--secondary { background: #0070f3 !important; }
+    .btn--secondary:hover { background: #0059c1 !important; }
 
     .search-autocomplete {
       position: absolute !important;
@@ -348,9 +330,7 @@
       flex-shrink: 0;
     }
 
-    .store-details {
-      flex: 1;
-    }
+    .store-details { flex: 1; }
 
     .store-title {
       font-size: 2.2rem;
@@ -375,13 +355,7 @@
       margin-bottom: 1rem;
     }
 
-    .store-details p {
-      line-height: 1.55;
-    }
-
-    .offers-section {
-      margin-bottom: 3rem;
-    }
+    .offers-section { margin-bottom: 3rem; }
 
     .offers-grid {
       display: grid;
@@ -397,6 +371,9 @@
       transition: all 0.3s ease;
       backdrop-filter: blur(10px);
       border: 3px solid #0070f3;
+      display: flex;
+      flex-direction: column;
+      min-height: 330px;
     }
 
     .offer-card:hover {
@@ -431,13 +408,8 @@
       text-transform: uppercase;
     }
 
-    .offer-type.cashback {
-      background: #ff6b35;
-    }
-
-    .offer-type.promo {
-      background: #2196F3;
-    }
+    .offer-type.cashback { background: #ff6b35; }
+    .offer-type.promo { background: #2196F3; }
 
     .offer-title {
       font-size: 1.1rem;
@@ -457,6 +429,7 @@
       color: #ff6b35;
       font-weight: bold;
       font-size: 1rem;
+      margin-top: auto;
       margin-bottom: 1rem;
     }
 
@@ -472,9 +445,7 @@
       width: 100%;
     }
 
-    .offer-button:hover {
-      background: #45a049;
-    }
+    .offer-button:hover { background: #45a049; }
 
     footer {
       height: 80px !important;
@@ -489,8 +460,8 @@
       font-weight: bold !important;
       text-align: center !important;
       overflow: hidden !important;
-      position: relative !important;
-      z-index: 1001 !important;
+      position: relative;
+      z-index: 1001;
     }
 
     footer *,
@@ -501,6 +472,7 @@
       z-index: 2 !important;
     }
 
+    header::before,
     footer::before {
       content: '' !important;
       position: absolute !important;
@@ -518,34 +490,28 @@
       pointer-events: none !important;
       z-index: 1 !important;
       opacity: 1 !important;
-      animation: footerBubbleCycle 4s linear infinite !important;
+      animation-duration: 4s !important;
+      animation-timing-function: linear !important;
+      animation-iteration-count: infinite !important;
+    }
+
+    header::before { animation-name: headerBubbleCycle !important; }
+    footer::before { animation-name: footerBubbleCycle !important; z-index: 0 !important; }
+
+    @keyframes headerBubbleCycle {
+      from { background-position: 0 0, 24px 0, 48px 0; }
+      to { background-position: 72px 0, 96px 0, 120px 0; }
+    }
+
+    @keyframes footerBubbleCycle {
+      from { background-position: 0 0, 24px 0, 48px 0; }
+      to { background-position: -72px 0, -48px 0, -24px 0; }
     }
 
     @media (max-width: 768px) {
-      header {
-        height: auto;
-        min-height: 120px;
-        padding-top: 4.7rem;
-      }
-
-      .logo-img {
-        left: 50%;
-        top: 0.2rem;
-        height: 75px;
-        transform: translateX(-50%);
-      }
-
-      .center-group {
-        flex-wrap: wrap;
-      }
-
       .search-bar {
-        margin-left: 0;
+        margin-left: 20px;
         max-width: 300px;
-      }
-
-      .auth-nav {
-        display: none;
       }
 
       .store-header {
@@ -555,6 +521,10 @@
 
       .offers-grid {
         grid-template-columns: 1fr;
+      }
+
+      .auth-nav {
+        display: none;
       }
     }
   </style>
@@ -569,7 +539,6 @@
         <input type="search" placeholder="Search any store ..." />
         <button type="submit" aria-label="Search">🔍</button>
       </form>
-
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
     </div>
 
@@ -581,15 +550,11 @@
   <main>
     <div class="store-header">
       <div class="store-logo-large"></div>
-
       <div class="store-details">
         <h1 class="store-title">ASOS</h1>
         <p class="store-subtitle">Fashion store with cashback rewards</p>
         <div class="cashback-highlight">💰 Earn up to 1% Cashback</div>
-        <p>
-          ASOS brings together clothing, shoes, accessories, beauty picks, and popular fashion brands in one online destination.
-          Shop fresh outfits, everyday basics, statement pieces, and seasonal edits while activating Smartcashly cashback before you buy.
-        </p>
+        <p>ASOS brings together clothing, shoes, accessories, beauty picks, and popular fashion brands in one online destination. Shop fresh outfits, everyday basics, statement pieces, and seasonal edits while activating Smartcashly cashback before you buy.</p>
       </div>
     </div>
 
@@ -602,7 +567,6 @@
           </div>
           <h3 class="offer-title">Shop at ASOS & Earn Cashback</h3>
           <p class="offer-description">Browse ASOS clothing, shoes, accessories, beauty, and branded fashion picks while earning cashback on your order.</p>
-          <div style="height: 48px;"></div>
           <div class="offer-cashback" style="color: #ff6b35;">💰 Earn up to 1% Cashback</div>
           <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-general')">💰 Shop & Earn</button>
         </div>
@@ -614,21 +578,19 @@
           </div>
           <h3 class="offer-title">20% Off Your First Purchase</h3>
           <p class="offer-description">Get an ASOS coupon for a first-purchase style discount and continue through Smartcashly for extra cashback.</p>
-          <div style="height: 24px;"></div>
           <div class="offer-cashback">🎫 Get Exclusive Coupon + Extra 1% Cashback</div>
           <button class="offer-button" onclick="event.stopPropagation(); showCouponModal('20% Off Your First Purchase', 'Use this ASOS promo code for a first-purchase style discount where eligible.', 'APP')">🎫 Get Coupon</button>
         </div>
 
-        <div class="offer-card" onclick="showCouponModal('10% Off With ASOS Updates', 'Use this ASOS promo code for update-based savings where eligible.', 'ERE')" style="cursor: pointer;">
+        <div class="offer-card" onclick="showCouponModal('10% Off With ASOS Updates', 'Use this ASOS promo code for a newsletter or updates discount where eligible.', 'ERE')" style="cursor: pointer;">
           <div class="offer-header">
             <div class="offer-logo"></div>
             <div class="offer-type promo" style="background: #e74c3c;">COUPON</div>
           </div>
           <h3 class="offer-title">10% Off With ASOS Updates</h3>
           <p class="offer-description">Try this ASOS coupon for update-based savings, then shop through Smartcashly for extra cashback.</p>
-          <div style="height: 24px;"></div>
           <div class="offer-cashback">🎫 Get Exclusive Coupon + Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); showCouponModal('10% Off With ASOS Updates', 'Use this ASOS promo code for update-based savings where eligible.', 'ERE')">🎫 Get Coupon</button>
+          <button class="offer-button" onclick="event.stopPropagation(); showCouponModal('10% Off With ASOS Updates', 'Use this ASOS promo code for a newsletter or updates discount where eligible.', 'ERE')">🎫 Get Coupon</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('asos-women-dresses')" style="cursor: pointer;">
@@ -638,7 +600,6 @@
           </div>
           <h3 class="offer-title">Women's Dresses & Occasion Looks</h3>
           <p class="offer-description">Discover dresses for casual days, nights out, holidays, events, and fresh wardrobe updates.</p>
-          <div style="height: 48px;"></div>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
           <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-women-dresses')">👗 Get Offer</button>
         </div>
@@ -650,7 +611,6 @@
           </div>
           <h3 class="offer-title">Men's Clothing & Streetwear</h3>
           <p class="offer-description">Shop shirts, jeans, hoodies, jackets, trainers, and easy everyday looks for men.</p>
-          <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
           <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-men')">👕 Get Offer</button>
         </div>
@@ -662,7 +622,6 @@
           </div>
           <h3 class="offer-title">Beauty, Grooming & Face + Body</h3>
           <p class="offer-description">Browse makeup, skincare, fragrance, haircare, grooming products, and daily beauty essentials.</p>
-          <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
           <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-face-body')">💄 Get Offer</button>
         </div>
@@ -673,8 +632,7 @@
             <div class="offer-type promo">OFFER</div>
           </div>
           <h3 class="offer-title">Popular Brands & ASOS Design</h3>
-          <p class="offer-description">Explore branded clothing, footwear, accessories, and ASOS Design styles in one place.</p>
-          <div style="height: 24px;"></div>
+          <p class="offer-description">Explore ASOS Design pieces alongside well-known fashion labels, shoes, accessories, and trend edits.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
           <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-brands')">🏷️ Get Offer</button>
         </div>
@@ -684,9 +642,8 @@
             <div class="offer-logo"></div>
             <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">ASOS Outlet Fashion Finds</h3>
-          <p class="offer-description">Look through lower-price clothing, shoes, accessories, and seasonal outlet edits.</p>
-          <div style="height: 48px;"></div>
+          <h3 class="offer-title">Outlet Fashion Finds</h3>
+          <p class="offer-description">Look through lower-price clothing, shoes, accessories, and seasonal outlet pieces before checkout.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
           <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-outlet')">🛍️ Get Offer</button>
         </div>
@@ -697,8 +654,7 @@
             <div class="offer-type promo">OFFER</div>
           </div>
           <h3 class="offer-title">New-In Styles & Fresh Drops</h3>
-          <p class="offer-description">See the latest arrivals across outfits, shoes, accessories, and trend-led ASOS edits.</p>
-          <div style="height: 24px;"></div>
+          <p class="offer-description">Check the newest arrivals across outfits, shoes, accessories, beauty, and seasonal edits.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
           <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-new-in')">✨ Get Offer</button>
         </div>
@@ -709,8 +665,7 @@
             <div class="offer-type promo">OFFER</div>
           </div>
           <h3 class="offer-title">Sneakers, Boots, Heels & Sandals</h3>
-          <p class="offer-description">Find footwear for casual outfits, nights out, holidays, workwear, and everyday comfort.</p>
-          <div style="height: 24px;"></div>
+          <p class="offer-description">Find footwear for everyday outfits, workwear, holidays, nights out, and casual comfort.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
           <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-shoes')">👟 Get Offer</button>
         </div>
@@ -720,9 +675,8 @@
             <div class="offer-logo"></div>
             <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">Bags, Jewellery, Sunglasses & Extras</h3>
-          <p class="offer-description">Complete your look with accessories and small style upgrades through Smartcashly.</p>
-          <div style="height: 24px;"></div>
+          <h3 class="offer-title">Bags, Jewellery & Accessories</h3>
+          <p class="offer-description">Complete your look with bags, belts, jewellery, sunglasses, caps, and small style extras.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
           <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-accessories')">👜 Get Offer</button>
         </div>
@@ -732,9 +686,8 @@
             <div class="offer-logo"></div>
             <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">Student Fashion Savings</h3>
-          <p class="offer-description">Check ASOS student shopping options and eligible style savings before placing your order.</p>
-          <div style="height: 24px;"></div>
+          <h3 class="offer-title">Student Savings at ASOS</h3>
+          <p class="offer-description">Students can check ASOS student savings and eligible account offers before completing their order.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
           <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-student')">🎓 Get Offer</button>
         </div>
@@ -790,14 +743,12 @@
 
       searchInput.addEventListener('input', function(e) {
         const query = e.target.value.toLowerCase().trim();
-
         if (!query) {
           autocomplete.classList.remove('show');
           return;
         }
 
         const results = stores.filter(s => s.name.toLowerCase().includes(query));
-
         if (results.length) {
           autocomplete.innerHTML = results.map(s =>
             `<div onclick="window.location.href='${s.url}'">
@@ -805,7 +756,6 @@
                <span class="store-name">${s.name}</span>
              </div>`
           ).join('');
-
           autocomplete.classList.add('show');
         } else {
           autocomplete.classList.remove('show');
@@ -818,16 +768,11 @@
 
       searchBar.addEventListener('submit', function(event) {
         event.preventDefault();
-
         const query = searchInput.value.toLowerCase().trim();
         const exact = stores.find(s => s.name.toLowerCase() === query);
         const partial = stores.find(s => s.name.toLowerCase().includes(query));
-
-        if (exact) {
-          window.location.href = exact.url;
-        } else if (partial) {
-          window.location.href = partial.url;
-        }
+        if (exact) window.location.href = exact.url;
+        else if (partial) window.location.href = partial.url;
       });
     }
 
@@ -846,7 +791,6 @@
       try {
         let clickHistory = [];
         const stored = localStorage.getItem('click_history');
-
         if (stored) {
           clickHistory = JSON.parse(stored);
         }
@@ -887,19 +831,12 @@
 
       const targetBase = asosUrls[offerId] || 'https://www.asos.com/';
       const separator = targetBase.includes('?') ? '&' : '?';
-
-      window.open(
-        targetBase + separator +
-        'utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&click_id=' +
-        clickData.clickId,
-        '_blank'
-      );
+      window.open(targetBase + separator + 'utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&click_id=' + clickData.clickId, '_blank');
     }
 
     function showCouponModal(title, description, couponCode) {
       const modal = document.createElement('div');
       modal.id = 'coupon-modal';
-
       modal.style.cssText = `
         position: fixed;
         top: 0;
@@ -947,7 +884,6 @@
             margin-bottom: 1.5rem;
           ">
             <p style="font-weight: bold; color: #e74c3c; margin-bottom: 0.5rem;">Your Coupon Code:</p>
-
             <div style="
               background: white;
               border: 2px solid #e74c3c;
@@ -960,7 +896,6 @@
               margin-bottom: 0.5rem;
               letter-spacing: 2px;
             " id="coupon-code-display">${couponCode}</div>
-
             <button onclick="copyCouponCode()" style="
               background: #e74c3c;
               color: white;
@@ -993,13 +928,10 @@
 
     window.copyCouponCode = function() {
       const codeElement = document.getElementById('coupon-code-display');
-
       navigator.clipboard.writeText(codeElement.textContent).then(() => {
         const button = event.target;
         const originalText = button.textContent;
-
         button.textContent = '✅ Copied!';
-
         setTimeout(() => {
           button.textContent = originalText;
         }, 2000);
@@ -1009,18 +941,10 @@
     window.goToASOS = function(couponCode) {
       const clickData = saveClick('asos-coupon', couponCode);
       const modal = document.getElementById('coupon-modal');
-
       if (modal) {
         modal.remove();
       }
-
-      window.open(
-        'https://www.asos.com/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=coupon&click_id=' +
-        clickData.clickId +
-        '&coupon=' +
-        encodeURIComponent(couponCode),
-        '_blank'
-      );
+      window.open('https://www.asos.com/?utm_source=smartcashly&utm_medium=affiliate&utm_campaign=coupon&click_id=' + clickData.clickId + '&coupon=' + encodeURIComponent(couponCode), '_blank');
     };
   </script>
 </body>
