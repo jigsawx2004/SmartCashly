@@ -1,21 +1,876 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>iHerb - 1% Cashback • Smartcashly</title>
-<link rel="icon" type="image/svg+xml" href="../../site-logo/smartcashly-favicon.svg" />
-<style>
-:root{--page-bg:#eaf6df;--bubble:#4b8f29;--text:#17324d}*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,Helvetica,Arial,sans-serif}html,body{min-height:100vh;background:var(--page-bg);color:#222}body{display:flex;flex-direction:column;position:relative;overflow-x:hidden}.brand-bubbles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}.brand-bubbles span{position:absolute;display:block;border-radius:999px;background:var(--bubble);opacity:.14;filter:blur(.2px)}.brand-bubbles span:nth-child(1){width:120px;height:120px;left:5%;top:10px}.brand-bubbles span:nth-child(2){width:70px;height:70px;right:12%;top:22px;opacity:.18}.brand-bubbles span:nth-child(3){width:42px;height:42px;right:28%;bottom:8px;opacity:.22}body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 12% 18%,var(--bubble) 0 62px,transparent 64px),radial-gradient(circle at 88% 28%,var(--bubble) 0 46px,transparent 48px),radial-gradient(circle at 20% 78%,var(--bubble) 0 34px,transparent 36px),radial-gradient(circle at 78% 86%,var(--bubble) 0 80px,transparent 82px);opacity:.10;pointer-events:none;z-index:0}header,footer{min-height:80px;display:flex;align-items:center;padding:1rem 1.5rem;background:#008e45;color:#fff;position:relative;z-index:2;overflow:hidden}header{justify-content:center}footer{justify-content:center;color:#051b10;font-weight:700}header>*:not(.brand-bubbles),footer>*:not(.brand-bubbles){position:relative;z-index:1}.logo-img{position:absolute;left:1.5rem;height:96px;width:auto}.center-group{display:flex;gap:.5rem;align-items:center}.search-bar input{width:min(500px,52vw);padding:.55rem 1rem;border:0;border-radius:9999px}.btn,.all-stores-btn{background:#0070f3;color:#fff;text-decoration:none;border:0;border-radius:6px;font-weight:600;padding:.55rem 1rem}.auth-nav{position:absolute;right:1.5rem}main{flex:1;width:min(1200px,100%);margin:0 auto;padding:2rem 1rem;position:relative;z-index:1}.store-hero{position:relative;overflow:hidden;border-radius:18px;margin-bottom:2rem;background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(255,255,255,.76));box-shadow:0 12px 35px rgba(0,0,0,.16)}.store-header{position:relative;z-index:1;padding:2rem;display:flex;gap:2rem;align-items:center}.store-logo-large{width:120px;height:120px;background:#fff url('/store-logos/store-logo-iherb.png') no-repeat center/contain;border-radius:14px;flex-shrink:0;box-shadow:0 6px 18px rgba(0,0,0,.12)}.store-title{font-size:2.2rem;color:#008e45}.store-subtitle{font-size:1.1rem;color:#333;margin:.25rem 0 1rem}.cashback-highlight{background:linear-gradient(135deg,#ff6b35,#ff8a50);color:white;padding:1rem 2rem;border-radius:10px;font-weight:800;display:inline-block;margin-bottom:1rem}.offers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}.offer-card{background:rgba(255,255,255,.94);border:3px solid #0070f3;border-radius:14px;box-shadow:0 8px 25px rgba(0,0,0,.15);padding:1.5rem;cursor:pointer}.offer-header{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}.offer-logo{width:60px;height:60px;background:#fff url('/store-logos/store-logo-iherb.png') no-repeat center/contain;border-radius:8px}.offer-type{background:#2196f3;color:white;padding:.3rem .8rem;border-radius:4px;font-size:.8rem;font-weight:700}.offer-type.cashback{background:#ff6b35}.offer-type.coupon{background:#e74c3c}.offer-title{color:#008e45;font-size:1.1rem;margin-bottom:.5rem}.offer-description{color:#555;line-height:1.4;margin-bottom:1rem}.offer-cashback{color:#ff6b35;font-weight:800;margin-bottom:1rem}.offer-button{width:100%;background:#4caf50;color:white;border:0;border-radius:6px;padding:.75rem 1.5rem;font-weight:800;cursor:pointer}@media(max-width:768px){header{min-height:118px;padding-top:4rem}.logo-img{left:50%;top:.35rem;transform:translateX(-50%);height:70px}.center-group{width:100%;justify-content:center;flex-wrap:wrap}.search-bar input{width:min(86vw,420px)}.store-header{flex-direction:column;text-align:center;padding:1.5rem}.auth-nav{display:none}.offers-grid{grid-template-columns:1fr}.brand-bubbles span:nth-child(1){width:86px;height:86px;left:-18px}.brand-bubbles span:nth-child(2){width:54px;height:54px;right:4%}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iHerb - 1% Cashback • Smartcashly</title>
+  <link rel="icon" type="image/svg+xml" href="../../site-logo/smartcashly-favicon.svg" />
+
+  <style>
+    html {
+      background: radial-gradient(circle at 20% 80%, rgba(75, 143, 41, 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(126, 184, 55, 0.2) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.35) 0%, transparent 50%), radial-gradient(circle at 60% 80%, rgba(75, 143, 41, 0.14) 0%, transparent 40%), linear-gradient(135deg, #eaf6df 0%, #d8efc6 55%, #f4fbef 100%) !important;
+      background-size: 300% 300%, 250% 250%, 200% 200%, 280% 280%, 300% 300% !important;
+      animation: shimmer 12s ease-in-out infinite !important;
+      min-height: 100vh;
+    }
+
+    body {
+      background: transparent !important;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        radial-gradient(circle at 15% 25%, rgba(75, 143, 41, 0.82) 1px, transparent 1px),
+        radial-gradient(circle at 75% 75%, rgba(126, 184, 55, 0.56) 1px, transparent 1px),
+        radial-gradient(circle at 45% 55%, rgba(255, 255, 255, 0.62) 1px, transparent 1px),
+        radial-gradient(circle at 85% 15%, rgba(75, 143, 41, 0.50) 1px, transparent 1px),
+        radial-gradient(circle at 25% 85%, rgba(75, 143, 41, 0.48) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 65% 45%, rgba(126, 184, 55, 0.38) 1px, transparent 1px);
+      background-size: 120px 120px, 160px 160px, 100px 100px, 140px 140px, 90px 90px, 110px 110px;
+      z-index: 0;
+      pointer-events: none !important;
+      animation: gentleFloat 25s ease-in-out infinite;
+      will-change: background-position;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        radial-gradient(circle at 25% 40%, rgba(126, 184, 55, 0.58) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 65% 20%, rgba(75, 143, 41, 0.48) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 35% 70%, rgba(255, 255, 255, 0.52) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 80% 60%, rgba(75, 143, 41, 0.42) 0.8px, transparent 0.8px),
+        radial-gradient(circle at 15% 80%, rgba(75, 143, 41, 0.38) 0.5px, transparent 0.5px);
+      background-size: 70px 70px, 90px 90px, 60px 60px, 80px 80px, 65px 65px;
+      pointer-events: none !important;
+      z-index: 1;
+      animation: gentleSparkle 20s ease-in-out infinite;
+      will-change: background-position;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% 50%, 0% 0%, 0% 0%, 0% 0%, 0% 50%; }
+      50% { background-position: 100% 50%, 100% 100%, 100% 50%, 100% 100%, 100% 50%; }
+      100% { background-position: 0% 50%, 0% 0%, 0% 0%, 0% 0%, 0% 50%; }
+    }
+
+    @keyframes gentleFloat {
+      0% { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%; opacity: 0.7; }
+      33% { background-position: 30% 20%, 20% 40%, 50% 30%, 40% 10%, 60% 50%, 70% 20%; opacity: 0.9; }
+      66% { background-position: 60% 40%, 40% 80%, 80% 60%, 10% 70%, 30% 80%, 90% 40%; opacity: 0.9; }
+      100% { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%; opacity: 0.7; }
+    }
+
+    @keyframes gentleSparkle {
+      0%, 100% { opacity: 0.45; background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%; }
+      25% { opacity: 0.7; background-position: 15% 15%, 25% 25%, 35% 35%, 45% 45%, 55% 55%; }
+      50% { opacity: 0.75; background-position: 30% 30%, 50% 50%, 70% 70%, 90% 90%, 10% 90%; }
+      75% { opacity: 0.6; background-position: 20% 40%, 40% 20%, 60% 80%, 80% 60%, 100% 40%; }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    }
+
+    header, main, footer {
+      position: relative;
+      z-index: 10;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: #222;
+    }
+
+    header {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 1.5rem;
+      background: #008e45 !important;
+      color: #fff;
+      position: relative;
+      overflow: visible;
+      z-index: 1001;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at center 22%, rgba(255, 255, 255, 1) 1px, transparent 1px),
+        radial-gradient(circle at center 50%, rgba(255, 255, 255, 1) 1px, transparent 1px),
+        radial-gradient(circle at center 78%, rgba(255, 255, 255, 1) 1px, transparent 1px) !important;
+      background-size: 72px 100%, 72px 100%, 72px 100% !important;
+      background-position: 0 0, 24px 0, 48px 0;
+      background-repeat: repeat-x !important;
+      pointer-events: none !important;
+      z-index: 1 !important;
+      opacity: 1 !important;
+      animation: headerBubbleCycle 4s linear infinite !important;
+    }
+
+    @keyframes headerBubbleCycle {
+      from { background-position: 0 0, 24px 0, 48px 0; }
+      to { background-position: 72px 0, 96px 0, 120px 0; }
+    }
+
+    @keyframes footerBubbleCycle {
+      from { background-position: 0 0, 24px 0, 48px 0; }
+      to { background-position: -72px 0, -48px 0, -24px 0; }
+    }
+
+    .logo-img {
+      position: absolute;
+      left: 1.5rem;
+      height: 100px;
+      width: auto;
+      background: transparent !important;
+      z-index: 1002;
+    }
+
+    .center-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex: 1;
+    }
+
+    .search-bar {
+      position: relative !important;
+      flex: 0 1 500px;
+      max-width: 500px;
+      width: 100%;
+      z-index: 1002;
+      margin: 0;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 0.55rem 2.8rem 0.55rem 1rem;
+      border: none;
+      border-radius: 9999px;
+      font-size: 0.95rem;
+      outline: none;
+      background: white !important;
+      transition: box-shadow .18s;
+    }
+
+    .search-bar input:focus {
+      box-shadow: 0 0 0 2px rgba(0,112,243,.35);
+    }
+
+    .search-bar button {
+      font-size: 1rem;
+      line-height: 1;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.2rem;
+      height: 2.2rem;
+      border: none;
+      border-radius: 50%;
+      background: #0070f3 !important;
+      cursor: pointer;
+      transition: background .18s;
+    }
+
+    .search-bar button:hover {
+      background: #0059c1 !important;
+    }
+
+    .all-stores-btn {
+      position: relative;
+      z-index: 5;
+      background: #0070f3;
+      color: white;
+      text-decoration: none;
+      padding: 0.55rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.18s;
+      white-space: nowrap;
+      height: 38px;
+      display: flex;
+      align-items: center;
+    }
+
+    .all-stores-btn:hover {
+      background: #0059c1;
+    }
+
+    .auth-nav {
+      position: absolute;
+      right: 1.5rem;
+      display: flex;
+      gap: 0.5rem;
+      z-index: 1002;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      background: #0070f3 !important;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background .18s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #0059c1 !important;
+    }
+
+    .btn--secondary {
+      background: #0070f3 !important;
+    }
+
+    .btn--secondary:hover {
+      background: #0059c1 !important;
+    }
+
+    .search-autocomplete {
+      position: absolute !important;
+      top: calc(100% + 2px) !important;
+      left: 0 !important;
+      right: 0 !important;
+      background: white !important;
+      border: 2px solid #008e45 !important;
+      border-radius: 0 0 12px 12px !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+      z-index: 999999 !important;
+      max-height: 250px !important;
+      overflow-y: auto !important;
+      display: none;
+    }
+
+    .search-autocomplete.show {
+      display: block !important;
+    }
+
+    .search-autocomplete div {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    .search-autocomplete div:hover {
+      background: #f0f8ff;
+    }
+
+    .search-autocomplete .store-logo {
+      height: 38px;
+      width: 38px;
+      object-fit: contain;
+      flex-shrink: 0;
+      border-radius: 5px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .search-autocomplete .store-name {
+      color: #008e45;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    main {
+      flex: 1 1 auto;
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      background: transparent !important;
+    }
+
+    .store-header {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      backdrop-filter: blur(10px);
+      border: 3px solid #0070f3;
+    }
+
+    .store-logo-large {
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      flex-shrink: 0;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .store-logo-large img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .store-logo-large.logo-fallback::after {
+      content: 'iHerb';
+      color: #111;
+      font-size: 0.95rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .store-details {
+      flex: 1;
+    }
+
+    .store-title {
+      font-size: 2.2rem;
+      color: #008e45;
+      margin-bottom: 0.1rem;
+    }
+
+    .store-subtitle {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .cashback-highlight {
+      background: linear-gradient(135deg, #ff6b35, #ff8a50);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .store-details p {
+      line-height: 1.55;
+    }
+
+    .offers-section {
+      margin-bottom: 3rem;
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .offer-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      border: 3px solid #0070f3;
+      display: flex;
+      flex-direction: column;
+      min-height: 330px;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px #0059c1;
+      border-color: #0059c1;
+    }
+
+    .offer-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .offer-logo {
+      width: 60px;
+      height: 60px;
+      background: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .offer-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .offer-logo.logo-fallback::after {
+      content: 'iHerb';
+      color: #111;
+      font-size: 0.58rem;
+      font-weight: 900;
+    }
+
+    .offer-type {
+      background: #2196F3;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .offer-type.cashback {
+      background: #ff6b35;
+    }
+
+    .offer-type.promo {
+      background: #2196F3;
+    }
+
+    .offer-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #008e45;
+      margin-bottom: 0.5rem;
+    }
+
+    .offer-description {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+
+    .offer-cashback {
+      color: #ff6b35;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-top: auto;
+      margin-bottom: 1rem;
+    }
+
+    .offer-button {
+      background: #4CAF50;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+    }
+
+    .offer-button:hover {
+      background: #45a049;
+    }
+
+    footer {
+      height: 80px !important;
+      min-height: 80px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 1rem 1.5rem !important;
+      background: #008e45 !important;
+      color: #000 !important;
+      font-size: 1rem !important;
+      font-weight: bold !important;
+      text-align: center !important;
+      overflow: hidden !important;
+      position: relative !important;
+      z-index: 1001 !important;
+    }
+
+    footer *,
+    footer span {
+      color: #000 !important;
+      font-weight: bold !important;
+      position: relative !important;
+      z-index: 2 !important;
+    }
+
+    footer::before {
+      content: '' !important;
+      position: absolute !important;
+      inset: 0 !important;
+      display: block !important;
+      width: 100% !important;
+      height: 100% !important;
+      background-image:
+        radial-gradient(circle at center 22%, rgba(255, 255, 255, 1) 1px, transparent 1px),
+        radial-gradient(circle at center 50%, rgba(255, 255, 255, 1) 1px, transparent 1px),
+        radial-gradient(circle at center 78%, rgba(255, 255, 255, 1) 1px, transparent 1px) !important;
+      background-size: 72px 100%, 72px 100%, 72px 100% !important;
+      background-position: 0 0, 24px 0, 48px 0;
+      background-repeat: repeat-x !important;
+      pointer-events: none !important;
+      z-index: 1 !important;
+      opacity: 1 !important;
+      animation: footerBubbleCycle 4s linear infinite !important;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        height: auto;
+        min-height: 120px;
+        padding-top: 4.7rem;
+      }
+
+      .logo-img {
+        left: 50%;
+        top: 0.2rem;
+        height: 75px;
+        transform: translateX(-50%);
+      }
+
+      .center-group {
+        flex-wrap: wrap;
+      }
+
+      .search-bar {
+        margin-left: 0;
+        max-width: 300px;
+      }
+
+      .auth-nav {
+        display: none;
+      }
+
+      .store-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .offers-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header><div class="brand-bubbles"><span></span><span></span><span></span></div><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /><div class="center-group"><form class="search-bar"><input type="search" placeholder="Search any store ..." aria-label="Search stores" /></form><a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a></div><nav class="auth-nav"><a href="/" class="btn">Home</a></nav></header>
-<main>
-<section class="store-hero"><div class="brand-bubbles"><span></span><span></span><span></span></div><div class="store-header"><div class="store-logo-large"></div><div class="store-details"><h1 class="store-title">iHerb</h1><p class="store-subtitle">Health &amp; Wellness store with cashback rewards</p><div class="cashback-highlight">💰 Earn up to 1% Cashback</div><p>Browse vitamins, supplements, wellness products, natural beauty items, groceries, personal care, and healthy lifestyle essentials.</p></div></div></section>
-<section class="offers-section"><div class="offers-grid"><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type cashback">CASHBACK</div></div><h3 class="offer-title">Shop wellness essentials at iHerb + Get Extra 1% Cashback</h3><p class="offer-description">Activate Smartcashly, then continue to iHerb to shop wellness essentials at iHerb while your extra 1% cashback tracks.</p><div class="offer-cashback">+ Get Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">💰 Get Offer</button></article><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type ">OFFER</div></div><h3 class="offer-title">Save on selected vitamins and supplements + Get Extra 1% Cashback</h3><p class="offer-description">Start at Smartcashly before you save on selected vitamins and supplements; your iHerb visit will carry extra 1% cashback.</p><div class="offer-cashback">+ Get Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">💰 Get Offer</button></article><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type ">OFFER</div></div><h3 class="offer-title">Browse healthy groceries and natural products + Get Extra 1% Cashback</h3><p class="offer-description">Use this Smartcashly link to browse healthy groceries and natural products, then complete your order with extra 1% cashback enabled.</p><div class="offer-cashback">+ Get Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">💰 Get Offer</button></article><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type ">OFFER</div></div><h3 class="offer-title">Discover beauty, personal care, and lifestyle items + Get Extra 1% Cashback</h3><p class="offer-description">Head to iHerb from Smartcashly when you want to discover beauty, personal care, and lifestyle items and keep extra 1% cashback in place.</p><div class="offer-cashback">+ Get Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">💰 Get Offer</button></article><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type ">OFFER</div></div><h3 class="offer-title">Find sports nutrition and daily wellness picks + Get Extra 1% Cashback</h3><p class="offer-description">Open this tracked visit for find sports nutrition and daily wellness picks; Smartcashly will connect extra 1% cashback to your session.</p><div class="offer-cashback">+ Get Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">💰 Get Offer</button></article><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type ">OFFER</div></div><h3 class="offer-title">Shop trusted health brands through iHerb + Get Extra 1% Cashback</h3><p class="offer-description">Choose this deal before you shop trusted health brands through iHerb, then shop at iHerb with extra 1% cashback ready.</p><div class="offer-cashback">+ Get Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">💰 Get Offer</button></article><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type coupon">COUPON</div></div><h3 class="offer-title">Get Exclusive Coupon + Extra 1% Cashback</h3><p class="offer-description">Open this no-code coupon-style deal for iHerb; Smartcashly sends you onward with extra 1% cashback attached.</p><div class="offer-cashback">🎫 Get Exclusive Coupon + Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">🎫 Get Coupon</button></article><article class="offer-card" onclick="openStoreOffer()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type coupon">COUPON</div></div><h3 class="offer-title">Unlock iHerb wellness savings + Get Exclusive Coupon + Extra 1% Cashback</h3><p class="offer-description">Reveal Unlock iHerb wellness savings without adding a fake code, then continue to iHerb with extra 1% cashback active.</p><div class="offer-cashback">🎫 Get Exclusive Coupon + Extra 1% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openStoreOffer()">🎫 Get Coupon</button></article></div></section>
-</main>
-<footer><div class="brand-bubbles"><span></span><span></span><span></span></div><span>©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.</span></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();function openStoreOffer(){window.open('https://www.iherb.com/','_blank');}</script>
+  <header>
+    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+
+    <div class="center-group">
+      <form class="search-bar" action="#" method="get">
+        <input type="search" placeholder="Search any store ..." />
+        <button type="submit" aria-label="Search">🔍</button>
+      </form>
+
+      <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
+    </div>
+
+    <nav class="auth-nav">
+      <a href="/" class="btn btn--secondary">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="store-header">
+      <div class="store-logo-large">
+        <img src="../../store-logos/store-logo-iherb.png" alt="iHerb logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" />
+      </div>
+
+      <div class="store-details">
+        <h1 class="store-title">iHerb</h1>
+        <p class="store-subtitle">Vitamins, wellness, beauty and grocery essentials with cashback rewards</p>
+        <div class="cashback-highlight">💰 Earn up to 1% Cashback</div>
+        <p>iHerb is an online destination for vitamins, supplements, natural beauty products, personal care, sports nutrition, grocery items and household essentials from well-known wellness brands. Browse daily health routines, clean beauty picks, pantry products and family essentials while earning cashback on eligible orders.</p>
+      </div>
+    </div>
+
+    <div class="offers-section">
+      <div class="offers-grid">
+        <div class="offer-card" onclick="trackClick('iherb-general')" style="cursor: pointer;">
+          <div class="offer-header">
+            <div class="offer-logo"><img src="../../store-logos/store-logo-iherb.png" alt="iHerb logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
+            <div class="offer-type cashback">CASHBACK</div>
+          </div>
+          <h3 class="offer-title">Shop at iHerb &amp; Earn Cashback</h3>
+          <p class="offer-description">Start your iHerb order for wellness products, beauty care, groceries and everyday essentials.</p>
+          <div class="offer-cashback" style="color: #ff6b35;">💰 Earn up to 1% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-general')">💰 Shop &amp; Earn</button>
+        </div>
+
+        <div class="offer-card" onclick="trackClick('iherb-vitamins')" style="cursor: pointer;">
+          <div class="offer-header">
+            <div class="offer-logo"><img src="../../store-logos/store-logo-iherb.png" alt="iHerb logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
+            <div class="offer-type promo">OFFER</div>
+          </div>
+          <h3 class="offer-title">Vitamins and Daily Wellness Essentials</h3>
+          <p class="offer-description">Browse multivitamins, minerals, capsules, gummies and routine-support products from trusted brands.</p>
+          <div class="offer-cashback">+ Get Extra 1% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-vitamins')">💊 Get Offer</button>
+        </div>
+
+        <div class="offer-card" onclick="trackClick('iherb-supplements')" style="cursor: pointer;">
+          <div class="offer-header">
+            <div class="offer-logo"><img src="../../store-logos/store-logo-iherb.png" alt="iHerb logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
+            <div class="offer-type promo">OFFER</div>
+          </div>
+          <h3 class="offer-title">Supplements and Specialized Nutrition</h3>
+          <p class="offer-description">Find formulas for common wellness goals, dietary preferences and daily supplement routines.</p>
+          <div class="offer-cashback">+ Get Extra 1% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-supplements')">🌿 Get Offer</button>
+        </div>
+
+        <div class="offer-card" onclick="trackClick('iherb-beauty')" style="cursor: pointer;">
+          <div class="offer-header">
+            <div class="offer-logo"><img src="../../store-logos/store-logo-iherb.png" alt="iHerb logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
+            <div class="offer-type promo">OFFER</div>
+          </div>
+          <h3 class="offer-title">Beauty, Skincare and Personal Care</h3>
+          <p class="offer-description">Shop cleansers, moisturizers, haircare, body care, sunscreen, makeup and natural beauty favorites.</p>
+          <div class="offer-cashback">+ Get Extra 1% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-beauty')">🧴 Get Offer</button>
+        </div>
+
+        <div class="offer-card" onclick="trackClick('iherb-sports')" style="cursor: pointer;">
+          <div class="offer-header">
+            <div class="offer-logo"><img src="../../store-logos/store-logo-iherb.png" alt="iHerb logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
+            <div class="offer-type promo">OFFER</div>
+          </div>
+          <h3 class="offer-title">Sports Nutrition and Fitness Products</h3>
+          <p class="offer-description">Compare protein powders, bars, hydration products, shaker bottles and workout-support essentials.</p>
+          <div class="offer-cashback">+ Get Extra 1% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-sports')">🏋️ Get Offer</button>
+        </div>
+
+        <div class="offer-card" onclick="trackClick('iherb-grocery')" style="cursor: pointer;">
+          <div class="offer-header">
+            <div class="offer-logo"><img src="../../store-logos/store-logo-iherb.png" alt="iHerb logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
+            <div class="offer-type promo">OFFER</div>
+          </div>
+          <h3 class="offer-title">Healthy Grocery and Pantry Picks</h3>
+          <p class="offer-description">Stock up on snacks, teas, coffee, cooking ingredients, superfoods and specialty diet products.</p>
+          <div class="offer-cashback">+ Get Extra 1% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-grocery')">🛒 Get Offer</button>
+        </div>
+
+        <div class="offer-card" onclick="trackClick('iherb-baby-kids')" style="cursor: pointer;">
+          <div class="offer-header">
+            <div class="offer-logo"><img src="../../store-logos/store-logo-iherb.png" alt="iHerb logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
+            <div class="offer-type promo">OFFER</div>
+          </div>
+          <h3 class="offer-title">Baby, Kids and Family Essentials</h3>
+          <p class="offer-description">Browse gentle care products, family-friendly snacks, baby items and everyday household staples.</p>
+          <div class="offer-cashback">+ Get Extra 1% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-baby-kids')">👶 Get Offer</button>
+        </div>
+
+        <div class="offer-card" onclick="trackClick('iherb-brands')" style="cursor: pointer;">
+          <div class="offer-header">
+            <div class="offer-logo"><img src="../../store-logos/store-logo-iherb.png" alt="iHerb logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
+            <div class="offer-type promo">OFFER</div>
+          </div>
+          <h3 class="offer-title">Popular Wellness Brands and New Finds</h3>
+          <p class="offer-description">Explore customer-favorite brands, trending products and fresh arrivals across iHerb categories.</p>
+          <div class="offer-cashback">+ Get Extra 1% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-brands')">⭐ Get Offer</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span>©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.</span>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const searchInput = document.querySelector('.search-bar input');
+    const searchBar = document.querySelector('.search-bar');
+
+    if (searchInput && searchBar) {
+      const autocomplete = document.createElement('div');
+      autocomplete.className = 'search-autocomplete';
+      searchBar.appendChild(autocomplete);
+
+      const stores = [
+        { name: "Box Now", url: "/stores/boxnow", logo: "../../store-logos/store-logo-boxnow.png" },
+        { name: "Nike", url: "/stores/nike", logo: "../../store-logos/store-logo-nike.png" },
+        { name: "Shein", url: "/stores/shein", logo: "../../store-logos/store-logo-shein.png" },
+        { name: "Benetton", url: "/stores/benetton", logo: "../../store-logos/store-logo-benetton.png" },
+        { name: "Myprotein", url: "/stores/myprotein", logo: "../../store-logos/store-logo-myprotein.png" },
+        { name: "Aegean Airlines", url: "/stores/aegeanairlines", logo: "../../store-logos/store-logo-aegeanairlines.png" },
+        { name: "Adidas", url: "/stores/adidas", logo: "../../store-logos/store-logo-adidas.png" },
+        { name: "AliExpress", url: "/stores/aliexpress", logo: "../../store-logos/store-logo-aliexpress.png" },
+        { name: "Temu", url: "/stores/temu", logo: "../../store-logos/store-logo-temu.png" },
+        { name: "Alibaba", url: "/stores/alibaba", logo: "../../store-logos/store-logo-alibaba.png" },
+        { name: "Agoda", url: "/stores/agoda", logo: "../../store-logos/store-logo-agoda.png" },
+        { name: "Notino", url: "/stores/notino", logo: "../../store-logos/store-logo-notino.png" },
+        { name: "YOOX", url: "/stores/yoox", logo: "../../store-logos/store-logo-yoox.png" },
+        { name: "Alensa", url: "/stores/alensa", logo: "../../store-logos/store-logo-alensa.png" },
+        { name: "AirHelp", url: "/stores/airhelp", logo: "../../store-logos/store-logo-airhelp.png" },
+        { name: "Airshop", url: "/stores/airshop", logo: "../../store-logos/store-logo-airshop.png" },
+        { name: "Kiwi", url: "/stores/kiwi", logo: "../../store-logos/store-logo-kiwi.png" },
+        { name: "Abito", url: "/stores/abito", logo: "../../store-logos/store-logo-abito.png" },
+        { name: "ASOS", url: "/stores/asos", logo: "../../store-logos/store-logo-asos.png" },
+        { name: "Booking.com", url: "/stores/booking", logo: "../../store-logos/store-logo-booking.png" },
+        { name: "Decathlon", url: "/stores/decathlon", logo: "../../store-logos/store-logo-decathlon.png" },
+        { name: "eBay", url: "/stores/ebay", logo: "../../store-logos/store-logo-ebay.png" },
+        { name: "Expedia", url: "/stores/expedia", logo: "../../store-logos/store-logo-expedia.png" },
+        { name: "H&M", url: "/stores/hm", logo: "../../store-logos/store-logo-hm.png" },
+        { name: "iHerb", url: "/stores/iherb", logo: "../../store-logos/store-logo-iherb.png" },
+        { name: "Klook", url: "/stores/klook", logo: "../../store-logos/store-logo-klook.png" },
+        { name: "Samsung", url: "/stores/samsung", logo: "../../store-logos/store-logo-samsung.png" },
+        { name: "Sephora", url: "/stores/sephora", logo: "../../store-logos/store-logo-sephora.png" }
+      ];
+
+      searchInput.addEventListener('input', function(e) {
+        const query = e.target.value.toLowerCase().trim();
+
+        if (!query) {
+          autocomplete.classList.remove('show');
+          return;
+        }
+
+        const results = stores.filter(s => s.name.toLowerCase().includes(query));
+
+        if (results.length) {
+          autocomplete.innerHTML = results.map(s =>
+            `<div onclick="window.location.href='${s.url}'">
+               <div class="store-logo" style="background-image: url('${s.logo}')"></div>
+               <span class="store-name">${s.name}</span>
+             </div>`
+          ).join('');
+
+          autocomplete.classList.add('show');
+        } else {
+          autocomplete.classList.remove('show');
+        }
+      });
+
+      searchInput.addEventListener('blur', () => {
+        setTimeout(() => autocomplete.classList.remove('show'), 200);
+      });
+
+      searchBar.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const query = searchInput.value.toLowerCase().trim();
+        const exact = stores.find(s => s.name.toLowerCase() === query);
+        const partial = stores.find(s => s.name.toLowerCase().includes(query));
+
+        if (exact) {
+          window.location.href = exact.url;
+        } else if (partial) {
+          window.location.href = partial.url;
+        }
+      });
+    }
+
+    function saveClick(offerId) {
+      const clickData = {
+        store: 'iHerb',
+        offerId: offerId,
+        timestamp: new Date().toISOString(),
+        clickId: 'IH' + Date.now().toString().slice(-6)
+      };
+
+      try {
+        let clickHistory = [];
+        const stored = localStorage.getItem('click_history');
+
+        if (stored) {
+          clickHistory = JSON.parse(stored);
+        }
+
+        if (!Array.isArray(clickHistory)) {
+          clickHistory = [];
+        }
+
+        clickHistory.unshift(clickData);
+
+        if (clickHistory.length > 50) {
+          clickHistory.splice(50);
+        }
+
+        localStorage.setItem('click_history', JSON.stringify(clickHistory));
+      } catch (error) {
+        console.warn('Could not store click history:', error);
+      }
+
+      return clickData;
+    }
+
+    function trackClick(offerId) {
+      const clickData = saveClick(offerId);
+
+      const storeUrls = {
+        'iherb-general': "https://www.iherb.com/",
+        'iherb-vitamins': "https://www.iherb.com/",
+        'iherb-supplements': "https://www.iherb.com/",
+        'iherb-beauty': "https://www.iherb.com/",
+        'iherb-sports': "https://www.iherb.com/",
+        'iherb-grocery': "https://www.iherb.com/",
+        'iherb-baby-kids': "https://www.iherb.com/",
+        'iherb-brands': "https://www.iherb.com/"
+      };
+
+      const targetBase = storeUrls[offerId] || "https://www.iherb.com/";
+      const separator = targetBase.includes('?') ? '&' : '?';
+
+      window.open(
+        targetBase + separator +
+        'utm_source=smartcashly&utm_medium=affiliate&utm_campaign=cashback&utm_content=' +
+        encodeURIComponent(offerId) +
+        '&click_id=' +
+        clickData.clickId,
+        '_blank'
+      );
+    }
+  </script>
 </body>
 </html>
