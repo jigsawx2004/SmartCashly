@@ -354,38 +354,9 @@
       display: block;
     }
 
-    .store-logo-large.logo-fallback::after {
-      content: 'Sephora';
-      color: #111;
-      font-size: 0.95rem;
-      font-weight: 900;
-      letter-spacing: -0.02em;
-    }
-
     .store-header {
       position: relative;
       overflow: hidden;
-    }
-
-    .store-header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: none;
-      opacity: 1;
-      pointer-events: none;
-      z-index: 0;
-      animation: heroBubbleDrift 14s ease-in-out infinite;
-    }
-
-    .store-header > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    @keyframes heroBubbleDrift {
-      0%, 100% { transform: translate3d(0, 0, 0); }
-      50% { transform: translate3d(12px, -8px, 0); }
     }
 
     .store-details {
@@ -476,13 +447,6 @@
       display: block;
     }
 
-    .offer-logo.logo-fallback::after {
-      content: 'Sephora';
-      color: #111;
-      font-size: 0.58rem;
-      font-weight: 900;
-    }
-
     .offer-type {
       background: #000000;
       color: white;
@@ -501,9 +465,6 @@
       background: #000000;
     }
 
-    .offer-type.coupon {
-      background: #000000;
-    }
 
     .offer-title {
       font-size: 1.1rem;
@@ -588,81 +549,51 @@
       animation: footerBubbleCycle 4s linear infinite !important;
     }
 
-    /* Sephora palette refinement: pure white surfaces with black brand bubbles and accents. */
-    html {
+    /* Sephora reference palette: pure white background with subtle black particles. */
+    html,
+    body {
       background: #ffffff !important;
-      animation: none !important;
+      min-height: 100vh;
     }
 
-    body {
-      background: transparent !important;
+    html {
+      animation: none !important;
     }
 
     body::before {
       background-image:
-        radial-gradient(circle at 15% 25%, rgba(0, 0, 0, 0.24) 0 4px, transparent 5px),
-        radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.18) 0 5px, transparent 6px),
-        radial-gradient(circle at 45% 55%, rgba(0, 0, 0, 0.20) 0 3px, transparent 4px),
-        radial-gradient(circle at 85% 15%, rgba(0, 0, 0, 0.16) 0 4px, transparent 5px),
-        radial-gradient(circle at 25% 85%, rgba(0, 0, 0, 0.18) 0 5px, transparent 6px),
-        radial-gradient(circle at 65% 45%, rgba(0, 0, 0, 0.14) 0 3px, transparent 4px);
-      background-size: 160px 160px, 210px 210px, 140px 140px, 190px 190px, 135px 135px, 165px 165px;
+        radial-gradient(circle at 15% 25%, rgba(0, 0, 0, 0.80) 1px, transparent 1px),
+        radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.60) 1px, transparent 1px),
+        radial-gradient(circle at 45% 55%, rgba(0, 0, 0, 0.70) 1px, transparent 1px),
+        radial-gradient(circle at 85% 15%, rgba(0, 0, 0, 0.50) 1px, transparent 1px),
+        radial-gradient(circle at 25% 85%, rgba(0, 0, 0, 0.60) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 65% 45%, rgba(0, 0, 0, 0.40) 1px, transparent 1px);
+      background-size: 120px 120px, 160px 160px, 100px 100px, 140px 140px, 90px 90px, 110px 110px;
     }
 
     body::after {
       background-image:
-        radial-gradient(circle at 25% 40%, rgba(0, 0, 0, 0.20) 0 2px, transparent 3px),
-        radial-gradient(circle at 65% 20%, rgba(0, 0, 0, 0.16) 0 2.5px, transparent 3.5px),
-        radial-gradient(circle at 35% 70%, rgba(0, 0, 0, 0.18) 0 2px, transparent 3px),
-        radial-gradient(circle at 80% 60%, rgba(0, 0, 0, 0.14) 0 2.5px, transparent 3.5px),
-        radial-gradient(circle at 15% 80%, rgba(0, 0, 0, 0.12) 0 2px, transparent 3px);
-      background-size: 100px 100px, 135px 135px, 90px 90px, 120px 120px, 105px 105px;
+        radial-gradient(circle at 25% 40%, rgba(0, 0, 0, 0.90) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 65% 20%, rgba(0, 0, 0, 0.70) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 35% 70%, rgba(0, 0, 0, 0.80) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 80% 60%, rgba(0, 0, 0, 0.60) 0.8px, transparent 0.8px),
+        radial-gradient(circle at 15% 80%, rgba(0, 0, 0, 0.50) 0.5px, transparent 0.5px);
+      background-size: 70px 70px, 90px 90px, 60px 60px, 80px 80px, 65px 65px;
     }
 
     header::before,
     footer::before {
       background-image:
-        radial-gradient(circle at center 20%, rgba(0, 0, 0, 0.68) 0 2px, transparent 3px),
-        radial-gradient(circle at center 50%, rgba(0, 0, 0, 0.54) 0 3px, transparent 4px),
-        radial-gradient(circle at center 80%, rgba(0, 0, 0, 0.62) 0 2px, transparent 3px) !important;
-      background-size: 96px 100%, 128px 100%, 112px 100% !important;
+        radial-gradient(circle at center 22%, rgba(0, 0, 0, 0.72) 1px, transparent 1px),
+        radial-gradient(circle at center 50%, rgba(0, 0, 0, 0.58) 1px, transparent 1px),
+        radial-gradient(circle at center 78%, rgba(0, 0, 0, 0.66) 1px, transparent 1px) !important;
+      background-size: 72px 100%, 72px 100%, 72px 100% !important;
     }
 
     .store-header,
     .offer-card {
       background: rgba(255, 255, 255, 0.98);
       border-color: #000000;
-    }
-
-    .store-header::before {
-      background-image:
-        radial-gradient(circle at 6% 18%, rgba(0, 0, 0, 0.24) 0 7px, transparent 8px),
-        radial-gradient(circle at 94% 20%, rgba(0, 0, 0, 0.18) 0 5px, transparent 6px),
-        radial-gradient(circle at 88% 88%, rgba(0, 0, 0, 0.14) 0 4px, transparent 5px),
-        radial-gradient(circle at 14% 84%, rgba(0, 0, 0, 0.12) 0 3px, transparent 4px);
-      opacity: 1;
-    }
-
-    .offer-card {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .offer-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        radial-gradient(circle at 94% 8%, rgba(0, 0, 0, 0.16) 0 6px, transparent 7px),
-        radial-gradient(circle at 88% 16%, rgba(0, 0, 0, 0.10) 0 3px, transparent 4px),
-        radial-gradient(circle at 7% 92%, rgba(0, 0, 0, 0.12) 0 4px, transparent 5px);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .offer-card > * {
-      position: relative;
-      z-index: 1;
     }
 
     .store-title,
@@ -678,9 +609,6 @@
     .offer-type,
     .offer-type.cashback,
     .offer-type.promo,
-    .offer-type.coupon {
-      background: #000000;
-    }
 
     .offer-card:hover {
       border-color: #000000;
@@ -696,7 +624,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html, body::before, body::after, header::before, footer::before, .store-header::before {
+      html, body::before, body::after, header::before, footer::before {
         animation: none !important;
       }
     }
@@ -737,10 +665,6 @@
         grid-template-columns: 1fr;
       }
 
-      .store-header::before {
-        opacity: 0.18;
-        background-size: 75% 75%;
-      }
     }
 
     @media (max-width: 480px) {
@@ -778,13 +702,12 @@
   <main>
     <div class="store-header">
       <div class="store-logo-large">
-        <img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" />
+        <img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" />
       </div>
-
       <div class="store-details">
         <h1 class="store-title">Sephora</h1>
         <p class="store-subtitle">Makeup, skincare, fragrance, and beauty with cashback rewards</p>
-        <div class="cashback-highlight">💰 Earn up to 1% Cashback</div>
+        <div class="cashback-highlight">💰 Earn 1% Cashback</div>
         <p>Explore makeup, skincare, fragrance, haircare, beauty tools, gift sets, and everyday essentials from premium, popular, and emerging brands. Follow Smartcashly to Sephora before shopping your routine, discovering a new launch, or choosing a beauty gift.</p>
       </div>
     </div>
@@ -793,90 +716,106 @@
       <div class="offers-grid">
         <div class="offer-card" onclick="trackClick('sephora-general')" style="cursor: pointer;">
           <div class="offer-header">
-            <div class="offer-logo"><img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
+            <div class="offer-logo">
+              <img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" />
+            </div>
             <div class="offer-type cashback">CASHBACK</div>
           </div>
-          <h3 class="offer-title">Shop makeup and skincare at Sephora + Get Extra 1% Cashback</h3>
-          <p class="offer-description">Begin at Smartcashly, then explore makeup staples and skincare routines from Sephora's wide beauty selection.</p>
-          <div class="offer-cashback">+ Get Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-general')">💄 Get Offer</button>
+          <h3 class="offer-title">Shop at Sephora &amp; Earn Cashback</h3>
+          <p class="offer-description">Start at Smartcashly, continue to Sephora, and complete an eligible beauty purchase. Cashback is added after the order is approved.</p>
+          <div class="offer-cashback">💰 Earn 1% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-general')">💰 Shop & Earn</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('sephora-fragrance-haircare')" style="cursor: pointer;">
           <div class="offer-header">
-            <div class="offer-logo"><img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
+            <div class="offer-logo">
+              <img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" />
+            </div>
             <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">Browse fragrance, haircare, and beauty essentials + Get Extra 1% Cashback</h3>
-          <p class="offer-description">Discover signature scents, hair treatments, styling products, and everyday beauty must-haves in one visit.</p>
+          <h3 class="offer-title">Fragrance, Haircare &amp; Beauty Essentials</h3>
+          <p class="offer-description">Discover signature scents, hair treatments, styling products, and everyday beauty essentials across Sephora's selection.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
           <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-fragrance-haircare')">🌸 Get Offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('sephora-new-brands')" style="cursor: pointer;">
           <div class="offer-header">
-            <div class="offer-logo"><img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
+            <div class="offer-logo">
+              <img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" />
+            </div>
             <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">Discover premium beauty brands and new arrivals + Get Extra 1% Cashback</h3>
-          <p class="offer-description">See new launches and standout products from established labels, emerging names, and exclusive beauty ranges.</p>
+          <h3 class="offer-title">Premium Beauty Brands &amp; New Arrivals</h3>
+          <p class="offer-description">Explore recent launches and standout products from established labels, emerging names, and exclusive beauty collections.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
           <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-new-brands')">✨ Get Offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('sephora-collection')" style="cursor: pointer;">
           <div class="offer-header">
-            <div class="offer-logo"><img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
+            <div class="offer-logo">
+              <img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" />
+            </div>
             <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">Save on selected Sephora Collection picks + Get Extra 1% Cashback</h3>
-          <p class="offer-description">Browse Sephora Collection makeup, brushes, masks, bath care, and practical tools for your beauty bag.</p>
+          <h3 class="offer-title">Sephora Collection Makeup &amp; Tools</h3>
+          <p class="offer-description">Browse Sephora Collection makeup, brushes, masks, bath care, and practical tools for everyday beauty routines.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-collection')">🛍️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-collection')">💄 Get Offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('sephora-gifts-minis')" style="cursor: pointer;">
           <div class="offer-header">
-            <div class="offer-logo"><img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
+            <div class="offer-logo">
+              <img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" />
+            </div>
             <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">Explore gift sets, minis, and beauty favorites + Get Extra 1% Cashback</h3>
-          <p class="offer-description">Find travel sizes, discovery sets, curated gifts, and popular picks for treating yourself or someone else.</p>
+          <h3 class="offer-title">Gift Sets, Minis &amp; Travel Sizes</h3>
+          <p class="offer-description">Find discovery sets, travel-friendly sizes, curated gifts, and popular beauty picks for yourself or someone special.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
           <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-gifts-minis')">🎁 Get Offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('sephora-routine')" style="cursor: pointer;">
           <div class="offer-header">
-            <div class="offer-logo"><img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
+            <div class="offer-logo">
+              <img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" />
+            </div>
             <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">Refresh your routine with skincare and makeup deals + Get Extra 1% Cashback</h3>
-          <p class="offer-description">Update morning and evening routines with cleansers, serums, complexion products, lip color, and eye makeup.</p>
+          <h3 class="offer-title">Skincare &amp; Makeup Routine Essentials</h3>
+          <p class="offer-description">Refresh morning and evening routines with cleansers, serums, complexion products, lip colour, and eye makeup.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
           <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-routine')">🧴 Get Offer</button>
         </div>
 
-        <div class="offer-card" onclick="trackClick('sephora-coupon')" style="cursor: pointer;">
+        <div class="offer-card" onclick="trackClick('sephora-promotions')" style="cursor: pointer;">
           <div class="offer-header">
-            <div class="offer-logo"><img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
-            <div class="offer-type coupon">COUPON</div>
+            <div class="offer-logo">
+              <img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" />
+            </div>
+            <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">Get Exclusive Coupon + Extra 1% Cashback</h3>
-          <p class="offer-description">Use this no-code coupon-style offer to reach Sephora while keeping the Smartcashly cashback journey active.</p>
-          <div class="offer-cashback">🎫 Get Exclusive Coupon + Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-coupon')">🎫 Get Coupon</button>
+          <h3 class="offer-title">Browse Current Sephora Promotions</h3>
+          <p class="offer-description">Visit Sephora through Smartcashly to browse current eligible promotions and seasonal beauty highlights before ordering.</p>
+          <div class="offer-cashback">+ Get Extra 1% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-promotions')">🛍️ Get Offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('sephora-savings')" style="cursor: pointer;">
           <div class="offer-header">
-            <div class="offer-logo"><img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');" /></div>
-            <div class="offer-type coupon">COUPON</div>
+            <div class="offer-logo">
+              <img src="../../store-logos/store-logo-sephora.png" alt="Sephora logo" />
+            </div>
+            <div class="offer-type promo">OFFER</div>
           </div>
-          <h3 class="offer-title">Unlock Sephora beauty savings + Get Exclusive Coupon + Extra 1% Cashback</h3>
-          <p class="offer-description">Open selected Sephora savings through Smartcashly without relying on a made-up promotional code.</p>
-          <div class="offer-cashback">🎫 Get Exclusive Coupon + Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-savings')">🎫 Get Coupon</button>
+          <h3 class="offer-title">Explore More Sephora Beauty Picks</h3>
+          <p class="offer-description">Browse additional beauty categories and seasonal selections while keeping your tracked Smartcashly visit active.</p>
+          <div class="offer-cashback">+ Get Extra 1% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-savings')">🔎 Get Offer</button>
         </div>
       </div>
     </div>
@@ -1015,7 +954,7 @@
         'sephora-collection': "https://www.sephora.com/",
         'sephora-gifts-minis': "https://www.sephora.com/",
         'sephora-routine': "https://www.sephora.com/",
-        'sephora-coupon': "https://www.sephora.com/",
+        'sephora-promotions': "https://www.sephora.com/",
         'sephora-savings': "https://www.sephora.com/"
       };
 
@@ -1034,4 +973,5 @@
   </script>
 </body>
 </html>
+
 
