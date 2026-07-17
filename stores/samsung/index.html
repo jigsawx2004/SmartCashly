@@ -336,7 +336,7 @@
       align-items: center;
       gap: 2rem;
       backdrop-filter: blur(10px);
-      border: 3px solid #1428a0;
+      border: 3px solid #0070f3;
     }
 
     .store-logo-large {
@@ -371,7 +371,7 @@
 
     .store-title {
       font-size: 2.2rem;
-      color: #1428a0;
+      color: #008e45;
       margin-bottom: 0.1rem;
     }
 
@@ -382,7 +382,7 @@
     }
 
     .cashback-highlight {
-      background: linear-gradient(135deg, #1428a0, #315bd6);
+      background: linear-gradient(135deg, #ff6b35, #ff8a50);
       color: white;
       padding: 1rem 2rem;
       border-radius: 8px;
@@ -413,7 +413,7 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
       backdrop-filter: blur(10px);
-      border: 3px solid #1428a0;
+      border: 3px solid #0070f3;
       display: flex;
       flex-direction: column;
       min-height: 330px;
@@ -421,8 +421,8 @@
 
     .offer-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 8px 25px #0b1b78;
-      border-color: #0b1b78;
+      box-shadow: 0 8px 25px #0059c1;
+      border-color: #0059c1;
     }
 
     .offer-header {
@@ -454,7 +454,7 @@
     }
 
     .offer-type {
-      background: #315bd6;
+      background: #2196F3;
       color: white;
       padding: 0.3rem 0.8rem;
       border-radius: 4px;
@@ -464,18 +464,18 @@
     }
 
     .offer-type.cashback {
-      background: #1428a0;
+      background: #ff6b35;
     }
 
     .offer-type.promo {
-      background: #315bd6;
+      background: #2196F3;
     }
 
 
     .offer-title {
       font-size: 1.1rem;
       font-weight: 600;
-      color: #1428a0;
+      color: #008e45;
       margin-bottom: 0.5rem;
     }
 
@@ -487,7 +487,7 @@
     }
 
     .offer-cashback {
-      color: #1428a0;
+      color: #ff6b35;
       font-weight: bold;
       font-size: 1rem;
       margin-top: auto;
@@ -495,7 +495,7 @@
     }
 
     .offer-button {
-      background: #1428a0;
+      background: #4CAF50;
       color: white;
       padding: 0.75rem 1.5rem;
       border: none;
@@ -507,7 +507,7 @@
     }
 
     .offer-button:hover {
-      background: #0b1b78;
+      background: #45a049;
     }
 
     footer {
@@ -555,38 +555,48 @@
       animation: footerBubbleCycle 4s linear infinite !important;
     }
 
-    /* Samsung official blue-and-white palette, using the established SmartCashly surfaces. */
+    /* Keep all store cards on the established SmartCashly card palette. */
     .store-header,
     .offer-card {
-      border-color: #1428a0;
+      border-color: #0070f3;
     }
 
     .store-title,
-    .offer-title,
+    .offer-title {
+      color: #008e45;
+    }
+
     .offer-cashback {
-      color: #1428a0;
+      color: #ff6b35;
     }
 
     .cashback-highlight {
-      background: linear-gradient(135deg, #1428a0, #315bd6);
+      background: linear-gradient(135deg, #ff6b35, #ff8a50);
     }
 
-    .offer-type,
+    .offer-type {
+      background: #2196F3;
+    }
+
     .offer-type.cashback {
-      background: #1428a0;
+      background: #ff6b35;
     }
 
     .offer-type.promo {
-      background: #315bd6;
+      background: #2196F3;
     }
 
+    .offer-card:hover {
+      border-color: #0059c1;
+      box-shadow: 0 8px 25px #0059c1;
+    }
 
     .offer-button {
-      background: #1428a0;
+      background: #4CAF50;
     }
 
     .offer-button:hover {
-      background: #0b1b78;
+      background: #45a049;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -967,5 +977,4 @@
   </script>
 </body>
 </html>
-
 
