@@ -377,11 +377,8 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image:
-        radial-gradient(circle at 10% 24%, rgba(20, 40, 160, 0.34) 0 34px, transparent 36px),
-        radial-gradient(circle at 88% 18%, rgba(20, 40, 160, 0.34) 0 24px, transparent 26px),
-        radial-gradient(circle at 76% 84%, rgba(20, 40, 160, 0.34) 0 42px, transparent 44px);
-      opacity: 0.28;
+      background: none;
+      opacity: 1;
       pointer-events: none;
       z-index: 0;
       animation: heroBubbleDrift 14s ease-in-out infinite;
@@ -403,7 +400,7 @@
 
     .store-title {
       font-size: 2.2rem;
-      color: #008e45;
+      color: #1428a0;
       margin-bottom: 0.1rem;
     }
 
@@ -414,7 +411,7 @@
     }
 
     .cashback-highlight {
-      background: linear-gradient(135deg, #ff6b35, #ff8a50);
+      background: linear-gradient(135deg, #1428a0, #315bd6);
       color: white;
       padding: 1rem 2rem;
       border-radius: 8px;
@@ -493,7 +490,7 @@
     }
 
     .offer-type {
-      background: #2196F3;
+      background: #315bd6;
       color: white;
       padding: 0.3rem 0.8rem;
       border-radius: 4px;
@@ -503,21 +500,21 @@
     }
 
     .offer-type.cashback {
-      background: #ff6b35;
+      background: #1428a0;
     }
 
     .offer-type.promo {
-      background: #2196F3;
+      background: #315bd6;
     }
 
     .offer-type.coupon {
-      background: #e74c3c;
+      background: #0b1b78;
     }
 
     .offer-title {
       font-size: 1.1rem;
       font-weight: 600;
-      color: #008e45;
+      color: #1428a0;
       margin-bottom: 0.5rem;
     }
 
@@ -529,7 +526,7 @@
     }
 
     .offer-cashback {
-      color: #ff6b35;
+      color: #1428a0;
       font-weight: bold;
       font-size: 1rem;
       margin-top: auto;
@@ -537,7 +534,7 @@
     }
 
     .offer-button {
-      background: #4CAF50;
+      background: #1428a0;
       color: white;
       padding: 0.75rem 1.5rem;
       border: none;
@@ -549,7 +546,7 @@
     }
 
     .offer-button:hover {
-      background: #45a049;
+      background: #0b1b78;
     }
 
     footer {
@@ -595,6 +592,104 @@
       z-index: 1 !important;
       opacity: 1 !important;
       animation: footerBubbleCycle 4s linear infinite !important;
+    }
+
+    /* Samsung palette refinement: blue and white only, without oversized card circles. */
+    body::before {
+      background-image:
+        radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.78) 0 3px, transparent 4px),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.58) 0 4px, transparent 5px),
+        radial-gradient(circle at 45% 55%, rgba(255, 255, 255, 0.68) 0 2px, transparent 3px),
+        radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.48) 0 3px, transparent 4px),
+        radial-gradient(circle at 25% 85%, rgba(255, 255, 255, 0.58) 0 4px, transparent 5px),
+        radial-gradient(circle at 65% 45%, rgba(255, 255, 255, 0.42) 0 2px, transparent 3px);
+      background-size: 150px 150px, 190px 190px, 130px 130px, 170px 170px, 120px 120px, 145px 145px;
+    }
+
+    body::after {
+      background-image:
+        radial-gradient(circle at 25% 40%, rgba(255, 255, 255, 0.62) 0 1.5px, transparent 2.5px),
+        radial-gradient(circle at 65% 20%, rgba(255, 255, 255, 0.52) 0 2px, transparent 3px),
+        radial-gradient(circle at 35% 70%, rgba(255, 255, 255, 0.56) 0 1.5px, transparent 2.5px),
+        radial-gradient(circle at 80% 60%, rgba(255, 255, 255, 0.46) 0 2px, transparent 3px),
+        radial-gradient(circle at 15% 80%, rgba(255, 255, 255, 0.42) 0 1.5px, transparent 2.5px);
+      background-size: 90px 90px, 120px 120px, 80px 80px, 110px 110px, 95px 95px;
+    }
+
+    header::before,
+    footer::before {
+      background-image:
+        radial-gradient(circle at center 20%, rgba(255, 255, 255, 0.92) 0 2px, transparent 3px),
+        radial-gradient(circle at center 50%, rgba(255, 255, 255, 0.78) 0 3px, transparent 4px),
+        radial-gradient(circle at center 80%, rgba(255, 255, 255, 0.88) 0 2px, transparent 3px) !important;
+      background-size: 96px 100%, 128px 100%, 112px 100% !important;
+    }
+
+    .store-header,
+    .offer-card {
+      border-color: #1428a0;
+    }
+
+    .store-header::before {
+      background-image:
+        radial-gradient(circle at 6% 18%, rgba(20, 40, 160, 0.30) 0 7px, transparent 8px),
+        radial-gradient(circle at 94% 20%, rgba(20, 40, 160, 0.22) 0 5px, transparent 6px),
+        radial-gradient(circle at 88% 88%, rgba(20, 40, 160, 0.18) 0 4px, transparent 5px),
+        radial-gradient(circle at 14% 84%, rgba(20, 40, 160, 0.16) 0 3px, transparent 4px);
+      opacity: 1;
+    }
+
+    .offer-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offer-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 94% 8%, rgba(20, 40, 160, 0.18) 0 6px, transparent 7px),
+        radial-gradient(circle at 88% 16%, rgba(20, 40, 160, 0.12) 0 3px, transparent 4px),
+        radial-gradient(circle at 7% 92%, rgba(20, 40, 160, 0.14) 0 4px, transparent 5px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .offer-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .store-title,
+    .offer-title,
+    .offer-cashback {
+      color: #1428a0;
+    }
+
+    .cashback-highlight {
+      background: linear-gradient(135deg, #1428a0, #315bd6);
+    }
+
+    .offer-type,
+    .offer-type.cashback {
+      background: #1428a0;
+    }
+
+    .offer-type.promo {
+      background: #315bd6;
+    }
+
+    .offer-type.coupon {
+      background: #0b1b78;
+    }
+
+    .offer-button {
+      background: #1428a0;
+    }
+
+    .offer-button:hover {
+      background: #0b1b78;
     }
 
     @media (prefers-reduced-motion: reduce) {
