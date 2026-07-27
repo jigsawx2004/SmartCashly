@@ -708,7 +708,7 @@
         { name: 'Shein', url: "/stores/shein", logo: "../../store-logos/store-logo-shein.png" },
         { name: 'Temu', url: "/stores/temu", logo: "../../store-logos/store-logo-temu.png" },
         { name: 'YOOX', url: "/stores/yoox", logo: "../../store-logos/store-logo-yoox.png" },
-        { name: 'Kotsovolos', url: "/stores/kotsovolos", logo: "../../store-logos/store-logo-kotsovolos.png" },
+        { name: 'Kotsovolos', url: "/stores/kotsovolos", logo: "../../store-logos/store-logo-kotsovolos.png", aliases: ['Kotsovolos', 'Κωτσόβολος'] },
         { name: 'Public', url: "/stores/public", logo: "../../store-logos/store-logo-public.png" },
         { name: 'Dell', url: "/stores/dell", logo: "../../store-logos/store-logo-dell.png" },
         { name: 'HP', url: "/stores/hp", logo: "../../store-logos/store-logo-hp.png" },
@@ -732,7 +732,7 @@
       searchInput.addEventListener('input', function(e) {
         const query = e.target.value.toLowerCase().trim();
         if (!query) { autocomplete.classList.remove('show'); return; }
-        const results = stores.filter(s => s.name.toLowerCase().includes(query));
+        const results = stores.filter(s => (s.aliases || [s.name]).some(name => name.toLowerCase().includes(query)));
         if (results.length) {
           autocomplete.innerHTML = results.map(s => `<div onclick="window.location.href='${s.url}'"><div class="store-logo" style="background-image: url('${s.logo}')"></div><span class="store-name">${s.name}</span></div>`).join('');
           autocomplete.classList.add('show');
@@ -742,8 +742,8 @@
       searchBar.addEventListener('submit', function(event) {
         event.preventDefault();
         const query = searchInput.value.toLowerCase().trim();
-        const exact = stores.find(s => s.name.toLowerCase() === query);
-        const partial = stores.find(s => s.name.toLowerCase().includes(query));
+        const exact = stores.find(s => (s.aliases || [s.name]).some(name => name.toLowerCase() === query));
+        const partial = stores.find(s => (s.aliases || [s.name]).some(name => name.toLowerCase().includes(query)));
         if (exact) window.location.href = exact.url;
         else if (partial) window.location.href = partial.url;
       });

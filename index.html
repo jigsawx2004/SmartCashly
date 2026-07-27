@@ -1214,7 +1214,27 @@ footer::before {
         { name: 'AirHelp', url: '/stores/airhelp' },
         { name: 'Airshop', url: '/stores/airshop' },
         { name: 'Kiwi', url: '/stores/kiwi' },
-        { name: 'Abito', url: '/stores/abito' }, { name: 'eBay', url: '/stores/ebay', logo: '/store-logos/store-logo-ebay.png' }, { name: 'ASOS', url: '/stores/asos', logo: '/store-logos/store-logo-asos.png' }, { name: 'H&M', url: '/stores/hm', logo: '/store-logos/store-logo-hm.png' }, { name: 'Sephora', url: '/stores/sephora', logo: '/store-logos/store-logo-sephora.png' }, { name: 'iHerb', url: '/stores/iherb', logo: '/store-logos/store-logo-iherb.png' }, { name: 'Booking.com', url: '/stores/booking', logo: '/store-logos/store-logo-booking.png' }, { name: 'Expedia', url: '/stores/expedia', logo: '/store-logos/store-logo-expedia.png' }, { name: 'Klook', url: '/stores/klook', logo: '/store-logos/store-logo-klook.png' }, { name: 'Samsung', url: '/stores/samsung', logo: '/store-logos/store-logo-samsung.png' }, { name: 'Decathlon', url: '/stores/decathlon', logo: '/store-logos/store-logo-decathlon.png' }
+        { name: 'Abito', url: '/stores/abito' }, { name: 'eBay', url: '/stores/ebay', logo: '/store-logos/store-logo-ebay.png' }, { name: 'ASOS', url: '/stores/asos', logo: '/store-logos/store-logo-asos.png' }, { name: 'H&M', url: '/stores/hm', logo: '/store-logos/store-logo-hm.png' }, { name: 'Sephora', url: '/stores/sephora', logo: '/store-logos/store-logo-sephora.png' }, { name: 'iHerb', url: '/stores/iherb', logo: '/store-logos/store-logo-iherb.png' }, { name: 'Booking.com', url: '/stores/booking', logo: '/store-logos/store-logo-booking.png' }, { name: 'Expedia', url: '/stores/expedia', logo: '/store-logos/store-logo-expedia.png' }, { name: 'Klook', url: '/stores/klook', logo: '/store-logos/store-logo-klook.png' }, { name: 'Samsung', url: '/stores/samsung', logo: '/store-logos/store-logo-samsung.png' }, { name: 'Decathlon', url: '/stores/decathlon', logo: '/store-logos/store-logo-decathlon.png' },
+        { name: 'Kotsovolos', url: '/stores/kotsovolos', logo: '/store-logos/store-logo-kotsovolos.png', aliases: ['Kotsovolos', 'Κωτσόβολος'] },
+        { name: 'Public', url: '/stores/public', logo: '/store-logos/store-logo-public.png' },
+        { name: 'Dell', url: '/stores/dell', logo: '/store-logos/store-logo-dell.png' },
+        { name: 'HP', url: '/stores/hp', logo: '/store-logos/store-logo-hp.png' },
+        { name: 'Lenovo', url: '/stores/lenovo', logo: '/store-logos/store-logo-lenovo.png' },
+        { name: 'Udemy', url: '/stores/udemy', logo: '/store-logos/store-logo-udemy.png' },
+        { name: 'Hotels.com', url: '/stores/hotelscom', logo: '/store-logos/store-logo-hotelscom.png', aliases: ['Hotels.com', 'Hotels'] },
+        { name: 'Trip.com', url: '/stores/tripcom', logo: '/store-logos/store-logo-tripcom.png', aliases: ['Trip.com', 'Trip'] },
+        { name: 'Etsy', url: '/stores/etsy', logo: '/store-logos/store-logo-etsy.png' },
+        { name: 'IKEA', url: '/stores/ikea', logo: '/store-logos/store-logo-ikea.png' },
+        { name: 'Zara', url: '/stores/zara', logo: '/store-logos/store-logo-zara.png' },
+        { name: 'Puma', url: '/stores/puma', logo: '/store-logos/store-logo-puma.png' },
+        { name: 'New Balance', url: '/stores/newbalance', logo: '/store-logos/store-logo-newbalance.png' },
+        { name: 'Under Armour', url: '/stores/underarmour', logo: '/store-logos/store-logo-underarmour.png' },
+        { name: 'FARFETCH', url: '/stores/farfetch', logo: '/store-logos/store-logo-farfetch.png', aliases: ['FARFETCH', 'Farfetch'] },
+        { name: 'Zalando', url: '/stores/zalando', logo: '/store-logos/store-logo-zalando.png' },
+        { name: 'Coursera', url: '/stores/coursera', logo: '/store-logos/store-logo-coursera.png' },
+        { name: 'UNIQLO', url: '/stores/uniqlo', logo: '/store-logos/store-logo-uniqlo.png', aliases: ['UNIQLO', 'Uniqlo'] },
+        { name: 'Bose', url: '/stores/bose', logo: '/store-logos/store-logo-bose.png' },
+        { name: 'Acer', url: '/stores/acer', logo: '/store-logos/store-logo-acer.png' }
       ];
 
       searchInput.addEventListener('input', function(e) {
@@ -1224,7 +1244,7 @@ footer::before {
           return;
         }
 
-        const results = stores.filter(s => s.name.toLowerCase().includes(query));
+        const results = stores.filter(s => (s.aliases || [s.name]).some(name => name.toLowerCase().includes(query)));
         if (results.length) {
           autocomplete.innerHTML = results.map(s =>
               `<div onclick="window.location.href='${s.url}'">
@@ -1608,8 +1628,168 @@ footer::before {
         url: '/stores/decathlon',
         icon: '/store-logos/store-logo-decathlon.png',
         keywords: ['decathlon', 'sports & outdoor', 'cashback', 'deals', 'coupons']
+      },
+      {
+        name: 'Kotsovolos',
+        description: 'Shop Kotsovolos and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/kotsovolos',
+        icon: '/store-logos/store-logo-kotsovolos.png',
+        keywords: ['kotsovolos', 'κωτσόβολος']
+      },
+      {
+        name: 'Public',
+        description: 'Shop Public and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/public',
+        icon: '/store-logos/store-logo-public.png',
+        keywords: ['public']
+      },
+      {
+        name: 'Dell',
+        description: 'Shop Dell and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/dell',
+        icon: '/store-logos/store-logo-dell.png',
+        keywords: ['dell']
+      },
+      {
+        name: 'HP',
+        description: 'Shop HP and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/hp',
+        icon: '/store-logos/store-logo-hp.png',
+        keywords: ['hp']
+      },
+      {
+        name: 'Lenovo',
+        description: 'Shop Lenovo and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/lenovo',
+        icon: '/store-logos/store-logo-lenovo.png',
+        keywords: ['lenovo']
+      },
+      {
+        name: 'Udemy',
+        description: 'Shop Udemy and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/udemy',
+        icon: '/store-logos/store-logo-udemy.png',
+        keywords: ['udemy']
+      },
+      {
+        name: 'Hotels.com',
+        description: 'Shop Hotels.com and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/hotelscom',
+        icon: '/store-logos/store-logo-hotelscom.png',
+        keywords: ['hotels.com', 'hotels']
+      },
+      {
+        name: 'Trip.com',
+        description: 'Shop Trip.com and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/tripcom',
+        icon: '/store-logos/store-logo-tripcom.png',
+        keywords: ['trip.com', 'trip']
+      },
+      {
+        name: 'Etsy',
+        description: 'Shop Etsy and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/etsy',
+        icon: '/store-logos/store-logo-etsy.png',
+        keywords: ['etsy']
+      },
+      {
+        name: 'IKEA',
+        description: 'Shop IKEA and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/ikea',
+        icon: '/store-logos/store-logo-ikea.png',
+        keywords: ['ikea']
+      },
+      {
+        name: 'Zara',
+        description: 'Shop Zara and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/zara',
+        icon: '/store-logos/store-logo-zara.png',
+        keywords: ['zara']
+      },
+      {
+        name: 'Puma',
+        description: 'Shop Puma and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/puma',
+        icon: '/store-logos/store-logo-puma.png',
+        keywords: ['puma']
+      },
+      {
+        name: 'New Balance',
+        description: 'Shop New Balance and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/newbalance',
+        icon: '/store-logos/store-logo-newbalance.png',
+        keywords: ['new balance']
+      },
+      {
+        name: 'Under Armour',
+        description: 'Shop Under Armour and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/underarmour',
+        icon: '/store-logos/store-logo-underarmour.png',
+        keywords: ['under armour']
+      },
+      {
+        name: 'FARFETCH',
+        description: 'Shop FARFETCH and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/farfetch',
+        icon: '/store-logos/store-logo-farfetch.png',
+        keywords: ['farfetch', 'farfetch']
+      },
+      {
+        name: 'Zalando',
+        description: 'Shop Zalando and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/zalando',
+        icon: '/store-logos/store-logo-zalando.png',
+        keywords: ['zalando']
+      },
+      {
+        name: 'Coursera',
+        description: 'Shop Coursera and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/coursera',
+        icon: '/store-logos/store-logo-coursera.png',
+        keywords: ['coursera']
+      },
+      {
+        name: 'UNIQLO',
+        description: 'Shop UNIQLO and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/uniqlo',
+        icon: '/store-logos/store-logo-uniqlo.png',
+        keywords: ['uniqlo', 'uniqlo']
+      },
+      {
+        name: 'Bose',
+        description: 'Shop Bose and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/bose',
+        icon: '/store-logos/store-logo-bose.png',
+        keywords: ['bose']
+      },
+      {
+        name: 'Acer',
+        description: 'Shop Acer and earn cashback',
+        cashback: 'Up to',
+        url: '/stores/acer',
+        icon: '/store-logos/store-logo-acer.png',
+        keywords: ['acer']
       }
-    ];
+      ];
 
     // Search functionality
     const searchInput = document.getElementById('search-input');

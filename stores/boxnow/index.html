@@ -1011,7 +1011,27 @@ if (searchInput && searchBar) {
         { name: 'AirHelp', url: '/stores/airhelp' },
         { name: 'Airshop', url: '/stores/airshop' },
         { name: 'Kiwi', url: '/stores/kiwi' },
-        { name: 'Abito', url: '/stores/abito' }
+        { name: 'Abito', url: '/stores/abito' },
+        { name: 'Kotsovolos', url: '/stores/kotsovolos', logo: '../../store-logos/store-logo-kotsovolos.png', aliases: ['Kotsovolos', 'Κωτσόβολος'] },
+        { name: 'Public', url: '/stores/public', logo: '../../store-logos/store-logo-public.png' },
+        { name: 'Dell', url: '/stores/dell', logo: '../../store-logos/store-logo-dell.png' },
+        { name: 'HP', url: '/stores/hp', logo: '../../store-logos/store-logo-hp.png' },
+        { name: 'Lenovo', url: '/stores/lenovo', logo: '../../store-logos/store-logo-lenovo.png' },
+        { name: 'Udemy', url: '/stores/udemy', logo: '../../store-logos/store-logo-udemy.png' },
+        { name: 'Hotels.com', url: '/stores/hotelscom', logo: '../../store-logos/store-logo-hotelscom.png', aliases: ['Hotels.com', 'Hotels'] },
+        { name: 'Trip.com', url: '/stores/tripcom', logo: '../../store-logos/store-logo-tripcom.png', aliases: ['Trip.com', 'Trip'] },
+        { name: 'Etsy', url: '/stores/etsy', logo: '../../store-logos/store-logo-etsy.png' },
+        { name: 'IKEA', url: '/stores/ikea', logo: '../../store-logos/store-logo-ikea.png' },
+        { name: 'Zara', url: '/stores/zara', logo: '../../store-logos/store-logo-zara.png' },
+        { name: 'Puma', url: '/stores/puma', logo: '../../store-logos/store-logo-puma.png' },
+        { name: 'New Balance', url: '/stores/newbalance', logo: '../../store-logos/store-logo-newbalance.png' },
+        { name: 'Under Armour', url: '/stores/underarmour', logo: '../../store-logos/store-logo-underarmour.png' },
+        { name: 'FARFETCH', url: '/stores/farfetch', logo: '../../store-logos/store-logo-farfetch.png', aliases: ['FARFETCH', 'Farfetch'] },
+        { name: 'Zalando', url: '/stores/zalando', logo: '../../store-logos/store-logo-zalando.png' },
+        { name: 'Coursera', url: '/stores/coursera', logo: '../../store-logos/store-logo-coursera.png' },
+        { name: 'UNIQLO', url: '/stores/uniqlo', logo: '../../store-logos/store-logo-uniqlo.png', aliases: ['UNIQLO', 'Uniqlo'] },
+        { name: 'Bose', url: '/stores/bose', logo: '../../store-logos/store-logo-bose.png' },
+        { name: 'Acer', url: '/stores/acer', logo: '../../store-logos/store-logo-acer.png' }
       ];
 
   searchInput.addEventListener('input', function(e) {
@@ -1021,7 +1041,7 @@ if (searchInput && searchBar) {
       return;
     }
 
-    const results = stores.filter(s => s.name.toLowerCase().includes(query));
+    const results = stores.filter(s => (s.aliases || [s.name]).some(name => name.toLowerCase().includes(query)));
     if (results.length) {
       autocomplete.innerHTML = results.map(s =>
             `<div onclick="window.location.href='${s.url}'">
