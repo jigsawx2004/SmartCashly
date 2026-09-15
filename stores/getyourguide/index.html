@@ -606,55 +606,16 @@
       }
     }
   </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" placeholder="Search any store ..." />
-        <button type="submit" aria-label="Search">🔍</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
       </form>
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
     </div>
@@ -669,7 +630,7 @@
       <div class="store-details">
         <h1 class="store-title">GetYourGuide</h1>
         <p class="store-subtitle">Travel Experiences with cashback rewards</p>
-        <div class="cashback-highlight">💰 Up to 7% Cashback</div>
+        <div class="cashback-highlight">Up to 7% Cashback</div>
         <p>Tours, attractions, tickets and activities in destinations around the world.</p>
       </div>
     </div>
@@ -683,8 +644,8 @@
           </div>
           <h3 class="offer-title">Shop at GetYourGuide &amp; Earn Cashback</h3>
           <p class="offer-description">Start your GetYourGuide purchase through Smartcashly and collect cashback after the eligible order or booking is completed and approved.</p>
-          <div class="offer-cashback" style="color: #ff6b35;">💰 Up to 7% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('getyourguide-general')">💰 Shop & Earn</button>
+          <div class="offer-cashback" style="color: #ff6b35;">Up to 7% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('getyourguide-general')">Shop &amp; earn</button>
         </div>
         <div class="offer-card" onclick="trackClick('getyourguide-tours')" style="cursor: pointer;">
           <div class="offer-header">
@@ -694,7 +655,7 @@
           <h3 class="offer-title">Tours at GetYourGuide</h3>
           <p class="offer-description">Explore tours from GetYourGuide and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 7% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('getyourguide-tours')">🛍️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('getyourguide-tours')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('getyourguide-attractions')" style="cursor: pointer;">
           <div class="offer-header">
@@ -704,7 +665,7 @@
           <h3 class="offer-title">Attractions at GetYourGuide</h3>
           <p class="offer-description">Explore attractions from GetYourGuide and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 7% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('getyourguide-attractions')">✨ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('getyourguide-attractions')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('getyourguide-day-trips')" style="cursor: pointer;">
           <div class="offer-header">
@@ -714,7 +675,7 @@
           <h3 class="offer-title">Day Trips at GetYourGuide</h3>
           <p class="offer-description">Explore day trips from GetYourGuide and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 7% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('getyourguide-day-trips')">🔎 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('getyourguide-day-trips')">View offer</button>
         </div>
       </div>
     </div>

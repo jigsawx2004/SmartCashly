@@ -842,55 +842,16 @@ background: #0059c1;
     }
 
 </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-  <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+  <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
   <div class="center-group">
   <form class="search-bar" action="#" method="get">
     <input type="search" placeholder="Search any store ..." />
-    <button type="submit" aria-label="Search">🔍</button>
+    <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
     </button>
   </form>
   <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
@@ -906,7 +867,7 @@ background: #0059c1;
       <div class="store-details">
         <h1 class="store-title">Aegean Airlines</h1>
         <p class="store-subtitle">Airline with cashback rewards on flight bookings</p>
-        <div class="cashback-highlight">💰 Earn up to 15% Cashback</div>
+        <div class="cashback-highlight">Earn up to 15% Cashback</div>
         <p>Aegean Airlines is the largest Greek airline and a Star Alliance member, offering flights to Greece, Europe, and Mediterranean destinations. Book your flights to Athens, Thessaloniki, and over 50 destinations across Europe with excellent service, modern fleet, and competitive prices. Enjoy the convenience of online booking, mobile check-in, and the Miles+Bonus loyalty program while earning cashback on every flight.</p>
       </div>
     </div>
@@ -921,8 +882,8 @@ background: #0059c1;
           <h3 class="offer-title">Book Flights & Earn Cashback</h3>
           <p class="offer-description">Book any Aegean Airlines flight and earn cashback on every ticket purchase!</p>
           <div style="height: 72px;"></div>
-          <div class="offer-cashback" style="color: #ff6b35;">💰 Earn up to 15% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">💰 Book & Earn</button>
+          <div class="offer-cashback" style="color: #ff6b35;">Earn up to 15% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">Shop &amp; earn</button>
         </div>
 
         <div class="offer-card" onclick="window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')" style="cursor: pointer;">
@@ -934,7 +895,7 @@ background: #0059c1;
           <p class="offer-description">Discover Athens with special flight deals from major European cities!</p>
           <div style="height: 72px;"></div>
           <div class="offer-cashback">+ Get Extra 15% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">🏛️ Book Athens Flight</button>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')" style="cursor: pointer;">
@@ -946,7 +907,7 @@ background: #0059c1;
           <p class="offer-description">Fly to beautiful Greek islands including Santorini, Mykonos, Rhodes and more!</p>
           <div style="height: 72px;"></div>
           <div class="offer-cashback">+ Get Extra 15% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">🏖️ Book Island Flight</button>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')" style="cursor: pointer;">
@@ -958,7 +919,7 @@ background: #0059c1;
           <p class="offer-description">Connect to major European cities with competitive prices and great service!</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Get Extra 15% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">🌍 Book European Flight</button>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')" style="cursor: pointer;">
@@ -970,7 +931,7 @@ background: #0059c1;
           <p class="offer-description">Join the loyalty program and earn miles on every flight for future rewards!</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Get Extra 15% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">🎁 Join Miles+Bonus</button>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')" style="cursor: pointer;">
@@ -982,7 +943,7 @@ background: #0059c1;
           <p class="offer-description">Book round trip flights and save with better prices and flexible dates!</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Get Extra 15% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">✈️ Book Round Trip</button>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')" style="cursor: pointer;">
@@ -994,7 +955,7 @@ background: #0059c1;
           <p class="offer-description">Upgrade to Business Class for enhanced comfort and premium service!</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Get Extra 15% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">👑 Upgrade to Business</button>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')" style="cursor: pointer;">
@@ -1006,7 +967,7 @@ background: #0059c1;
           <p class="offer-description">Book for groups of 9+ passengers and get special group rates and benefits!</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Get Extra 15% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">👥 Book Group Travel</button>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://el.aegeanair.com/?utm_source=CD3020&utm_medium=affiliate&utm_campaign=standard_campaign&lkws_73=674dfb5d-0d01-1160-db39-da0f2e15edd8', '_blank')">View offer</button>
         </div>
       </div>
     </div>

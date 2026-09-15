@@ -528,56 +528,17 @@
       }
     }
   </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
 
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" placeholder="Search any store ..." />
-        <button type="submit" aria-label="Search">🔍</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
       </form>
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
     </div>
@@ -593,7 +554,7 @@
       <div class="store-details">
         <h1 class="store-title">ASOS</h1>
         <p class="store-subtitle">Fashion store with cashback rewards</p>
-        <div class="cashback-highlight">💰 Earn up to 1% Cashback</div>
+        <div class="cashback-highlight">Earn up to 1% Cashback</div>
         <p>ASOS is a global fashion destination for trend-led clothing, shoes, accessories, beauty products, and curated brand collections. Browse casual essentials, statement outfits, occasion looks, streetwear, sneakers, grooming items, and seasonal edits for men and women in one clean shopping experience.</p>
       </div>
     </div>
@@ -607,8 +568,8 @@
           </div>
           <h3 class="offer-title">Shop at ASOS & Earn Cashback</h3>
           <p class="offer-description">Browse ASOS clothing, shoes, accessories, beauty, and branded fashion picks while earning cashback on your order.</p>
-          <div class="offer-cashback" style="color: #ff6b35;">💰 Earn up to 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-general')">💰 Shop & Earn</button>
+          <div class="offer-cashback" style="color: #ff6b35;">Earn up to 1% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-general')">Shop &amp; earn</button>
         </div>
 
         <div class="offer-card" onclick="showCouponModal('20% Off Your First Purchase', 'Use this ASOS promo code for a first-purchase style discount where eligible.', 'APP')" style="cursor: pointer;">
@@ -618,8 +579,8 @@
           </div>
           <h3 class="offer-title">20% Off Your First Purchase</h3>
           <p class="offer-description">Use this ASOS coupon for a first-purchase style discount where eligible, then continue to the store before checkout.</p>
-          <div class="offer-cashback">🎫 Get Exclusive Coupon + Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); showCouponModal('20% Off Your First Purchase', 'Use this ASOS promo code for a first-purchase style discount where eligible.', 'APP')">🎫 Get Coupon</button>
+          <div class="offer-cashback">Get Exclusive Coupon + Extra 1% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); showCouponModal('20% Off Your First Purchase', 'Use this ASOS promo code for a first-purchase style discount where eligible.', 'APP')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="showCouponModal('10% Off With ASOS Updates', 'Use this ASOS promo code for a newsletter or updates discount where eligible.', 'ERE')" style="cursor: pointer;">
@@ -629,8 +590,8 @@
           </div>
           <h3 class="offer-title">10% Off With ASOS Updates</h3>
           <p class="offer-description">Try this ASOS coupon for update-based savings where eligible before completing your order.</p>
-          <div class="offer-cashback">🎫 Get Exclusive Coupon + Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); showCouponModal('10% Off With ASOS Updates', 'Use this ASOS promo code for a newsletter or updates discount where eligible.', 'ERE')">🎫 Get Coupon</button>
+          <div class="offer-cashback">Get Exclusive Coupon + Extra 1% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); showCouponModal('10% Off With ASOS Updates', 'Use this ASOS promo code for a newsletter or updates discount where eligible.', 'ERE')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('asos-women-dresses')" style="cursor: pointer;">
@@ -641,7 +602,7 @@
           <h3 class="offer-title">Women's Dresses & Occasion Looks</h3>
           <p class="offer-description">Discover dresses for casual days, nights out, holidays, events, and fresh wardrobe updates.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-women-dresses')">👗 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-women-dresses')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('asos-men')" style="cursor: pointer;">
@@ -652,7 +613,7 @@
           <h3 class="offer-title">Men's Clothing & Streetwear</h3>
           <p class="offer-description">Shop shirts, jeans, hoodies, jackets, trainers, and easy everyday looks for men.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-men')">👕 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-men')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('asos-face-body')" style="cursor: pointer;">
@@ -663,7 +624,7 @@
           <h3 class="offer-title">Beauty, Grooming & Face + Body</h3>
           <p class="offer-description">Browse makeup, skincare, fragrance, haircare, grooming products, and daily beauty essentials.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-face-body')">💄 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-face-body')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('asos-brands')" style="cursor: pointer;">
@@ -674,7 +635,7 @@
           <h3 class="offer-title">Popular Brands & ASOS Design</h3>
           <p class="offer-description">Explore ASOS Design pieces alongside well-known fashion labels, shoes, accessories, and trend edits.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-brands')">🏷️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-brands')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('asos-outlet')" style="cursor: pointer;">
@@ -685,7 +646,7 @@
           <h3 class="offer-title">Outlet Fashion Finds</h3>
           <p class="offer-description">Look through lower-price clothing, shoes, accessories, and seasonal outlet pieces before checkout.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-outlet')">🛍️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-outlet')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('asos-new-in')" style="cursor: pointer;">
@@ -696,7 +657,7 @@
           <h3 class="offer-title">New-In Styles & Fresh Drops</h3>
           <p class="offer-description">Check the newest arrivals across outfits, shoes, accessories, beauty, and seasonal edits.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-new-in')">✨ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-new-in')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('asos-shoes')" style="cursor: pointer;">
@@ -707,7 +668,7 @@
           <h3 class="offer-title">Sneakers, Boots, Heels & Sandals</h3>
           <p class="offer-description">Find footwear for everyday outfits, workwear, holidays, nights out, and casual comfort.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-shoes')">👟 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-shoes')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('asos-accessories')" style="cursor: pointer;">
@@ -718,7 +679,7 @@
           <h3 class="offer-title">Bags, Jewellery & Accessories</h3>
           <p class="offer-description">Complete your look with bags, belts, jewellery, sunglasses, caps, and small style extras.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-accessories')">👜 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-accessories')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('asos-student')" style="cursor: pointer;">
@@ -729,7 +690,7 @@
           <h3 class="offer-title">Student Savings at ASOS</h3>
           <p class="offer-description">Students can check ASOS student savings and eligible account offers before completing their order.</p>
           <div class="offer-cashback">+ Get Extra 1% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-student')">🎓 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('asos-student')">View offer</button>
         </div>
       </div>
     </div>

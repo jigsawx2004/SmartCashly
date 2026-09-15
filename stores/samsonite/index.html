@@ -606,55 +606,16 @@
       }
     }
   </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" placeholder="Search any store ..." />
-        <button type="submit" aria-label="Search">🔍</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
       </form>
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
     </div>
@@ -669,7 +630,7 @@
       <div class="store-details">
         <h1 class="store-title">Samsonite</h1>
         <p class="store-subtitle">Travel Accessories with cashback rewards</p>
-        <div class="cashback-highlight">💰 Up to 6% Cashback</div>
+        <div class="cashback-highlight">Up to 6% Cashback</div>
         <p>Suitcases, travel bags, backpacks and accessories built for every journey.</p>
       </div>
     </div>
@@ -683,8 +644,8 @@
           </div>
           <h3 class="offer-title">Shop at Samsonite &amp; Earn Cashback</h3>
           <p class="offer-description">Start your Samsonite purchase through Smartcashly and collect cashback after the eligible order or booking is completed and approved.</p>
-          <div class="offer-cashback" style="color: #ff6b35;">💰 Up to 6% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-general')">💰 Shop & Earn</button>
+          <div class="offer-cashback" style="color: #ff6b35;">Up to 6% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-general')">Shop &amp; earn</button>
         </div>
         <div class="offer-card" onclick="trackClick('samsonite-suitcases')" style="cursor: pointer;">
           <div class="offer-header">
@@ -694,7 +655,7 @@
           <h3 class="offer-title">Suitcases at Samsonite</h3>
           <p class="offer-description">Explore suitcases from Samsonite and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 6% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-suitcases')">🛍️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-suitcases')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('samsonite-cabin-luggage')" style="cursor: pointer;">
           <div class="offer-header">
@@ -704,7 +665,7 @@
           <h3 class="offer-title">Cabin Luggage at Samsonite</h3>
           <p class="offer-description">Explore cabin luggage from Samsonite and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 6% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-cabin-luggage')">✨ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-cabin-luggage')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('samsonite-backpacks')" style="cursor: pointer;">
           <div class="offer-header">
@@ -714,7 +675,7 @@
           <h3 class="offer-title">Backpacks at Samsonite</h3>
           <p class="offer-description">Explore backpacks from Samsonite and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 5.5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-backpacks')">🔎 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-backpacks')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('samsonite-business-bags')" style="cursor: pointer;">
           <div class="offer-header">
@@ -724,7 +685,7 @@
           <h3 class="offer-title">Business Bags at Samsonite</h3>
           <p class="offer-description">Explore business bags from Samsonite and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 5.5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-business-bags')">⭐ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-business-bags')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('samsonite-kids-luggage')" style="cursor: pointer;">
           <div class="offer-header">
@@ -734,7 +695,7 @@
           <h3 class="offer-title">Kids’ Luggage at Samsonite</h3>
           <p class="offer-description">Explore kids’ luggage from Samsonite and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 4.5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-kids-luggage')">🎁 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-kids-luggage')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('samsonite-travel-accessories')" style="cursor: pointer;">
           <div class="offer-header">
@@ -744,7 +705,7 @@
           <h3 class="offer-title">Travel Accessories at Samsonite</h3>
           <p class="offer-description">Explore travel accessories from Samsonite and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-travel-accessories')">🏷️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-travel-accessories')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('samsonite-new-collections')" style="cursor: pointer;">
           <div class="offer-header">
@@ -754,7 +715,7 @@
           <h3 class="offer-title">New Collections at Samsonite</h3>
           <p class="offer-description">Explore new collections from Samsonite and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 6% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-new-collections')">🧭 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsonite-new-collections')">View offer</button>
         </div>
       </div>
     </div>

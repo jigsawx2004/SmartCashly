@@ -655,56 +655,17 @@
       .all-stores-btn { padding-inline: 0.9rem; }
     }
   </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
 
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" placeholder="Search any store ..." />
-        <button type="submit" aria-label="Search">🔍</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
       </form>
 
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
@@ -723,7 +684,7 @@
       <div class="store-details">
         <h1 class="store-title">Samsung</h1>
         <p class="store-subtitle">Official electronics and connected technology with cashback rewards</p>
-        <div class="cashback-highlight">💰 Earn 3% Cashback</div>
+        <div class="cashback-highlight">Earn 3% Cashback</div>
         <p>Shop Samsung smartphones, tablets, televisions, monitors, appliances, wearables, accessories, and connected home technology. Compare Galaxy devices and practical upgrades for work, entertainment, and everyday life.</p>
       </div>
     </div>
@@ -739,8 +700,8 @@
           </div>
           <h3 class="offer-title">Shop at Samsung &amp; Earn Cashback</h3>
           <p class="offer-description">Start at Smartcashly, continue to Samsung, and complete an eligible purchase. Cashback is added after the order is approved.</p>
-          <div class="offer-cashback">💰 Earn 3% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-general')">💰 Shop & Earn</button>
+          <div class="offer-cashback">Earn 3% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-general')">Shop &amp; earn</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('samsung-smartphones')" style="cursor: pointer;">
@@ -753,7 +714,7 @@
           <h3 class="offer-title">Galaxy Phones, Tablets &amp; Wearables</h3>
           <p class="offer-description">Explore Galaxy smartphones, tablets, smartwatches, and fitness wearables for work, entertainment, and everyday use.</p>
           <div class="offer-cashback">+ Get Extra 3% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-smartphones')">📱 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-smartphones')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('samsung-tvs-monitors')" style="cursor: pointer;">
@@ -766,7 +727,7 @@
           <h3 class="offer-title">TVs, Monitors &amp; Home Entertainment</h3>
           <p class="offer-description">Compare televisions, gaming monitors, soundbars, and display technology for home entertainment or a new workspace.</p>
           <div class="offer-cashback">+ Get Extra 3% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-tvs-monitors')">📺 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-tvs-monitors')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('samsung-appliances')" style="cursor: pointer;">
@@ -779,7 +740,7 @@
           <h3 class="offer-title">Home Appliances &amp; Everyday Essentials</h3>
           <p class="offer-description">Browse refrigerators, laundry appliances, vacuum cleaners, kitchen equipment, and practical products for the home.</p>
           <div class="offer-cashback">+ Get Extra 3% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-appliances')">🏠 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-appliances')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('samsung-accessories')" style="cursor: pointer;">
@@ -792,7 +753,7 @@
           <h3 class="offer-title">Galaxy Buds, Cases &amp; Accessories</h3>
           <p class="offer-description">Find earbuds, chargers, cases, keyboards, S Pens, watch bands, and accessories made for compatible Samsung devices.</p>
           <div class="offer-cashback">+ Get Extra 3% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-accessories')">🎧 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-accessories')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('samsung-electronics')" style="cursor: pointer;">
@@ -805,7 +766,7 @@
           <h3 class="offer-title">Selected Samsung Electronics Offers</h3>
           <p class="offer-description">Review current Samsung offers across eligible devices, displays, appliances, and technology bundles before ordering.</p>
           <div class="offer-cashback">+ Get Extra 3% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-electronics')">⚡ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-electronics')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('samsung-galaxy')" style="cursor: pointer;">
@@ -818,7 +779,7 @@
           <h3 class="offer-title">Galaxy Smartphones &amp; Foldable Devices</h3>
           <p class="offer-description">Discover Galaxy S, Z, and A series phones, including foldable models and options for different everyday needs.</p>
           <div class="offer-cashback">+ Get Extra 3% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-galaxy')">📲 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-galaxy')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('samsung-smart-home')" style="cursor: pointer;">
@@ -831,7 +792,7 @@
           <h3 class="offer-title">Connected Home &amp; SmartThings Products</h3>
           <p class="offer-description">Bring compatible appliances, screens, sensors, and connected products together through the Samsung SmartThings ecosystem.</p>
           <div class="offer-cashback">+ Get Extra 3% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-smart-home')">💡 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-smart-home')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('samsung-promotions')" style="cursor: pointer;">
@@ -844,7 +805,7 @@
           <h3 class="offer-title">Browse Current Samsung Promotions</h3>
           <p class="offer-description">Visit Samsung through Smartcashly to review current eligible promotions and seasonal product highlights before ordering.</p>
           <div class="offer-cashback">+ Get Extra 3% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-promotions')">🛍️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-promotions')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('samsung-savings')" style="cursor: pointer;">
@@ -857,7 +818,7 @@
           <h3 class="offer-title">Explore More Samsung Technology</h3>
           <p class="offer-description">Browse additional Samsung categories and compare suitable upgrades while keeping your tracked Smartcashly visit active.</p>
           <div class="offer-cashback">+ Get Extra 3% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-savings')">🔎 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('samsung-savings')">View offer</button>
         </div>
       </div>
     </div>

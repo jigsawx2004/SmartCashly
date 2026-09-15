@@ -524,54 +524,15 @@
     }
 
 </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" placeholder="Search any store ..." aria-label="Search stores" />
-        <button type="submit" aria-label="Search">🔍</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
       </form>
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
     </div>
@@ -586,7 +547,7 @@
       <div class="store-details">
         <h1 class="store-title">Myprotein</h1>
         <p class="store-subtitle">Supplements store with cashback rewards on nutrition products</p>
-        <div class="cashback-highlight">💰 Earn up to 20% Cashback</div>
+        <div class="cashback-highlight">Earn up to 20% Cashback</div>
         <p>Myprotein is Europe's leading sports nutrition brand, offering premium quality supplements and nutrition products for athletes and fitness enthusiasts. From whey protein and amino acids to vitamins and healthy snacks, Myprotein provides scientifically-backed products to help you reach your fitness goals. With over 2,500 high-quality products at affordable prices, Myprotein is trusted by millions worldwide.</p>
       </div>
     </div>
@@ -598,8 +559,8 @@
           <h3 class="offer-title">Shop at Myprotein & Earn Cashback</h3>
           <p class="offer-description">Browse the entire Myprotein collection and earn cashback on every supplement purchase!</p>
           <div style="height: 48px;"></div>
-          <div class="offer-cashback">💰 Earn up to 20% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); openOffer('cashback')">💰 Shop & Earn</button>
+          <div class="offer-cashback">Earn up to 20% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); openOffer('cashback')">Shop &amp; earn</button>
         </div>
 
         <div class="offer-card" onclick="showCouponModal()">
@@ -607,50 +568,50 @@
           <h3 class="offer-title">30% Off with Christos Kogias!</h3>
           <p class="offer-description">Use Christos Kogias' Myprotein promo code for 30% off almost all products!</p>
           <div style="height: 24px;"></div>
-          <div class="offer-cashback">🎫 Get Exclusive Coupon + Extra 20% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); showCouponModal()">🎫 Get Coupon</button>
+          <div class="offer-cashback">Get Exclusive Coupon + Extra 20% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); showCouponModal()">View offer</button>
         </div>
 
         <div class="offer-card" onclick="openOffer('whey')">
           <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Whey Protein Collection - 40% Off</h3>
           <p class="offer-description">Premium whey protein powders including Impact Whey, Isolate, and Hydrolysate!</p>
-          <div style="height: 48px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🥛 Get Offer</button>
+          <div style="height: 48px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">View offer</button>
         </div>
 
         <div class="offer-card" onclick="openOffer('bestsellers')">
           <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Bestsellers Collection - 35% Off</h3>
           <p class="offer-description">Shop the most popular supplements including creatine and pre-workout formulas!</p>
-          <div style="height: 48px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🏆 Get Offer</button>
+          <div style="height: 48px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">View offer</button>
         </div>
 
         <div class="offer-card" onclick="openOffer('protein')">
           <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Protein Collection - 25% Off</h3>
           <p class="offer-description">Complete protein range including BCAA, amino acids, and protein supplements!</p>
-          <div style="height: 24px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🔬 Get Offer</button>
+          <div style="height: 24px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">View offer</button>
         </div>
 
         <div class="offer-card" onclick="openOffer('snacks')">
           <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Protein Bars & Snacks - 50% Off</h3>
           <p class="offer-description">Delicious high-protein snacks perfect for on-the-go nutrition and post-workout!</p>
-          <div style="height: 24px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🍫 Get Offer</button>
+          <div style="height: 24px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">View offer</button>
         </div>
 
         <div class="offer-card" onclick="openOffer('proteinBar')">
           <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Impact Protein Bar - Award Winning</h3>
           <p class="offer-description">Try the award-winning Impact Protein Bar with 20g protein, low sugar, high fiber!</p>
-          <div style="height: 24px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🏅 Get Offer</button>
+          <div style="height: 24px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">View offer</button>
         </div>
 
         <div class="offer-card" onclick="openOffer('student')">
           <div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div>
           <h3 class="offer-title">Student Discount - 10% Off</h3>
           <p class="offer-description">Special discount for students on all Myprotein supplements and nutrition products!</p>
-          <div style="height: 24px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">🎓 Get Offer</button>
+          <div style="height: 24px;"></div><div class="offer-cashback">+ Get Extra 20% Cashback</div><button class="offer-button">View offer</button>
         </div>
       </div>
     </div>

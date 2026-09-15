@@ -569,11 +569,12 @@
     }
 
 </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-account" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
     <div style="flex:1 1 auto;"></div>
     <nav class="auth-nav">
       <a href="../../" class="btn">Home</a>
@@ -598,9 +599,7 @@
         <div class="upload-area">
           <div class="file-input-wrapper">
             <input type="file" id="profile-pic-input" class="file-input" accept="image/*" />
-            <label for="profile-pic-input" class="file-input-label">
-              📷 Choose New Picture
-            </label>
+            <label for="profile-pic-input" class="file-input-label">Choose a new picture</label>
           </div>
           <div class="upload-info">
             Supported formats: JPG, PNG (Max: 5MB)
@@ -612,8 +611,8 @@
           <img id="preview-image" class="preview-image" />
 
           <div class="action-buttons">
-            <button id="save-picture" class="btn btn--save">💾 Save Picture</button>
-            <button id="cancel-upload" class="btn btn--cancel">❌ Cancel</button>
+            <button id="save-picture" class="btn btn--save">Save picture</button>
+            <button id="cancel-upload" class="btn btn--cancel">Cancel</button>
           </div>
         </div>
 
@@ -643,7 +642,7 @@
                    style="width: 100%; padding: 0.75rem; border: 3px solid #008e45; border-radius: 6px; font-size: 1rem; background: white;">
           </div>
 
-          <button type="submit" class="btn" style="width: 100%; background: #0070f3 !important;">🔐 Change Password</button>
+          <button type="submit" class="btn" style="width: 100%; background: #0070f3 !important;">Change Password</button>
         </form>
 
         <div id="password-message" class="message"></div>

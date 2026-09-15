@@ -690,56 +690,17 @@
       .all-stores-btn { padding-inline: 0.9rem; }
     }
   </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
 
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" placeholder="Search any store ..." />
-        <button type="submit" aria-label="Search">🔍</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
       </form>
 
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
@@ -758,7 +719,7 @@
       <div class="store-details">
         <h1 class="store-title">Sephora</h1>
         <p class="store-subtitle">Makeup, skincare, fragrance, and beauty with cashback rewards</p>
-        <div class="cashback-highlight">💰 Earn 13% Cashback</div>
+        <div class="cashback-highlight">Earn 13% Cashback</div>
         <p>Explore makeup, skincare, fragrance, haircare, beauty tools, gift sets, and everyday essentials from premium, popular, and emerging brands. Follow Smartcashly to Sephora before shopping your routine, discovering a new launch, or choosing a beauty gift.</p>
       </div>
     </div>
@@ -774,8 +735,8 @@
           </div>
           <h3 class="offer-title">Shop at Sephora &amp; Earn Cashback</h3>
           <p class="offer-description">Start at Smartcashly, continue to Sephora, and complete an eligible beauty purchase. Cashback is added after the order is approved.</p>
-          <div class="offer-cashback">💰 Earn 13% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-general')">💰 Shop & Earn</button>
+          <div class="offer-cashback">Earn 13% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-general')">Shop &amp; earn</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('sephora-fragrance-haircare')" style="cursor: pointer;">
@@ -788,7 +749,7 @@
           <h3 class="offer-title">Fragrance, Haircare &amp; Beauty Essentials</h3>
           <p class="offer-description">Discover signature scents, hair treatments, styling products, and everyday beauty essentials across Sephora's selection.</p>
           <div class="offer-cashback">+ Get Extra 13% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-fragrance-haircare')">🌸 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-fragrance-haircare')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('sephora-new-brands')" style="cursor: pointer;">
@@ -801,7 +762,7 @@
           <h3 class="offer-title">Premium Beauty Brands &amp; New Arrivals</h3>
           <p class="offer-description">Explore recent launches and standout products from established labels, emerging names, and exclusive beauty collections.</p>
           <div class="offer-cashback">+ Get Extra 13% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-new-brands')">✨ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-new-brands')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('sephora-collection')" style="cursor: pointer;">
@@ -814,7 +775,7 @@
           <h3 class="offer-title">Sephora Collection Makeup &amp; Tools</h3>
           <p class="offer-description">Browse Sephora Collection makeup, brushes, masks, bath care, and practical tools for everyday beauty routines.</p>
           <div class="offer-cashback">+ Get Extra 13% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-collection')">💄 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-collection')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('sephora-gifts-minis')" style="cursor: pointer;">
@@ -827,7 +788,7 @@
           <h3 class="offer-title">Gift Sets, Minis &amp; Travel Sizes</h3>
           <p class="offer-description">Find discovery sets, travel-friendly sizes, curated gifts, and popular beauty picks for yourself or someone special.</p>
           <div class="offer-cashback">+ Get Extra 13% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-gifts-minis')">🎁 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-gifts-minis')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('sephora-routine')" style="cursor: pointer;">
@@ -840,7 +801,7 @@
           <h3 class="offer-title">Skincare &amp; Makeup Routine Essentials</h3>
           <p class="offer-description">Refresh morning and evening routines with cleansers, serums, complexion products, lip colour, and eye makeup.</p>
           <div class="offer-cashback">+ Get Extra 13% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-routine')">🧴 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-routine')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('sephora-promotions')" style="cursor: pointer;">
@@ -853,7 +814,7 @@
           <h3 class="offer-title">Browse Current Sephora Promotions</h3>
           <p class="offer-description">Visit Sephora through Smartcashly to browse current eligible promotions and seasonal beauty highlights before ordering.</p>
           <div class="offer-cashback">+ Get Extra 13% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-promotions')">🛍️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-promotions')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('sephora-savings')" style="cursor: pointer;">
@@ -866,7 +827,7 @@
           <h3 class="offer-title">Explore More Sephora Beauty Picks</h3>
           <p class="offer-description">Browse additional beauty categories and seasonal selections while keeping your tracked Smartcashly visit active.</p>
           <div class="offer-cashback">+ Get Extra 13% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-savings')">🔎 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('sephora-savings')">View offer</button>
         </div>
       </div>
     </div>

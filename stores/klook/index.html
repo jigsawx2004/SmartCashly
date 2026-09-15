@@ -595,56 +595,17 @@
       }
     }
   </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
 
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" placeholder="Search any store ..." />
-        <button type="submit" aria-label="Search">🔍</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
       </form>
 
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
@@ -664,7 +625,7 @@
       <div class="store-details">
         <h1 class="store-title">Klook</h1>
         <p class="store-subtitle">Travel activities, tickets and experiences with cashback rewards</p>
-        <div class="cashback-highlight">💰 Earn up to 14% Cashback</div>
+        <div class="cashback-highlight">Earn up to 14% Cashback</div>
         <p>Klook helps travellers book experiences, attraction tickets, tours, transport, theme parks, local activities, dining deals and destination services before or during a trip. Plan memorable travel days, compare convenient options and earn cashback on eligible bookings.</p>
       </div>
     </div>
@@ -678,8 +639,8 @@
           </div>
           <h3 class="offer-title">Book with Klook &amp; Earn Cashback</h3>
           <p class="offer-description">Start your Klook booking for attractions, activities, tours, transport and destination experiences.</p>
-          <div class="offer-cashback" style="color: #ff6b35;">💰 Earn up to 14% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-general')">💰 Shop &amp; Earn</button>
+          <div class="offer-cashback" style="color: #ff6b35;">Earn up to 14% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-general')">Shop &amp; earn</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('klook-attractions')" style="cursor: pointer;">
@@ -690,7 +651,7 @@
           <h3 class="offer-title">Attraction Tickets and City Passes</h3>
           <p class="offer-description">Book museums, observation decks, landmarks, aquariums and popular attraction tickets before you go.</p>
           <div class="offer-cashback">+ Get Extra 14% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-attractions')">🎟️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-attractions')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('klook-tours')" style="cursor: pointer;">
@@ -701,7 +662,7 @@
           <h3 class="offer-title">Tours, Day Trips and Local Experiences</h3>
           <p class="offer-description">Explore guided tours, day trips, cultural experiences, adventure activities and local highlights.</p>
           <div class="offer-cashback">+ Get Extra 14% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-tours')">🚌 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-tours')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('klook-theme-parks')" style="cursor: pointer;">
@@ -712,7 +673,7 @@
           <h3 class="offer-title">Theme Parks and Family Activities</h3>
           <p class="offer-description">Plan theme park visits, family attractions, shows and fun experiences for kids or groups.</p>
           <div class="offer-cashback">+ Get Extra 14% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-theme-parks')">🎢 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-theme-parks')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('klook-transport')" style="cursor: pointer;">
@@ -723,7 +684,7 @@
           <h3 class="offer-title">Airport Transfers and Transport Passes</h3>
           <p class="offer-description">Arrange airport transfers, train passes, buses, ferries, car services and city transport options.</p>
           <div class="offer-cashback">+ Get Extra 14% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-transport')">🚆 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-transport')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('klook-food')" style="cursor: pointer;">
@@ -734,7 +695,7 @@
           <h3 class="offer-title">Food, Dining and Local Treats</h3>
           <p class="offer-description">Find restaurant deals, food tours, café vouchers, tasting experiences and destination dining ideas.</p>
           <div class="offer-cashback">+ Get Extra 14% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-food')">🍜 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-food')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('klook-connectivity')" style="cursor: pointer;">
@@ -745,7 +706,7 @@
           <h3 class="offer-title">Travel SIM, eSIM and Connectivity</h3>
           <p class="offer-description">Stay connected with SIM cards, eSIM options, Wi-Fi devices and travel tech services.</p>
           <div class="offer-cashback">+ Get Extra 14% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-connectivity')">📱 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-connectivity')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('klook-hotels')" style="cursor: pointer;">
@@ -756,7 +717,7 @@
           <h3 class="offer-title">Stays, Packages and Travel Extras</h3>
           <p class="offer-description">Browse hotels, stay packages, luggage services, spa visits and convenient trip add-ons.</p>
           <div class="offer-cashback">+ Get Extra 14% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-hotels')">🏨 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('klook-hotels')">View offer</button>
         </div>
       </div>
     </div>

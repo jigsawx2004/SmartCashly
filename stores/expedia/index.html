@@ -600,56 +600,17 @@
       }
     }
   </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
 
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" placeholder="Search any store ..." />
-        <button type="submit" aria-label="Search">🔍</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
       </form>
 
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
@@ -669,7 +630,7 @@
       <div class="store-details">
         <h1 class="store-title">Expedia</h1>
         <p class="store-subtitle">Hotels, flights, packages and travel bookings with cashback rewards</p>
-        <div class="cashback-highlight">💰 Earn up to 5% Cashback</div>
+        <div class="cashback-highlight">Earn up to 5% Cashback</div>
         <p>Expedia helps travellers plan trips with hotels, flights, holiday packages, car rentals, activities and destination experiences in one place. Compare travel options, build a complete itinerary, book flexible stays or bundled trips, and earn cashback on eligible reservations.</p>
       </div>
     </div>
@@ -683,8 +644,8 @@
           </div>
           <h3 class="offer-title">Book with Expedia &amp; Earn Cashback</h3>
           <p class="offer-description">Start your Expedia booking for hotels, flights, packages, activities and travel essentials in one place.</p>
-          <div class="offer-cashback" style="color: #ff6b35;">💰 Earn up to 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-general')">💰 Shop &amp; Earn</button>
+          <div class="offer-cashback" style="color: #ff6b35;">Earn up to 5% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-general')">Shop &amp; earn</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('expedia-hotels')" style="cursor: pointer;">
@@ -695,7 +656,7 @@
           <h3 class="offer-title">Hotels, Resorts &amp; City Stays</h3>
           <p class="offer-description">Compare hotels, resorts, apartments and flexible stays for weekend breaks, business trips or longer holidays.</p>
           <div class="offer-cashback">+ Get Extra 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-hotels')">🏨 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-hotels')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('expedia-flights')" style="cursor: pointer;">
@@ -706,7 +667,7 @@
           <h3 class="offer-title">Flights for Domestic and International Trips</h3>
           <p class="offer-description">Search routes, compare airlines and organize your next flight booking through Expedia travel tools.</p>
           <div class="offer-cashback">+ Get Extra 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-flights')">✈️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-flights')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('expedia-packages')" style="cursor: pointer;">
@@ -717,7 +678,7 @@
           <h3 class="offer-title">Flight + Hotel Package Deals</h3>
           <p class="offer-description">Bundle parts of your trip together when planning a holiday, city escape or long-distance journey.</p>
           <div class="offer-cashback">+ Get Extra 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-packages')">🧳 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-packages')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('expedia-car-rentals')" style="cursor: pointer;">
@@ -728,7 +689,7 @@
           <h3 class="offer-title">Car Rentals for Your Destination</h3>
           <p class="offer-description">Reserve rental cars for airport arrivals, road trips and flexible travel plans after you land.</p>
           <div class="offer-cashback">+ Get Extra 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-car-rentals')">🚗 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-car-rentals')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('expedia-activities')" style="cursor: pointer;">
@@ -739,7 +700,7 @@
           <h3 class="offer-title">Tours, Attractions &amp; Things To Do</h3>
           <p class="offer-description">Discover activities, guided tours, tickets, day trips and local experiences for your destination.</p>
           <div class="offer-cashback">+ Get Extra 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-activities')">🎟️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-activities')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('expedia-vacation-rentals')" style="cursor: pointer;">
@@ -750,7 +711,7 @@
           <h3 class="offer-title">Vacation Rentals and Apartment Stays</h3>
           <p class="offer-description">Browse homes, apartments and larger stays for family travel, group trips or extended visits.</p>
           <div class="offer-cashback">+ Get Extra 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-vacation-rentals')">🏠 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-vacation-rentals')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('expedia-last-minute')" style="cursor: pointer;">
@@ -761,7 +722,7 @@
           <h3 class="offer-title">Last-Minute Travel Ideas</h3>
           <p class="offer-description">Check available stays and travel options when your plans are close or your dates are flexible.</p>
           <div class="offer-cashback">+ Get Extra 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-last-minute')">🌍 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('expedia-last-minute')">View offer</button>
         </div>
       </div>
     </div>

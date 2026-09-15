@@ -593,56 +593,17 @@
       }
     }
   </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
 
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" placeholder="Search any store ..." />
-        <button type="submit" aria-label="Search">🔍</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
       </form>
 
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
@@ -662,7 +623,7 @@
       <div class="store-details">
         <h1 class="store-title">iHerb</h1>
         <p class="store-subtitle">Vitamins, wellness, beauty and grocery essentials with cashback rewards</p>
-        <div class="cashback-highlight">💰 Earn up to 28% Cashback</div>
+        <div class="cashback-highlight">Earn up to 28% Cashback</div>
         <p>iHerb is an online destination for vitamins, supplements, natural beauty products, personal care, sports nutrition, grocery items and household essentials from well-known wellness brands. Browse daily health routines, clean beauty picks, pantry products and family essentials while earning cashback on eligible orders.</p>
       </div>
     </div>
@@ -676,8 +637,8 @@
           </div>
           <h3 class="offer-title">Shop at iHerb &amp; Earn Cashback</h3>
           <p class="offer-description">Start your iHerb order for wellness products, beauty care, groceries and everyday essentials.</p>
-          <div class="offer-cashback" style="color: #ff6b35;">💰 Earn up to 28% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-general')">💰 Shop &amp; Earn</button>
+          <div class="offer-cashback" style="color: #ff6b35;">Earn up to 28% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-general')">Shop &amp; earn</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('iherb-vitamins')" style="cursor: pointer;">
@@ -688,7 +649,7 @@
           <h3 class="offer-title">Vitamins and Daily Wellness Essentials</h3>
           <p class="offer-description">Browse multivitamins, minerals, capsules, gummies and routine-support products from trusted brands.</p>
           <div class="offer-cashback">+ Get Extra 28% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-vitamins')">💊 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-vitamins')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('iherb-supplements')" style="cursor: pointer;">
@@ -699,7 +660,7 @@
           <h3 class="offer-title">Supplements and Specialized Nutrition</h3>
           <p class="offer-description">Find formulas for common wellness goals, dietary preferences and daily supplement routines.</p>
           <div class="offer-cashback">+ Get Extra 28% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-supplements')">🌿 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-supplements')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('iherb-beauty')" style="cursor: pointer;">
@@ -710,7 +671,7 @@
           <h3 class="offer-title">Beauty, Skincare and Personal Care</h3>
           <p class="offer-description">Shop cleansers, moisturizers, haircare, body care, sunscreen, makeup and natural beauty favorites.</p>
           <div class="offer-cashback">+ Get Extra 28% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-beauty')">🧴 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-beauty')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('iherb-sports')" style="cursor: pointer;">
@@ -721,7 +682,7 @@
           <h3 class="offer-title">Sports Nutrition and Fitness Products</h3>
           <p class="offer-description">Compare protein powders, bars, hydration products, shaker bottles and workout-support essentials.</p>
           <div class="offer-cashback">+ Get Extra 28% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-sports')">🏋️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-sports')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('iherb-grocery')" style="cursor: pointer;">
@@ -732,7 +693,7 @@
           <h3 class="offer-title">Healthy Grocery and Pantry Picks</h3>
           <p class="offer-description">Stock up on snacks, teas, coffee, cooking ingredients, superfoods and specialty diet products.</p>
           <div class="offer-cashback">+ Get Extra 28% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-grocery')">🛒 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-grocery')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('iherb-baby-kids')" style="cursor: pointer;">
@@ -743,7 +704,7 @@
           <h3 class="offer-title">Baby, Kids and Family Essentials</h3>
           <p class="offer-description">Browse gentle care products, family-friendly snacks, baby items and everyday household staples.</p>
           <div class="offer-cashback">+ Get Extra 28% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-baby-kids')">👶 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-baby-kids')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="trackClick('iherb-brands')" style="cursor: pointer;">
@@ -754,7 +715,7 @@
           <h3 class="offer-title">Popular Wellness Brands and New Finds</h3>
           <p class="offer-description">Explore customer-favorite brands, trending products and fresh arrivals across iHerb categories.</p>
           <div class="offer-cashback">+ Get Extra 28% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-brands')">⭐ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('iherb-brands')">View offer</button>
         </div>
       </div>
     </div>

@@ -606,55 +606,16 @@
       }
     }
   </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" placeholder="Search any store ..." />
-        <button type="submit" aria-label="Search">🔍</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
       </form>
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
     </div>
@@ -669,7 +630,7 @@
       <div class="store-details">
         <h1 class="store-title">Dust+Cream</h1>
         <p class="store-subtitle">Beauty with cashback rewards</p>
-        <div class="cashback-highlight">💰 Up to 6% Cashback</div>
+        <div class="cashback-highlight">Up to 6% Cashback</div>
         <p>Makeup, skincare, fragrance and beauty accessories from the Greek beauty brand.</p>
       </div>
     </div>
@@ -683,8 +644,8 @@
           </div>
           <h3 class="offer-title">Shop at Dust+Cream &amp; Earn Cashback</h3>
           <p class="offer-description">Start your Dust+Cream purchase through Smartcashly and collect cashback after the eligible order or booking is completed and approved.</p>
-          <div class="offer-cashback" style="color: #ff6b35;">💰 Up to 6% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-general')">💰 Shop & Earn</button>
+          <div class="offer-cashback" style="color: #ff6b35;">Up to 6% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-general')">Shop &amp; earn</button>
         </div>
         <div class="offer-card" onclick="trackClick('dustandcream-makeup')" style="cursor: pointer;">
           <div class="offer-header">
@@ -694,7 +655,7 @@
           <h3 class="offer-title">Makeup at Dust+Cream</h3>
           <p class="offer-description">Explore makeup from Dust+Cream and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 6% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-makeup')">🛍️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-makeup')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('dustandcream-face-care')" style="cursor: pointer;">
           <div class="offer-header">
@@ -704,7 +665,7 @@
           <h3 class="offer-title">Face Care at Dust+Cream</h3>
           <p class="offer-description">Explore face care from Dust+Cream and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 6% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-face-care')">✨ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-face-care')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('dustandcream-body-care')" style="cursor: pointer;">
           <div class="offer-header">
@@ -714,7 +675,7 @@
           <h3 class="offer-title">Body Care at Dust+Cream</h3>
           <p class="offer-description">Explore body care from Dust+Cream and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 5.5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-body-care')">🔎 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-body-care')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('dustandcream-fragrance')" style="cursor: pointer;">
           <div class="offer-header">
@@ -724,7 +685,7 @@
           <h3 class="offer-title">Fragrance at Dust+Cream</h3>
           <p class="offer-description">Explore fragrance from Dust+Cream and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-fragrance')">⭐ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-fragrance')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('dustandcream-nails')" style="cursor: pointer;">
           <div class="offer-header">
@@ -734,7 +695,7 @@
           <h3 class="offer-title">Nails at Dust+Cream</h3>
           <p class="offer-description">Explore nails from Dust+Cream and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 5.5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-nails')">🎁 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-nails')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('dustandcream-accessories')" style="cursor: pointer;">
           <div class="offer-header">
@@ -744,7 +705,7 @@
           <h3 class="offer-title">Accessories at Dust+Cream</h3>
           <p class="offer-description">Explore accessories from Dust+Cream and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 4% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-accessories')">🏷️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-accessories')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('dustandcream-new-products')" style="cursor: pointer;">
           <div class="offer-header">
@@ -754,7 +715,7 @@
           <h3 class="offer-title">New Products at Dust+Cream</h3>
           <p class="offer-description">Explore new products from Dust+Cream and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 6% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-new-products')">🧭 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('dustandcream-new-products')">View offer</button>
         </div>
       </div>
     </div>

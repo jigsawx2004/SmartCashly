@@ -606,55 +606,16 @@
       }
     }
   </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" placeholder="Search any store ..." />
-        <button type="submit" aria-label="Search">🔍</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
       </form>
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
     </div>
@@ -669,7 +630,7 @@
       <div class="store-details">
         <h1 class="store-title">The Home Depot</h1>
         <p class="store-subtitle">Home Improvement with cashback rewards</p>
-        <div class="cashback-highlight">💰 Up to 13% Cashback</div>
+        <div class="cashback-highlight">Up to 13% Cashback</div>
         <p>Tools, appliances, building materials, garden supplies and home improvement products.</p>
       </div>
     </div>
@@ -683,8 +644,8 @@
           </div>
           <h3 class="offer-title">Shop at The Home Depot &amp; Earn Cashback</h3>
           <p class="offer-description">Start your The Home Depot purchase through Smartcashly and collect cashback after the eligible order or booking is completed and approved.</p>
-          <div class="offer-cashback" style="color: #ff6b35;">💰 Up to 13% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-general')">💰 Shop & Earn</button>
+          <div class="offer-cashback" style="color: #ff6b35;">Up to 13% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-general')">Shop &amp; earn</button>
         </div>
         <div class="offer-card" onclick="trackClick('homedepot-tools')" style="cursor: pointer;">
           <div class="offer-header">
@@ -694,7 +655,7 @@
           <h3 class="offer-title">Tools at The Home Depot</h3>
           <p class="offer-description">Explore tools from The Home Depot and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-tools')">🛍️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-tools')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('homedepot-appliances')" style="cursor: pointer;">
           <div class="offer-header">
@@ -704,7 +665,7 @@
           <h3 class="offer-title">Appliances at The Home Depot</h3>
           <p class="offer-description">Explore appliances from The Home Depot and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-appliances')">✨ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-appliances')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('homedepot-building-materials')" style="cursor: pointer;">
           <div class="offer-header">
@@ -714,7 +675,7 @@
           <h3 class="offer-title">Building Materials at The Home Depot</h3>
           <p class="offer-description">Explore building materials from The Home Depot and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 2% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-building-materials')">🔎 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-building-materials')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('homedepot-paint')" style="cursor: pointer;">
           <div class="offer-header">
@@ -724,7 +685,7 @@
           <h3 class="offer-title">Paint at The Home Depot</h3>
           <p class="offer-description">Explore paint from The Home Depot and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-paint')">⭐ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-paint')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('homedepot-garden')" style="cursor: pointer;">
           <div class="offer-header">
@@ -734,7 +695,7 @@
           <h3 class="offer-title">Garden at The Home Depot</h3>
           <p class="offer-description">Explore garden from The Home Depot and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-garden')">🎁 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-garden')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('homedepot-smart-home')" style="cursor: pointer;">
           <div class="offer-header">
@@ -744,7 +705,7 @@
           <h3 class="offer-title">Smart Home at The Home Depot</h3>
           <p class="offer-description">Explore smart home from The Home Depot and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 12% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-smart-home')">🏷️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-smart-home')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('homedepot-special-buys')" style="cursor: pointer;">
           <div class="offer-header">
@@ -754,7 +715,7 @@
           <h3 class="offer-title">Special Buys at The Home Depot</h3>
           <p class="offer-description">Explore special buys from The Home Depot and activate Smartcashly before completing an eligible purchase.</p>
           <div class="offer-cashback">+ 13% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-special-buys')">🧭 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('homedepot-special-buys')">View offer</button>
         </div>
       </div>
     </div>

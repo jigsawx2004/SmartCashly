@@ -595,55 +595,16 @@
       }
     }
   </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" placeholder="Search any store ..." />
-        <button type="submit" aria-label="Search">🔍</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
       </form>
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
     </div>
@@ -658,7 +619,7 @@
       <div class="store-details">
         <h1 class="store-title">Hotels.com</h1>
         <p class="store-subtitle">Hotels and accommodation with cashback rewards</p>
-        <div class="cashback-highlight">💰 Earn up to 8% Cashback</div>
+        <div class="cashback-highlight">Earn up to 8% Cashback</div>
         <p>Hotels.com helps travellers compare hotels, resorts, apartments and vacation rentals around the world. Search eligible stays, review current promotions and earn cashback after a completed approved booking.</p>
       </div>
     </div>
@@ -672,8 +633,8 @@
           </div>
           <h3 class="offer-title">Book with Hotels.com &amp; Earn Cashback</h3>
           <p class="offer-description">Start your Hotels.com purchase through SmartCashly and collect cashback after the eligible order or booking is completed and approved.</p>
-          <div class="offer-cashback" style="color: #ff6b35;">💰 Earn up to 8% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('hotelscom-general')">💰 Shop &amp; Earn</button>
+          <div class="offer-cashback" style="color: #ff6b35;">Earn up to 8% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('hotelscom-general')">Shop &amp; earn</button>
         </div>
         <div class="offer-card" onclick="trackClick('hotelscom-member-prices')" style="cursor: pointer;">
           <div class="offer-header">
@@ -683,7 +644,7 @@
           <h3 class="offer-title">Member Prices – Save Up to 20%</h3>
           <p class="offer-description">Eligible One Key members can find Member Prices offering savings of up to 20% on qualifying stays.</p>
           <div class="offer-cashback">+ Get Extra 6% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('hotelscom-member-prices')">⭐ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('hotelscom-member-prices')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('hotelscom-dream-stay')" style="cursor: pointer;">
           <div class="offer-header">
@@ -693,7 +654,7 @@
           <h3 class="offer-title">30% or More Off Selected Dream Stays</h3>
           <p class="offer-description">Browse participating properties included in current deals with savings of 30% or more.</p>
           <div class="offer-cashback">+ Get Extra 8% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('hotelscom-dream-stay')">🏨 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('hotelscom-dream-stay')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('hotelscom-under-100')" style="cursor: pointer;">
           <div class="offer-header">
@@ -703,7 +664,7 @@
           <h3 class="offer-title">Selected Stays Under $100 per Night</h3>
           <p class="offer-description">Explore selected properties advertised below $100 per night, subject to destination and dates.</p>
           <div class="offer-cashback">+ Get Extra 6% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('hotelscom-under-100')">💵 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('hotelscom-under-100')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('hotelscom-weekend')" style="cursor: pointer;">
           <div class="offer-header">
@@ -713,7 +674,7 @@
           <h3 class="offer-title">Save 20% or More on Weekend Getaways</h3>
           <p class="offer-description">Check participating weekend properties displaying savings of at least 20%.</p>
           <div class="offer-cashback">+ Get Extra 7% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('hotelscom-weekend')">🧳 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('hotelscom-weekend')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('hotelscom-beach')" style="cursor: pointer;">
           <div class="offer-header">
@@ -723,7 +684,7 @@
           <h3 class="offer-title">Beach and Resort Deals</h3>
           <p class="offer-description">Search coastal hotels, resorts and relaxing destinations for your next escape.</p>
           <div class="offer-cashback">+ Get Extra 7% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('hotelscom-beach')">🏖️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('hotelscom-beach')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('hotelscom-rentals')" style="cursor: pointer;">
           <div class="offer-header">
@@ -733,7 +694,7 @@
           <h3 class="offer-title">Apartments and Vacation Rentals</h3>
           <p class="offer-description">Compare apartments, homes, villas and other accommodation alternatives for longer or group stays.</p>
           <div class="offer-cashback">+ Get Extra 7% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('hotelscom-rentals')">🏡 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('hotelscom-rentals')">View offer</button>
         </div>
       </div>
     </div>

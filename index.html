@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smartcashly</title>
+  <meta name="description" content="Earn cashback at 98 partner stores with clear offers and simple activation." />
+  <title>Smartcashly — Cashback made clear</title>
   <link rel="icon" type="image/png" sizes="64x64" href="site-logo/smartcashly-favicon.png" />
   <style>
     /* Advanced shiny dark yellow background with floating particles */
@@ -1037,33 +1038,10 @@ footer::before {
     }
 
 </style>
-
-  <style data-polished-store-logos>
-    .store-logo,
-    .search-autocomplete .store-logo {
-      border: 1px solid rgba(15, 23, 42, 0.13) !important;
-      border-radius: 14px !important;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.11) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-      object-fit: contain !important;
-      padding: 10px !important;
-    }
-
-    .search-autocomplete .store-logo {
-      border-radius: 10px !important;
-      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.09) !important;
-      padding: 7px !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-home" data-ui-version="3">
 <!-- Falling cash animation with 20 bills -->
 <ul class="cash-rain" aria-hidden="true">
     <li>$</li><li>$</li><li>$</li><li>$</li><li>$</li><li>$</li>
@@ -1073,11 +1051,11 @@ footer::before {
 </ul>
 
   <header>
-    <img src="site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" name="q" id="search-input" placeholder="Search any store ..." aria-label="Search Smartcashly" autocomplete="off" />
-        <button type="submit" aria-label="Search">📦</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
         <div id="search-autocomplete" class="search-autocomplete"></div>
       </form>
       <a href="general/all-stores/" class="all-stores-btn">View All Stores</a>
@@ -1111,95 +1089,103 @@ footer::before {
 
   <main>
     <div class="welcome-section">
-      <h2>Welcome to Smartcashly</h2>
-      <p>💲The most generous cashback platform💲</p>
+      <p class="hero-eyebrow">Cashback made clear</p>
+      <h1>Keep more of what you spend.</h1>
+      <p class="hero-copy">Choose a store, activate an offer, and shop as usual. Smartcashly turns everyday purchases into money back.</p>
+      <div class="hero-actions">
+        <a href="/general/all-stores/" class="hero-cta">Explore all stores</a>
+        <span class="hero-meta">98 partner stores · cashback on every listing</span>
+      </div>
     </div>
 
     <div class="stores-section">
-      <h2 class="section-title">🔥 Best offers currently</h2>
+      <div class="section-heading">
+        <h2 class="section-title">Featured cashback</h2>
+        <a href="/general/all-stores/" class="section-link">See all stores →</a>
+      </div>
       <div class="stores-grid">
         <div class="store-card" onclick="window.location.href='/stores/boxnow'" style="cursor: pointer;">
           <img src="/store-logos/store-logo-boxnow.png" alt="Box Now Logo" class="store-logo" />
           <div class="store-name">Box Now</div>
           <div class="store-description">Fast and reliable delivery service with amazing cashback rewards on every shipment</div>
-          <div class="cashback-badge">💰 Up to 35% Cashback</div>
+          <div class="cashback-badge">Up to 35% Cashback</div>
           <ul class="store-features">
             <li>Package delivery service</li>
             <li>International shipping options</li>
             <li>Send packages from 2€</li>
             <li>Send a variety of package sizes</li>
           </ul>
-          <button class="shop-now-btn" onclick="event.stopPropagation(); window.location.href='/stores/boxnow'"style="min-height: 72px;">📦 Shop Now & Earn Cashback</button>
+          <button class="shop-now-btn" onclick="event.stopPropagation(); window.location.href='/stores/boxnow'"style="min-height: 72px;">Shop &amp; earn</button>
         </div>
 
         <div class="store-card" onclick="window.location.href='/stores/shein'" style="cursor: pointer;">
           <img src="/store-logos/store-logo-shein.png" alt="Shein Logo" class="store-logo" />
           <div class="store-name">Shein</div>
           <div class="store-description">Fashion store with cashback rewards on trendy clothing for women, men, and kids</div>
-          <div class="cashback-badge">💰 Up to 30% Cashback</div>
+          <div class="cashback-badge">Up to 30% Cashback</div>
           <ul class="store-features">
             <li>Trendy women's fashion and accessories</li>
             <li>Men's and kids' clothing collections</li>
             <li>Affordable prices with frequent sales</li>
             <li>Home decor and lifestyle products</li>
           </ul>
-          <button class="shop-now-btn" onclick="event.stopPropagation(); window.location.href='/stores/shein'"style="min-height: 72px;">👗 Shop Now & Earn Cashback</button>
+          <button class="shop-now-btn" onclick="event.stopPropagation(); window.location.href='/stores/shein'"style="min-height: 72px;">Shop &amp; earn</button>
         </div>
 
         <div class="store-card" onclick="window.location.href='/stores/benetton'" style="cursor: pointer;">
           <img src="/store-logos/store-logo-benetton.png" alt="Benetton Logo" class="store-logo" />
           <div class="store-name">Benetton</div>
           <div class="store-description">Fashion store with cashback rewards on colorful Italian clothing for the whole family</div>
-          <div class="cashback-badge">💰 Up to 25% Cashback</div>
+          <div class="cashback-badge">Up to 25% Cashback</div>
           <ul class="store-features">
             <li>Iconic Italian fashion since 1965</li>
             <li>Vibrant colors and multicultural style</li>
             <li>Quality clothing for men, women & kids</li>
             <li>Knitwear and contemporary designs</li>
           </ul>
-          <button class="shop-now-btn" onclick="event.stopPropagation(); window.location.href='/stores/benetton'"style="min-height: 72px;">👕 Shop Now & Earn Cashback</button>
+          <button class="shop-now-btn" onclick="event.stopPropagation(); window.location.href='/stores/benetton'"style="min-height: 72px;">Shop &amp; earn</button>
         </div>
 
         <div class="store-card" onclick="window.location.href='/stores/myprotein'" style="cursor: pointer;">
           <img src="/store-logos/store-logo-myprotein.png" alt="Myprotein Logo" class="store-logo" />
           <div class="store-name">Myprotein</div>
           <div class="store-description">Supplements store with cashback rewards on nutrition products</div>
-          <div class="cashback-badge">💰 Up to 20% Cashback</div>
+          <div class="cashback-badge">Up to 20% Cashback</div>
           <ul class="store-features">
             <li>Premium whey protein powders</li>
             <li>Creatine and pre-workout supplements</li>
             <li>Vitamins and amino acids</li>
             <li>Protein bars and health snacks</li>
           </ul>
-          <button class="shop-now-btn" onclick="event.stopPropagation(); window.location.href='/stores/myprotein'"style="min-height: 72px;">💪 Shop Now & Earn Cashback</button>
+          <button class="shop-now-btn" onclick="event.stopPropagation(); window.location.href='/stores/myprotein'"style="min-height: 72px;">Shop &amp; earn</button>
         </div>
 
         <div class="store-card" onclick="window.location.href='/stores/nike'" style="cursor: pointer;">
           <img src="/store-logos/store-logo-nike.png" alt="Nike Logo" class="store-logo" />
           <div class="store-name">Nike</div>
           <div class="store-description">Fashion store with cashback rewards on athletic footwear and sports equipment</div>
-          <div class="cashback-badge">💰 Up to 17% Cashback</div>
+          <div class="cashback-badge">Up to 17% Cashback</div>
           <ul class="store-features">
             <li>Athletic footwear and apparel</li>
             <li>Sports equipment and accessories</li>
             <li>Men's, women's and kids' collections</li>
             <li>Limited edition releases</li>
           </ul>
-          <button class="shop-now-btn" onclick="event.stopPropagation(); window.location.href='/stores/nike'"style="min-height: 72px;">👟 Shop Now & Earn Cashback</button>
+          <button class="shop-now-btn" onclick="event.stopPropagation(); window.location.href='/stores/nike'"style="min-height: 72px;">Shop &amp; earn</button>
         </div>
 
         <div class="store-card" onclick="window.location.href='/stores/aegeanairlines'" style="cursor: pointer;">
           <img src="/store-logos/store-logo-aegeanairlines.png" alt="Aegean Airlines Logo" class="store-logo" />
           <div class="store-name">Aegean Airlines</div>
           <div class="store-description">Airline with cashback rewards on flight bookings across Europe</div>
-          <div class="cashback-badge">💰 Up to 15% Cashback</div>
+          <div class="cashback-badge">Up to 15% Cashback</div>
           <ul class="store-features">
             <li>Flights to Athens, Thessaloniki & Greek islands</li>
             <li>European destinations & connections</li>
             <li>Miles+Bonus loyalty program benefits</li>
             <li>Business class upgrades available</li>
           </ul>
-          <button class="shop-now-btn" onclick="event.stopPropagation(); window.location.href='/stores/aegeanairlines'"style="min-height: 72px;">✈️ Shop Now & Earn Cashback</button>
+          <button class="shop-now-btn" onclick="event.stopPropagation(); window.location.href='/stores/aegeanairlines'"style="min-height: 72px;">Shop &amp; earn</button>
         </div>
       </div>
     </div>

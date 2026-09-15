@@ -595,55 +595,16 @@
       }
     }
   </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" placeholder="Search any store ..." />
-        <button type="submit" aria-label="Search">🔍</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
       </form>
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
     </div>
@@ -658,7 +619,7 @@
       <div class="store-details">
         <h1 class="store-title">Public</h1>
         <p class="store-subtitle">Technology, books and entertainment with cashback rewards</p>
-        <div class="cashback-highlight">💰 Earn up to 6% Cashback</div>
+        <div class="cashback-highlight">Earn up to 6% Cashback</div>
         <p>Public brings together books, technology, home appliances, gaming, toys, entertainment and refurbished devices in one Greek online destination. Discover current collections and earn cashback on eligible approved orders.</p>
       </div>
     </div>
@@ -672,8 +633,8 @@
           </div>
           <h3 class="offer-title">Shop at Public &amp; Earn Cashback</h3>
           <p class="offer-description">Start your Public purchase through SmartCashly and collect cashback after the eligible order or booking is completed and approved.</p>
-          <div class="offer-cashback" style="color: #ff6b35;">💰 Earn up to 6% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-general')">💰 Shop &amp; Earn</button>
+          <div class="offer-cashback" style="color: #ff6b35;">Earn up to 6% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-general')">Shop &amp; earn</button>
         </div>
         <div class="offer-card" onclick="trackClick('public-sale')" style="cursor: pointer;">
           <div class="offer-header">
@@ -683,7 +644,7 @@
           <h3 class="offer-title">Current Public Sale</h3>
           <p class="offer-description">Browse selected technology, entertainment, book and home categories included in current sale activity.</p>
           <div class="offer-cashback">+ Get Extra 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-sale')">🏷️ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-sale')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('public-public-plus')" style="cursor: pointer;">
           <div class="offer-header">
@@ -693,7 +654,7 @@
           <h3 class="offer-title">Public+ Rewards and Member Benefits</h3>
           <p class="offer-description">Explore the Public+ programme, member rewards and eligible wallet benefits available through Public.</p>
           <div class="offer-cashback">+ Get Extra 3% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-public-plus')">⭐ Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-public-plus')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('public-books')" style="cursor: pointer;">
           <div class="offer-header">
@@ -703,7 +664,7 @@
           <h3 class="offer-title">Books, Bestsellers and New Releases</h3>
           <p class="offer-description">Find Greek and international books, school titles, comics, children’s books and new releases.</p>
           <div class="offer-cashback">+ Get Extra 4% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-books')">📚 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-books')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('public-tech')" style="cursor: pointer;">
           <div class="offer-header">
@@ -713,7 +674,7 @@
           <h3 class="offer-title">Smartphones, Laptops and Technology</h3>
           <p class="offer-description">Compare phones, computers, tablets, wearables, accessories and smart devices.</p>
           <div class="offer-cashback">+ Get Extra 4% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-tech')">💻 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-tech')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('public-appliances')" style="cursor: pointer;">
           <div class="offer-header">
@@ -723,7 +684,7 @@
           <h3 class="offer-title">Home Appliances and Personal Care</h3>
           <p class="offer-description">Shop major and small appliances, home equipment and personal-care technology.</p>
           <div class="offer-cashback">+ Get Extra 3.5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-appliances')">🏠 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-appliances')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('public-gaming')" style="cursor: pointer;">
           <div class="offer-header">
@@ -733,7 +694,7 @@
           <h3 class="offer-title">Gaming, Toys and Entertainment</h3>
           <p class="offer-description">Discover consoles, games, collectibles, toys, music, films and entertainment products.</p>
           <div class="offer-cashback">+ Get Extra 5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-gaming')">🎮 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-gaming')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('public-refurbished')" style="cursor: pointer;">
           <div class="offer-header">
@@ -743,7 +704,7 @@
           <h3 class="offer-title">Refurbished Smartphones</h3>
           <p class="offer-description">Consider selected refurbished phones for a lower-cost route to popular devices.</p>
           <div class="offer-cashback">+ Get Extra 3% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-refurbished')">📱 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('public-refurbished')">View offer</button>
         </div>
       </div>
     </div>

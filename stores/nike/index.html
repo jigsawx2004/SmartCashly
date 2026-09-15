@@ -201,54 +201,15 @@
     }
 
 </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" placeholder="Search any store ..." aria-label="Search stores" />
-        <button type="submit" aria-label="Search">🔍</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
       </form>
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
     </div>
@@ -260,20 +221,20 @@
       <div class="store-details">
         <h1 class="store-title">Nike</h1>
         <p class="store-subtitle">Fashion store with cashback rewards on athletic footwear</p>
-        <div class="cashback-highlight">💰 Earn up to 17% Cashback</div>
+        <div class="cashback-highlight">Earn up to 17% Cashback</div>
         <p>Nike is the world's leading athletic footwear and apparel brand, offering innovative products for athletes and fashion enthusiasts. From iconic sneakers to performance sportswear, Nike combines cutting-edge technology with timeless style. Shop the latest collections and earn cashback on every purchase.</p>
       </div>
     </div>
     <div class="offers-section"><div class="offers-grid">
-      <div class="offer-card" onclick="openNikeOffer('cashback')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type cashback">CASHBACK</div></div><h3 class="offer-title">Shop at Nike & Earn Cashback</h3><p class="offer-description">Browse the full Nike collection and earn cashback on every athletic purchase you make!</p><div style="height:24px"></div><div class="offer-cashback">💰 Earn up to 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('cashback')">💰 Shop & Earn</button></div>
-      <div class="offer-card" onclick="showCouponModal()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type coupon">COUPON</div></div><h3 class="offer-title">Free Shipping on Your Nike Order</h3><p class="offer-description">Use the exclusive coupon code FREESHIP to get free shipping on your Nike order!</p><div style="height:24px"></div><div class="offer-cashback">🎫 Get Free Shipping Coupon + Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();showCouponModal()">🎫 Get Coupon</button></div>
-      <div class="offer-card" onclick="openNikeOffer('airMax')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div><h3 class="offer-title">Women's Air Max - 40% Off</h3><p class="offer-description">Experience revolutionary Air cushioning technology with iconic style and comfort!</p><div style="height:24px"></div><div class="offer-cashback">+ Get Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('airMax')">👟 Get Offer</button></div>
-      <div class="offer-card" onclick="openNikeOffer('driFit')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div><h3 class="offer-title">Dri-FIT Collection - 30% Off</h3><p class="offer-description">Stay dry and fresh during intense workouts with moisture-wicking technology!</p><div style="height:24px"></div><div class="offer-cashback">+ Get Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('driFit')">💪 Get Offer</button></div>
-      <div class="offer-card" onclick="openNikeOffer('jordan')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div><h3 class="offer-title">Jordan Retro Shoes - 25% Off</h3><p class="offer-description">Step into basketball legend with authentic retro designs and premium materials!</p><div style="height:24px"></div><div class="offer-cashback">+ Get Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('jordan')">🏀 Get Offer</button></div>
-      <div class="offer-card" onclick="openNikeOffer('running')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div><h3 class="offer-title">Running Shoes - 35% Off</h3><p class="offer-description">Lightweight responsive cushioning for your best run yet - mile after mile!</p><div style="height:24px"></div><div class="offer-cashback">+ Get Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('running')">🏃‍♀️ Get Offer</button></div>
-      <div class="offer-card" onclick="openNikeOffer('kids')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div><h3 class="offer-title">Kids' Sportswear - 30% Off</h3><p class="offer-description">Durable and comfortable athletic wear designed for active young champions!</p><div style="height:24px"></div><div class="offer-cashback">+ Get Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('kids')">👶 Get Offer</button></div>
-      <div class="offer-card" onclick="openNikeOffer('basketball')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div><h3 class="offer-title">Basketball Shoes - 20% Off</h3><p class="offer-description">Dominate the court with superior traction and ankle support for peak performance!</p><div style="height:24px"></div><div class="offer-cashback">+ Get Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('basketball')">🏀 Get Offer</button></div>
-      <div class="offer-card" onclick="openNikeOffer('training')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div><h3 class="offer-title">Training Gear - 45% Off</h3><p class="offer-description">Professional equipment and accessories to elevate your fitness game to the next level!</p><div style="height:24px"></div><div class="offer-cashback">+ Get Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('training')">💪 Get Offer</button></div>
+      <div class="offer-card" onclick="openNikeOffer('cashback')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type cashback">CASHBACK</div></div><h3 class="offer-title">Shop at Nike & Earn Cashback</h3><p class="offer-description">Browse the full Nike collection and earn cashback on every athletic purchase you make!</p><div style="height:24px"></div><div class="offer-cashback">Earn up to 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('cashback')">Shop &amp; earn</button></div>
+      <div class="offer-card" onclick="showCouponModal()"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type coupon">COUPON</div></div><h3 class="offer-title">Free Shipping on Your Nike Order</h3><p class="offer-description">Use the exclusive coupon code FREESHIP to get free shipping on your Nike order!</p><div style="height:24px"></div><div class="offer-cashback">Get Free Shipping Coupon + Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();showCouponModal()">View offer</button></div>
+      <div class="offer-card" onclick="openNikeOffer('airMax')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div><h3 class="offer-title">Women's Air Max - 40% Off</h3><p class="offer-description">Experience revolutionary Air cushioning technology with iconic style and comfort!</p><div style="height:24px"></div><div class="offer-cashback">+ Get Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('airMax')">View offer</button></div>
+      <div class="offer-card" onclick="openNikeOffer('driFit')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div><h3 class="offer-title">Dri-FIT Collection - 30% Off</h3><p class="offer-description">Stay dry and fresh during intense workouts with moisture-wicking technology!</p><div style="height:24px"></div><div class="offer-cashback">+ Get Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('driFit')">View offer</button></div>
+      <div class="offer-card" onclick="openNikeOffer('jordan')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div><h3 class="offer-title">Jordan Retro Shoes - 25% Off</h3><p class="offer-description">Step into basketball legend with authentic retro designs and premium materials!</p><div style="height:24px"></div><div class="offer-cashback">+ Get Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('jordan')">View offer</button></div>
+      <div class="offer-card" onclick="openNikeOffer('running')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div><h3 class="offer-title">Running Shoes - 35% Off</h3><p class="offer-description">Lightweight responsive cushioning for your best run yet - mile after mile!</p><div style="height:24px"></div><div class="offer-cashback">+ Get Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('running')">View offer</button></div>
+      <div class="offer-card" onclick="openNikeOffer('kids')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div><h3 class="offer-title">Kids' Sportswear - 30% Off</h3><p class="offer-description">Durable and comfortable athletic wear designed for active young champions!</p><div style="height:24px"></div><div class="offer-cashback">+ Get Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('kids')">View offer</button></div>
+      <div class="offer-card" onclick="openNikeOffer('basketball')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div><h3 class="offer-title">Basketball Shoes - 20% Off</h3><p class="offer-description">Dominate the court with superior traction and ankle support for peak performance!</p><div style="height:24px"></div><div class="offer-cashback">+ Get Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('basketball')">View offer</button></div>
+      <div class="offer-card" onclick="openNikeOffer('training')"><div class="offer-header"><div class="offer-logo"></div><div class="offer-type">OFFER</div></div><h3 class="offer-title">Training Gear - 45% Off</h3><p class="offer-description">Professional equipment and accessories to elevate your fitness game to the next level!</p><div style="height:24px"></div><div class="offer-cashback">+ Get Extra 17% Cashback</div><button class="offer-button" onclick="event.stopPropagation();openNikeOffer('training')">View offer</button></div>
     </div></div>
   </main>
   <footer><span class="footer-copy">©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.</span></footer>

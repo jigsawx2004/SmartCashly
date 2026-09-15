@@ -595,55 +595,16 @@
       }
     }
   </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-store" data-ui-version="3">
   <header>
-    <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
     <div class="center-group">
       <form class="search-bar" action="#" method="get">
         <input type="search" placeholder="Search any store ..." />
-        <button type="submit" aria-label="Search">🔍</button>
+        <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
       </form>
       <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
     </div>
@@ -658,7 +619,7 @@
       <div class="store-details">
         <h1 class="store-title">New Balance</h1>
         <p class="store-subtitle">Running, lifestyle and training products with cashback rewards</p>
-        <div class="cashback-highlight">💰 Earn up to 6% Cashback</div>
+        <div class="cashback-highlight">Earn up to 6% Cashback</div>
         <p>New Balance combines performance footwear, lifestyle trainers, clothing and accessories for men, women and children. Shop eligible products and earn cashback after approval.</p>
       </div>
     </div>
@@ -672,8 +633,8 @@
           </div>
           <h3 class="offer-title">Shop at New Balance &amp; Earn Cashback</h3>
           <p class="offer-description">Start your New Balance purchase through SmartCashly and collect cashback after the eligible order or booking is completed and approved.</p>
-          <div class="offer-cashback" style="color: #ff6b35;">💰 Earn up to 6% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('newbalance-general')">💰 Shop &amp; Earn</button>
+          <div class="offer-cashback" style="color: #ff6b35;">Earn up to 6% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('newbalance-general')">Shop &amp; earn</button>
         </div>
         <div class="offer-card" onclick="trackClick('newbalance-women-outlet')" style="cursor: pointer;">
           <div class="offer-header">
@@ -683,7 +644,7 @@
           <h3 class="offer-title">Women’s and Outlet Deals – Up to 68% Off</h3>
           <p class="offer-description">Browse selected women’s products and outlet styles with advertised savings reaching up to 68%.</p>
           <div class="offer-cashback">+ Get Extra 6% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('newbalance-women-outlet')">🔥 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('newbalance-women-outlet')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('newbalance-men')" style="cursor: pointer;">
           <div class="offer-header">
@@ -693,7 +654,7 @@
           <h3 class="offer-title">Men’s Selected Deals – Up to 62% Off</h3>
           <p class="offer-description">Explore selected men’s trainers, clothing and accessories with reductions reaching up to 62%.</p>
           <div class="offer-cashback">+ Get Extra 6% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('newbalance-men')">👟 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('newbalance-men')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('newbalance-kids')" style="cursor: pointer;">
           <div class="offer-header">
@@ -703,7 +664,7 @@
           <h3 class="offer-title">Kids’ Selected Deals – Up to 61% Off</h3>
           <p class="offer-description">Find selected children’s footwear and clothing displaying savings reaching up to 61%.</p>
           <div class="offer-cashback">+ Get Extra 5.5% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('newbalance-kids')">🧒 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('newbalance-kids')">View offer</button>
         </div>
         <div class="offer-card" onclick="trackClick('newbalance-shipping')" style="cursor: pointer;">
           <div class="offer-header">
@@ -713,7 +674,7 @@
           <h3 class="offer-title">Free Delivery on Orders Over €59</h3>
           <p class="offer-description">Eligible deliveries in Greece qualify for free shipping when the order exceeds €59.</p>
           <div class="offer-cashback">+ Get Extra 6% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); trackClick('newbalance-shipping')">📦 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); trackClick('newbalance-shipping')">View offer</button>
         </div>
       </div>
     </div>

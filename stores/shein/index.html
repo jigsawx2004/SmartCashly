@@ -763,56 +763,17 @@ footer::before {
     }
 
 </style>
-
-  <style data-polished-store-logos>
-    .store-logo-large,
-    .offer-logo {
-      border-style: solid !important;
-      border-color: rgba(15, 23, 42, 0.14) !important;
-      background-color: rgba(255, 255, 255, 0.96) !important;
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-origin: content-box !important;
-      background-clip: padding-box !important;
-      box-sizing: border-box !important;
-    }
-
-    .store-logo-large {
-      border-width: 1px !important;
-      border-radius: 14px !important;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.13) !important;
-      padding: 12px !important;
-    }
-
-    .offer-logo {
-      border-width: 1px !important;
-      border-radius: 10px !important;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.11) !important;
-      padding: 6px !important;
-    }
-
-    .store-logo-large img,
-    .offer-logo img {
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      object-fit: contain !important;
-      display: block !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
 </head>
 
-<body>
+<body class="page-store" data-ui-version="3">
  <header>
-  <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+  <a href="/" class="brand-home" aria-label="Smartcashly home"><img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" /></a>
 
  <div class="center-group">
   <form class="search-bar" action="#" method="get">
     <input type="search" placeholder="Search any store ..." />
-    <button type="submit" aria-label="Search">🔍</button>
+    <button type="submit" aria-label="Search"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
   </form>
   <a href="../../general/all-stores/" class="all-stores-btn">View All Stores</a>
 </div>
@@ -828,7 +789,7 @@ footer::before {
       <div class="store-details">
         <h1 class="store-title">Shein</h1>
         <p class="store-subtitle">Fashion store with cashback rewards on trendy clothing</p>
-        <div class="cashback-highlight">💰 Earn up to 30% Cashback</div>
+        <div class="cashback-highlight">Earn up to 30% Cashback</div>
         <p>Shein is a global online fashion and lifestyle retailer offering trendy, affordable clothing for women, men, and kids. Known for its fast fashion approach, Shein provides thousands of new styles daily including dresses, tops, bottoms, shoes, accessories, and home decor. With competitive prices and frequent sales, Shein makes it easy to stay on-trend without breaking the bank.</p>
       </div>
     </div>
@@ -843,8 +804,8 @@ footer::before {
           <h3 class="offer-title">Shop at Shein & Earn Cashback</h3>
           <p class="offer-description">Browse the entire Shein collection and earn cashback on every fashion purchase you make!</p>
           <div style="height: 48px;"></div>
-          <div class="offer-cashback" style="color: #ff6b35;">💰 Earn up to 30% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">💰 Shop & Earn</button>
+          <div class="offer-cashback" style="color: #ff6b35;">Earn up to 30% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">Shop &amp; earn</button>
         </div>
 
         <div class="offer-card" onclick="showCouponModal()" style="cursor: pointer;">
@@ -855,8 +816,8 @@ footer::before {
           <h3 class="offer-title">10% Off Your First Purchase</h3>
           <p class="offer-description">Get an exclusive discount coupon for 10% off your first order at Shein!</p>
           <div style="height: 24px;"></div>
-          <div class="offer-cashback">🎫 Get Exclusive Coupon + Extra 30% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); showCouponModal()">🎫 Get Coupon</button>
+          <div class="offer-cashback">Get Exclusive Coupon + Extra 30% Cashback</div>
+          <button class="offer-button" onclick="event.stopPropagation(); showCouponModal()">View offer</button>
         </div>
 
         <div class="offer-card" onclick="window.open('https://us.shein.com/Women-Dresses-c-1727.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')" style="cursor: pointer;">
@@ -868,7 +829,7 @@ footer::before {
           <p class="offer-description">Discover trendy dresses for every occasion from casual to formal wear!</p>
           <div style="height: 48px;"></div>
           <div class="offer-cashback">+ Get Extra 30% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/Women-Dresses-c-1727.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">👗 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/Women-Dresses-c-1727.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="window.open('https://us.shein.com/Women-Tops-c-1766.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')" style="cursor: pointer;">
@@ -880,7 +841,7 @@ footer::before {
           <p class="offer-description">Shop the latest collection of stylish tops, blouses, and tees for every style!</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Get Extra 30% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/Women-Tops-c-1766.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">👚 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/Women-Tops-c-1766.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="window.open('https://us.shein.com/discount/student-discount?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')" style="cursor: pointer;">
@@ -892,7 +853,7 @@ footer::before {
           <p class="offer-description">Exclusive student discount on all fashion items - verify your student status!</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Get Extra 30% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/discount/student-discount?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">🎓 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/discount/student-discount?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="window.open('https://us.shein.com/Curve-Plus-Size-c-1889.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')" style="cursor: pointer;">
@@ -904,7 +865,7 @@ footer::before {
           <p class="offer-description">Curve-friendly fashion with the latest trends in extended sizes for every body!</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Get Extra 30% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/Curve-Plus-Size-c-1889.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">💃 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/Curve-Plus-Size-c-1889.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="window.open('https://us.shein.com/Men-c-1978.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')" style="cursor: pointer;">
@@ -916,7 +877,7 @@ footer::before {
           <p class="offer-description">Trendy men's fashion including shirts, pants, shoes, and accessories!</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Get Extra 30% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/Men-c-1978.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">👕 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/Men-c-1978.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="window.open('https://us.shein.com/Women-Bags-c-1773.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')" style="cursor: pointer;">
@@ -928,7 +889,7 @@ footer::before {
           <p class="offer-description">Complete your look with trendy shoes, bags, jewelry, and accessories!</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Get Extra 30% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/Women-Bags-c-1773.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">👠 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/Women-Bags-c-1773.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="window.open('https://us.shein.com/Kids-c-1864.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')" style="cursor: pointer;">
@@ -940,7 +901,7 @@ footer::before {
           <p class="offer-description">Adorable and affordable kids' clothing for boys and girls of all ages!</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Get Extra 30% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/Kids-c-1864.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">👶 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/Kids-c-1864.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">View offer</button>
         </div>
 
         <div class="offer-card" onclick="window.open('https://us.shein.com/Home-Garden-c-1953.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')" style="cursor: pointer;">
@@ -952,7 +913,7 @@ footer::before {
           <p class="offer-description">Stylish home decor, bedding, kitchen items, and living essentials!</p>
           <div style="height: 24px;"></div>
           <div class="offer-cashback">+ Get Extra 30% Cashback</div>
-          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/Home-Garden-c-1953.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">🏠 Get Offer</button>
+          <button class="offer-button" onclick="event.stopPropagation(); window.open('https://us.shein.com/Home-Garden-c-1953.html?ref=cj&affiliateID=6606553&PID=100914861&url_from=cj.com&cjevent=', '_blank')">View offer</button>
         </div>
       </div>
     </div>
