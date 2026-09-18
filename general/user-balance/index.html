@@ -694,7 +694,7 @@
     <div class="balance-container">
       <div class="balance-header">
         <h1>Your Balance</h1>
-        <p>Track your earnings and transaction history</p>
+        <p>Track approved earnings and transaction history</p>
       </div>
 
       <div class="balance-overview">
@@ -800,80 +800,16 @@
     });
 
     function loadBalanceData() {
-      // Get click history and calculate balance
-      const clickHistory = JSON.parse(localStorage.getItem('click_history') || '[]');
-      const referralNotifications = JSON.parse(localStorage.getItem('pending_referral_notifications') || '[]');
+      // Clicks and referral activity are not approved monetary transactions.
+      // Keep every balance at zero until a verified earnings source is connected.
+      document.getElementById('available-balance').textContent = '$0.00';
+      document.getElementById('pending-balance').textContent = '$0.00';
+      document.getElementById('total-earned').textContent = '$0.00';
+      document.getElementById('payments-made').textContent = '$0.00';
 
-      let availableBalance = 0;
-      let pendingBalance = 0;
-      let totalEarned = 0;
-      let paymentsMade = 0; // Start with 0
-
-      // Calculate from click history
-      clickHistory.forEach((click, index) => {
-        const amount = getCashbackAmount(click.store);
-        if (index < 3) {
-          // First 3 are available
-          availableBalance += amount;
-        } else {
-          // Rest are pending
-          pendingBalance += amount;
-        }
-        totalEarned += amount;
-      });
-
-      // Add referral bonuses
-      referralNotifications.forEach(referral => {
-        const bonus = 5.00;
-        if (referral.processed) {
-          availableBalance += bonus;
-        } else {
-          pendingBalance += bonus;
-        }
-        totalEarned += bonus;
-      });
-
-      // NO ADDITIONAL BASE AMOUNTS - ONLY REAL EARNINGS
-
-      // Update display with dollar signs
-      document.getElementById('available-balance').textContent = `$${availableBalance.toFixed(2)}`;
-      document.getElementById('pending-balance').textContent = `$${pendingBalance.toFixed(2)}`;
-      document.getElementById('total-earned').textContent = `$${totalEarned.toFixed(2)}`;
-      document.getElementById('payments-made').textContent = `$${paymentsMade.toFixed(2)}`;
-
-      // Enable/disable withdraw button
       const withdrawBtn = document.getElementById('withdraw-btn');
-      if (availableBalance >= 20) {
-        withdrawBtn.disabled = false;
-        withdrawBtn.textContent = `💰 Withdraw ${availableBalance.toFixed(2)}`;
-      } else {
-        withdrawBtn.disabled = true;
-        withdrawBtn.textContent = `💰 Withdraw Money`;
-      }
-    }
-
-    function getCashbackAmount(storeName) {
-      const cashbackRates = {
-        'Box Now': 2.50,
-        'Nike': 3.25,
-        'Shein': 4.10,
-        'Benetton': 3.75,
-        'Myprotein': 2.80,
-        'Aegean Airlines': 8.50,
-        'Adidas': 3.15,
-        'AliExpress': 11.00,
-        'Temu': 20.00,
-        'Alibaba': 10.00,
-        'Agoda': 13.00,
-        'Notino': 7.00,
-        'YOOX': 5.00,
-        'Alensa': 9.00,
-        'AirHelp': 15.00,
-        'Airshop': 8.00,
-        'Kiwi': 10.00,
-        'Abito': 10.00
-      };
-      return cashbackRates[storeName] || 1.50;
+      withdrawBtn.disabled = true;
+      withdrawBtn.textContent = 'Withdraw money';
     }
 
     function loadTransactionHistory() {
