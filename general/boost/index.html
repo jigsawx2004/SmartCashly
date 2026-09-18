@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your Smartcashly withdrawal boost visit has been tracked. See the boost available for offer clicks and verified completions." />
+  <title>Your withdrawal boost is tracked • Smartcashly</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="../../site-logo/smartcashly-favicon.png" />
+  <link rel="stylesheet" href="/assets/smartcashly-v3.css?v=20260915a" />
+  <link rel="stylesheet" href="/assets/smartcashly-boost.css?v=20260918a" />
+</head>
+<body class="page-boost" data-ui-version="3">
+  <header>
+    <a href="/" class="brand-home" aria-label="Smartcashly home">
+      <img src="../../site-logo/smartcashly-logo.png" alt="Smartcashly logo" class="logo-img" />
+    </a>
+    <div></div>
+    <nav class="auth-nav" aria-label="Primary navigation">
+      <a href="/general/all-stores/" class="btn btn--secondary">All stores</a>
+      <a href="/" class="btn btn--secondary">Home</a>
+    </nav>
+  </header>
+
+  <main class="boost-main">
+    <section class="boost-confirmation" aria-labelledby="boost-title">
+      <div class="boost-status">Visit tracked</div>
+      <h1 id="boost-title">Your cashback boost is in motion.</h1>
+      <p class="boost-lead">Your visit from the offer screen has been recorded. Clicking any available offer qualifies you for a boost on your next eligible withdrawal. If the offer provider verifies that you completed an offer, your reward is upgraded automatically.</p>
+      <p class="boost-reference">Boost reference: <span id="boost-reference">Creating…</span></p>
+    </section>
+
+    <section class="boost-rate-grid" aria-label="Withdrawal boost rates">
+      <article class="boost-rate-card">
+        <div class="boost-country">
+          <span class="boost-country-mark">US</span>
+          <div>
+            <h2>United States</h2>
+            <p>Applied to your next eligible withdrawal</p>
+          </div>
+        </div>
+        <div class="boost-tier">
+          <span class="boost-tier-label">Click any offer</span>
+          <strong>+5%</strong>
+        </div>
+        <div class="boost-tier boost-tier--complete">
+          <span class="boost-tier-label">Verified completion</span>
+          <strong>+7%</strong>
+        </div>
+        <p class="boost-upgrade-note">A verified completion upgrades your click boost from 5% to 7%.</p>
+      </article>
+
+      <article class="boost-rate-card">
+        <div class="boost-country">
+          <span class="boost-country-mark">INTL</span>
+          <div>
+            <h2>All other countries</h2>
+            <p>Applied to your next eligible withdrawal</p>
+          </div>
+        </div>
+        <div class="boost-tier">
+          <span class="boost-tier-label">Click any offer</span>
+          <strong>+3%</strong>
+        </div>
+        <div class="boost-tier boost-tier--complete">
+          <span class="boost-tier-label">Verified completion</span>
+          <strong>+5%</strong>
+        </div>
+        <p class="boost-upgrade-note">A verified completion upgrades your click boost from 3% to 5%.</p>
+      </article>
+    </section>
+
+    <section class="boost-how" aria-labelledby="how-title">
+      <h2 id="how-title">How your boost works</h2>
+      <div class="boost-steps">
+        <article class="boost-step">
+          <h3>Choose an offer</h3>
+          <p>Open any available offer shown in the offer screen and click through normally.</p>
+        </article>
+        <article class="boost-step">
+          <h3>Keep this visit connected</h3>
+          <p>Use the same browser and avoid private browsing so the offer partner can match your activity.</p>
+        </article>
+        <article class="boost-step">
+          <h3>Earn the higher boost</h3>
+          <p>Complete an offer and wait for partner verification to upgrade your withdrawal boost.</p>
+        </article>
+      </div>
+      <div class="boost-actions">
+        <a class="boost-action" href="/general/all-stores/">Explore cashback stores</a>
+        <span>Your reference is saved in this browser.</span>
+      </div>
+    </section>
+
+    <p class="boost-fine-print"><strong>Good to know:</strong> The click and completion rates do not stack; a verified completion replaces the click rate with the higher boost. The applicable country and completion status are determined from the offer partner’s tracking and verification. The boost applies to the next eligible withdrawal and is subject to Smartcashly eligibility checks.</p>
+  </main>
+
+  <footer>
+    <span class="footer-copy">©&nbsp;<span id="year">2026</span>&nbsp;Smartcashly. All rights reserved.</span>
+  </footer>
+
+  <script>
+    (function () {
+      const now = new Date();
+      const existing = sessionStorage.getItem('smartcashly_boost_reference');
+      const reference = existing || ('BST' + now.getTime().toString().slice(-8));
+      sessionStorage.setItem('smartcashly_boost_reference', reference);
+
+      const trackingData = {
+        reference: reference,
+        status: 'visit_tracked',
+        trackedAt: now.toISOString(),
+        clickBoost: { US: 5, international: 3 },
+        completionBoost: { US: 7, international: 5 }
+      };
+      localStorage.setItem('smartcashly_boost_tracking', JSON.stringify(trackingData));
+
+      if (!existing) {
+        try {
+          let history = JSON.parse(localStorage.getItem('click_history') || '[]');
+          if (!Array.isArray(history)) history = [];
+          history.unshift({
+            store: 'Smartcashly Boost',
+            offerId: 'withdrawal-boost',
+            timestamp: trackingData.trackedAt,
+            clickId: reference
+          });
+          if (history.length > 50) history.splice(50);
+          localStorage.setItem('click_history', JSON.stringify(history));
+        } catch (error) {
+          console.warn('Could not update click history:', error);
+        }
+      }
+
+      document.getElementById('boost-reference').textContent = reference;
+      document.getElementById('year').textContent = now.getFullYear();
+    }());
+  </script>
+</body>
+</html>
+
